@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DeliveryPayment
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          delivery_payment
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        delivery_id:
+          label: Доставка
+        payment_id:
+          label: Оплата
+      list:    
+        title: Сортировка оплаты-доставки
+        display: [ _delivery_id, _payment_id ]
+        object_actions: []
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

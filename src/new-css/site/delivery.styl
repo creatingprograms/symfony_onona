@@ -1,0 +1,70 @@
+.russian-post-widget
+  height: 400px;
+  height: 40vh;
+  margin-top: 20px;
+  iframe 
+    height: 100%;
+.delivery-item
+  padding 0 8.6% 30px
+  border-bottom: 1px solid #E1E0E9
+  &:not(:first-of-type)
+    margin-top 24px
+  .col
+    display inline-block
+    vertical-align top
+    width 47%
+
+.delivery-item__titel
+  font-weight: 600
+  font-size: 24px
+  line-height: 28px
+  margin-bottom 24px
+
+.delivery-item__img
+  float left
+  margin-right: 46px
+  margin-left: 24px
+  margin-top: 13px
+
+.devlivery-item__table
+  margin-top 20px
+  margin-bottom 26px
+  +max(mobile)
+    display block
+    overflow-x: scroll
+    padding-bottom 10px
+  td
+    font-size: 14px
+    line-height: 18px
+  tr
+    &:first-child
+      td
+        padding-bottom 10px
+    &:last-child
+      td
+        padding-top 10px
+    &:not(:last-child)
+      border-bottom: 1px dashed #E1E0E9
+
+.wrap-delivery-note
+  padding 0 8.6% 21px
+  margin-top 29px
+
+.delivery-descr
+  text-align center
+  border-radius: 8px
+  background: linear-gradient(0deg, #F3F4F5, #F3F4F5), #EBEDEF
+  padding 15px 20%
+  a
+    color #EF182F
+    display block
+    text-decoration underline
+    &:first-of-type
+      margin-top 22px
+
+.delivery-note
+  margin-top 30px
+  text-align right
+.-delivery
+  .ui-selectmenu-menu .ui-menu
+    max-height: 300px;

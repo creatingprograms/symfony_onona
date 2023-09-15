@@ -1,0 +1,56 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Coupons
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          coupons
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        is_promo:
+          label: Выводить купон в футере
+        is_active:
+          label: Купон активен
+        created_at:
+            label: Дата создания
+        updated_at:
+            label: Дата изменения
+        startaction:
+            label: Начало действия
+        endaction:
+            label: Окончание действия
+        discount:
+            label: Скидка в %%
+        discount_sum:
+            label: Скидка в рублях. При ее задании скидка в процентах будет ограничена по сумме. Дополнительные условия будут проигнорированы
+        min_sum:
+            label: Минимальная сумма в корзине для применения купона. Если сумма в корзине меньше - все остальное не проверяется
+        discount_second:
+          label: Скидка в %% на каждый второй товар. При задании значения все остальные настройки игнорируются
+        text:
+            label: Текст купона
+        conditions:
+            label: Дополнительные условия
+        is_important:
+            label: Безусловная скидка
+        free_third:
+            label: Третий товар в подарок
+        express_disc_50_if_gt_3:
+            label: Скидка 50% на 3 товара при экспресс-доставке
+      list:
+        title: Купоны
+        display: [ text, is_active, is_promo, discount,  startaction, endaction, is_important]
+        # sort: [ is_active, Asc ]
+      filter:
+        display: [ text, is_active, is_promo, discount,  startaction, endaction ]
+      form:
+        display: [ text, is_active, is_promo, min_sum, is_important, discount, discount_sum, free_third, discount_second, express_disc_50_if_gt_3, startaction, endaction, conditions]
+      edit:    ~
+      new:     ~

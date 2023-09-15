@@ -1,0 +1,22 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [/newdis/css/all_newcat_adaptive.css?v=101]
+#, /newdis/js/form.js
+#, /newdis/js/clear-form-fields.js
+#, /newdis/js/coin-slider_newcat.min.js
+  javascripts:    [/newdis/js/jquery-1.7.2.min.js, /newdis/js/jquery_newcat.main.js?v=11, /js/gtm-events.js?v=4, /newdis/js/jquery.plugin.js, /newdis/js/jquery.autocomplete.min.js, highslide/highslide-full.js, jquery.form.js]
+
+  has_layout:     true
+  layout:         layout

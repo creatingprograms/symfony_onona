@@ -1,0 +1,3 @@
+<?php $article=  ArticleTable::getInstance()->createQuery()->where("content like '% ".$articlelink->getWords()." %' or content like '% ".$articlelink->getWords().", %'");?>
+<span onClick="$('#slug<?=$articlelink->getId()?>').toggle(); " style="cursor: pointer"><?=$article->count();?></span>
+<div id="slug<?=$articlelink->getId()?>" style="display: none"><? Foreach($article->execute() as $art){?> <a href="/sexopedia/<?=$art->getSlug()?>" target="_blank"><?=$art->getName()?></a></br><?}?></div>

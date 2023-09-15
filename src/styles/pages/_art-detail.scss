@@ -1,0 +1,38 @@
+.art-detail{
+  h2{
+    margin: 15px 0;
+    font-weight: bold;
+  }
+  ul, ol{
+    margin: 15px 0;
+    margin-left: 35px;
+  }
+  ul{
+    li{
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        position: absolute;
+        top: 9px;
+        // transform: translate(0,-50%);
+        left: -15px;
+        background: #353535;
+      }
+    }
+  }
+  ol{
+    li{
+      list-style: decimal;
+    }
+  }
+  .cat-list.-items{
+    margin: 15px 0;
+  }
+  p{
+    margin-bottom: 15px;
+  }
+}

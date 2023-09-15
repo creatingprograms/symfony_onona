@@ -1,0 +1,391 @@
+Category:
+  actAs:
+    Timestampable: ~ 
+    Sortable: ~
+    Sluggable: 
+      fields: [ name ] 
+      unique: true 
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    content: { type: clob }
+    is_open: { type: boolean, default: 0 }
+    is_public:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    parents_id: { type: integer(8) }
+  relations:
+    Parent:
+      class: Category
+      local: parents_id
+      foreign: id
+      type: one
+    Children:
+      class: Category
+      local: id
+      foreign: parents_id
+      type: many
+    CategoryProducts:
+      class: Product
+      refClass: CategoryProduct
+      foreignAlias: Category
+      
+Product:
+  actAs:
+    Timestampable: ~ 
+    Sortable: ~
+    Sluggable: 
+      fields: [ name ] 
+      unique: true 
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    code: string(255)
+    content: { type: clob }
+    price: integer
+    bonus: integer
+    old_price: integer
+    discount: integer
+    count: integer
+    video: string(255)
+    views_count: integer
+    votes_count: integer
+    rating: integer
+    is_related:    { type: boolean, default: 0 }
+    is_public:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    parents_id: { type: integer(8) }
+    id1c: integer
+  relations:
+    CategoryProducts:
+      class: Category
+      refClass: CategoryProduct
+      foreignAlias: Product
+    DopInfoProducts:
+      class: DopInfo
+      refClass: DopInfoProduct
+      foreignAlias: Product
+    Parent:
+      class: Product
+      local: parents_id
+      foreign: id
+      type: one
+    Children:
+      class: Product
+      local: id
+      foreign: parents_id
+      type: many
+      
+DopInfo:
+  actAs:
+    Timestampable: ~ 
+    Sortable: ~
+    Sluggable: 
+      fields: [ name ] 
+      unique: true 
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    value: string(255)
+  relations:
+    DopInfoProducts:
+      class: DopInfo
+      refClass: DopInfoProduct
+      foreignAlias: Product  
+      
+DopInfoProduct:
+  columns:
+    dop_info_id:
+      type: integer(8)
+      primary: true
+    product_id:
+      type: integer(8)
+      primary: true
+    code:
+      type: string(255)
+  relations:
+    DopInfo:
+      foreignAlias: DopInfoProducts
+    Product:
+      foreignAlias: DopInfoProducts
+      
+CategoryProduct:
+  columns:
+    category_id:
+      type: integer(8)
+      primary: true
+    product_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Category:
+      foreignAlias: CategoryProducts
+    Product:
+      foreignAlias: CategoryProducts
+    
+    #Фотографии
+Photoalbum:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:           { type: string(255), notnull: true, unique: true }
+    content:        { type: clob }
+  relations:
+    ProductPhotoalbums:
+      class: Product
+      refClass: ProductPhotoalbum
+      foreignAlias: Photoalbums
+    
+Photo:
+  actAs:
+    Timestampable: ~
+  columns:
+    album_id:     { type: integer, notnull: true }
+    filename:     { type: string(50), notnull: true, unique: true }
+    name:         { type: string(255) }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+  relations:
+    Photoalbum:
+      onDelete: CASCADE
+      local: album_id
+      foreignAlias: Photos
+      
+ProductPhotoalbum:
+  columns:
+    product_id:
+      type: integer(5)
+      primary: true
+    photoalbum_id:
+      type: integer(5)
+      primary: true
+  relations:
+    Product:
+      foreignAlias: ProductPhotoalbums
+    Photoalbum:
+      foreignAlias: ProductPhotoalbums
+    
+   #Страницы
+Page:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns: 
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    
+   #Оплата
+Payment:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns: 
+    name:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    
+   #Доставка
+Delivery:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns: 
+    name:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+  relations:
+    DeliveryPayments:
+      class: Payment
+      refClass: DeliveryPayment
+      foreignAlias: Deliverys
+      
+DeliveryPayment:
+  columns:
+    delivery_id:
+      type: integer(8)
+      primary: true
+    payment_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Delivery:
+      foreignAlias: DeliveryPayment
+    Payment:
+      foreignAlias: DeliveryPayment
+      
+Menu:
+  actAs:
+    Timestampable: ~
+  columns:
+    url:
+      type: string(255)
+      notnull: true
+    text:
+      type: string(255)
+      notnull: true
+    position:
+      type: enum
+      values: [ 'Под шапкой', 'Левое' ]
+            
+#Пользователи
+sfGuardUser:
+  actAs:
+    Timestampable: ~
+  columns:
+    birthday:
+      type: date
+    phone:
+      type: string(255)
+    #Адрес
+    index_house:
+      type: string(255)
+    city:
+      type: string(255)
+    street:
+      type: string(255)
+    house:
+      type: string(255)
+    korpus:
+      type: string(255)
+    apartament:
+      type: string(255)
+      
+Orders:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    delivery_id:
+      type: integer(8)
+      notnull: true
+    payment_id:
+      type: integer(8)
+      notnull: true
+    customer_id:
+      type: integer(8)
+      notnull: true
+    delivery_price:
+      type: string(255)
+      notnull: true
+    coupon:
+      type: string(255)
+    comments:
+      type: clob
+    status:
+      type: enum
+      values: [ 'Новый', 'Оформление', 'Закрыт' ]
+    referal:
+      type: string(255)
+    sync_status:
+      type: string(255)
+    internetid:
+      type: string(255)
+  relations:
+    Delivery:
+      onDelete: CASCADE
+      local: delivery_id
+      foreignAlias: Delivery
+    Payment:
+      onDelete: CASCADE
+      local: payment_id
+      foreignAlias: Payment
+    sfGuardUser:
+      onDelete: CASCADE
+      local: customer_id
+      foreignAlias: User
+
+Comments:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    product_id:
+      type: integer(8)
+      notnull: true
+    customer_id:
+      type: integer(8)
+    is_public:    { type: boolean, default: 0 }
+    username:
+      type: string(255)
+    mail:
+      type: string(255)
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+    sfGuardUser:
+      onDelete: CASCADE
+      local: customer_id
+      foreignAlias: User
+      
+Bonus:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:
+      type: integer(8)
+      notnull: true
+    bonus:
+      type: integer(8)
+      notnull: true
+    comment:
+      type: string(255)
+      notnull: true
+    log:
+      type: clob
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+      
+Banners:
+  actAs:
+    Timestampable: ~
+  columns:
+    href:
+      type: string(255)
+    alt:
+      type: string(255)
+    src:
+      type: string(255)
+    is_public:    { type: boolean, default: 0 }
+    is_rotation:    { type: boolean, default: 1 }    
+    
+Senduser:
+  actAs:
+    Timestampable: ~
+  columns:
+    product_id:
+      type: integer(8)
+      notnull: true
+    name:
+      type: string(255)
+    mail:
+      type: string(255)
+    is_send:    { type: boolean, default: 0 }
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product

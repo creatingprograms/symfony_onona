@@ -1,0 +1,153 @@
+@import "swiper/scss/functions";
+
+$themeColor: #007aff !default;
+$colors: (white: #ffffff, black: #000000) !default;
+
+@import "swiper/components/core/core";
+
+//IMPORT_COMPONENTS
+
+.-typeSlider {
+  a {
+    @extend %logo;
+  }
+  img {
+    display: block;
+  }
+  .swiper {
+    &-slide {
+      height: auto;
+      position: relative;
+    }
+    &-wrapper {
+      align-items: stretch;
+    }
+    &-pagination {
+      display: none;
+      text-align: center;
+      &-bullet {
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        margin: 0 6px;
+        display: inline-block;
+        border-radius: 50%;
+        outline: none;
+        background-color: #f0c0bf;
+        &-active {
+          background-color: #d11e0f;
+        }
+      }
+    }
+    &-button {
+      &-prev,
+      &-next {
+        @extend %noUserSelect;
+        top: 50%;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -21px;
+        svg {
+          @extend %anim;
+          width: 25px;
+          height: 42px;
+          fill: #000;
+          display: block;
+          transition-property: fill;
+        }
+        &:hover {
+          svg {
+            fill: $f3c;
+          }
+        }
+      }
+      &-prev {
+        left: -21px;
+        main &,
+        .v-block & {
+          left: -41px;
+        }
+      }
+      &-next {
+        right: -21px;
+        transform-origin: 50% 50%;
+        transform: rotate(180deg);
+        main &,
+        .v-block & {
+          right: -41px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    .swiper {
+      &-button {
+        &-prev {
+          left: -12px;
+          main &,
+          .v-block & {
+            left: -32px;
+          }
+        }
+        &-next {
+          right: -12px;
+          main &,
+          .v-block & {
+            right: -32px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    .swiper {
+      &-pagination {
+        display: block;
+        margin-top: 30px;
+        &-bullet {
+          width: 18px;
+          height: 18px;
+          margin: 0 12px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    .swiper {
+      &-button {
+        &-prev {
+          left: 10px;
+          .v-block & {
+            left: -27px;
+          }
+          main & {
+            left: -10px;
+          }
+        }
+        &-next {
+          right: 10px;
+          .v-block & {
+            right: -27px;
+          }
+          main & {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    .swiper {
+      &-pagination {
+        display: block;
+        margin: 6px 0 0;
+        &-bullet {
+          width: 12px;
+          height: 12px;
+          margin: 0 7px;
+        }
+      }
+    }
+  }
+}

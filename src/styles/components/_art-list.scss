@@ -1,0 +1,154 @@
+.art-list {
+  h2,
+  .h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    &,
+    a {
+      color: #0f0f0f;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $redC;
+      }
+    }
+  }
+  & + .v-block-link {
+    text-align: left;
+  }
+  &-group {
+    &:nth-of-type(n+2) {
+      margin-top: 32px;
+    }
+  }
+  &-item {
+    clear: both;
+    background-color: #fff;
+    &:nth-of-type(n+2) {
+      margin-top: 23px;
+    }
+  }
+  &-img {
+    @extend %logo;
+    float: left;
+    max-width: 237px;
+    margin: 0 37px 0 0;
+    img {
+      display: block;
+    }
+  }
+  &-desc {
+    position: relative;
+    margin: 0 0 0 12px;
+    box-sizing: border-box;
+    padding: 15px 36px 10px 0;
+  }
+  &-text {
+    color: #5d5c5c;
+    font-size: 16px;
+    line-height: 120%;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &-more {
+    margin: 2px 0 0;
+    letter-spacing: -0.5px;
+    a {
+      color: #fd0404;
+    }
+  }
+  &-tag {
+    font: 400 12px/120% $helvFont;
+    span,
+    a {
+      color: #010101;
+      padding: 3px 4px;
+      margin: 5px 5px 0 0;
+      display: inline-block;
+      text-decoration: none;
+      background-color: #f5d0cf;
+    }
+  }
+  &-wrap {
+    min-height: 177px;
+    margin: 0 0 5px;
+  }
+  @media screen and (max-width: $smallDesctop) {
+    &-img {
+      margin-right: 25px;
+    }
+    &-text {
+      font-size: 14px;
+    }
+    &-desc {
+      padding-right: 25px;
+    }
+    &-more {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-img {
+      width: 180px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    &-desc {
+      padding-right: 12px;
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    h2,
+    .h2 {
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 0 4px;
+    }
+    &-group {
+      &:nth-of-type(n+2) {
+        margin-top: 18px;
+      }
+      .v-block {
+        &-link,
+        &-plate {
+          text-align: center;
+        }
+        &-link {
+          font-size: 13px;
+          margin: 9px 0 0;
+        }
+      }
+    }
+    &-item {
+      &:nth-of-type(n+2) {
+        margin-top: 13px;
+      }
+    }
+    &-img {
+      max-width: 92px;
+      margin: 0 14px 0 0;
+    }
+    &-wrap {
+      min-height: 80px;
+    }
+    &-desc {
+      padding: 8px 5px 12px 0;
+    }
+    &-text {
+      display: none;
+    }
+    &-tag {
+      font-size: 10px;
+      a {
+        padding: 0 2px;
+        margin-top: 7px;
+      }
+    }
+  }
+}

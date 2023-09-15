@@ -1,0 +1,1 @@
+<img src="/uploads/photo/thumbnails_250x250/<?php echo $photo->getFilename() ?>" height="50" />

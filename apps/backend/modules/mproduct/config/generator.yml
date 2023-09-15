@@ -1,0 +1,88 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Product
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product_mproduct
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        category_products_list:
+          label: Категории
+        dop_info_products_list:
+          label: Дополнительные характеристики  
+        photoalbums_list:
+          label: Фотоальбом  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        code:
+          label: Артикул
+        content:
+          label: Содержимое
+        price:
+          label: Цена
+        old_price:
+          label: Старая цена
+        discount:
+          label: Скидка
+        count:
+          label: Кол-во на складе
+        video:
+          label: Ссылка на видео
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+        rating:
+          label: Рейтинг
+        is_public:
+          label: Доступна
+        is_related:
+          label: Рек. товар
+        parents_id:
+          label: Родитель
+        bonus:
+          label: Процент бонусов
+        generalcategory_id:
+          label: Главная категория(её так же отметить в списке ниже)
+        newPhotoalbums:
+          label: Новый фотоальбом
+        Photoalbums:
+          label: Фотоальбомы
+        created_at:
+          label: Дата добавления
+        endaction:
+          label: Дата окончания акции
+        step:
+          label: Шаг акции
+      list:
+        title: Товары
+        display: [ id, name, discount, endaction, step ]
+        sort: [ position, Asc ]
+        object_actions:
+          #promote: 
+          #  action: promote
+          #  label: Вверх
+          #demote: 
+          #  action: demote
+          #  label: Вниз
+          _edit: ~
+      filter:  
+        display: [ id, name, discount, endaction, step]
+      form:       
+        display: 
+          Основная информация: [ id, name,price,  discount, old_price, endaction, step ] 
+          #
+      edit:    
+        title: Редактирование товара "%%name%%"
+      new:     
+        title: Создание товара

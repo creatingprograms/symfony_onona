@@ -1,0 +1,1480 @@
+body
+  overflow-x hidden
+  &.no-scroll
+    height 100%
+    overflow hidden
+.-hidden
+  display: none;
+
+html
+  overflow-x hidden
+  &.no-scroll
+    height 100%
+    overflow hidden
+
+.wrap-block
+  margin-top: 64px;
+  +max(tablet)
+    margin-top 56px
+  +max(sMobile)
+    margin-top 48px
+  &.wrap-block_top
+    margin-top 48px
+    +max(desktop)
+      margin-top 32px
+    +max(sMobile)
+      margin-top 0
+.js-show-stocks
+  cursor: pointer;
+.text-enlarged
+  font-size: 20px;
+  line-height: 26px;
+
+.link-text
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: top;
+  &::after
+    content: '';
+    display: inline-block;
+    background-image: url('/frontend/images_new/arr.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-left: 5px;
+
+.link-fill
+  font-weight: 500;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 24px;
+  padding: 12px 24px;
+  &.-red
+    background-color: #EF182F;
+    color: #fff;
+
+.sl-advantages
+  padding 20px 20px
+  margin -20px -20px
+  +max(tablet)
+    width calc(100vw - 12px)
+  +max(mobile)
+    padding 0
+    margin 0
+    width calc(100vw - 25px)
+  .wrap-sl-item
+    max-width: 235px
+    +max(tablet)
+      max-width: 208px
+    +max(mobile)
+      max-width 152px
+    &:first-child
+      .advantage-item
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    &:last-child
+      .advantage-item
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    &:not(:last-child)
+      .advantage-item
+        border-right: none
+
+.advantage-item
+  padding: 24px 24px;
+  transition $trans
+  +max(tablet)
+    padding 16px
+  +max(mobile)
+    padding-right 0
+    padding-left 0
+    padding-top 0
+  +min(mobile)
+    border 1px solid #E1E0E9
+  &:hover
+    +min(mobile)
+      box-shadow: 0px 0px 20px 2px rgba(95, 95, 95, 0.1)
+
+
+.advantage-item__img
+  margin-bottom: 19px;
+  +max(mobile)
+    margin-bottom 10px
+
+.advantage-item__title
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  +max(tablet)
+    font-size: 18px;
+    line-height: 24px;
+
+.advantage-item__text
+  color: #616C7C;
+
+.sl-text
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+
+.sl-item
+  display: flex;
+  flex-direction: column;
+  .link-text
+    margin-top: 13px;
+
+.block-info
+.promotion-item
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  min-height: 224px
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  position relative
+  +max(tablet)
+    min-height: 204px
+    padding 14px 16px
+  +max(mobile)
+    background-position-x 75%
+  &>*
+    position relative
+    z-index 2
+  .link-fill
+    margin-top: auto;
+    margin-right: auto;
+
+
+.block-info__title
+.promotion-item__title
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px;
+  +max(tablet)
+    font-size: 24px;
+    line-height: 26px;
+    font-weight 500
+
+.block-info__text
+.promotion-item__text
+  margin-top: 16px;
+  margin-bottom: 20px;
+  +max(tablet)
+    margin-top 9px
+
+.promotion-item
+  position relative
+  overflow hidden
+  &>*
+    position relative
+    z-index 2
+  .block-info__img
+    position absolute
+    z-index 1
+    right 0
+    top 0
+    +max(tablet)
+      right -24px
+    +max(sMobile)
+      opacity 0.3
+
+.block-info.block-info_mob
+  position relative
+  overflow hidden
+  +max(sMobile)
+    position relative
+    background #F3F4F5 !important
+    padding-top 0
+    overflow hidden
+    border 1px solid #E1E0E9
+  &>*
+    position relative
+    z-index 2
+  .block-info__text
+    +max(mobile)
+      width 50%
+      +max(sMobile)
+        width 100%
+  .block-info__img
+      position absolute
+      right 75px
+      top 0
+      z-index 1
+      +max(tablet)
+        right 35px
+        height 100%
+      +max(sMobile)
+        width calc(100% + 32px)
+        transform translateX(-16px)
+        position static
+        margin-bottom 24px
+    img
+      +max(tablet)
+        height 100%
+        width auto
+      +max(sMobile)
+        width 100%
+        height auto
+        object-fit: cover
+
+
+
+.block-info_1.block-info_mob
+  .block-info__img
+    right 57px
+    +between(sMobile, mobile)
+      right -20px
+    img
+      +between(mobile,tablet)
+        max-width 303px
+        width 100%
+        height auto
+      +between(sMobile, mobile)
+        max-width 284px
+
+.block-info_2.block-info_mob
+  .block-info__img
+    right 57px
+    +between(sMobile, mobile)
+      right -20px
+    img
+      +between(mobile,tablet)
+        max-width 303px
+        width 100%
+        height 100%
+      +between(sMobile, mobile)
+        max-width 284px
+
+.block-info_1
+  background: linear-gradient(180deg, #ACDEFD 0%, #ACDEFD 100%), #C4C4C4
+
+.block-info_2
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #EBEDEF
+
+
+.block-intro
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  +max(mobile)
+    display block
+
+.block-intro__content
+  // max-width: 41.5%;
+  flex: 1 0;
+  margin-left: 40px;
+  +max(tablet)
+    margin-left: 0;
+  .text-enlarged
+    display: block;
+    margin-bottom: 12px;
+    +max(tablet)
+      padding-left: 160px;
+      +max(mobile)
+        padding-left: 0;
+  .link-fill
+    margin-top: 38px;
+    +max(tablet)
+      margin-top 32px
+
+.block-intro__title
+  margin-bottom: 23px;
+  +max(tablet)
+    padding-left: 160px;
+  +max(mobile)
+    padding-left: 150px;
+    font-size: 20px;
+    max-width: 290px;
+
+.block-intro__img
+  // max-width: 49%;
+  flex: 0 1 auto;
+  +max(tablet)
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 140px;
+    height: 92px;
+  +max(mobile)
+    width: 132px;
+    height: 87px;
+    top: -5px;
+    // display: none;
+    // max-width 100%
+    // margin-top 32px
+    // img
+    //   width 100%
+
+.block-title
+  margin-bottom: 42px;
+  position relative
+  +max(mobile)
+    margin-bottom 32px
+  a
+    position absolute
+    top 50%
+    right 0
+    transform translateY(-50%)
+    font-weight: 500
+    font-size: 15px
+    line-height: 24px
+    +max(sMobile)
+      position static
+      transform translateY(0)
+      display block
+      margin-top 14px
+
+.overview-item__img
+  img
+    border-radius: 8px
+    overflow: hidden
+
+.overview-item__tag
+  font-size: 13px;
+  line-height: 20px;
+  color: #EF182F;
+  margin-top: 12px;
+  +max(sMobile)
+    margin-top 10px
+
+.overview-item__text
+  margin-bottom: 12px;
+  +min(sMobile)
+    width 70%
+  +max(mobile)
+    margin-bottom 60px
+  +max(sMobile)
+    margin-top 4px
+    margin-bottom 26px
+
+.overview-item
+  .link-text
+    margin-top: auto;
+
+.sl-overview
+  +max(sMobile)
+    .swiper-wrapper
+      flex-wrap wrap
+      justify-content space-between
+    .wrap-sl-item
+      max-width 47%
+      &:not(:nth-child(1)):not(:nth-child(2))
+        margin-top 32px
+
+.sl-promotions
+  +max(mobile)
+    width calc(100vw - 25px)
+  .wrap-sl-item
+    +max(mobile)
+      max-width 436px
+
+
+.promotion-item__title
+.promotion-item__text
+  color: #fff;
+
+.promotion-item__text
+  max-width: 55%;
+  +max(tablet)
+    max-width 45%
+
+// .promotion-item__content
+//   display: flex;
+//   flex-direction: column
+
+.promotion-item
+  padding-bottom: 24px;
+
+.promotion-item_orange
+  background: linear-gradient(180deg, #FCA11E 0%, #F08101 100%), #C4C4C4
+
+.promotion-item_cyan
+  background: linear-gradient(180deg, #66C3D5 0%, #A2DDE9 100%), #C4C4C4
+
+.promotion-item_blue
+  background: linear-gradient(180deg,#10a4d3 0%,#01d0fe 100%) , #c4c4c4
+
+.promotion-item_red
+  background: linear-gradient(270deg, #F20013 0%, #96001A 100%), #DE0014
+
+.block-promotions
+.block-reviews
+.block-overview
+.wrap-sl-doc
+  position relative
+  .wrap-nav .custom-nav
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+    border 1px solid #E5E4EB
+  .swiper-button-next
+    right -26px
+    +max(sMobile)
+      right -10px
+  .swiper-button-prev
+    left -26px
+    +max(sMobile)
+      left -10px
+  .swiper-button-disabled
+    +max(sMobile)
+      opacity 0
+
+
+
+.block-promotions
+  .wrap-nav .custom-nav
+    +max(sMobile)
+      display none
+
+.block-overview
+  .wrap-nav .custom-nav
+    margin-top 7px
+  .wrap-nav
+    +max(sMobile)
+      display none
+
+
+.product-item
+  position: relative;
+  .btn-chosen
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index 2
+    cursor pointer
+    &.active
+      svg
+        fill #EF182F
+        stroke #EF182F
+  .product-item__text
+    +max(tablet)
+      margin-bottom 10px
+
+.wrap-sl-product
+  padding-right: 23px;
+  border-right: 1px solid #E1E0E9
+
+.sl-products
+  margin-top: 33px;
+  .swiper-wrapper
+    flex-wrap: wrap;
+    justify-content: space-between;
+  .swiper-slide
+    margin-bottom: 40px;
+  .wrap-sl-product
+    &.empty
+      margin: 0!important;
+      height: 0!important;
+      padding: 0!important;
+    width 25%
+    box-sizing: border-box
+    padding: 0 12px;
+    +max(tablet)
+      width 33.33333333%;
+      padding: 0 16px;
+    +max(sMobile)
+      border-right none
+      padding 0 10px
+      width 50%
+      // width 100%;
+      // max-width: 46.5%
+      // margin: 0 auto;
+      // .product-item__text
+        // height: 125px;
+        // overflow: hidden;
+      .product-item__content-sl
+        .product-item__bar-bottom
+          padding-bottom: 55px;
+        .product-item__price
+          &::after
+            position: relative;
+            right: 0;
+            transform: none;
+    // &:not(:nth-child(1)):not(:nth-child(2))
+    //   +max(sMobile)
+    //     margin-top 24px
+  // .swiper-wrapper
+  //   +max(sMobile)
+  //     display flex
+  //     flex-wrap: wrap
+  //     justify-content space-between
+  .product-item
+    +max(sMobile)
+      padding-top 22px
+      height 100% !important
+  .btn-chosen
+    +max(sMobile)
+      top 24px
+  .product-item__bar
+    +max(sMobile)
+      display block
+  .product-item__img
+    +max(sMobile)
+      flex 1 0 auto
+
+.product-item__status
+  position: absolute;
+  top: 0;
+  left: 0;
+  display flex
+  flex-direction: column
+  z-index 2
+  &&--inner
+    position: relative;
+    flex-direction: row;
+    margin-bottom: 15px;
+    span
+      &:not(:first-child)
+        margin-top 0;
+        margin-left 4px;
+
+  span
+    display flex
+    color: #fff;
+    background-color: #EF182F;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0 6px;
+    height: 22px;
+    align-self flex-start
+    align-items center
+    justify-content center
+    &.orange
+      background-color: #FF8A00;
+    &:not(:first-child)
+      margin-top 4px
+  .dev-i
+    width 20px
+    height 14px
+.product-item__img
+  height 214px
+  max-height: 214px
+  margin-bottom: 10px
+  position relative
+  overflow hidden
+  +max(sMobile)
+    margin-bottom 0
+  img
+    height: 100%
+    width: auto
+    object-fit: contain
+
+.product-item__bar
+  display: flex;
+  align-items: center;
+
+.product-item__reviews
+  font-size: 13px;
+  line-height: 20px;
+  color: #9B98AC;
+  margin-left: 12px;
+  +max(sMobile)
+    margin-left 0
+    margin-top 4px
++max(mobile)
+  .-mod-cart
+    .product-item__price
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+.product-item__price
+  font-size: 28px;
+  line-height: 28px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  +max(mobile)
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    &::after
+      font-weight: normal;
+      margin-top: 0!important;
+      margin-left: auto;
+  &::after
+    content: attr(old-price)
+    font-size: 15px;
+    line-height: 20px;
+    color: #9B98AC;
+    text-decoration: line-through;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    transform: translateX(100%);
+
+.block-products .product-item__content-sl
+  .product-item__price
+    &::after
+      position absolute
+      top: 0
+      right: -10px
+      transform: translateX(100%);
+
+.wrap-rating-star
+  display: flex;
+  align-items: center;
+
+.rating-star
+  max-width: 14px;
+  width: 14px;
+  height: 14px;
+  background-image: url('/frontend/images_new/star.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 1 0 auto;
+  &.active
+    background-image: url('/frontend/images_new/star-act.svg');
+
+.product-item__bar-bottom
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  +max(sMobile)
+    flex-direction: column
+    align-items flex-start
+    position: relative;
+
+.product-item__cart
+  max-width: 48px;
+  width: 100%;
+  height: 48px;
+  flex 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #E1E0E9;
+  cursor pointer
+  transition $trans
+  +max(sMobile)
+    margin-top 21px
+  &:hover
+  &.active
+    background-color #EF182F
+    border-color #EF182F
+    svg
+      stroke #fff
+  svg
+    width: 20px;
+    height: 20px;
+    stroke #2D2841;
+    transition $trans;
+
+
+.wrap-sl-catalog
+  width 186px;
+  +max(tabletLarge)
+    width 120px;
+  +max(tablet)
+    width 90px;
+    margin-bottom: 20px;
+  +max(mobile)
+    width auto;
+    min-width: 60px;
+
+.sl-catalog
+  +max(tablet)
+    width calc(100vw - 32px)
+  +max(mobile)
+    width calc(100vw - 35px)
+    // .swiper-wrapper
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+.sl-catalog-new
+  padding-bottom: 44px;
+  +max(tablet)
+    padding-bottom: 32px;
+    .wrap-sl-catalog
+      margin-bottom: 0;
+      // width: 104px;
+.catalog-item
+  position: relative;
+  background-color: #F3F4F5;
+  border-radius: 20px;
+  min-height: 216px;
+  &_new
+    min-height: 230px;
+    overflow: hidden;
+    border-radius: 20px;
+    .img_wrapper
+      min-height: 126px;
+    .catalog-item__text
+      font-size: 12px;
+    .catalog-item__title
+      line-height: 18px;
+      max-width: 100%;
+    .text-wrapper
+      padding: 9px 19px 15px;
+
+.catalog-item__content
+  position: relative;
+  z-index: 1;
+  padding 16px
+  height 100%;
+  display flex
+  flex-direction column
+
+.catalog-item__img
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 168px;
+
+.catalog-item__title
+  font-weight: 500;
+  line-height: 21px;
+  max-width: 97px;
+
+.catalog-item__text
+  font-size: 13px;
+  line-height: 18px;
+  color: #616C7C;
+
+.catalog-item__btn
+  width: 100%;
+  height: 100%;
+  width: 48px;
+  height: 48px
+  max-height: 48px
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  flex 1 0 auto
+  margin-top auto
+  transition $trans
+  &:hover
+    background-color #EF182F
+    svg
+      fill #fff
+  svg
+    width: 16px;
+    height: 16px;
+    transition $trans
+
+.sl-reviews
+  padding-bottom: 36px;
+  +max(mobile)
+    width calc(100vw - 25px)
+  +max(sMobile)
+    width 100%
+  .wrap-sl-item
+    +max(mobile)
+      max-width 436px
+#main
+  .swiper-pagination
+    .swiper-pagination-bullet
+      background: #EF182F;
+      opacity: 0.5;
+      width: 7px;
+      height: 7px;
+      margin: 2px 8px;
+      &-active
+        opacity: 1;
+        width: 11px;
+        height: 11px;
+        margin: 0 10px;
+
+.review-item
+  display flex
+  flex-direction: row
+  border 1px solid #E1E0E9
+  border-radius: 8px
+  +max(tablet)
+    flex-direction: column
+  .product-item__text
+    text-align center
+    max-width 180px
+    display block
+    +max(tablet)
+      text-align left
+      max-width 220px
+
+.review-item__name
+  font-weight 500
+  line-height 21px
+
+.review-item__date
+  font-size: 13px;
+  line-height: 18px;
+  color #9B98AC
+
+.review-item__reviwe
+  max-width: 58%
+  padding-top 30px
+  padding-left 40px
+  padding-bottom 24px
+  display flex
+  flex-direction: column
+  height 100%
+  margin-right auto
+  +max(tablet)
+    padding-top 21px
+    padding-left 23px
+    max-width 100%
+    background-color #F3F4F5
+    margin-right 0
+  .link-text
+    margin-top auto
+
+.review-item__cart
+  position relative
+  margin-left 16px
+  height 100%
+  border-left: 1px solid #E1E0E9
+  display flex
+  flex-direction: column
+  align-items center
+  padding-top 12px
+  max-width: 228px
+  width 100%
+  flex-grow: 1
+  padding-bottom 24px
+  +max(tablet)
+    border-right none
+    margin-left 0
+    flex-direction: row-reverse
+    width 100%
+    padding-top 16px
+    padding-left 22px
+    border-left none
+    max-width: 100%;
+  &::before
+    content ''
+    position absolute
+    top 32px
+    left -15px
+    background-image url('/frontend/images_new/tr.svg')
+    background-repeat no-repeat
+    width 16px
+    height 18px
+    +max(tablet)
+      display none
+  .product-item__img
+    max-width 136px
+    margin-bottom 0
+    +max(tablet)
+      margin-left auto
+    img
+      height auto
+      width 100%
+  .wrap-rating-star
+    justify-content center
+    +max(tablet)
+      justify-content flex-start
+  .product-item__price
+    width 100%
+    text-align center
+    margin-top 7px
+    +max(tablet)
+      text-align left
+
+.review-item__text
+  +max(tablet)
+    margin-bottom 25px
+
+.sl-top-item
+  +min(sMobile)
+    padding-right 3px
+  .block-info__title
+  .block-info__text
+    color #fff
+
+.sl-top
+  .block-info__img
+    // position absolute
+    position static
+    top 0
+    right -1px
+    height 100%
+    text-align: center;
+    +max(sMobile)
+      right 0
+      height auto
+    img
+      height 100%
+      border-radius: 20px
+      +max(sMobile)
+        height auto
+        width 100%
+  a
+    display block
+    width 100%
+    text-align center
+
+.sl-top
+  max-width: 588px
+  width 588px
+  &&--hard
+    max-width: 100%;
+    width: 100%;
+  flex 1 0 auto
+  // width 100%
+  margin-right 24px
+  overflow hidden
+  +max(tablet)
+    max-width: 66%
+    width 100%
+  +max(mobile)
+    max-width 100%
+    width 100%
+    margin-right 20px
+
+  +max(mobile)
+    max-width 100%
+  +max(sMobile)
+    max-width: 100vw
+    width 100vw
+    margin-left -18px
+  .block-info
+    padding-left 24px
+    padding-right 24px
+    padding 0
+    +max(tablet)
+      padding-left 16px
+      padding-top 16px
+      padding 0
+    +max(sMobile)
+      border-radius: 0
+    &.sl-item
+      +max(sMobile)
+        height auto !important
+        min-height: inherit
+  .block-info__title
+    max-width 70%
+    +max(tablet)
+      max-width: 264px
+    +max(sMobile)
+      max-width: 100%
+  .block-info__text
+    +max(tablet)
+      max-width: 258px
+    +max(sMobile)
+      max-width: 100%
+  .wrap-nav
+    position absolute
+    bottom: 25px
+    right: 13px
+    width: 128px
+    height 50px
+    +max(mobile)
+      display none
+  .wrap-pag
+    position absolute
+    bottom 37px
+    right 16px
+    z-index 1
+    +max(sMobile)
+      right 47px
+    +min(mobile)
+      display none
+    .swiper-pagination
+      position static
+    .swiper-pagination-bullet
+      border-color #fff
+      &::before
+        background-color #fff
+
+
+.sl-top .sl-item .block-info__img
+  a
+    display block
+    width 100%
+    text-align center
+
+.block-top
+  display flex
+  justify-content space-between
+  +max(mobile)
+    display block
+  .sl-item
+    min-height: 356px
+    +max(tablet)
+      min-height: auto
+    +max(mobile)
+      min-height: 270px
+
+.sl-sidebar
+  // width 100%
+  width calc(100% - 588px - 24px)
+  flex-shrink: 1
+  // overflow inherit
+  overflow hidden
+  height 100%
+  +max(tablet)
+    width 32%
+    flex-grow: 1
+    flex-shrink: 0
+  +max(mobile)
+    width 100%
+    max-width: 284px
+    max-width: 100%
+    margin-top 20px
+  .sl-item
+    +max(mobile)
+      min-height: 356px;
+      // min-height: 200px
+  .sl-text
+    +max(sMobile)
+      margin-top 28px
+  .block-info
+    padding 24px
+    +max(tablet)
+      padding 16px
+  .block-info__title
+    font-size: 24px;
+    line-height: 28px;
+    +max(tablet)
+      font-size 20px
+      line-height 24px
+  .product-item
+    border-radius: 20px
+    border: 1px solid #E1E0E9
+    padding 10px 20px
+    +max(mobile)
+      display flex
+      // flex-direction: row-reverse
+      padding-left 16px
+      padding-top 16px
+  .wrap-sl-product
+    padding-right 0
+  .product-item__img
+    max-height: 158px
+    +min(mobile)
+      flex 1 0 auto
+    img
+      display block
+      margin 0 auto
+  .product-item__status
+    top 19px
+    left 19px
+    +max(mobile)
+      top 15px
+      left 16px
+  .wrap-sl-item
+    max-width 276px
+    // width 48%
+    width 276px
+    +between(mobile, tablet)
+      max-width 100%
+      width 100%
+    +max(mobile)
+      margin-right 20px
+      max-width: 286px
+    +max(660px)
+      width 286px
+    +max(sMobile)
+      max-width 275px
+      margin-right 8px
+    &:not(:first-child)
+      margin-left 24px
+      +max(mobile)
+        margin-left 0
+    &:not(:first-child)
+      +between(mobile, tablet)
+        display none
+
+
+.product-item__content-sl
+  display flex
+  flex-direction: column
+  flex 1 0 auto
+  +max(mobile)
+    padding-top 28px
+    padding-bottom 3px
+    display: flex
+    flex-direction: column
+    // max-width 135px
+    max-width 100%;
+  .product-item__bar
+    +max(mobile)
+      display none
+  .product-item__text
+    +max(mobile)
+      line-height 20px
+  .product-item__price
+    // font-size 28px
+    // line-height 28px
+    &::after
+      display block
+      position static
+      margin-top 5px
+      transform translateX(0)
+  .product-item__cart
+    +max(mobile)
+      // display none
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // transform: translate(0, -50%);
+      margin-top: 0;
+
++max(mobile)
+  .sl-sidebar
+    .product-item__content-sl
+      .product-item__cart
+        right: 0;
+        left: auto;
+
+
+.wrap-pag
+  .swiper-pagination
+    display flex
+  .swiper-pagination-bullet
+    opacity 1
+    max-width:  12px
+    width 12px
+    height 12px
+    border-radius: 50%
+    border 0px solid #E1E0E9
+    padding 3px
+    display flex
+    align-items center
+    justify-content center
+    background-color transparent
+    margin 0 3px
+    &::before
+      content ''
+      display block
+      max-width 6px
+      width 6px
+      height 6px
+      background-color #E1E0E9
+      border-radius: 50%
+      flex 1 0 auto
+  .swiper-pagination-bullet-active
+    border-width: 1px
+    background-color transparent
+
+.custom-nav
+  max-width 48px
+  width 100%
+  height 48px
+  border-radius: 50%
+  display flex
+  align-items center
+  justify-content center
+  background-color #fff
+  svg
+    width 18px
+    height 18px
+  &::after
+    display none
+
+.block-info.block-info_sidebar
+  padding 0
+  position relative
+  +max(tablet)
+    padding 0
+  &>*
+    position relative
+    z-index 2
+  .block-info__img
+    position static
+    bottom 0
+    right 0
+    z-index 1
+    max-height 100%
+    // height 19vw
+    height 100%
+    border-radius: 20px;
+    overflow: hidden;
+    +max(tablet)
+      // height 184px
+      height 100%
+    // +max(mobile)
+    //   display none
+    a
+      display block
+      width 100%
+      text-align right
+      +max(mobile)
+        // max-height 202px
+        height 100%
+    img
+      width auto
+      height 100%
+      +max(mobile)
+        width 100%
+        height 100%
+        object-fit: contain
+
+.breadcrumbs
+  padding-top 38px
+  padding-bottom 26px
+  +max(tablet)
+    padding-top 38px
+    padding-bottom 26px
+  +max(mobile)
+    padding-top 38px
+    padding-bottom 26px
+  +max(sMobile)
+    padding-top 38px
+    padding-bottom 26px
+  span
+    font-size: 13px
+    line-height: 18px
+    padding-bottom 3px
+    color #2D2841
+    border-bottom 1px solid transparent
+
+  a
+    border-bottom 1px solid #2D2841
+    font-size: 13px
+    line-height: 18px
+    padding-bottom 3px
+    color #2D2841
+  & > span
+    &:not(:last-child)
+      margin-right 9px
+
+.width_min
+  max-width: 800px
+  width 100%
+
+.page-content
+  position relative
+  z-index 2
+  & > .wrap-block:first-of-type
+    margin-top 0
+
+.wrap-title-page
+  margin-bottom 25px
+
+.img-p-m
+  margin 24px 0 33px
+
+.page-offer
+  .block-content
+    padding-left 8.5%
+    +max(sMobile)
+      padding-left 0
+
+.pag-line_mod
+  margin-top 47px
+  margin-bottom 146px
+  +max(tabletLarge)
+    margin-bottom 100px
+  +max(sMobile)
+    margin-bottom 60px
+  .pag
+    display flex
+    align-items center
+    justify-content center
+    min-height: 47px
+    flex-wrap: wrap
+  .pag-number
+    margin 0 3px
+    line-height 28px
+    color #9B98AC
+    max-width: 45px
+    width 45px
+    height 45px
+    flex 1 0 auto
+    align-items center
+    justify-content center
+    display flex
+    position relative
+    transition $trans
+    &::before
+      content: ''
+      position absolute
+      z-index -1
+      width 100%
+      height 100%
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      border-radius: 50%
+      transition $trans
+    &.active
+      color #fff
+      &::before
+        background-color #2D2841 !important
+    &:hover
+      &:before
+        background-color #EBEDEF
+    &.pag-number_sep
+      &::before
+        background-color transparent !important
+
+  .pag-prev
+    margin-right 8px
+    svg
+      transform scale(-1,1)
+  .pag-next
+    margin-left 8px
+  .pag-arr-nav
+    max-width 20px
+    width 20px
+    height 20px
+    padding 3px
+    flex 1 0 auto
+    align-items center
+    justify-content center
+    display flex
+    svg
+      fill #9B98AC
+
+.wrapper-page
+  &.page-title-center
+    .wrap-title-page
+      text-align center
+
+.link-to-catalog
+  font-weight: bold;
+  color: red;
+.hide-mobile
+  +max(tabletLarge)
+    display: none;
+.mobile-cat-wrapper
+  display: none;
+  +max(tablet)
+    display: block;
+    text-align: center;
+    max-width: 82px;
+    font-size: 12px;
+    margin-top: 20px;
+  .mobile-cat
+      display: inline-flex;
+      background-color: #EF182F;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px;
+      .cat-icon
+        height: 30px;
+        width: 30px;
+        margin: 9px auto;
+        fill: #fff;
+.catalog-item
+  &.sl-item
+    +max(tablet)
+      display: none;
+.product-item.-mod-cart
+  .sl-text
+    min-height: 64px;
+    text-decoration: none;
++min(tabletLarge)
+  .product-item.-mod-cart
+    &:hover
+      .sl-text
+        -webkit-line-clamp: unset;
+      .product-item__status
+        display: none;
+
+    .product-item__reviews
+      opacity 0
+      visibility: hidden
+      display: none;
+      transition: .55s opacity, .55s visibility
+    .product-item__img
+      height 100%
+      max-height 232px
+      min-height 232px
+      margin-bottom 32px
+      transition: .55s
+      width: 100%
+
+  .product-item__sub-img
+    position absolute
+    top 0
+    left 0
+    display flex
+    flex-direction column
+    opacity 0
+    visibility: hidden
+    transition: .55s opacity, .55s visibility
+    .-item
+      max-width 30px
+      width 100%
+      height 30px
+      display flex
+      justify-content center
+      align-items center
+      cursor pointer
+      border 0.5px solid #E1E0E9
+      border-radius 3px
+      &:not(:first-child)
+        margin-top 8px
+
+    img
+      width 100%
+      height 100%
+      object-fit contain
+
+  .product-item__details
+    font-size 13px
+    line-height 22px
+    height 24px
+    overflow hidden
+    opacity 0
+    visibility: hidden
+    transition: .3s opacity, .3s visibility, .55s height
+    ul
+      padding-left 18px
+      li
+        &::before
+          background-color #2d2841
+          background-image url('')
+          border-radius 50%
+          width 4px
+          height 4px
+          left -12px
+          top 10px
+        &:not(:last-child)
+          margin-bottom 2px
+
+  .product-item.-mod-cart:hover
+    // .product-item__img
+    //   max-height 132px
+    //   margin-bottom: 19px
+    .product-item__details
+      opacity: 1
+      visibility: visible
+      height 118px
+    .product-item__sub-img
+    .product-item__reviews
+      opacity: 1
+      display: block;
+      visibility: visible
+
++max(tabletLarge)
+  .product-item__details
+  .product-item__sub-img
+    display none
+
++between(sMobile, mobile)
+  .product-item.-mod-cart
+    .product-item__cart
+      left auto
+      right 0
+.sl-brands
+  .swiper-slide
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 148px;
+    padding: 15px;
+    a
+      display: block;
+      margin-bottom: 6px;
+.container
+  .container
+    padding: 0;
+  .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon
+    height: 36px;
+    width: 36px;
+    background-size: 36px 36px;
+  .ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item
+    &:before
+      content: none;

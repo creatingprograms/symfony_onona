@@ -1,0 +1,1 @@
+<a href="/product/<?=$senduser->getProduct()->getSlug();?>"><?=$senduser->getProductId()?></a>

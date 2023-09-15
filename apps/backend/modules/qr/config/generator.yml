@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           QrRedirects
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          qrredirects
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        shop:
+          label: Магазин
+        shop_id:
+          label: Магазин
+        type:
+          label: Тип
+        created_at:
+            label: Дата создания
+      list:
+        title: Переходы на отзывы
+        display: [ created_at, type, _shop_id ]
+      filter:
+        display: [ type, created_at, _filter_shop_id, _download]
+      form:
+        display:
+          Основная информация: [type, shop_id, created_at ]
+      edit:
+        title: Редактирование перехода "%%name%%"
+      new:
+        title: Создание нового перехода

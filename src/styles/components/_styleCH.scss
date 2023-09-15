@@ -1,0 +1,41 @@
+.styleCH {
+  left: -30000px;
+  position: absolute;
+  &:checked + label::before {
+    background-position: 50% 50%;
+  }
+  & + label {
+    @extend %noUserSelect;
+    cursor: pointer;
+    padding-left: 25px;
+    position: relative;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      content: ' ';
+      display: block;
+      position: absolute;
+      border: 1px solid #d3d3d3;
+      background: #fff url('/frontend/images/check.svg') no-repeat 50% 400%;
+      background-size: 90% auto;
+    }
+    &.hasError{
+      &::before {
+        border: 1px solid red;
+      }
+
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    & + label {
+      padding-left: 45px;
+      &::before {
+        top: -3px;
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+}

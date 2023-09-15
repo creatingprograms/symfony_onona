@@ -1,0 +1,1781 @@
+.for-newbies
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: white;
+  height: 80px;
+  background: url('/frontend/images/main_newby.jpg');
+  line-height: 76px;
+  font-size: 40px;
+.-isNav
+  &.fixed-head
+    .header-wrap
+      top: 0;
+      position: fixed;
+      width: 100%;
+      background: #fff;
+.-forNewbie
+  h2
+    font-size: 21px;
+    line-height: normal;
+  h3
+    font-size: 18px;
+    line-height: normal;
+    +max(tablet)
+      font-size: 16px;
+.aside_changer
+  display: flex;
+  flex-direction: column;
+  .first
+    order: -1;
+    margin-bottom: 40px;
+    .form-group-block-price
+      margin-top: 0;
+.blured
+  .product-features__full
+    filter: blur(10px);
+  .product-item__img
+    img
+      filter: blur(10px);
+a.strong
+  font-weight: bold;
+.catalog-list
+  display flex
+  justify-content space-between
+  flex-wrap: wrap
+  .catalog-item
+    max-width: 49%
+    width 49%
+    flex 1 0 auto
+    +max(mobile)
+      flex-direction: column
+    +max(sMobile)
+      max-width: 100%
+      width 100%
+    &:not(:nth-child(-n+2))
+      +min(sMobile)
+        margin-top 38px
+    &:not(:first-child)
+      +max(sMobile)
+        margin-top 30px
+
+.catalog-item__img
+  border-radius: 20px
+  overflow hidden
+  margin-right 4.5%
+  flex 1 0 auto
+  max-width 148px
+  // width 100%
+  +max(tablet)
+    max-width 100px
+  +max(mobile)
+    margin-right 0
+    margin-bottom 20px
+  img
+    border-radius: 20px
+    overflow hidden
+
+.catalog-item.catalog-item_mod
+  background-color transparent
+  display flex
+  align-items flex-start
+  justify-content: center;
+  .catalog-item__img
+    position static
+  .catalog-item__content
+    padding 0
+    padding-top 4px
+    width: 100%;
+    +min(tabletLarge)
+      max-width: 324px
+  .catalog-item__title
+    width 100%
+    max-width: 100%
+    margin-bottom 21px
+    background-repeat: no-repeat;
+    background-position: 94% center;
+    background-color: #efecec;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 26px;
+    height: 117px;
+    padding-left: 30px;
+    padding-right: 110px;
+    border-radius: 20px;
+.catalog-item__link
+  display flex
+  align-items baseline
+  line-height 32px
+  padding: 0  25px;
+  +max(tabletLarge)
+    flex-direction column
+  &:not(:last-child)
+    margin-bottom 7px
+  a
+    line-height 24px
+  span
+    font-size 12px
+    line-height 24px
+    color #616C7C
+    margin-left 10px
+    flex 1 0 auto
+    +max(tabletLarge)
+      margin-left 0
+    +max(sMobile)
+      display: none;
+
+.block-content_catalog
+  +min(mobile)
+    display flex
+    justify-content space-between
+
+.sidebar-mob-but
+  display flex
+  align-items center
+  font-size 15px
+  line-height 28px
+  font-weight 500
+  margin-bottom 15px
+  cursor pointer
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  +min(mobile)
+    display none
+  svg
+    max-width 18px
+    width 100%
+    height 18px
+    flex 1 0 auto
+    margin-top 5px
+    margin-right 5px
+
+.wrap-form-catalog__mob
+  display flex
+  align-items center
+  justify-content space-between
+  border-bottom: 1px solid #E1E0E9
+  padding-bottom 20px
+  margin-bottom 30px
+  .btn-close
+    max-width 16px
+    width 100%
+    height 16px
+    flex 1 0 auto
+    cursor pointer
+  +min(mobile)
+    display none
+
+.form-catalog__title-mob
+  font-size 20px
+  line-height 28px
+  font-weight 500
+
+.sidebar-filter
+  max-width 260px
+  width 100%
+  flex 1 0 auto
+  margin-right 42px
+  +max(mobile)
+    position absolute
+    top 0
+    left 0
+    max-width: 100%
+    width 100%
+    height 100%
+    background-color rgba(5,5,5,0)
+    z-index -1
+    opacity 0
+    transition opacity 2s linear
+    &.active
+      z-index 120
+      opacity 1
+      background-color rgba(5,5,5,.7)
+      transition background-color 0.2s linear
+      height 100%
+  .form-catalog
+    +max(mobile)
+      max-width 320px
+      padding 20px
+      width 100%
+      background-color #fff
+      transform: translateX(-100%)
+      height 100%
+      overflow-y auto
+  &.brands
+    margin-bottom: 20px;
+    .h3
+      font-size: 26px;
+      margin-bottom: 20px;
+    +max(tablet)
+      display: none;
+
+.sidebar-filter.active
+  .form-catalog
+    transform: translateX(0)
+    transition transform 0.3s linear
+    transition-delay .2s
+
+.form-catalog__title
+  font-size 20px
+  line-height 26px
+  font-weight 500
+
+.form-group__title
+  font-weight 500
+  display flex
+  align-items center
+  justify-content space-between
+  cursor pointer
+  &.active
+    .btn-form-group
+      transform rotate(-90deg)
+      svg
+        fill #EF182F
+
+.btn-form-group
+  transform rotate(90deg)
+  max-width 16px
+  width 16px
+  height 16px
+  flex 1 0 auto
+  padding 2px
+  display flex
+  align-items center
+  justify-content center
+  svg
+    fill #9993B2
+
+
+.form-group-block
+  margin-top 23px
+  .custom-check_label
+    font-size: 15px
+    line-height: 20px
+    color #616C7C
+    &.active
+      color: #2D2841;
+  .custom-check
+    &:not(:first-child)
+      margin-top 16px
+  .form-group__content
+    padding-top 24px
+    padding-bottom 8px
+  &.-mt
+    margin-top 36px
+
+.form-group-block_range
+  margin-top 40px
+
+.form-group-block.accordion
+  .form-group__content
+    display none
+
+.catalog-result
+  display flex
+  flex-wrap: wrap
+  margin-bottom: 30px
+  +max(tablet)
+    justify-content space-between
+  .product-item__text
+    margin-bottom 11px
+  .product-item__bar-bottom
+    margin-top auto
+    @media(max-width: 440px)
+      padding-bottom: 69px;
+      position: relative;
+      height: 108px;
+  .promotion-item
+    max-width 100%
+    width 100%
+
+
+.block-info
+  &.block-info_catalog
+    max-width 100%
+    width 100%
+    margin-top 41px
+    margin-bottom 23px
+    padding-left 24px
+    padding-right 24px
+    &.block-info_mob .block-info__img
+      right 106px
+    & > *
+      color #fff
+    .link-fill
+      color #2D2841
+
+.catalog-result
+  .product-item
+    width 100%
+    flex 1 0 auto
+    +min(tabletLarge)
+      max-width calc((100% / 3) - 40px)
+    +min(tablet)
+      max-width calc((100% / 3) - 25px)
+    +between(mobile,tablet)
+      max-width calc((100% / 2) - 25px)
+    +max(mobile)
+      max-width: 48%;
+      margin-bottom: 20px;
+    &:not(:nth-child(3n+3))
+      +min(tabletLarge)
+        margin-right 5.93%
+      +min(tablet)
+        margin-right 5%
+    &:not(:nth-child(2n+2))
+      +between(mobile,tablet)
+        margin-right 5.93%
+    &:not(:nth-child(-n+3))
+      +min(tabletLarge)
+        margin-top 30px
+    &:not(:nth-child(-n+2))
+      +max(tablet)
+        margin-top 30px
+  .product-item__price::after
+    +between(sMobile, desktop)
+      display block
+      position static
+      transform: translateX(0)
+  .product-item__bar
+    +max(sMobile)
+      display block
+
+.custom-check_color
+  &.active
+    label
+      color #2D2841
+
+.form-group__content.tag
+  display flex
+  flex-wrap: wrap
+  margin -12px -6px 0
+  .custom-tag-set
+    margin 12px 6px 0
+
+.sorting-type__label
+  display flex
+  cursor pointer
+  transition $trans
+  &:hover
+    color #EF182F
+    svg
+      stroke #EF182F
+  svg
+    margin-left 5px
+    margin-top 4px
+    max-width 12px
+    width 100%
+    height 12px
+    flex 1 0 auto
+    stroke #2D2841
+    transition $trans
+
+.sorting-type
+  input
+    position absolute
+    z-index -1
+    opacity 0
+  input[type="radio"]:checked ~ label
+    color #EF182F
+    svg
+      stroke #EF182F
+
+.form-sorting__title
+.sorting-type__label
+  font-size 14px
+  line-height 18px
+  font-weight 500
+  color #616C7C
+.form-sorting__title
+  @media(max-width: 767px)
+    display: none;
+
+
+.sorting-type__label
+  color #2D2841
+
+.form-sorting
+.sorting-block
+  display flex
+  align-items center
+  flex-wrap: wrap
+
+.form-sorting
+  justify-content space-between
+  border-bottom 1px solid #E1E0E9
+  padding-bottom 18px
+  margin-bottom 32px
+  position: relative;
+
+.sorting-type
+  @media(max-width: 767px)
+    width: 100%;
+  &:not(:last-child)
+    margin-right 24px
+
+.wrap-catalog-result
+  padding-top 8px
+  max-width: calc(100% - 308px);
+  @media(max-width: 767px)
+    max-width: 100%;
+.page-express
+  .wrap-catalog-result
+    max-width: 100%;
+.sl-sidebar
+  .product-item__status
+    &.-status-discount
+      @media(max-width: 767px)
+        top auto
+        left auto
+.product-item__status
+  &.-status-discount
+    top auto
+    left auto
+    right 0
+    bottom 0
+  &.-status-sets
+    @media(max-width: 765px)
+      top auto
+      left auto
+      span
+        font-size: 10px;
+  &.-status-order
+    top auto
+    bottom 0
+    @media(max-width: 767px)
+      top auto
+      left auto
+    span
+      background-color #BDBDBD
+  span
+    &.tinkoff_plate
+        background: #ffdd2d;
+        color: #333;
+        span
+          color: #333;
+          background: #ffdd2d;
+          +max(tablet)
+            display: none;
+
+.shadow-white_active
+  &::after
+    content ''
+    position absolute
+    top 0
+    right 0
+    width 176px
+    height 100%
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+    z-index 2
+    @media(max-width: 765px)
+      content: none;
+
+.catalog-cart
+  .title-page
+    font-size: 32px
+    line-height: 34px
+
+.status-bar-product
+  display flex
+  align-items center
+  justify-content space-between
+  padding-bottom 18px
+  border-bottom: 1px solid #E1E0E9
+  +max(tabletLarge)
+    justify-content flex-start
+    flex-wrap: wrap
+  +max(sMobile)
+    border-bottom: none
+    display block
+  .column
+    display flex
+    align-items center
+    max-width 50%
+    width 100%
+    flex 1 0 auto
+    +max(tabletLarge)
+      flex 0 1 auto
+      max-width: inherit
+      width auto
+    &:last-child
+      justify-content flex-end
+      +max(tabletLarge)
+        justify-content flex-start
+      +max(sMobile)
+        margin-top 12px
+      .status-block-item
+        margin-left 41px
+        +max(tabletLarge)
+          margin-left 0
+          margin-right 25px
+        +max(sMobile)
+          margin-right 20px
+
+.status-block-item
+  display flex
+  align-items center
+  &:not(:first-child)
+    margin-left 25px
+    +max(tabletLarge)
+      margin-right 25px
+    +max(sMobile)
+      margin-left 20px
+      margin-right 0
+  .rating-star
+    max-width 16px
+    width 16px
+    height 16px
+    background-size contain
+    &:not(:last-child)
+      margin-right 1px
+  .product-item__reviews
+    font-size 14px
+    line-height 18px
+    color #2D2841
+    margin-left 8px
+  svg
+    max-width 20px
+    width 100%
+    height 20px
+    flex 1 0 auto
+  span
+    +max(sMobile)
+      font-size: 14px
+      line-height: 18px
+
+.wrap-block.wrap-block-features
+  margin-top 46px
+  +max(tabletLarge)
+    margin-top 40px
+  .block-content
+    display flex
+    justify-content space-between
+
+
+.wrap-double-slider
+  display flex
+  justify-content flex-start
+  align-items flex-start
+  +max(mobile)
+    flex-direction: column-reverse
+
+.product-features
+  display flex
+  justify-content space-between
+  +max(tabletLarge)
+    margin-bottom 36px
+  +max(mobile)
+    margin-bottom 32px
+  .gallery-top
+    max-width 376px
+    width 100%
+    +max(tabletLarge)
+      max-width: 42vw
+    +max(mobile)
+      max-width: 476px
+      margin 0 auto
+  .gallery-thumbs
+    margin-left 0
+    max-width 78px
+    width 100%
+    flex 1 0 auto
+    margin-right 20px
+    margin-top 30px
+    height 310px
+    +max(tabletLarge)
+      margin-top 20px
+    +max(mobile)
+      max-width: 376px
+      margin-top 11px
+      margin-left auto
+      margin-right auto
+      height auto
+    +max(sMobile)
+      margin-top 27px
+    .swiper-slide
+      cursor pointer
+  .product-features__full
+    width 376px
+    height 368px
+    display block
+    background-position 50% 50%
+    background-repeat no-repeat
+    background-size: contain;
+    +max(tabletLarge)
+      width 42vw
+    +max(mobile)
+      width 100%
+    +max(sMobile)
+      height 59vw
+  .product-features__thumbs
+    width 76px
+    height 76px
+    border: 1px solid transparent
+    border-radius: 8px
+    background-position 50% 50%
+    transition $trans
+    background-size: contain
+    &:hover
+      border-color #E1E0E9
+
+.swiper-slide-thumb-active
+  .product-features__thumbs
+    border-color #E1E0E9
+
+.wrap-double-slider
+  position relative
+  padding-top 34px
+  +max(mobile)
+    width 100%
+  +max(sMobile)
+    padding-top 0
+  .swiper-button-next
+    top auto
+    bottom -15px
+    +max(tabletLarge)
+      bottom -9px
+    +max(mobile)
+      display none
+  .swiper-button-prev
+    bottom auto
+    top 11px
+    +max(tabletLarge)
+      top 3px
+    +max(mobile)
+      display none
+  .swiper-button-grey
+    right auto
+    left 23px
+    padding 3px
+    &::after
+      display none
+    svg
+      stroke #9993B2
+
+.specifications__list
+  max-width 261px
+  +max(tabletLarge)
+    max-width: 282px
+  +max(mobile)
+    display none
+
+.specifications__item
+  border-bottom: 1px dashed #E1E0E9
+  padding-bottom 11px
+  display flex
+  justify-content space-between
+  &:not(:first-child)
+    margin-top 20px
+  &--no_border
+    border-bottom: hidden;
+  span
+    font-size: 14px
+    line-height: 18px
+    color #2D2841
+    &:first-child
+      color #616C7C
+      padding-right: 8px;
+    &:last-child
+      text-align right
+    .specifications__item--description
+      cursor: pointer;
+      padding-right: 0;
+      display: inline-block;
+      height: 19px;
+      width: 19px;
+      text-align: center;
+      border: 1px dotted #ccc;
+      border-radius: 50%;
+  .video-review
+    color: #EF182F
+    font-size: 14px;
+    &::before
+      content: '';
+      display: inline-block;
+      height: 16px;
+      width: 14px;
+      background: url('/frontend/images_new/video.svg') no-repeat center;
+      vertical-align: middle;
+      margin-right: 14px;
+
+.product-sidebar
+  max-width 276px
+  width 100%
+  margin-left 20px
+  display none
+  +min(tabletLarge)
+    display block
+  &.purchase-card_fixed
+    +min(tabletLarge)
+      display none
+
+.purchase-card
+  border-radius: 8px
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05)
+  width 100%
+  padding 24px 0
+  .wrap
+    padding 0 24px
+    &:last-child
+      border-top 1px solid #E1E0E9
+      margin-top 25px
+      padding-top 22px
+      +max(mobile)
+        margin-top: 0;
+        padding-bottom: 25px;
+
+  .product-item__price
+    font-weight 500
+    font-size: 32px
+    line-height: 34px
+    &::after
+      font-weight 400
+      color #616C7C
+  .btn-full
+    margin-top 12px
+  .btn-chosen
+    display flex
+    align-items center
+    max-width: 100%
+    width 100%
+    height auto
+    justify-content center
+    margin-top 23px
+    font-weight: 500
+    font-size: 14px
+    line-height: 18px
+    +max(sMobile)
+      margin-top 26px
+    svg
+      max-width 20px
+      width 20px
+      height 20px
+    span
+      margin-left 8px
+
+.purchase-card__bonus
+  font-size: 14px
+  line-height: 26px
+  color #EF182F
+  margin-top 7px
+  margin-bottom 24px
+  &.icon-bonus
+    &::before
+      content: '';
+      display: inline-block;
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      background: #EF182F url('/frontend/images_new/gift-card_white.svg') no-repeat center;
+      margin-right: 4px;
+      vertical-align: bottom;
+
+.product-for-him-bar
+  background: #E04858
+  border-radius: 3px
+  color: #FFF
+  display: block
+  margin: 0 0 5px
+  padding: 3px 5px
+  text-align: center
+  transition: 0.2s
+  &:hover
+    background: #CC4E5C
+    color: #FFF
+.purchase-card_fixed
+  .product-for-him-bar
+    margin: -58px -21px 58px -27px
+
+.btn-full
+  background-color #EF182F
+  border-radius: 8px
+  border 1px solid #EF182F
+  color #fff
+  font-weight 500
+  display flex
+  align-items center
+  justify-content center
+  padding 12px 22px
+  cursor pointer
+  transition $trans
+  &:hover
+    background-color #fff
+    border-color: #E1E0E9
+    color #616C7C
+  &_white
+    background-color #fff
+    border-color: #E1E0E9
+    color #616C7C
+  &_gray
+    background-color #F3F4F5
+    border-color: #F3F4F5
+    color #616C7C
+  &_white
+  &_gray
+    &:hover
+      background-color #EF182F
+      border 1px solid #EF182F
+      color #fff
+  &_rad
+    border-radius: 50px
+  &_small
+    font-size: 14px;
+
+.purchase-card__receive
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 18px
+  &.--tinkoff
+    background-color #ffdd2d
+    border-radius 8px
+    align-items center
+    justify-content center
+    padding 12px 22px
+    transition .3s ease
+    span
+      display block
+      width 100%
+      text-align center
+  span
+    font-size 14px
+    line-height 18px
+    font-weight 500
+  svg
+    max-width: 20px
+    width 20px
+    height 20px
+
+.purchase-card__item
+  display flex
+  &:not(:first-child)
+    margin-top 12px
+  span
+    font-size: 14px
+    line-height: 18px
+    color #616C7C
+    &:last-child
+      color #EF182F
+      margin-left 6px
+  &.-status
+    a
+      color #EF182F
+      margin-left 6px
+      font-size: 14px
+      line-height: 18px
+      text-decoration underline
+
+.purchase-card_fixed
+  display flex
+  border 1px solid #E1E0E9
+  padding 0
+  justify-content space-between
+  +max(600px)
+    display block
+  +min(tabletLarge)
+    display none
+  .wrap
+    &:nth-child(1)
+      padding 31px
+      padding-right 0
+      flex-grow: 1
+      +max(mobile)
+        padding 23px
+        padding-bottom 32px
+      .wrap-btn
+        display flex
+        flex-wrap: wrap
+    &:nth-child(2)
+      max-width: 284px
+      width 100%
+      flex 1 0 auto
+      border-top none
+      border-left: 1px solid #E1E0E9
+      margin-top 0
+      padding 30px 26px 32px
+      +max(mobile)
+        max-width: 254px
+        padding-right 20px
+      +max(600px)
+        max-width: 100%
+        border-left: none
+        border-top: 1px solid #E1E0E9
+        padding-bottom 24px
+  .btn-full
+    +max(mobile)
+      max-width: 246px
+      width 100%
+    &:not(:last-child)
+      margin-right 16px
+      +max(600px)
+        margin-right 0
+  .purchase-card__bonus
+    margin-bottom 12px
+  .btn-chosen
+    justify-content flex-start
+  .purchase-card__receive
+    margin-bottom 36px
+    +max(mobile)
+      margin-bottom 14px
+    svg
+      +max(mobile)
+        display none
+
+.sticky
+  position: fixed
+  z-index: 101
+
+.stop
+  position: relative
+  z-index: 101
+
+
+.features-tabs
+  margin-top 62px
+  +max(tabletLarge)
+    margin-top 49px
+  +max(sMobile)
+    margin-top 31px
+
+.features-tabs__title
+  display flex
+  border-bottom 1px solid #E1E0E9
+  +max(mobile)
+    overflow-x scroll
+    overflow-y hidden
+    width 100vw
+    margin-left -25px
+    padding-left 25px
+    padding-bottom 30px
+    position relative
+    z-index 1
+  &::after
+    +max(mobile)
+      content ''
+      position absolute
+      bottom 29px
+      left 25px
+      width 120vw
+      height 1px
+      background-color #E1E0E9
+      z-index 1
+  .features-tab__title
+    font-weight 500
+    position relative
+    padding-bottom 16px
+    cursor pointer
+    transition $trans
+    +max(mobile)
+      flex 1 0 auto
+      z-index 2
+    &:not(:last-child)
+      margin-right 3%
+      +max(mobile)
+        margin-right 24px
+    &:last-child
+      +max(mobile)
+        padding-right 25px
+    &:after
+      content ''
+      position absolute
+      left 0
+      bottom -1px
+      height 1px
+      width 100%
+      transition $trans
+    &.active
+    &:hover
+      color #EF182F
+      &:after
+        background-color #EF182F
+
+.features-tabs__content
+  +max(mobile)
+    background-color #fff
+    margin-top -30px
+    width 100vw
+    margin-left -25px
+    padding 0 25px
+    position relative
+    z-index 2
+  +max(sMobile)
+    margin-left -18px
+    padding 0 18px
+
+
+.features-tab__content
+  padding-top 38px
+  +max(tabletLarge)
+    max-width 740px
+  +max(sMobile)
+    padding-top 31px
+  .list-doc
+    padding-top 10px
+  .doc-item
+    &:not(:nth-child(-n+2))
+      margin-top 30px
+
+.tab__content
+  &:not(.active)
+    display none
+
+
+.catalog-cart
+  .features-tabs__title
+    .hide-desktop
+      display: none;
+      +max(mobile)
+        display: block;
+        padding-bottom: 25px;
+        margin-bottom: 17px;
+        border-bottom: 1px solid #e1e0e9;
+        &:last-of-type
+          border: hidden
+    +max(mobile)
+      padding-bottom 30px
+      position relative
+      z-index 1
+      flex-wrap: wrap;
+      overflow: hidden;
+      &:after
+        content: none;
+    .features-tab__title
+      +max(mobile)
+        flex 1 0 auto
+        z-index 2
+        width: 100%;
+        margin-bottom: 14px;
+        &::before
+          content '';
+          position absolute;
+          bottom 17px;
+          right: 0;
+          left: auto;
+          width 20px;
+          height 20px;
+          background: url('/frontend/images_new/arr.svg') center;
+          transform: rotate(90deg);
+          z-index 1;
+      &:not(:last-child)
+        margin-right 3%
+        +max(mobile)
+          margin-right: 0
+      &:after
+        content ''
+        position absolute
+        left 0
+        bottom -1px
+        height 1px
+        width 100%
+        transition $trans
+        +max(mobile)
+          background-color: #E1E0E9;
+      &.active
+        +min(mobile)
+          color #EF182F;
+        +max(mobile)
+          &::before
+            transform: rotate(-90deg);
+        &:after
+          background-color #EF182F
+          +max(mobile)
+            background-color: transparent;
+      &:hover
+        &:after
+          background-color #EF182F;
+          +max(mobile)
+            background-color: #E1E0E9;
+
+  // .features-tabs__content
+  //   +max(mobile)
+  //     background-color #fff
+  //     margin-top -30px
+  //     width 100vw
+  //     margin-left -25px
+  //     padding 0 25px
+  //     position relative
+  //     z-index 2
+  //   +max(sMobile)
+  //     margin-left -18px
+  //     padding 0 18px
+
+  /*.features-tab__content
+    +max(tabletLarge)
+      max-width 740px
+    +max(sMobile)
+      padding-top 31px
+    .list-doc
+      padding-top 10px
+    .doc-item
+      &:not(:nth-child(-n+2))
+        margin-top 30px*/
+
+  .tab__content
+    +max(mobile)
+      display none
+
+
+.doc-item
+  max-width 276px
+  width 100%
+  display inline-block
+  vertical-align top
+  margin-right 2.5%
+
+.doc-item__img
+  background-color #F3F4F5
+  border-radius: 8px
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 212px
+  margin-bottom 15px
+
+.doc-item__type
+  color #EF182F
+  font-size: 13px
+  line-height: 20px
+
+.file-type-svg
+  max-width 64px
+  width 100%
+  height 64px
+
+.block-overall-rating
+  display flex
+  max-width 485px
+  width 100%
+  margin-top: 8px
+  margin-left: 26.6%
+  margin-bottom 65px
+  +max(mobile)
+    margin-left auto
+    margin-right auto
+    display block
+  .column
+    &:first-child
+      flex 1 0 auto
+      padding-top 25px
+      margin-right 13%
+      max-width: 100%
+      +max(mobile)
+        margin-bottom 10px
+        margin-top 0
+  .btn-full
+    border-radius: 50px
+    max-width 236px
+    margin-top 10px
+    +max(sMobile)
+      margin-top 20px
+  .rating-star
+    max-width 21px
+    width 21px
+    height 21px
+    background-size contain
+    &:not(:last-child)
+      margin-right 2px
+
+.rating-number
+  margin-bottom 14px
+  span
+    vertical-align bottom
+    display inline-block
+    color #616C7C
+    font-weight: 500
+    font-size: 18px
+    line-height: 1
+    &:first-child
+      font-size: 42px
+      line-height: 34px
+      color #EF182F
+
+.list-reviews
+  padding-right 3%
+  +max(tabletLarge)
+    padding-right 0
+  .review-item
+    display block
+    border 1px solid #E1E0E9
+    border-radius: 8px
+    box-shadow: 0px 0px 20px 2px rgba(95, 95, 95, 0.1)
+    &:not(:first-child)
+      margin-top 15px
+    .review-item__top
+      display flex
+      justify-content space-between
+      align-items center
+      border-bottom: 1px solid #E1E0E9
+      padding 23px 30px 14px
+    .column
+      &:first-child
+        display flex
+        align-items center
+    .review-item__name
+      margin-right 10px
+    .rating-star
+      &:not(:first-child)
+        margin-left 1px
+    .review-item__bottom
+      padding 24px 30px
+    .review-item__content
+      overflow hidden
+      height auto
+      transition .2s
+      &.show
+        max-height: 2000px !important
+    .btn-show-more
+      margin-top 26px
+      display none
+
+.btn-show-more
+  cursor pointer
+  display flex
+  align-items center
+  span
+    font-weight 500
+    margin-right 4px
+  svg
+    transform rotate(90deg)
+    max-width 16px
+    width 16px
+    height 16px
+    padding 2px
+  &.active
+    svg
+      transform rotate(-90deg)
+
+.list-reviews + .wrap-btn
+  padding-right 3%
+  margin-top 33px
+  +max(tabletLarge)
+    padding-right 0
+
+.catalog-feedback
+  padding-top 65px
+  padding-right 3%
+  +max(tabletLarge)
+    padding-right 0
+  h2
+  .h2
+    margin-bottom 25px
+  .wrap-rating-star
+    margin-bottom 25px
+  .rating-star
+    max-width 20px
+    width 20px
+    height 20px
+    background-size contain
+    cursor pointer
+    &:not(:last-child)
+      margin-right 2px
+  .wrap-btn
+    margin-top 38px
+
+.table-shop
+  border 1px solid #E1E0E9
+  margin-right 3%
+  margin-top 8px
+  +max(tabletLarge)
+    margin-right 0
+  .col
+    width 100%
+    flex 1 0 auto
+    &:nth-child(1)
+      max-width 38%
+    &:nth-child(2)
+      max-width 17%
+    &:nth-child(3)
+      max-width 24%
+    &:nth-child(4)
+      max-width 21%
+      +max(mobile)
+        max-width 152px
+    &:nth-child(1)
+    &:nth-child(2)
+    &:nth-child(3)
+      +max(mobile)
+        max-width: 100%
+        margin-bottom 15px
+  .btn-full
+    border-radius: 32px
+    padding-left 0
+    padding-right 0
+  & + .wrap-btn
+    margin-top 31px
+    padding-right 3%
+    +max(tabletLarge)
+      padding-right 0
+
+.table-shop__th
+  font-size: 13px
+  line-height: 18px
+  display flex
+  padding 18px 24px 12px
+  +max(mobile)
+    display none
+
+.table-shop__row
+  display flex
+  align-items center
+  border-top 1px solid #E1E0E9
+  padding 30px 24px 24px
+  +max(mobile)
+    display block
+    padding-bottom 30px
+
+.table-shop__st
+  font-weight: 500
+  position relative
+  padding-left 20px
+  margin-bottom 4px
+  &::before
+    content ''
+    position absolute
+    top 50%
+    left 0
+    border-radius: 50%
+    width 10px
+    height 10px
+    background-color #B033C5
+    transform: translateY(-50%)
+  img
+    position absolute
+    top 50%
+    left -5px
+    border-radius: 50%
+    width 20px
+    height 20px
+    transform: translateY(-50%)
+    border 1px solid #fff
+
+.table-shop__address
+  line-height 22px
+  color #616C7C
+
+.table-shop__status
+.table-shop__date
+  font-weight 500
+
+.table-shop__status
+  &.in-stock
+    color #EF182F
+
+.wrap-video
+  position relative
+  border-radius: 16px
+  overflow hidden
+  width 100%
+  background-color #000
+  height 410px
+  margin-top 48px
+  +max(tabletLarge)
+    margin-top 38px
+  +max(mobile)
+    height 350px
+  +max(sMobile)
+    margin-top 32px
+    background-color #fff
+    height 56vw
+  video
+    width 100%
+    height 100%
+    object-fit:fill
+  .btn-paly
+    background-color #fff
+    border-radius: 50%
+    width 56px
+    height 56px
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    cursor pointer
+    display flex
+    align-items center
+    justify-content center
+    z-index 1
+    svg
+      width auto
+      height auto
+      position relative
+      left 2px
+  .video-info
+    position absolute
+    bottom 24px
+    left 32px
+    width 90%
+    & > *
+      color #fff
+
+.wrap-best-offer
+  background-color #F3F4F5
+  padding 64px 0
+  +max(tabletLarge)
+    padding 40px 0
+  +max(tablet)
+    padding 32px 0
+
+.best-offer
+  background-color #fff
+  border-radius: 16px
+  overflow hidden
+  display flex
+  +max(mobile)
+    display block
+
+.best-offer__title
+  font-weight 400
+  margin-bottom 8px
+  &:not(.lead-text)
+    font-size 28px
+    line-height 28px
+    margin-bottom 16px
+    +max(tabletLarge)
+      font-size: 22px
+      line-height: 24px
+      margin-bottom 8px
+
+.best-offer__price
+  font-size 28px
+  line-height 28px
+  +max(tabletLarge)
+    font-size: 22px
+    line-height: 24px
+
+.best-offer__item
+  display flex
+  flex-direction: column
+  flex 1 0 auto
+  padding 33px 31px 41px
+  position relative
+  +max(tabletLarge)
+    padding 25px 21px 24px
+  +max(mobile)
+    padding-bottom 32px
+  &:not(:last-child)
+    border-right 1px solid #E1E0E9
+    +max(mobile)
+      border-bottom: 1px solid #E1E0E9
+      flex-direction: row-reverse
+      justify-content flex-end
+  &:nth-child(1)
+    max-width 49%
+    padding-right 12%
+    +max(tabletLarge)
+      max-width: 40.5%
+      padding-right 2%
+    .best-offer__price
+      color #EF182F
+    .best-offer__img
+      max-width: 320px
+      +max(mobile)
+        max-width: 106px
+        margin-right 4.7%
+    .best-offer__title
+      +max(mobile)
+        width 80%
+        margin-top 8px
+        font-size: 18px
+        line-height: 24px
+  &:nth-child(2)
+    max-width 25.5%
+    +max(tabletLarge)
+      max-width: 28%
+    .best-offer__img
+      max-width: 252px
+      +max(mobile)
+        max-width: 106px
+        margin-right 4.7%
+    .best-offer__title
+      +max(mobile)
+        margin-top 8px
+  &:nth-child(3)
+    max-width: 25.5%
+    +max(tabletLarge)
+      max-width: 31.5%
+    +max(mobile)
+      padding-top 30px
+      flex-direction: row
+      flex-wrap: wrap
+    .best-offer__title
+      +max(mobile)
+        width 50%
+      +max(sMobile)
+        width 100%
+    .best-offer__price
+      +max(mobile)
+        width 50%
+      +max(sMobile)
+        width 100%
+    .btn-full
+      +max(mobile)
+        width 100%
+        margin-top 18px
+  &:nth-child(1)
+  &:nth-child(2)
+  &:nth-child(3)
+    +max(mobile)
+      max-width: 100%
+      border-right: none
+
+.best-offer__item
+  &:nth-child(1)
+  &:nth-child(2)
+    &::after
+      content ''
+      position absolute
+      width 48px
+      height 48px
+      position absolute
+      top 50%
+      right 0
+      transform translate(50%, -50%)
+      background-image url('/frontend/images_new/plus.svg')
+      +max(mobile)
+        top auto
+        right auto
+        left 38px
+        bottom 0
+        transform translate(50%, 50%)
+        width 32px
+        height 32px
+        background-size contain
+  &:nth-child(2)
+    &::after
+      background-image url('/frontend/images_new/ravno.svg')
+
+.best-offer__img
+  margin-top auto
+
+.best-offer__item-result
+  .best-offer__title
+    span
+      color #EF182F
+  .best-offer__price
+    margin-top auto
+    margin-bottom 12px
+    +max(tabletLarge)
+      margin-bottom 18px
+    +max(mobile)
+      margin-top 0
+      text-align right
+      padding-right 9.5%
+    +max(sMobile)
+      text-align left
+      padding-right 0
+      margin-top 10px
+  .product-item__price
+    +max(tabletLarge)
+      font-size: 22px
+      line-height: 24px
+    +max(mobile)
+      padding-bottom 24px
+    &::after
+      +between(sMobile, mobile)
+        top auto
+        right auto
+        bottom 0
+        left 0
+        transform translateX(0)
+
+.products-tabs__title
+  display flex
+  flex-wrap: wrap
+  +max(sMobile)
+    margin -6px
+
+.products-tab__title
+  background-color #fff
+  border 1px solid #E1E0E9
+  border-radius: 4px
+  transition $trans
+  cursor pointer
+  padding 4px 11px
+  +max(sMobile)
+    margin 6px
+  &:not(:last-child)
+    +min(sMobile)
+      margin-right 12px
+  &:hover
+  &.active
+    color #fff
+    background-color #EF182F
+    border-color #EF182F
+
+.products-tabs__content
+  padding-top 35px
+
+.wrap-product-features
+  +max(tabletLarge)
+    max-width 100%
+
+.block-popup.popup-cart
+  max-width: 975px
+
+.filter-article
+  margin-bottom 30px
+.art-detail
+  margin-right: 10px;
+.mobile_params
+  display: none;
+  @media(max-width: 767px)
+    display: block;
+    .specifications__list
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      max-width: 100%;
++max(sMobile)
+  .product-item__img
+    img
+      display: block;
+      margin: auto;
+
+
+.wrap-info-sets
+  margin-top 34px
+  .block-content
+    max-width: 776px
+    margin: 0 auto
+
+.product-item__img-min
+  position absolute
+  bottom 22px
+  right 0
+  box-shadow 0px 4px 15px rgba(0, 0, 0, 0.05)
+  max-width 82px
+  max-height 82px
+
+.product-item_sets
+  .product-item__status.-status-discount
+    bottom 112px
+  .product-item__status.-status-order
+    +max(mobile)
+      bottom 26px
+  .product-item__img
+    +max(mobile)
+      margin-bottom 6px
+
+.product-item__status
+  &.-status-sets
+    background-color #A71A96
+    color #fff
+    bottom 0
+    right 0
+    top auto
+    left auto
+    display flex
+    align-items center
+    flex-direction row
+    border-radius 4px
+    padding 0 5px
+    +max(mobile)
+      right auto
+      left 0
+    span
+      background-color transparent
+      margin-top 0
+    .status-sets__img
+      max-width 16px
+      width 16px
+      height 16px
+      background-repeat no-repeat
+      background-size contain
+      flex 1 0 auto
+      align-self center
+    &-pair
+      .status-sets__img
+        background-image url(/frontend/images_new/sets_img/3-min.svg)
+    &-her
+      .status-sets__img
+        background-image url(/frontend/images_new/sets_img/2-min.svg)
+    &-him
+      .status-sets__img
+        background-image url(/frontend/images_new/sets_img/1-min.svg)
+
+.title-link
+  text-align center
+  margin 0 auto 30px
+
+.sets-list
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  margin -20px
+
+.sets-item
+  display flex
+  margin 20px
+  +max(mobile)
+    flex-direction column
+  .product-item_sets
+    max-width 260px
+    margin-right 42px
+  .product-item__bar-bottom
+    flex-direction column
+    align-items flex-start
+    margin-top inherit
+    +max(mobile)
+      margin-top 10px
+  .-status-benefit
+    position static
+    margin-bottom auto
+    +max(mobile)
+      margin-bottom 15px
+    span
+      background-color #F8F8F8
+      color #2D2841
+    b
+      margin-left 5px
+  .product-item__price
+    font-size 32px
+    line-height 34px
+    font-weight 500
+    margin-bottom 24px
+  .btn-full
+    border-radius 50px
+    padding 12px 40px
+.product-item
+  &.slider-inside
+    .product-item__img
+      img
+        position: absolute;
+        left: 0;
+        right: 0;
+    img
+      display: block;
+      margin: auto;
+    .swiper-container
+      height: 100%;
+      .swiper-wrapper
+        +max(mobile)
+          flex-wrap: nowrap;
+      .swiper-button-disabled
+        display: none;
+      .swiper-button-next
+        right: 0;
+      .swiper-button-prev
+        left: 0;
+        &::after
+          transform: rotate(-180deg);
+      .swiper-button-next
+      .swiper-button-prev
+        width: 25px;
+        height: 25px;
+        background: #fff;
+        border-radius: 50%;
+        border: 1px solid #e5e4eb
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+        &::after
+          content: '';
+          width: 100%;
+          height: 100%;
+          background: url('/frontend/images/arrow.svg') no-repeat 50%;
+          background-size: 30%;
+.video-container
+  video
+    width: 100%;

@@ -1,0 +1,23 @@
+.garantii{
+  &-block{
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    img{
+      margin-bottom: 20px;
+    }
+  }
+  &-vert{
+    max-width: 24%;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .garantii{
+    &-vert{
+      max-width: 48%;
+      margin-right: 0;
+    }
+  }
+}

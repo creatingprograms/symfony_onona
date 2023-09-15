@@ -1,0 +1,1 @@
+<a href="/backend.php/photo/setFilterTag/<?php echo $photoalbum->getId() ?>"><?php echo $photoalbum->getName() ?></a>

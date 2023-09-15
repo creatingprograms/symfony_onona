@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Articlecatalog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          articlecatalog
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields: 
+        name:
+          label: Название
+        description:
+          label: Описание
+        is_public:
+          label: Доступна
+      list:    
+        title: Каталог статей
+        display: [ name, is_public ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

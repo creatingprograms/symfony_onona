@@ -1,0 +1,41 @@
+photos_user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PhotosUser
+    module:               userphotos
+    prefix_path:          /userphotos
+    column:               id
+    with_wildcard_routes: true
+
+video:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Video
+    module:               video
+    prefix_path:          /video
+    column:               id
+    with_wildcard_routes: true
+
+comments:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Comments
+    module:               comments
+    prefix_path:          /comments
+    column:               id
+    with_wildcard_routes: true
+
+  
+# default rules
+homepage:
+  url:   /
+  param: { module: general, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

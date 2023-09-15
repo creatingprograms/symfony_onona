@@ -1,0 +1,115 @@
+.video-container{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  display: block;
+  iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.video {
+  &-page {
+    .v-block {
+      &-plate {
+        margin-bottom: 0;
+      }
+      &-link {
+        text-align: left;
+      }
+      &-link + .v-block-plate {
+        margin-top: 40px;
+      }
+    }
+  }
+  &-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 21px 17px;
+    background-color: #fff;
+    &-item {
+      @extend %logo;
+    }
+  }
+  &-item {
+    @extend %logo;
+    color: #0f0f0f;
+    font-weight: bold;
+    width: calc(50% - 15px);
+    &:nth-of-type(n+3) {
+      margin-top: 26px;
+    }
+  }
+  &-img {
+    margin: 0 0 9px;
+    &,
+    img {
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &-head {
+    display: block;
+  }
+  &-popup-wrapper{
+    // display: flex;
+    width: 800px;
+    margin: auto;
+    max-width: 90%;
+    &.popup{
+      background:none;
+    }
+    video{
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    &-page {
+      .v-block-plate {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-item {
+      width: 100%;
+      &:nth-of-type(n+2) {
+        margin-top: 26px;
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    &-page {
+      .v-block {
+        &-plate {
+          margin-left: -17px;
+          margin-right: -17px;
+          padding-left: 17px;
+          padding-right: 17px;
+        }
+        &-link {
+          text-align: center;
+        }
+      }
+    }
+    &-group {
+      margin-left: -17px;
+      margin-right: -17px;
+    }
+    &-item {
+      &:nth-of-type(n+2) {
+        margin-top: 17px;
+      }
+    }
+    &-head {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+Array('item' => Array(
+				'969a17f0-87ec-11de-b97f-000423dc3bde' => 'Kосметика'
+				,'969a17f1-87ec-11de-b97f-000423dc3bde' => 'Интимная гигиена'
+				,'9dcd11bc-87ec-11de-b97f-000423dc3bde' => 'Массажные масла'
+				,'e2e73aaa-87eb-11de-b97f-000423dc3bde' => 'Аксессуары для игр'
+				,'72e6ca79-4083-11df-874c-000423dc3bde' => 'Для любовных игр'
+				,'e2e73aab-87eb-11de-b97f-000423dc3bde' => 'Наручники, фиксаторы'
+				,'4c0425fb-87ee-11de-b97f-000423dc3bde' => 'Фанты'
+				,'a1e71c35-87ee-11de-b97f-000423dc3bde' => 'Маски DayDream'
+        ),'child' => Array(
+				'969a17f0-87ec-11de-b97f-000423dc3bde' => '00000000-0000-0000-0000-000000000000'
+				,'969a17f1-87ec-11de-b97f-000423dc3bde' => '969a17f0-87ec-11de-b97f-000423dc3bde'
+				,'9dcd11bc-87ec-11de-b97f-000423dc3bde' => '969a17f0-87ec-11de-b97f-000423dc3bde'
+				,'e2e73aaa-87eb-11de-b97f-000423dc3bde' => '00000000-0000-0000-0000-000000000000'
+				,'72e6ca79-4083-11df-874c-000423dc3bde' => 'e2e73aaa-87eb-11de-b97f-000423dc3bde'
+				,'e2e73aab-87eb-11de-b97f-000423dc3bde' => 'e2e73aaa-87eb-11de-b97f-000423dc3bde'
+				,'4c0425fb-87ee-11de-b97f-000423dc3bde' => 'e2e73aaa-87eb-11de-b97f-000423dc3bde'
+				,'a1e71c35-87ee-11de-b97f-000423dc3bde' => 'e2e73aaa-87eb-11de-b97f-000423dc3bde'
+        ),'parent' => Array(
+				'00000000-0000-0000-0000-000000000000' => Array(
+										0 => '969a17f0-87ec-11de-b97f-000423dc3bde'
+										,1 => 'e2e73aaa-87eb-11de-b97f-000423dc3bde'
+                ),'969a17f0-87ec-11de-b97f-000423dc3bde' => Array(
+										0 => '969a17f1-87ec-11de-b97f-000423dc3bde'
+										,1 => '9dcd11bc-87ec-11de-b97f-000423dc3bde'
+                ),'e2e73aaa-87eb-11de-b97f-000423dc3bde' => Array(
+										0 => '72e6ca79-4083-11df-874c-000423dc3bde'
+										,1 => 'e2e73aab-87eb-11de-b97f-000423dc3bde'
+										,2 => '4c0425fb-87ee-11de-b97f-000423dc3bde'
+										,3 => 'a1e71c35-87ee-11de-b97f-000423dc3bde'
+                )
+	)
+)

@@ -1,0 +1,8 @@
+#nav li {
+	display: inline;
+	margin-left: 20px;
+	font-weight: bold;
+}
+#nav li a {
+	color: #000;
+}

@@ -1,0 +1,16 @@
+.-isNav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  .header-nav-but {
+    background: url("/frontend/images/header/close.svg") 50% 50% no-repeat;
+    background-size: auto 100%;
+  }
+  @media screen and (max-width: $largeTablet) {
+    .mob-nav {
+      transform: translateX(-0);
+    }
+  }
+}

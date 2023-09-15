@@ -1,0 +1,209 @@
+.novice-icons{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  .novice-icon{
+    padding: 0 20px 0 80px;
+    font: 18px/66px Tahoma;
+    font-weight: bold;
+    position: relative;
+    height: 66px;
+    color: #3d3d3d;
+    cursor: pointer;
+    &:after{
+      content: '';
+      display: block;
+      width: 66px;
+      height: 66px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+    &.for-pairs:after{
+      background: #3d3d3d url(/images/for_both.svg) no-repeat 50%;
+    }
+    &.for-her:after{
+      background: #3d3d3d url(/images/for_her.svg) no-repeat 50%;
+    }
+    &.for-him:after{
+      background: #3d3d3d url(/images/for_him.svg) no-repeat 50%;
+    }
+    &.for-pairs.active:after,
+    &.for-pairs:hover:after {
+      background: #3d3d3d url(/images/for_both_red.svg) no-repeat 50%;
+    }
+    &.for-him.active:after,
+    &.for-him:hover:after {
+      background: #3d3d3d url(/images/for_him_red.svg) no-repeat 50%;
+    }
+    &.for-her.active:after,
+    &.for-her:hover:after {
+      background: #3d3d3d url(/images/for_her_red.svg) no-repeat 50%;
+    }
+  }
+}
+.discount-60-form{
+  .catalog-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    // display: none;
+    @media screen and (max-width: 1020px) {
+
+      flex-wrap: wrap;
+      justify-content: start;
+      .cat{
+        margin: 3px;
+      }
+    }
+  }
+  .cat{
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    background-color: #ffeeee;
+    padding: 8px 13px;
+    color: red;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+    &.active,
+    &:hover{
+      color: white;
+      background-color: #e17c80;
+      border: 1px solid #e17c80;
+    }
+    @media screen and (max-width: 1240px) {
+      width: 87px;
+      padding: 8px 0;
+    }
+  }
+  .price-block {
+    margin-bottom: 20px;
+    input{
+      font-size: 16px;
+      color: red;
+      border-radius: 10px;
+      border: 1px solid #747676;
+      text-align: center;
+      font-weight: bold;
+      padding: 6px 0;
+      width: 75px;
+      display: inline-block;
+      margin: 0 5px;
+    }
+    button{
+      border-radius: 10px;
+      font-size: 16px;
+      border: 1px solid #e94742;
+      background-color: #e94742;
+      padding: 6px 13px;
+      color: white;
+      cursor: pointer;
+      vertical-align: top;
+      margin-left: 10px;
+      outline: none;
+    }
+  }
+}
+.collection-page {
+  color: #020202;
+  font-size: 14px;
+  line-height: 135%;
+  margin: 0 0 42px;
+  p {
+    margin: 2px 0;
+  }
+  &-subscription {
+    max-width: 274px;
+    margin: 29px 0 0;
+  }
+  &-img {
+    float: left;
+    margin: 3px 14px 5px 0;
+    img {
+      display: block;
+    }
+  }
+  &-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 487px;
+    margin: 14px 0 0;
+    justify-content: space-between;
+    input[type="email"] {
+      height: 34px;
+      display: block;
+      padding: 0 17px;
+      color: $font-main-color;
+      box-sizing: border-box;
+      width: calc(100% - 193px);
+      font: 15px/34px $font-main-family;
+      &::placeholder {
+        color: #979696;
+      }
+    }
+    .but {
+      padding: 0;
+      width: 182px;
+      height: 34px;
+      font-size: 19px;
+      line-height: 34px;
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-img {
+      width: 144px;
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    font-size: 12px;
+    line-height: 125%;
+    margin: 0 0 28px;
+    p {
+      margin: 12px 0;
+    }
+    &-subscription {
+      margin: 11px 0;
+    }
+    &-form {
+      margin: 8px 0 0;
+      input[type="email"] {
+        height: 29px;
+        font-size: 11px;
+        line-height: 29px;
+        padding: 0 11px;
+        width: calc(100% - 160px);
+      }
+      .but {
+        width: 144px;
+        height: 29px;
+        font-size: 15px;
+        line-height: 29px;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &-form {
+      display: block;
+      input[type="email"] {
+        width: 100%;
+        margin: 0 0 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .novice-icons{
+    display: none;
+  }
+  .discount-60-form{
+    .price-block {
+      input{
+        margin: 0 1px;
+        width: 56px;
+      }
+    }
+  }
+}

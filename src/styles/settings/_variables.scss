@@ -1,0 +1,50 @@
+// По сути ругулирую фоны, будут ли они ораничены или будут на все страницу, в html появится .wrapper. Доступно full и limited
+$site-status: full;
+$footer-bottom: true;
+// Дополнительное пространство когда прибиваем футер к низу
+$content-dist-indent: 10px;
+//Фоны нашего сайта, в дальнейшем я сделаю файл theme.scss и вынесу туда наши background-ы
+$background-html: null;
+$background-body: null;
+$background-main: #ffe2e2;
+$background-wrapper: null;
+$background-header: #fff;
+$background-footer: #eeb9b8;
+
+//Размеры наших основных блоков
+$main-min-height: 100%;
+$main-width: null;
+$wrapper-width: null;
+$wrapper-min-width: null;
+$wrapper-max-width: 1186px;
+$header-height: 130px;
+$footer-height: 639px;
+//margins основных элементов
+$main-mar: null;
+$wrapper-mar: 0 auto;
+//padding-и основных элементов, поскольку в HTML-файле разметка будет меняться, паддинги слева и справа для футера, шапки будут одинаковыми и вообще это логично, если сайт четко делать по сетке
+$wrapper-pad-left: 20px;
+$wrapper-pad-right: $wrapper-pad-left;
+$wrapper-pad-top: 5px;
+$wrapper-pad-bottom: 5px;
+$header-pad-top: 16px;
+$header-pad-bottom: 10px;
+$header-pad-left: $wrapper-pad-left;
+$header-pad-right: $wrapper-pad-right;
+$footer-pad-top: 40px;
+$footer-pad-bottom: 10px;
+$footer-pad-left: $wrapper-pad-left;
+$footer-pad-right: $wrapper-pad-right;
+//Основные шрифты сайта
+$font-main-color: #1A1A1A;
+$font-main-weight: null;
+$font-main-style: null;
+$font-main-size: 18px;
+$font-main-line-height: 156%;
+$font-main-family: "Myriad Pro", "Geneva CY", sans-serif;
+
+$smallDesctop: 1240px;
+$largeTablet: 1090px;
+$smallTablet: 1010px;
+$largeMobile: 760px;
+$smallMobile: 600px;

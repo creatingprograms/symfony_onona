@@ -1,0 +1,558 @@
+.page-bonus {
+  margin: 0 0 50px;
+  &-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 26px;
+    background-color: #fdbeed;
+    padding: 11px 18px 10px 30px;
+    justify-content: space-between;
+    font: 20px/130% $segoeFont;
+    &,
+    a {
+      color: #0f0f0f;
+    }
+    .-bonus {
+      display: block;
+      word-spacing: 0;
+      font-family: 'seguibl';
+    }
+    &-link {
+      a {
+        margin-left: 36px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+    &-rk {
+      word-spacing: -3px;
+      text-align: center;
+    }
+  }
+  &-rnb {
+    height: 616px;
+    color: #0f0f0f;
+    margin: 26px 0 12px;
+    box-sizing: border-box;
+    padding: 36px 0 0 35px;
+    background: url('/frontend/images/bonus/rnb-bonus.jpg') 100% top no-repeat;
+    .-fz {
+      &-1 {
+        font-size: 29px;
+        line-height: 120%;
+        letter-spacing: 2px;
+      }
+      &-2 {
+        font-size: 36px;
+        line-height: 70%;
+      }
+      &-3 {
+        font-size: 44px;
+        line-height: 115%;
+      }
+    }
+    &-head {
+      margin: 0 0 20px;
+      text-transform: uppercase;
+      font: 53px/120% $aFuturFont;
+      span {
+        display: block;
+        margin: 0 0 0 61px;
+      }
+    }
+    &-title {
+      margin: 0 0 0 139px;
+      font: 29px/120% $segoeFont;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+    &-but {
+      color: #fff;
+      padding: 0 24px;
+      margin: 0 0 0 162px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: inline-block;
+      font: 19px/73px $helvFont;
+      text-transform: uppercase;
+      background-color: #c50049;
+    }
+    &-circle-block {
+      margin: 41px 0 39px;
+    }
+    &-circle {
+      color: #fff;
+      width: 222px;
+      height: 215px;
+      font-size: 19px;
+      line-height: 120%;
+      text-align: center;
+      margin: 0 0 0 14px;
+      vertical-align: top;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 56px 20px 20px;
+      background: url('/frontend/images/bonus/ellipse.png') left top no-repeat;
+      &.-numb {
+        padding-top: 51px;
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &-h {
+        font-family: $aFuturFont;
+      }
+    }
+  }
+  &-scale {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0 41px;
+    &-h {
+      font: 42px/120% $aFuturFont;
+      &.-fz {
+        &-1 {
+          font-size: 35px;
+          margin-top: -10px;
+        }
+        &-2 {
+          font-size: 48px;
+          margin-top: -6px;
+        }
+        &-3 {
+          font-size: 37px;
+          margin-top: 5px;
+        }
+      }
+    }
+    &-text {
+      font: 20px/120% $segoeFont;
+    }
+    &-item {
+      color: #0f0f0f;
+      text-align: center;
+      margin: 0 0 0 10px;
+      padding: 29px 15px 25px;
+      width: calc(20% - 8px);
+      box-sizing: border-box;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:nth-of-type(1) {
+        background-color: #fcc4ed;
+      }
+      &:nth-of-type(2) {
+        background-color: #fcb1e8;
+      }
+      &:nth-of-type(3) {
+        background-color: #f99de0;
+      }
+      &:nth-of-type(4) {
+        background-color: #fa88db;
+      }
+      &:nth-of-type(5) {
+        background-color: #fc75d7;
+      }
+      .-block {
+        display: block;
+      }
+    }
+  }
+  &-link-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 40px;
+    padding: 0 33px 0 60px;
+    justify-content: space-around;
+    .but {
+      height: 57px;
+      font-size: 22px;
+      padding: 0 27px;
+      line-height: 56px;
+      letter-spacing: -1px;
+    }
+  }
+  &-item {
+    color: #020202;
+    font-size: 15px;
+    line-height: 120%;
+    background-color: #fff;
+    margin: 25px 0;
+    padding: 32px 16px;
+    letter-spacing: -1px;
+    h2,
+    .h2 {
+      color: #0f0f0f;
+      margin: 0 0 20px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    a {
+      color: #d11e0f;
+      text-decoration: none;
+    }
+    .-normal {
+      li {
+        &::before {
+          min-width: 1px;
+        }
+      }
+    }
+    ol {
+      letter-spacing: 0;
+      counter-reset: list1;
+      ol {
+        counter-reset: list2;
+        ol {
+          counter-reset: list3;
+        }
+      }
+      &,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        &::before {
+          min-width: 25px;
+          margin: 0 3px 0 0;
+          display: inline-block;
+          counter-increment: list1;
+          content: counter(list1)".";
+        }
+        li {
+          &::before {
+            counter-increment: list2;
+            content: counter(list1)"."counter(list2)".";
+          }
+          li {
+            &::before {
+              counter-increment: list3;
+              content: counter(list1)"."counter(list2)"."counter(list3)".";
+            }
+          }
+        }
+      }
+    }
+    .-reset {
+      li {
+        margin: 3px 0;
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    ul {
+      line-height: 145%;
+      margin: 22px 0 0;
+      letter-spacing: 0;
+      li {
+        margin: 4px 0;
+        position: relative;
+        padding-left: 20px;
+        &::before {
+          top: 7px;
+          left: 5px;
+          width: 8px;
+          height: 8px;
+          content: ' ';
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+          background-color: #ffbbb9;
+        }
+      }
+    }
+    &-group {
+      margin-top: 16px;
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    &-scroll {
+      font-size: 17px;
+      padding-left: 18px;
+      &-link {
+        a {
+          margin-left: 25px;
+        }
+      }
+    }
+    &-rnb {
+      height: 506px;
+      padding-top: 32px;
+      background-size: 100% auto;
+      .-fz {
+        &-1,
+        &-3 {
+          font-size: 22px;
+        }
+      }
+      &-but {
+        margin-left: 59px;
+        font-size: 17px;
+        line-height: 64px;
+      }
+      &-head {
+        font-size: 45px;
+        margin-bottom: 10px;
+        span {
+          margin-left: 34px;
+        }
+      }
+      &-circle {
+        height: 178px;
+        margin-left: 0;
+        font-size: 16px;
+        &-block {
+          margin: 30px 0 20px;
+        }
+        &.-numb {
+          padding-top: 38px;
+        }
+      }
+      &-title {
+        font-size: 26px;
+        margin-left: 124px;
+      }
+      &-circle {
+        width: 176px;
+        padding: 42px 15px 20px;
+        background-size: 100% auto;
+      }
+    }
+    &-scale {
+      &-text {
+        font-size: 16px;
+      }
+      &-h {
+        font-size: 30px;
+        &.-fz {
+          &-1 {
+            font-size: 28px;
+            margin-top: -10px;
+          }
+          &-2,
+          &-3 {
+            margin-top: 0;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-scroll {
+      font-size: 14px;
+      padding-left: 15px;
+      &-link {
+        a {
+          margin-left: 13px;
+        }
+      }
+    }
+    &-link {
+      &-block {
+        padding: 0;
+        .but {
+          font-size: 18px;
+        }
+      }
+    }
+    &-scale {
+      &-item {
+        padding: 25px 10px 20px;
+      }
+      &-h {
+        font-size: 24px;
+        &.-fz {
+          &-1 {
+            font-size: 22px;
+          }
+          &-2,
+          &-3 {
+            font-size: 24px;
+          }
+        }
+      }
+      &-text {
+        font-size: 13px;
+      }
+    }
+    &-rnb {
+      height: 398px;
+      padding-top: 20px;
+      padding-left: 25px;
+      .-fz {
+        &-1,
+        &-3 {
+          font-size: 20px;
+        }
+        &-2 {
+          font-size: 30px;
+        }
+      }
+      &-but {
+        font-size: 14px;
+        line-height: 50px;
+      }
+      &-head {
+        font-size: 34px;
+        margin-bottom: 7px;
+      }
+      &-title {
+        margin-left: 82px;
+      }
+      &-circle {
+        width: 158px;
+        height: 160px;
+        font-size: 14px;
+        padding-top: 38px;
+        &-block {
+          margin: 20px 0 10px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    margin: 0;
+    &-item {
+      font-size: 18px;
+      line-height: 150%;
+      margin: 32px 0;
+      h2,
+      .h2 {
+        font-size: 21px;
+        margin: 0 0 16px;
+      }
+      &-group {
+        margin-top: 27px
+      }
+    }
+    &-scroll {
+      display: none;
+    }
+    &-link-block {
+      margin-bottom: 30px;
+      .but {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+      }
+    }
+    &-rnb {
+      height: auto;
+      padding-left: 0;
+      padding-bottom: 20px;
+      margin-bottom: 5px;
+      margin-top: 0;
+      background: linear-gradient(to right, #d491c5, #f59edd);
+      &-mob-wrap {
+        margin: 0 auto;
+        max-width: 482px;
+      }
+    }
+    &-scale {
+      margin-top: 6px;
+      margin-bottom: 17px;
+      justify-content: center;
+      &-item {
+        margin-left: 6px;
+        width: calc(33.33333333% - 4px);
+        &:nth-of-type(3n-2) {
+          margin-left: 0;
+        }
+        &:nth-of-type(n+4) {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallMobile) {
+    &-link-block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .but {
+        width: calc(100% - 34px);
+        margin: 10px 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &-rnb {
+      padding-top: 10px;
+      padding-bottom: 14px;
+      .-fz {
+        &-1 {
+          font-size: 12px;
+        }
+        &-2 {
+          font-size: 17px;
+        }
+      }
+      &-mob-wrap {
+        max-width: 294px;
+      }
+      &-head {
+        font-size: 24px;
+        letter-spacing: -1px;
+        margin-top: 5px;
+        margin-bottom: 4px;
+        span {
+          margin-left: 23px;
+        }
+      }
+      &-title {
+        font-size: 13px;
+        margin-left: 58px;
+      }
+      &-circle {
+        width: 95px;
+        height: 98px;
+        font-size: 8px;
+        padding: 24px 10px 10px;
+        &.-numb {
+          padding-top: 22px;
+        }
+        &-block {
+          margin: 15px 0 8px;
+        }
+      }
+      &-but {
+        font-size: 7px;
+        padding: 0 9px;
+        line-height: 31px;
+        margin-left: 65px;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &-scale {
+      &-item {
+        padding: 13px 7px 13px;
+      }
+      &-h {
+        font-size: 20px;
+        &.-fz {
+          &-1 {
+            font-size: 16px;
+            margin-top: -4px;
+          }
+          &-2 {
+            font-size: 22px;
+          }
+          &-3 {
+            font-size: 17px;
+          }
+        }
+      }
+      &-text {
+        font-size: 9px;
+      }
+    }
+  }
+}

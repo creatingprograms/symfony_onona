@@ -1,0 +1,47 @@
+.top-slider {
+  position: relative;
+  &.wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 74px;
+    margin-bottom: 30px;
+    //  Видимо ошибка дизайна
+    // .swiper-container {
+    //   border-top: 1px solid #e5fbfb;
+    // }
+  }
+  @media screen and (max-width: $largeTablet) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1024px;
+    &.wrapper {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .swiper {
+      &-button {
+        &-prev,
+        &-next {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &.wrapper {
+      max-width: 766px;
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    margin-top: 5px;
+    &.wrapper {
+      margin-top: 11px;
+      margin-bottom: 0;
+    }
+    .swiper {
+      &-pagination {
+        margin-top: 5px;
+      }
+    }
+  }
+}

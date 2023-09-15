@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ProductActionLog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product_action_log
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: [ ]
+      fields:  
+        prodid:
+          label: Товар
+        manid:
+          label: Производитель
+        count:
+          label: Остаток на складе  
+        discount:
+          label: Скидка
+        endaction:
+          label: Дата окончания акции
+        step:
+          label: Шаг
+        created_at:
+          label: Дата генерации
+        countact:
+          label: Сколько раз участвовал в акции
+      list:    
+        title: Лог акций товаров
+        display: [ prodid, manid, count, discount, endaction, step, created_at, _countact]
+        object_actions: [ ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

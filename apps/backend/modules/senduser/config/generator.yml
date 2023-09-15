@@ -1,0 +1,45 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Senduser
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          senduser
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:   
+        product:
+          label: Товар
+        name:
+          label: Имя
+        mail:
+          label: Почта  
+        is_send:
+          label: Отправлено
+        created_at:
+          label: Создание запроса
+        updated_at:
+          label: Когда отправлен
+      list:    
+        title: Сообщить о поступлении
+        display: [ id, _product, name, mail, is_send, created_at, _updated_at ]
+        sort: [ position, Asc ]
+        object_actions:
+          #promote: 
+          #  action: promote
+          #  label: Вверх
+          #demote: 
+          #  action: demote
+          #  label: Вниз
+          _edit: ~
+          _delete: ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

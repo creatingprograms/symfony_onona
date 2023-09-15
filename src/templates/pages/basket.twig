@@ -1,0 +1,780 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <div class="breadcrumbs wrapper">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a> > Корзина
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <main class="wrapper">
+    <div class="basket-page">
+      <div class="v-block-plate">
+        <h1>корзина</h1>
+      </div>
+      <div class="basket-for-js" id="basketForJs">
+        <form action="index.php" class="basket-form" id="basketForm">
+          <table class="basket" id="basket">
+            <thead>
+              <th class="-size-1">&nbsp;</th>
+              <th class="-leftAlign -tHeadName">Наименование</th>
+              <th class="-size-3">Цена, руб.</th>
+              <th class="-size-4">Бонусы</th>
+              <th class="-size-5">Кол-во</th>
+              <th class="-size-6">Сумма</th>
+              <th class="-size-7">&nbsp;</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="basket-pic">
+                  <a href="#">
+                    <img src="/images/basket/img-1.jpg" alt="">
+                  </a>
+                </td>
+                <td class="basket-name -leftAlign">
+                  <a href="#">
+                    Металлические наручники Sitabella с&nbsp;кожаными вставками
+                  </a>
+                </td>
+                <td class="basket-price" data-mobtext="Цена, руб.">
+                  1590
+                </td>
+                <td class="basket-bonus" data-mobtext="Бонусы">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="0" data-bonus = "200" readonly>
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-numb" data-mobtext="Кол-во">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="1" data-price="1590" data-bonus="0" data-sum="1590">
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-sum" data-mobtext="Сумма">
+                  <span>1590</span>
+                </td>
+                <td class="basket-delete">
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="#closesIcon" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="basket-pic">
+                  <a href="#">
+                    <img src="/images/basket/img-2.jpg" alt="">
+                  </a>
+                </td>
+                <td class="basket-name -leftAlign">
+                  <a href="#">
+                    Наименование товара
+                  </a>
+                </td>
+                <td class="basket-price" data-mobtext="Цена, руб.">
+                  2590
+                </td>
+                <td class="basket-bonus" data-mobtext="Бонусы">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="0" data-bonus = "200" readonly>
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-numb" data-mobtext="Кол-во">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="1" data-price="2590" data-bonus="0" data-sum="2590">
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-sum" data-mobtext="Сумма">
+                  <span>2590</span>
+                </td>
+                <td class="basket-delete">
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="#closesIcon" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="basket-pic">
+                  <a href="#">
+                    <img src="/images/basket/img-3.jpg" alt="">
+                  </a>
+                </td>
+                <td class="basket-name -leftAlign">
+                  <a href="#">
+                    Третий товар
+                  </a>
+                </td>
+                <td class="basket-price" data-mobtext="Цена, руб.">
+                  2590
+                </td>
+                <td class="basket-bonus" data-mobtext="Бонусы">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="100" data-bonus = "200" readonly>
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-numb" data-mobtext="Кол-во">
+                  <div class="basket-calc">
+                    <div class="basket-calc-min"></div>
+                    <input type="number" name="" value="1" data-price="2590" data-bonus="100" data-sum="2490">
+                    <div class="basket-calc-plus"></div>
+                  </div>
+                </td>
+                <td class="basket-sum" data-mobtext="Сумма">
+                  <span>2490</span>
+                </td>
+                <td class="basket-delete">
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="#closesIcon" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="basket-services">
+            <div class="basket-user-param basket-bg">
+              <div class="basket-all-price basket-bg" id="basketAllPriceVlock">
+                <div class="basket-all-price-row -align">
+                  <div class="basket-all-price-col">
+                    Сумма:
+                  </div>
+                  <div class="basket-all-price-sum" id="basketAllPrice">
+                    <span>6 670</span> руб.
+                  </div>
+                </div>
+                <div class="basket-all-price-desc">
+                  <div class="basket-all-price-row">
+                    <div class="basket-all-price-col">
+                      <input type="radio" name="basketRadio" class="styleCH" value="val-1" id="basketRadio-1" data-discount="7">
+                      <label for="basketRadio-1">
+                        Оплата онлайн:
+                        <span class="-detailed">
+                          (скидка 7%)
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="basket-all-price-row">
+                    <div class="basket-all-price-col">
+                      <input type="radio" name="basketRadio" class="styleCH" value="val-2" id="basketRadio-2">
+                      <label for="basketRadio-2" class="-botCH">
+                        Оплата при получениии:
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket-all-price-foot ">
+                  <div class="basket-all-price-col basket-all-price-total-text">
+                    Итог:
+                  </div>
+                  <div class="basket-all-price-total" id="basketAllPriceTotal">
+                    <span>6 670</span> руб.
+                  </div>
+                  <div class="basket-all-price-foot-subm">
+                    <input type="submit" name="" class="but" value="Быстрый заказ">
+                  </div>
+                </div>
+              </div>
+              <div class="basket-user-param-wrap">
+                <div class="basket-user-param-item">
+                  <div class="basket-user-param-h">
+                    Зарегистрированный пользователь
+                  </div>
+                  <div class="basket-user-param-title">
+                    Авторизуйтесь для быстрого оформления заказа. Возможно, на вашем счете уже есть Бонусы на оплату от 20 до 50% стоимости заказа.
+                  </div>
+                  <a href="#" class="but">
+                    Войти
+                  </a>
+                </div>
+                <div class="basket-user-param-item">
+                  <div class="basket-user-param-h">
+                    Новый покупатель
+                  </div>
+                  <div class="basket-user-param-title">
+                    Зарегистрируйтесь и получите 300 приветственных бонусов, которыми вы сможете оплатить свой заказ прямо сейчас.
+                  </div>
+                  <a href="#" class="but">
+                    Зарегистрироваться
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="v-block-plate">
+              шаг 1. Выберите способ доставки
+            </div>
+            <div class="basket-delivery basket-bg">
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-1" id="delivery-1">
+                <label for="delivery-1">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-1.png" width="34px">
+                    <img src="/images/basket/delivery-1-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    Курьер
+                  </span>
+                  <span class="basket-delivery-title">
+                    (Москва и&nbsp;Московская область)
+                  </span>
+                </label>
+              </div>
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-2" id="delivery-2">
+                <label for="delivery-2">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-2.png" width="34px">
+                    <img src="/images/basket/delivery-2-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    Самовывоз
+                  </span>
+                  <span class="basket-delivery-title">
+                    из магазинов «Он&nbsp;и&nbsp;Она» в&nbsp;г.&nbsp;Москва
+                  </span>
+                </label>
+              </div>
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-3" id="delivery-3">
+                <label for="delivery-3">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-3.png" width="34px">
+                    <img src="/images/basket/delivery-3-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    PickPoint
+                  </span>
+                  <span class="basket-delivery-title">
+                    постаматы и пункты выдачи
+                  </span>
+                </label>
+              </div>
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-4" id="delivery-4">
+                <label for="delivery-4">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-4.png" width="44px">
+                    <img src="/images/basket/delivery-4-hover.png" class="-hoveredImg" width="44px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    Курьерская доставка
+                  </span>
+                  <span class="basket-delivery-title">
+                    по России
+                  </span>
+                </label>
+              </div>
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-5" id="delivery-5">
+                <label for="delivery-5">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-5.png" width="34px">
+                    <img src="/images/basket/delivery-5-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    Почта России
+                  </span>
+                  <span class="basket-delivery-title">
+                    Доставка почтой России
+                  </span>
+                </label>
+              </div>
+              <div class="basket-delivery-item">
+                <input type="radio" name="delivery" value="delivery-6" id="delivery-6">
+                <label for="delivery-6">
+                  <span class="basket-delivery-img">
+                    <img src="/images/basket/delivery-6.png" width="34px">
+                    <img src="/images/basket/delivery-6-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-delivery-h">
+                    Евросеть / Связной
+                  </span>
+                  <span class="basket-delivery-title">
+                    (пункты выдачи заказов)
+                  </span>
+                </label>
+              </div>
+              <div class="basket-all">
+                <a href="#">
+                  <span>Информация о доставке</span>
+                  <svg>
+                    <use xlink:href="#arrowMoreIcon" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="v-block-plate">
+              шаг 2. Выберите способ оплаты
+            </div>
+            <div class="basket-payment basket-bg">
+              <div class="basket-payment-item">
+                <input type="radio" name="payment" value="payment-1" id="payment-1">
+                <label for="payment-1">
+                  <span class="basket-payment-img">
+                    <img src="/images/basket/payment-1.png" width="34px">
+                    <img src="/images/basket/payment-1-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-payment-h">
+                    Оплата наличными
+                  </span>
+                  <span class="basket-payment-title">
+                    при получении заказа
+                  </span>
+                </label>
+              </div>
+              <div class="basket-payment-item">
+                <input type="radio" name="payment" value="payment-2" id="payment-2">
+                <label for="payment-2">
+                  <span class="basket-payment-img">
+                    <img src="/images/basket/payment-2.png" width="34px">
+                    <img src="/images/basket/payment-2-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-payment-h">
+                    Электронными деньгами
+                  </span>
+                  <span class="basket-payment-title">
+                    WebMoney / Яндекс.Деньги
+                  </span>
+                </label>
+              </div>
+              <div class="basket-payment-item">
+                <input type="radio" name="payment" value="payment-3" id="payment-3">
+                <label for="payment-3">
+                  <span class="basket-payment-img">
+                    <img src="/images/basket/payment-3.png" width="34px">
+                    <img src="/images/basket/payment-3-hover.png" class="-hoveredImg" width="34px">
+                  </span>
+                  <span class="basket-payment-h">
+                    Банковскими картами
+                  </span>
+                  <span class="basket-payment-title">
+                    ROBOKASSA - 15+&nbsp;способов&nbsp;оплаты
+                  </span>
+                </label>
+              </div>
+              <div class="basket-payment-hint">
+                Реквизиты для оплаты вам сообщит менеджер после подтверждения заказа.
+              </div>
+            </div>
+            <div class="v-block-plate">
+              шаг 3. ЗАПОЛНИТЕ ФОРМУ
+            </div>
+            <div class="basket-bg basket-services-form form">
+              <div class="basket-services-form-group -align -botBordered">
+                <div class="basket-services-form-col -col-4-of-12">
+                  <div class="form-label">
+                    ФИО: *
+                  </div>
+                  <input type="text" name="" value="Константин Константинопольский" placeholder="Как к Вам обращаться?">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12">
+                  <div class="form-label">
+                    Пол:
+                  </div>
+                  <input type="text" name="" value="" placeholder="Выберите пол">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12">
+                  <div class="form-label">
+                    День рождения:
+                  </div>
+                  <input type="text" name="" value="" placeholder="01.01.1980">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12">
+                  <div class="form-label">
+                    Телефон: *
+                  </div>
+                  <input type="tel" name="" value="" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12">
+                  <div class="form-label">
+                    E-mail:
+                  </div>
+                  <input type="email" name="" value="" placeholder="Укажите Ваш e-mail">
+                </div>
+                <div class="basket-services-form-col basket-services-form-add-comment -col-4-of-12">
+                  <a href="#">Добавить комментарий к заказу</a>
+                </div>
+              </div>
+              <div class="basket-services-form-group -align -middleBordered">
+                <div class="basket-services-form-col -col-4-of-12 -imitationRow">
+                  <div class="form-label">
+                    Город: *
+                  </div>
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12 -imitationRow">
+                  <div class="form-label">
+                    Улица: *
+                  </div>
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+                <div class="basket-services-form-col -col-4-of-12 -imitationRow">
+                  <div class="form-label">
+                    Дом: *
+                  </div>
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+                <div class="basket-services-form-col -col-8-of-12">
+                  <div class="form-label">
+                    Акция:
+                  </div>
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+                <div class="basket-services-form-col form-capcha -col-4-of-12">
+                  <div class="form-capcha-label">
+                    4534535
+                  </div>
+                  <input type="text" name="" value="" placeholder="Введите символы">
+                </div>
+              </div>
+              <div class="basket-services-form-foot">
+                <div class="basket-services-form-confirm">
+                  <div class="basket-services-form-confirm-row">
+                    <input type="checkbox" name="basketConfirm1" class="styleCH" value="val-1" id="basketConfirm1">
+                    <label for="basketConfirm1">
+                      Подтверждаю, что мне 18 или более лет.
+                    </label>
+                  </div>
+                  <div class="basket-services-form-confirm-row">
+                    <input type="checkbox" name="basketConfirm2" class="styleCH" value="val-2" id="basketConfirm2">
+                    <label for="basketConfirm2">
+                      Я принимаю условия <a href="#">Пользовательского соглашения</a>
+                    </label>
+                  </div>
+                </div>
+                <input type="submit" name="" value="оформить заказ" class="but">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="basket-is-deleted-block basket-bg">
+          <p>Корзина пуста.</p>
+          <p>Для добавления товара в&nbsp;корзину перейдите в&nbsp;раздел <a href="https://onona.ru/">Интернет&nbsp;секс&nbsp;шоп</a>, выберете нужный Вам товар и&nbsp;нажмите на кнопку «В&nbsp;корзину». В&nbsp;корзине Вы можете изменить количество товара или удалить его из корзины.</p>
+          <p>Кнопка «Сообщить о&nbsp;поступлении» вместо кнопки «В&nbsp;корзину» означает, что в&nbsp;данный момент товара нет на складе. При подписке на&nbsp;уведомление о&nbsp;поступлении товара, укажите свой e-mail, на&nbsp;который Вы хотели бы получить уведомление, и, когда товар поступит в&nbsp;продажу, Вы своевременно узнаете об этом.</p>
+          <p>Приятных Вам покупок!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section class="v-block wrapper -basket">
+    <div class="v-block-plate">
+      РЕКОМЕНДУЕМ ДОБАВИТЬ 
+    </div>
+    <div class="v-block-wrap-slider -typeSlider">
+      <div class="cat-list swiper-slider swiper-container -full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cat-list-item">
+              <a href="#" class="cat-list-img">
+                <span class="cat-list-action">
+                  хит
+                </span>
+                <img src="/images/catalog/catalog_img_2.jpg" alt="">
+              </a>
+              <div class="cat-list-desc">
+                <div class="rating">
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cat-list-title">
+                  <a href="#">
+                    Маска нитяная TOYFA Theatre
+                  </a>
+                </div>
+                <div class="cat-list-bal">
+                  +180 баллов
+                </div>
+                <div class="cat-list-price">
+                  590&nbsp;руб.
+                </div>
+                <a href="#addBasket" class="but inlinePopupJS">
+                  В корзину
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cat-list-item">
+              <a href="#" class="cat-list-img">
+                <img src="/images/temporary/cat/catalog_img.jpg" alt="">
+              </a>
+              <div class="cat-list-desc">
+                <div class="rating">
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cat-list-title">
+                  <a href="#">
+                    Маска нитяная TOYFA Theatre
+                  </a>
+                </div>
+                <div class="cat-list-bal">
+                  +180 баллов
+                </div>
+                <div class="cat-list-price">
+                  590&nbsp;руб.
+                </div>
+                <a href="#addBasket" class="but inlinePopupJS">
+                  В корзину
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cat-list-item">
+              <a href="#" class="cat-list-img">
+                <span class="cat-list-action">
+                  -20%
+                </span>
+                <img src="/images/catalog/catalog_img_3.jpg" alt="">
+              </a>
+              <div class="cat-list-desc">
+                <div class="rating">
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cat-list-title">
+                  <a href="#">
+                    Маска нитяная TOYFA Theatre
+                  </a>
+                </div>
+                <div class="cat-list-bal">
+                  +180 баллов
+                </div>
+                <div class="cat-list-price -oldPrice">
+                  <span>700 руб.</span>
+                  590&nbsp;руб.
+                </div>
+                <a href="#addBasket" class="but inlinePopupJS">
+                  В корзину
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cat-list-item">
+              <a href="#" class="cat-list-img">
+                <img src="/images/catalog/catalog_img_2.jpg" alt="">
+              </a>
+              <div class="cat-list-desc">
+                <div class="rating">
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cat-list-title">
+                  <a href="#">
+                    Маска нитяная TOYFA Theatre
+                  </a>
+                </div>
+                <div class="cat-list-bal">
+                  +180 баллов
+                </div>
+                <div class="cat-list-price">
+                  590&nbsp;руб.
+                </div>
+                <a href="#addBasket" class="but inlinePopupJS">
+                  В корзину
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide -noBg ">
+            <a href="#" class="cat-list-rnb">
+              <img src="/images/temporary/cat/rnbr_5.jpg">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <div class="cat-list-item">
+              <a href="#" class="cat-list-img">
+                <span class="-byOrder"></span>
+                <img src="/images/catalog/catalog_img_2.jpg" alt="">
+              </a>
+              <div class="cat-list-desc">
+                <div class="rating">
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                  <div class="rating-item">
+                    <svg>
+                      <use xlink:href="#rateItemIcon" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cat-list-title">
+                  <a href="#">
+                    Маска нитяная TOYFA Theatre
+                  </a>
+                </div>
+                <div class="cat-list-bal">
+                  +180 баллов
+                </div>
+                <div class="cat-list-price">
+                  590&nbsp;руб.
+                </div>
+                <a href="#addBasket" class="but inlinePopupJS">
+                  В корзину
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev">
+        <svg>
+          <use xlink:href="#backArrowIcon" />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg>
+          <use xlink:href="#backArrowIcon" />
+        </svg>
+      </div>
+    </div>
+    <div class="v-block-link">
+      <a href="#">Все рекомендуемыеые товары >></a>
+    </div>
+  </section>
+  <article class="intro-block -int wrapper">
+    <div class="intro-block-wrap">
+      <figure class="intro-block-img">
+        <img src="/images/about-int.png" width="388px">
+      </figure>
+      <div class="intro-block-desc">
+        <!-- Вообще можно заменить и на div с классом H1 это ничего не поломает -->
+        <div class="h1">
+          <span class="-smallTabletDefis">магазин для взрослых “он и она” </span>
+          КАЧЕСТВЕННЫЕ СЕКС-ИГРУШКИ, СЕКСУАЛЬНОЕ БЕЛЬЕ, 
+          ВЫГОДНЫЕ ПРЕДЛОЖЕНИЯ И ЛУЧШИЕ БРЕНДЫ
+        </div>
+        <p>Первый специализированный магазин для взрослых был открыт в Москве при отделении семейной консультации на базе медицинского центра «Медицина и репродукция» в 1992 году. Уникальность этого проекта состояла в том, что из массы зарубежных товаров отбирались исключительно те, медицинское действие которых было доказано.</p>
+      </div>
+    </div>
+  </article>
+{% endblock afterHeader %}

@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Oprosnik
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          oprosnik
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Опросник
+        display: [ orderid, rating, created_at , _orderstatus , _ordersum , shop ]
+      filter:  ~
+      form:    
+        display: 
+          Основная информация: [ _orderid, _orderdata,  _dataans ]
+      edit:    ~
+      new:     ~

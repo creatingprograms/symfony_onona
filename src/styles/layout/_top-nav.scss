@@ -1,0 +1,29 @@
+.top-nav {
+  font-size: 14px;
+  line-height: 120%;
+  font-weight: 300;
+  margin: 0 0 20px;
+  &,
+  a {
+    color: $font-main-color;
+  }
+  a {
+    text-decoration: none;
+    &.active{
+      font-weight: bold;
+    }
+  }
+  li {
+    display: inline-block;
+    margin-left: 19px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    font-size: 12px;
+    li {
+      margin-left: 10px;
+    }
+  }
+}

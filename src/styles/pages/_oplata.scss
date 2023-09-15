@@ -1,0 +1,131 @@
+.oplata{
+  font: 16px/18px "Myriad Pro","Geneva CY",sans-serif;
+  padding-bottom: 60px;
+  *{ 
+    box-sizing: border-box;
+  }
+  .red{
+    padding-left: 50px;
+    margin: 30px 0;
+  }
+  &-item{
+    padding-left: 190px;
+    padding-right: 30px;
+    margin: 40px 0;
+    min-height: 160px;
+    .hide-show{
+      display: none;
+      color: #d31f10;
+      cursor: pointer;
+      text-decoration: underline;
+      padding-right: 27px;
+      position: relative;
+      width: 104px;
+      margin-top: 12px;
+      &.active{
+        display: none;
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 27px;
+        height: 15px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background:url('/frontend/images/arrow_down.png') 50% no-repeat;
+      }
+    }
+    &-name{
+      color: #d31f10;
+    }
+    &-cash{
+      padding-top: 35px;
+      background: url('/frontend/images/img_1.png') no-repeat top left;
+    }
+    &-pochta{
+      padding-top: 30px;
+      background: url('/frontend/images/img_2.png') no-repeat top left;
+    }
+    &-visa{
+      padding-top: 7px;
+      background: url('/frontend/images/img_3.png') no-repeat top left;
+    }
+    &-bank{
+      padding-top: 18px;
+      background: url('/frontend/images/img_4.png') no-repeat top left;
+    }
+    &-yandex{
+      padding-top: 20px;
+      background: url('/frontend/images/img_5.png') no-repeat top left;
+    }
+    &-terminal{
+      background: url('/frontend/images/img_6.png') no-repeat top left;
+    }
+    &-euroset{
+      padding-top: 8px;
+      background: url('/frontend/images/img_7.png') no-repeat top left;
+    }
+    &-bonus{
+      padding-top: 17px;
+      background: url('/frontend/images/img_8.png') no-repeat top left;
+    }
+    &-coupon{
+      padding-top: 25px;
+      background: url('/frontend/images/img_9.png') no-repeat top left;
+    }
+  }
+  .dotted{
+    max-width: 650px;
+    margin: 55px auto 0;
+    padding: 22px 40px;
+  }
+}
+@media screen and (max-width: $smallTablet) {
+  .oplata{
+    font: 14px/16px "Myriad Pro","Geneva CY",sans-serif;
+    .red{
+      padding-left: 0;
+    }
+    &-hide{
+      display: none;
+    }
+    &-item{
+      padding-left: 110px;
+      min-height: 97px;
+      .hide-show{
+        display: block;
+      }
+      &-cash,
+      &-pochta,
+      &-visa,
+      &-bank,
+      &-yandex,
+      &-terminal,
+      &-euroset,
+      &-bonus,
+      &-coupon{
+        padding-top: 7px;
+        background-size: 95px;
+      }
+    }
+    .dotted{
+      font: 15px/18px "Myriad Pro","Geneva CY",sans-serif;
+    }
+  }
+}
+/*
+@media screen and (max-width: $largeMobile) {
+  .actions{
+    &-form{
+      padding: 27px 30px 20px;
+    }
+    .us_input{
+      max-width: 100%;
+    }
+    .us_submit{
+      width: 100%;
+    }
+  }
+}
+*/

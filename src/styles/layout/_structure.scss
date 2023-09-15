@@ -1,0 +1,110 @@
+#wrapper {
+  padding-bottom: 568px + $content-dist-indent;
+}
+.topHead {
+  & + .top-slider.wrapper {
+    margin-top: 0;
+  }
+}
+.cont-right {
+  float: right;
+  width: calc(100% - 309px);
+  &.-sexopedia {
+    width: calc(100% - 270px);
+  }
+  &.-video {
+    padding-left: 0;
+    width: calc(100% - 295px);
+  }
+  @media screen and (max-width: $smallDesctop) {
+    width: calc(100% - 275px);
+  }
+  @media screen and (max-width: $smallTablet) {
+    width: calc(100% - 245px);
+    &.-video {
+      width: calc(100% - 260px);
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    float: none;
+    width: auto;
+    padding-bottom: 44px;
+    &.-sexopedia {
+      width: auto;
+      padding-bottom: 19px;
+    }
+    &.-video {
+      width: auto;
+    }
+  }
+}
+.wrap-cont {
+  padding-top: 10px;
+  padding-bottom: 45px;
+  @media screen and (max-width: $largeMobile) {
+    &,
+    &.wrapper {
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.wrapper {
+  &.-sidebar {
+    max-width: 1166px;
+  }
+  &.-sidebar {
+    padding-left: 0;
+  }
+  &.-video {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1186px;
+  }
+  @media screen and (max-width: $smallDesctop) {
+    max-width: 940px;
+    &.-video {
+      max-width: 980px;
+    }
+    &.-sidebar {
+      max-width: 960px;
+      padding-right: 0;
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    padding-left: 17px;
+    padding-right: 17px;
+    max-width: 990px;
+    &.-action {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.-sidebar {
+      max-width: 1004px;
+      padding-right: 20px;
+    }
+    &.-video {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    max-width: 732px;
+    &.-sidebar {
+      max-width: 752px;
+    }
+    &.-video {
+      max-width: 768px;
+    }
+  }
+}
+
+@media screen and (max-width: $largeTablet) {
+  #main {
+    min-height: 10px;
+  }
+  #wrapper {
+    padding-bottom: 0;
+  }
+}

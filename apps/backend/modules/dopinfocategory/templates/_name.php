@@ -1,0 +1,1 @@
+<a href="/backend.php/dopinfo/setFilterTag/<?php echo $dop_info_category->getId() ?>"><?=$dop_info_category->getName()?></a>

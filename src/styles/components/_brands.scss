@@ -1,0 +1,131 @@
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  h2,
+  .h2 {
+    width: 100%;
+    color: #0f0f0f;
+    margin: 0 0 37px;
+    text-align: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+  }
+  img,
+  &-polyfill {
+    width: 150px;
+  }
+  &-item,
+  &-polyfill {
+    margin-left: 40px;
+  }
+  &-item {
+    @extend %logo;
+    &:nth-of-type(4n-3) {
+      margin-left: 0;
+    }
+    &:nth-of-type(n+5) {
+      margin-top: 64px;
+    }
+    img {
+      display: block;
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    margin-bottom: 20px;
+    &-item,
+    &-polyfill {
+      margin-left: 10px;
+    }
+    &-item {
+      &:nth-of-type(4n-3) {
+        margin-left: 0;
+      }
+      &:nth-of-type(n+5) {
+        margin-top: 40px;
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-item {
+      &:nth-of-type(n) {
+        margin-left: 10px;
+      }
+      &:nth-of-type(3n-2) {
+        margin-left: 0;
+      }
+      &:nth-of-type(n+4) {
+        margin-top: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    & + .more {
+      margin-top: 35px;
+    }
+    h2,
+    .h2 {
+      margin: 0 0 24px;
+    }
+    &-all {
+      font-size: 13px;
+      text-align: center;
+      font-family: $helvFont;
+      svg {
+        width: 12px;
+        height: 8px;
+        margin-left: 3px;
+      }
+    }
+    &-item,
+    &-polyfill {
+      width: 131px;
+      margin-left: 30px;
+    }
+    &-item {
+      &:nth-of-type(n) {
+        margin-left: 30px;
+      }
+      &:nth-of-type(4n-3) {
+        margin-left: 0;
+      }
+      &:nth-of-type(n+4) {
+        margin-top: 0;
+      }
+      &:nth-of-type(n+5) {
+        margin-top: 56px;
+      }
+    }
+  }
+  @media screen and (max-width: 680px) {
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+    &-item {
+      &:nth-of-type(n) {
+        margin-left: 30px;
+      }
+      &:nth-of-type(3n-2) {
+        margin-left: 0;
+      }
+      &:nth-of-type(n+4) {
+        margin-top: 56px;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    max-width: 294px;
+    &-item {
+      &:nth-of-type(n) {
+        margin-left: 0;
+      }
+      &:nth-of-type(2n) {
+        margin-left: 10px;
+      }
+      &:nth-of-type(n+3) {
+        margin-top: 56px;
+      }
+    }
+  }
+}

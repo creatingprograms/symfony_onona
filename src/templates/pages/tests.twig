@@ -1,0 +1,159 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <div class="breadcrumbs wrapper">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a>
+      >
+      Тесты
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <div class="wrapper wrap-cont -video -clf">
+    <main class="cont-right">
+      <div class="test-page">
+        <div class="v-block-plate -int">
+          <h1>Любовные тесты на сексуальную тематику онлайн</h1>
+        </div>
+        <form action="index.php" class="cat-list-filtr">
+          <span class="-sort"></span>
+          <div class="cat-list-filtr-mob-col">
+            <!-- div-ы после label нужны для мобильника, на мобильника все это превращается в селект, по другому не получится -->
+            <input type="radio" name="cal-list-filtr" id="clf-1" checked>
+            <label for="clf-1">новые</label>
+            <div class="cat-list-filtr-mob-text">новые</div>
+            <input type="radio" name="cal-list-filtr" id="clf-2">
+            <label for="clf-2">популярные</label>
+            <div class="cat-list-filtr-mob-text">популярные</div>
+            <!-- Попап для мобильника -->
+            <div class="cat-list-filtr-mob-pop">
+              <label for="clf-1">новые</label>
+              <label for="clf-2">популярные</label>
+            </div>
+          </div>
+        </form>
+        <div class="test-list -clf">
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+          {% include '../block/test-item.twig' %}
+        </div>
+        <div class="more">
+          <a href="#">Показать  еще  <svg><use xlink:href="#arrowMoreIcon"></use></svg></a>
+        </div>
+        <div class="pag-line">
+          <div class="pag">
+            <a href="#" class="pag-first -noActive">
+              &lt;
+              &lt;
+            </a>
+            <a href="#" class="pag-prev -noActive">
+              &lt;
+            </a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="pag-next">
+              &gt;
+            </a>
+            <a href="#" class="pag-last">
+              &gt;
+              &gt;
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-showcase">
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-1.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Журнал LoveStyle</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Новый формат общения для ярких молодых людей
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-2.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Гороскоп</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Тайна характера и отошений
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-3.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Сексопедия</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Статьи о сексе, любви и здорове
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-4.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Любовные тесты</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Онлайн анализ индивидуальности
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-5.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Он и Она | TUBE</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Видеоблог о  сексе
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-showcase-item">
+          <a href="#" class="sidebar-showcase-img">
+            <img src="/images/temporary/sidebar/img-6.jpg">
+          </a>
+          <div class="sidebar-showcase-desc">
+            <div class="sidebar-showcase-h">
+              <a href="#">Школа Интимной Гармонии</a>
+            </div>
+            <div class="sidebar-showcase-title">
+              Школа Интимной Гармонии 
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+{% endblock afterHeader %}

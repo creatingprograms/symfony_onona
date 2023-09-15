@@ -1,0 +1,1 @@
+<?=$horoscopesovm->getHoroscopeg()->getName()?>

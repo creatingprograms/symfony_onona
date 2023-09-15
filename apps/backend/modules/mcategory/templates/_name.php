@@ -1,0 +1,1 @@
+<a href="/backend.php/product/setFilterTag/<?php echo $mcategory->getId() ?>"><?php echo $mcategory->getName() ?></a>

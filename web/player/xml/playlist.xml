@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playlist>
+  <media>
+    <type>video</type>
+    <video>http://hdwebplayer.com/player/videos/300.mp4</video>
+    <thumb></thumb>
+    <preview></preview>
+    <title>Sample Video</title>
+  </media>
+</playlist>

@@ -1,0 +1,49 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Sliders
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sliders
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Активна
+        is_onlymoscow:
+          label: Только Москва
+        href:
+          label: Ссылка
+        alt:
+          label: Название
+        description:
+          label: Описание
+        button:
+          label: Текст кнопки
+        class:
+          label: Вид
+        src:
+          label: Слайд
+        file:
+          label: Изображение gif
+        position:
+          label: Сортировка
+        positionpage:
+          label: Место на сайте
+        is_small:
+          label: маленький справа
+        view_count:
+          label: Количество просмотров
+      list:
+        title: Слайды
+        display: [ is_active,  href, alt, _src, position, positionpage, view_count ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

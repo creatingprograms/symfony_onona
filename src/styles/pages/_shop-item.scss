@@ -1,0 +1,229 @@
+.shop-item {
+  .form-review {
+    padding: 1px 0;
+    margin: 20px 0 0;
+  }
+  .review-list {
+    margin: 57px 0 20px;
+  }
+  &-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 33px;
+    justify-content: space-between;
+  }
+  &-map {
+    order: 1;
+    width: calc(59% - 6px);
+    min-height: 403px;
+  }
+  &-info {
+    order: 2;
+    width: calc(41% - 6px);
+    background-color: #fff;
+    &-desc {
+      color: #5d5c5c;
+      padding: 5px 20px;
+      letter-spacing: -1px;
+      line-height: 125%;
+      b,
+      strong {
+        color: #010101;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  &-plate {
+    text-transform: uppercase;
+    background-color: #ffbbb9;
+    padding: 12px 20px 11px 22px;
+    &,
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+      color: #030303;
+      letter-spacing: 0;
+      font: 18px/120% $helvFont;
+    }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+      margin: 0;
+      padding: 0;
+    }
+    .-block {
+      display: block;
+    }
+  }
+  &-group {
+    margin: 20px 0;
+  }
+  &-slider {
+    position: relative;
+    margin: 0 0 40px;
+    clear: both;
+    .swiper {
+      &-slide {
+        margin-right: 30px;
+        text-decoration: none;
+        width: calc(33.33333333% - 20px);
+        height: 240px !important;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+  &-review {
+    margin: 0 0 30px;
+    padding: 34px 50px 55px;
+    background-color: #fff;
+    &-h {
+      color: #000;
+      font-size: 22px;
+      line-height: 130%;
+      font-weight: bold;
+      letter-spacing: -1px;
+      margin: 0 0 35px;
+      text-transform: uppercase;
+    }
+    &-call-form {
+      margin: 20px 0;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: -1px;
+      a {
+        color: #D11E0F;
+        &.-isVis {
+          color: #B8A6AF;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    .swiper-button {
+      &-prev,
+      &-next {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-top {
+      @include pie-clearfix;
+      display: block;
+      background-color: #fff;
+    }
+    &-info,
+    &-map {
+      width: 100%;
+      order: 1;
+    }
+    &-info {
+      &-desc {
+        float: left;
+        width: 100%;
+        padding-top: 412px;
+        box-sizing: border-box;
+      }
+    }
+    &-plate {
+      clear: both;
+      .-block {
+        display: inline;
+      }
+    }
+    &-map {
+      float: left;
+      width: 100%;
+      margin-left: -100%;
+    }
+    &-review {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &-slider {
+      .swiper {
+        &-slide {
+          margin-right: 30px;
+          text-decoration: none;
+          width: calc(50% - 10px);
+          /*img {
+            width: 100%;
+            display: block;
+          }*/
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    margin: 12px -17px 0;
+    .review-list {
+      margin-top: 40px;
+    }
+    &-slider {
+      margin: 0 0 8px;
+      &.-typeSlider {
+        .swiper-pagination {
+          margin: 15px 0 0;
+        }
+      }
+    }
+    &-review {
+      padding: 24px 17px 30px;
+      &-h {
+        font-size: 20px;
+        margin: 0 0 21px;
+      }
+      &-call-form {
+        font-size: 16px;
+      }
+    }
+    &-plate {
+      text-align: center;
+      padding: 4px 17px 5px;
+      &,
+      h1,
+      .h1,
+      h2,
+      .h2,
+      h3,
+      .h3 {
+        font-size: 15px;
+      }
+    }
+    &-map {
+      min-height: 10px;
+      height: 193px;
+    }
+    &-group {
+      margin: 21px 0;
+    }
+    &-info {
+      &-desc {
+        font-size: 18px;
+        padding-top: 190px;
+      }
+    }
+  }
+  @media screen and (max-width: $smallMobile) {
+    &-slider {
+      .swiper {
+        &-slide {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

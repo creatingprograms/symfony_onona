@@ -1,0 +1,70 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/05-Factories
+
+prod:
+  mailer:
+    param:
+      delivery_strategy: realtime
+  logger:
+    class:   sfNoLogger
+    param:
+      level:   err
+      loggers: ~
+
+test:
+  storage:
+    class: sfSessionTestStorage
+    param:
+      session_path: %SF_TEST_CACHE_DIR%/sessions
+
+  response:
+    class: sfWebResponse
+    param:
+      send_http_headers: false
+
+  mailer:
+    param:
+      delivery_strategy: none
+
+dev:
+  mailer:
+    param:
+      delivery_strategy: realtime
+
+all:
+#  mailer:
+#    param:
+#      transport:
+#        class: Swift_SmtpTransport
+#        param:
+#          host:       smtp.gmail.com
+#          port:       465
+#          encryption: ssl
+#          username: info@onona.ru
+#          password: 5r4e3w2q1
+  storage:
+    class: mySessionStorage
+    param:
+      session_name: ononas
+      session_cookie_lifetime: 864000
+#2592000
+      session_cookie_domain: .onona.ru
+      db_table: sessions
+      database: doctrine
+      regenerate: false
+#  storage:
+#    class: sfSessionStorage
+#    param:
+#      session_cookie_domain: .onona.ru
+#      session_cookie_lifetime: 2592000
+#      session_name:                   ononas
+  view_cache_manager:
+    class: sfViewCacheManager
+    param:
+      cache_key_use_vary_headers: true
+      cache_key_use_host_name:    true
+      
+  user:
+    class: myUser
+    param:
+      timeout:         864000

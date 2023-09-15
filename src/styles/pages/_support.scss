@@ -1,0 +1,54 @@
+.support{
+  &-header{
+    font-size:16px;
+    color: #d11e0f;
+    margin-bottom: 40px;
+  }
+  &-page{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 130%;
+    p{
+      margin-bottom: 25px;
+    }
+    .form{
+      input[type="text"],
+      input[type="email"],
+      textarea{
+        border: hidden;
+        background: #f2f2f2;
+      }
+      textarea{
+        height: 140px;
+      }
+      &-label{
+        font-size: 16px;
+        &.gray{
+          color: #b8a6af;
+        }
+      }
+    }
+  }
+  &-item{
+    margin: 10px 0;
+    position: relative;
+    width: calc(50% - 18px);
+    box-sizing: border-box;
+    &.-isWhite{
+      background: #fff;
+      padding: 20px 30px;
+    }
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .support{
+    &-page{
+      flex-wrap: wrap;
+    }
+    &-item{
+      width: 100%;
+      padding: 20px 30px;
+    }
+  }
+}

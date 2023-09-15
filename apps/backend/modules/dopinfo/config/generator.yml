@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DopInfo
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dop_info
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        dicategory_id:
+          label: Название
+        value:
+          label: Значение
+      list:
+        title: Дополнительные характеристики
+        display: [ _name, value ]
+      filter: ~
+      form:
+        display:
+          Основная информация: [ dicategory_id, value,dop_info_category_full_dop_info_list ]
+      edit:
+        title: Редактирование дополнительной характеристики "%%name%%"
+      new:
+        title: Создание дополнительной характеристики

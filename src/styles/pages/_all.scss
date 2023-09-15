@@ -1,0 +1,106 @@
+@media(max-width: 767px){
+  .scrollTop{
+    bottom: auto;
+    top: 10px;
+  }
+}
+.art-detail .ya-share2 ol, .art-detail .ya-share2 ul,
+.ya-share2 ul{
+  margin: 0;
+  li:after{
+    content: none;
+  }
+}
+.red{
+  color: #d11e0f;
+}
+.short-block{
+  max-height: 150px;
+  overflow: hidden;
+}
+.dotted{
+  border: 4px dotted #ffe2e2;
+}
+ul.pink{
+  li{
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -15px;
+      background:#ffe2e2;
+    }
+  }
+  &.black{
+    li{
+      &::after{
+        background: #040404;
+      }
+    }
+  }
+  &.grey{
+    li{
+      &::after{
+        background: #c5c5c5;
+      }
+    }
+  }
+}
+.but{
+  &.disabled{
+    background: #ccc;
+    cursor: default;
+  }
+}
+.discount-card{
+  padding: 25px 55px;
+  display: inline-block;
+  margin:  20px 0;
+  &.pink{
+    li{
+      &:after{
+        top: 10px;
+        transform: none;
+      }
+    }
+  }
+}
+.size-header{
+  box-sizing: border-box;
+  padding: 7px 20px 6px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  cursor: pointer;
+  &::after{
+    content: '';
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: url('/frontend/images/black-arrow.png') 50% no-repeat;
+    vertical-align: middle;
+    margin-left: 12px;
+    transform: scale(1, -1);
+  }
+  &.active{
+    &::after{
+      transform: scale(1, 1);
+    }
+  }
+  &-women{
+    background: #ffbbba;
+  }
+  &-man{
+    background: #b9c8e5;
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .hide-mobile{
+    display: none !important;
+  }
+}

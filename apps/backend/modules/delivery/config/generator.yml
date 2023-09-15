@@ -1,0 +1,50 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Delivery
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          delivery
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        is_pvz:
+          label: Группировать в ПВЗ
+        delivery_payments_list:
+          label: Способы оплаты
+        description:
+          label: Подробно
+        picture:
+          label: Иконка
+        picturehover:
+          label: Иконка при наведении
+        free_from:
+          label: Бесплатно от
+        free_from_online:
+          label: Бесплатно при онлайн-оплате от
+        free_from_online_moscow:
+          label: Бесплатно при онлайн-оплате для Москвы от
+      list:
+        title: Доставка
+        display: [ name, is_public ]
+      filter:
+        display: [ name, is_public ]
+      form:
+        display:
+          Основная информация: [ name, description, content, is_public, is_pvz, delivery_payments_list, picture, picturehover,free_from, free_from_online, free_from_online_moscow ]
+      edit:
+        title: Редактирование способа доставки "%%name%%"
+      new:
+        title: Создание нового способа доставки

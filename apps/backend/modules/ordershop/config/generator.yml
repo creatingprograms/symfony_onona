@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ordersShop
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          orders_shop
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        text:
+          label: Заказ
+        dopid:
+          label: ID 1C
+        date:
+          label: Дата заказа
+        checknumber:
+          label: Номер чека
+        smena:
+          label: Смена
+        price:
+          label: Сумма
+        active:
+          label: Активирован
+        dateactive:
+          label: Дата активации
+        ipactive:
+          label: IP клиента
+      list:    
+        title: Заказы из розницы
+        display: [ dopid, date, checknumber, smena,price,active,dateactive, ipactive ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

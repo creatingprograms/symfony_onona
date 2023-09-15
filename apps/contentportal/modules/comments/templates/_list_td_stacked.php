@@ -1,0 +1,3 @@
+<td colspan="7">
+  <?php echo __('%%product_id%% - %%customer_id%% - %%username%% - %%text%% - %%is_public%% - %%created_at%% - %%rate_set%%', array('%%product_id%%' => get_partial('comments/product_id', array('type' => 'list', 'comments' => $comments)), '%%customer_id%%' => get_partial('comments/customer_id', array('type' => 'list', 'comments' => $comments)), '%%username%%' => $comments->getUsername(), '%%text%%' => $comments->getText(), '%%is_public%%' => get_partial('comments/is_public', array('type' => 'list', 'comments' => $comments)), '%%created_at%%' => false !== strtotime($comments->getCreatedAt()) ? format_date($comments->getCreatedAt(), "f") : '&nbsp;', '%%rate_set%%' => $comments->getRateSet()), 'messages') ?>
+</td>

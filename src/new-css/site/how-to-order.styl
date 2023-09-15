@@ -1,0 +1,64 @@
+.wrap-step-order
+  border-bottom: 1px solid #E1E0E9
+  padding-bottom: 32px
+  padding-top: 32px
+  &:first-child
+    margin-top -50px
+  &:nth-child(odd)
+    .step-order__btn
+      +min(mobile)
+        margin-left: 2%
+  &:nth-child(even)
+    .step-order__btn
+      +min(mobile)
+        margin-right: 2%
+  &:nth-child(2)
+  &:nth-child(5)
+    .step-order
+      +max(mobile)
+        flex-direction: column-reverse
+
+.step-order
+  display flex
+  justify-content center
+  align-items center
+  max-width: 976px
+  margin 0 auto
+  +max(mobile)
+    flex-direction: column
+
+.step-order__btn
+  max-width: 28.5%
+  min-width: 276px
+  flex: 1 0 auto
+  width: 100%
+  display flex
+  flex-direction: column
+  justify-content center
+  +max(mobile)
+    margin-top 20px
+  .btn-full
+    max-width 276px
+    width 100%
+    margin 0 auto
+    &:not(:first-child)
+      margin-top 14px
+
+.step-order__icon
+  text-align center
+  max-width: 26%
+  width 100%
+  flex 1 0 auto
+  margin-right 4.5%
+  +max(mobile)
+    margin-top 20px
+
+.step-order-note
+  display block
+  color #616C7C
+  max-width: 976px
+  margin 32px auto 0
+  & + b
+    display block
+    margin 38px auto 0
+    text-align center

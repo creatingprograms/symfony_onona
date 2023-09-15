@@ -1,0 +1,60 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Page
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          page
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        views_count:
+          label: Просмотров
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        content_mobile:
+          label: Содержимое мобильной версии
+        content_mo:
+          label: Содержимое для МО
+        content_mo_mobile:
+          label: Содержимое для МО мобильной версии
+        content_new_version:
+          label: Содержимое для новой версии
+        is_public:
+          label: Доступна
+        sitemapRate:
+          label: Приоритет Sitemap
+        tags:
+          label: Теги
+        class:
+          label: Дополнительный класс
+        categorypage_list:
+          label: Категории
+        city_id:
+          label: Город
+        is_show_right_block:
+          label: Показывать правый блок
+      list:
+        title: Страницы
+        display: [ name, slug, is_public, views_count ]
+      filter:
+        display: [ name, slug, is_public, categorypage_list ]
+      form:
+        display:
+          Основная информация: [ name, slug, content, content_mo, content_new_version, is_public,sitemapRate, tags,categorypage_list, city_id, class ]
+          Meta теги: [ title, keywords, description ]
+          Служебное: [ views_count ]
+      edit:
+        title: Редактирование страницы "%%name%%"
+      new:
+        title: Создание новой страницы

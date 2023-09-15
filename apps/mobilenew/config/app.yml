@@ -1,0 +1,16 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+#all:
+all:
+  recaptcha:
+    active:     true
+    publickey:  "6LdgCdUSAAAAAAzL5d67NVF4HUTFpSA_n611KXTo"
+    privatekey: "6LdgCdUSAAAAAPVl1vDIFgvPlmUMelkfs74LPhXL"
+  recaptchacomm:
+    active:     true
+    publickey:  "6LdSINUSAAAAAF7tJcNIRzRTzmo94kh4A3kQwqSo"
+    privatekey: "6LdSINUSAAAAACwTev044Mih4sGLV78wnxOxGtXL"
+  sf_guard_plugin:
+    allow_login_with_email: true

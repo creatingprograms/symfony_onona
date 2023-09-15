@@ -1,0 +1,2 @@
+<iframe id="map-via" class="via-delivery" src="https://widget.viadelivery.pro/via.maps/?dealerId=7895165b-ac0b-476a-bec7-ebb1d3ad1814&orderCost=2000&zoom=10&lat=55.7558&lng=37.6173&action=true&lang=ru&orderWeight=1" width="100%" frameborder="0">
+</iframe>

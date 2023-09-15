@@ -1,0 +1,39 @@
+show:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_paramsNew:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_productBooklet:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_productBooklet_new:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_changechildren:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+rate:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+showUserPhotos:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+changechildren:
+  enabled:     false
+  with_layout: false
+  contextual: false

@@ -1,0 +1,247 @@
+.footer
+  background-color: #16222D;
+  +max(mobile)
+    margin-top 52px
+    padding-bottom: 50px;
+  & > *
+    color: #fff;
+  ul
+    li
+      &::before
+        display none
+  .footer-wrap
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 46px;
+    border-bottom: 1px solid #2D2841;
+    +max(tablet)
+      flex-wrap: wrap;
+      padding-bottom 41px
+    +max(sMobile)
+      padding-bottom 32px
+  .footer-h
+    margin-bottom: 24px;
+  .footer-plate-smm
+    margin-top: 31px;
+    +max(tablet)
+      margin-top 0
+      margin-left 10%
+    +max(mobile)
+      margin-left auto
+    +max(520)
+      margin-left 0
+      margin-top 22px
+      width 100%
+    +max(sMobile)
+      margin-left 0
+      margin-top 22px
+    .smm
+      display: flex;
+    a
+      max-width: 48px;
+      width: 100%;
+      height: 48px;
+      &:not(:last-child)
+        margin-right: 12px;
+  .footer-plate-w-text
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    +max(mobile)
+      display block
+    & > *
+      font-size: 12px;
+      line-height: 16px;
+      color: #9B98AC;
+      +max(mobile)
+        margin-top 17px
+    p:not(:last-of-type)
+      margin-bottom: 0;
+    p:first-child
+      +max(tablet)
+        flex 0 1 auto
+      +max(mobile)
+        margin-top 0
+  .footer-plate
+    padding-top: 25px;
+    padding-bottom: 20px;
+    +max(mobile)
+      padding-top 22px
+    .text-warning
+      margin-right: 12%;
+      +max(tablet)
+        margin-right 0
+        margin-left 3%
+      +max(mobile)
+        margin-left 0
+  .mobile-bottom-menu
+    display: none;
+    svg
+      stroke: #000;
+      stroke-width: 0px;
+      height: 20px;
+      width: 20px;
+      fill: none;
+    &_item
+      color: #2D2841;
+      text-align: center;
+      width: 50px;
+      line-height: 0;
+      .btn-cart
+        display: inline-block;
+      span
+        font-size: 8px;
+        line-height: 12px;
+        display: inline-block;
+        width: 100%;
+      &.fav-wrapper
+        position: relative;
+        &:after
+          content: attr(count);
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: -2px;
+          right: 6px;
+          background-color: #ef182f;
+          font-size: 12px;
+          line-height: 16px;
+          color: #fff;
+          font-weight: 500;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+    +max(mobile)
+      display: flex;
+      width: 100%;
+      padding: 9px 12px;
+      background: #fff;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 5;
+      justify-content: space-between;
+      box-shadow: 0px 4px 15px 0px #E5E5E5B2;
+.footer-menu
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  +max(tablet)
+    width 100%
+  +max(mobile)
+    flex-wrap wrap
+  +max(sMobile)
+    display block
+  .footer-nav-col
+    +max(mobile)
+      width 50%
+    +max(sMobile)
+      width 100%
+      border-bottom 1px solid #2D2841
+      padding-bottom 16px
+      &:not(:last-child)
+        margin-bottom 24px
+    &:last-child
+      +max(mobile)
+        margin-top 47px
+    ul
+      +max(sMobile)
+        display none
+        padding-top 25px
+  ul
+    padding-left: 0;
+  ul li:not(:last-child)
+    margin-bottom: 16px;
+  .footer-h
+    +max(sMobile)
+      display flex
+      align-items center
+      justify-content space-between
+      margin-bottom 0
+    a
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+
+.btn-footer-menu
+  display block
+  position relative
+  width 16px
+  height 16px
+  max-width: 16px
+  transition $trans
+  cursor pointer
+  +min(sMobile)
+    display none
+  &::before
+  &::after
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) rotate(90deg)
+    height 1px
+    background-color #fff
+    width 16px
+  &::after
+    transform translate(-50%, -50%) rotate(0)
+  &.active
+    transform rotate(45deg)
+
+.footer-tel__item
+  a
+    display: inline-block;
+    margin-bottom: 4px;
+  span
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color:#9B98AC;
+  &:not(:first-child)
+    margin-top: 15px;
+    +max(tablet)
+      margin-top 0
+      margin-left 24px
+    +max(sMobile)
+      margin-left 0
+      margin-top 21px
+
+.footer-contact
+  +max(tablet)
+    width 100%
+    max-width: 100%
+    margin-top 50px
+    display flex
+    flex-wrap wrap
+  .footer-h
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    +max(tablet)
+      width 100%
+  .footer-tel
+    +max(tablet)
+      display flex
+    +max(sMobile)
+      display block
+
+.footer .wrap-note
+.footer-contact
+  max-width: 276px;
+  width: 100%;
+  flex-grow: 1
+
+.footer .wrap-note
+  +max(tablet)
+    max-width inherit
+    width auto
+    flex-grow: 0
+    flex-shrink: 1
+    margin-left auto
+    margin-right 2%
+  a
+    display: inline;
+    padding-bottom: 2px;
+    border-bottom 1px solid #9B98AC

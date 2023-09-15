@@ -1,0 +1,67 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Article
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        category_slug:
+          label: Связанная категория товаров
+        precontent:
+          label: Превью
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        is_new:
+          label: с блога
+        tags:
+          label: Теги
+        created_at:
+            label: Дата создания
+        articlecategory_list:
+            label: Список категорий
+        img:
+            label: Изображение
+        img_preview:
+            label: Изображение предпросмотра
+        video:
+            label: Видеоролик
+        is_related:
+            label: Рекомендуемая
+        positionrelated:
+            label: Сортировка рекомендуемых
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+        rating:
+          label: Рейтинг
+        expert_id:
+          label: Эксперт
+      list:
+        title: Статьи
+        display: [ name, slug, is_public, is_related, positionrelated ]
+      filter:
+        display: [ name, slug, is_public, articlecategory_list, is_new ]
+      form:
+        display:
+          Основная информация: [ name, slug, articlecategory_list, precontent, content, img_preview, img, is_public, video, created_at, is_related, positionrelated, views_count, votes_count, rating, category_slug, is_new ]
+          Meta теги: [ title, keywords, description ]
+      edit:
+        title: Редактирование статьи "%%name%%"
+      new:
+        title: Создание новой статьи

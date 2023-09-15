@@ -1,0 +1,94 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <div class="breadcrumbs wrapper">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a> > Сексопедия
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <div class="wrapper topHead">
+    <h1>Энциклопедия секса - Sexopedia 18+</h1>
+  </div>
+  <section class="top-slider wrapper -typeSlider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-2.jpg">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-1.jpg">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-3.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+  </section>
+  <div class="wrapper wrap-cont -clf -sidebar">
+    <main class="cont-right -sexopedia">
+      <div class="art-list-group">
+        <div class="v-block-plate -int">
+          <h2>новые статьи</h2>
+        </div>
+        <div class="art-list">
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+        </div>
+        <div class="v-block-link">
+          <a href="#">Все новые статьи >></a>
+        </div>
+      </div>
+      <div class="art-list-group">
+        <div class="v-block-plate -int">
+          <h2>рекомендуемые статьи</h2>
+        </div>
+        <div class="art-list">
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+        </div>
+        <div class="v-block-link">
+          <a href="#">Все рекомендуемые статьи >></a>
+        </div>
+      </div>
+      <div class="art-list-group">
+        <div class="v-block-plate -int">
+          <h2>популярные статьи</h2>
+        </div>
+        <div class="art-list">
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+          {% include '../block/article-list-row-item.twig' %}
+        </div>
+        <div class="v-block-link">
+          <a href="#">Все популярные статьи >></a>
+        </div>
+      </div>
+    </main>
+    {% include '../layout/sidebar-sexopedia.twig' %}
+  </div>
+{% endblock afterHeader %}

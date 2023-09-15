@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           VacancyReply
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vacancy_reply
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        vacancy_name:
+          label: Название вакансии
+        name:
+          label: Имя
+        phone:
+          label: Телефон
+        email:
+          label: Email
+        created_at:
+          label: Получен
+      list:
+        title: Отклики на вакансии
+        display: [ id, created_at, vacancy_name, name, email, phone ]
+      filter:
+        display: [ id, vacancy_name, created_at ]
+      form:
+        display:
+          Основная информация: [ vacancy_name, name, email, phone]
+      edit:
+        title: Редактирование отклика на вакансии "%%vacancy_name%%"
+      new:
+        title: Создание отклика на вакансии

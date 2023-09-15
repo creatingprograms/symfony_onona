@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Wheelsectors
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wheelsectors
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        color:
+          label: Цвет сектора
+        percent:
+          label: Вероятность выпадения, %
+        discount:
+          label: Скидка
+        coupon:
+          label: Купон
+      list:
+        title: Коесо фортуны
+        display: [ color, percent, discount, coupon ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

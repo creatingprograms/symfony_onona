@@ -1,0 +1,43 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Banners
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          banners
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        href:
+          label: Ссылка
+        alt:
+          label: Название
+        description:
+          label: Описание
+        button:
+          label: Текст кнопки
+        class:
+          label: Вид
+        src:
+          label: Баннер
+        is_rotation:
+          label: Ротация
+        is_public:
+          label: Доступна
+        position:
+          label: Положение
+        view_count:
+          label: Количество просмотров
+      list:
+        title: Баннеры
+        display: [ href, alt, _src, is_public, position, view_count ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

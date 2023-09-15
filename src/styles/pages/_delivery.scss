@@ -1,0 +1,195 @@
+.delivery{
+  font-size: 16px;
+  line-height: 150%;
+  p{
+    margin-bottom: 20px;
+  }
+  &-top{
+    padding: 45px 80px;
+    background: #fff;
+    margin-bottom: 30px;
+    .header{
+      margin: 35px -80px 20px;
+      background: #fecbca;
+      line-height: 30px;
+      text-transform: uppercase;
+      padding: 0 80px;
+      font-weight: bold;
+      a{
+        color: #030303;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-table{
+    width: 280px;
+    margin: 20px 0;
+    font-size: 16px;
+    th{
+      text-align: left;
+      font-weight: normal;
+      color: #d11e0f;
+    }
+  }
+  &-second{
+    padding: 55px 80px;
+    background: #fff;
+    margin-bottom: 30px;
+    hr{
+      width: 80%;
+      height: 7px;
+      border: hidden;
+      background: #d7d7d7;
+      margin: 28px 0;
+    }
+    .header{
+      margin: 35px -80px 20px;
+      background: #fecbca;
+      line-height: 30px;
+      text-transform: uppercase;
+      padding: 0 80px;
+      font-weight: bold;
+      a{
+        color: #030303;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-picture-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-image{
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 80px;
+      margin-bottom: 10px;
+    }
+    &-text{
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 900px;
+    }
+  }
+  .overflow-container{
+    overflow-x: auto;
+  }
+  .map-box{
+    height: 460px;
+  }
+  select{
+    width: 100%;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .dlh-map{
+    height: 750px;
+  }
+  #PostPages{
+    border: 5px dotted #ffbbba;
+    .pickpoint-cities-list,
+    .pickpoint-cities-list-pick{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 40px;
+      justify-content: space-between;
+      li{
+        width: calc(25% - 15px);
+      }
+    }
+    .letters{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .header-nmt{
+    margin-top: 0;
+  }
+  .form{
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+      &-element{
+        width: calc(50% - 50px);
+      }
+    }
+    &-row{
+      margin: 10px 0 25px;
+    }
+    textarea,
+    input{
+      background: #f2f2f2;
+    }
+    textarea{
+      height: 124px;
+    }
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .delivery{
+    .form{
+      &-wrapper{
+        &-element{
+          width: calc(50% - 10px);
+        }
+      }
+    }
+    .sc-w-map-wrapper.sc-w-map-wrapper-xs .sc-w-header #sc-w-town{
+      left: 0;
+    }
+    &-top{
+      padding: 25px 20px;
+      .header{
+        margin: 35px -20px 20px;
+        padding: 0 20px;
+      }
+    }
+    &-second{
+      padding: 25px 20px;
+      .header{
+        margin: 35px -20px 20px;
+        padding: 0 20px;
+      }
+    }
+    &-picture-block{
+      &-image{
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .delivery{
+    .form{
+      &-wrapper{
+        flex-wrap: wrap;
+        &-element{
+          width: 100%;
+        }
+      }
+    }
+    #PostPages{
+      .pickpoint-cities-list,
+      .pickpoint-cities-list-pick{
+        padding: 15px 20px;
+        li{
+          width: calc(50% - 10px);
+        }
+      }
+      .letters{
+        flex-wrap: wrap;
+      }
+    }
+    &-picture-block{
+      flex-wrap: wrap;
+      &-image{
+        margin: 10px auto;
+      }
+    }
+  }
+}

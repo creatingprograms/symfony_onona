@@ -1,0 +1,47 @@
+.alter-price{
+  &-block{
+    display: flex;
+    font-size: 14px;
+    line-height: 132%;
+  }
+  &-element{
+    width: 50%;
+    box-sizing: border-box;
+    &.text{
+      padding-bottom: 30px;
+      &.left{
+        padding-right: 30px;
+      }
+      &.right{
+        padding-left: 30px;
+      }
+    }
+    .but{
+      color: #fff;
+      margin-top: 20px;
+    }
+  }
+  &-header{
+    color: #d11e0f;
+    margin: 20px 3px;
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .alter-price{
+    &-block{
+      flex-wrap: wrap;
+    }
+    &-element{
+      width: 100%;
+      padding-bottom: 20px;
+      &.text{
+        &.left{
+          padding-right: 0;
+        }
+        &.right{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

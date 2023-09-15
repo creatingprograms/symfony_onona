@@ -1,0 +1,12 @@
+.left-banners{
+  a{
+    display: block;
+    margin: 10px auto;
+    img{
+      max-width: 100%;
+    }
+  }
+  @media(max-width: 767px){
+    display: none;
+  }
+}

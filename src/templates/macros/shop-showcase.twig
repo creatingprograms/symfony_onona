@@ -1,0 +1,46 @@
+{% macro showcaseItem(img, id, head, title) %}
+  <div class="shops-showcase-item">
+    <a href="#" class="shops-showcase-img">
+      <img src="/images/shop/{{img}}" alt="">
+    </a>
+    <div class="shops-showcase-desc">
+      <div class="shops-page-adres-h {{id}}">
+        <a href="#">
+          <img src="/images/metro/metro-1.png" alt="">
+          {{head}}
+        </a>
+      </div>
+      <div class="shops-page-adres-inf">
+        {{title}}
+      </div>
+      <div class="shops-showcase-week-wrap">
+        <div class="shops-showcase-week">
+          <div class="shops-showcase-week-item">
+            пн
+          </div>
+          <div class="shops-showcase-week-item">
+            вт
+          </div>
+          <div class="shops-showcase-week-item">
+            ср
+          </div>
+          <div class="shops-showcase-week-item">
+            чт
+          </div>
+          <div class="shops-showcase-week-item">
+            пт
+          </div>
+          <div class="shops-showcase-week-item -off">
+            сб
+          </div>
+          <div class="shops-showcase-week-item -off">
+            вс
+          </div>
+        </div>
+        <div class="shops-showcase-week-period">
+          <div>круглосуточно</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

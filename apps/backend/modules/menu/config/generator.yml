@@ -1,0 +1,51 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Menu
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          menu
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        url:
+          label: URL
+        text:
+          label: Текст ссылки
+        positionmenu:
+          label: Позиция
+        conter_target:
+          label: Цель в Яндекс
+        parents_id:
+          label: Родитель
+        is_active:
+          label: Показывать
+        target_blank:
+          label: Target blank
+      list:
+        title: Меню
+        display: [ text, url, positionmenu ]
+        sort: [ position, Asc ]
+        object_actions:
+          promote:
+            action: promote
+            label: Вверх
+          demote:
+            action: demote
+            label: Вниз
+          _edit: ~
+          _delete: ~
+      filter:  ~
+      form:
+        display:
+          Основная информация: [ text, url, conter_target, positionmenu, parents_id, target_blank, is_active ]
+      edit:
+        title: Редактирование пункта меню "%%text%%"
+      new:
+        title: Создание нового пункта меню

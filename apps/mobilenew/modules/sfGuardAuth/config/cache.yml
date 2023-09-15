@@ -1,0 +1,4 @@
+signin:
+  enabled:     false
+  with_layout: false
+  contextual: false

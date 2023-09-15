@@ -1,0 +1,234 @@
+.header-frame{
+  display: flex;
+  justify-content: space-between;
+}
+.header-frame::after{
+  content: none;
+}
+.header-frame .card-box{
+  float: none;
+  width: 120px;
+}
+.card-box .card-btn{
+  display: none;
+}
+.card-box .title{
+  text-align: center;
+  padding: 0;
+}
+.card-box .title a{
+  display: block;
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 7px;
+}
+.card-box .title a::before{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eb3f37 url(/newdis/images/ico_buy.svg) no-repeat 50% ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.card-box .text{
+  text-align: center;
+}
+.logo{
+  float: none;
+  margin-right: 20px;
+}
+.header-frame .phone-box{
+  margin: auto;
+  float: none;
+}
+.middle-col{
+  padding: 17px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-height: 150px;
+  position: relative;
+}
+.shop-item{
+  padding-left: 20px;
+  width: calc(33.3333% - 34px);
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  flex-shrink: 0;
+}
+.shop-item:nth-of-type(3n+1){
+  margin-left: 0;
+}
+.shop-item a{
+  text-decoration: none;
+}
+.shop-item a:hover{
+  text-decoration: underline;
+}
+.button-all{
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: calc(33.3333% - 30px);
+  height: 36px;
+  padding-left: 20px;
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.top-shops-popup.active{
+  display: block;
+  z-index: 10;
+}
+.top-shops-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: none;
+}
+.top-shops-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width: 510px;
+  z-index: 10000;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  /* bottom: 0; */
+  right: 0;
+  padding: 70px 30px 30px;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+}
+.top-shops-wrapper .close{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background-image: url(/newdis/images/sprites/spriteme1.png);
+  background-position: -10px -638px;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+.top-shops-wrapper .header{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.top-shop-item{
+  background-repeat: no-repeat;
+  width: 150px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.black-back{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: fixed;
+  z-index: 9999;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: none repeat scroll 0px 0px rgb(119, 119, 119);
+}
+.sub-shops{
+  position: relative;
+  cursor: pointer;
+}
+.sub-shops:hover{
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #c3060e;
+}
+.sub-shops-wrapper.active{
+  display: block;
+}
+.sub-shops-wrapper{
+  display: none;
+  position: absolute;
+  left: -20px;
+  background: #fff;
+  top: -4px;
+  padding: 3px;
+  border: 1px solid #777;
+  border-radius: 8px;
+  box-shadow: 1px 1px 6px #777;
+}
+.sub-shops-wrapper a{
+  display: block;
+}
+.top-shops-popup .sub-shops{
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #424141;
+}
+.top-shops-popup .sub-shops:hover{
+  color: #c3060e;
+  text-decoration: none;
+}
+@media (max-width: 768px){
+  .shop-item{
+    width: calc(50% - 30px);
+  }
+  .shop-item:nth-of-type(3n+1){
+    margin-left: 20px;
+  }
+  .shop-item:nth-of-type(2n+1){
+    margin-left: 0;
+  }
+  .button-all{
+    width: calc(50% - 30px);
+  }
+  #header .head-row .top-menu li{
+    margin: 0 13px;
+  }
+}
+@media (max-width: 767px){
+  .left-col{
+    width: 100%;
+  }
+  .header-frame{
+    flex-wrap: wrap;
+  }
+  .logo{
+    float: left;
+    width: 155px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .header-frame .phone-box{
+    margin-top: 10px;
+  }
+  .top-shops-wrapper{
+    padding: 40px 10px 10px;
+    width: 280px;
+  }
+  .top-shop-item{
+    width: 120px;
+  }
+  .top-shops-wrapper .header{
+    top: 10px;
+  }
+  .top-shops-wrapper .close{
+    top: 12px;
+  }
+}

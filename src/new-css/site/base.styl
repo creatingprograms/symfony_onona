@@ -1,0 +1,439 @@
+// @import 'font.styl'
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, input[type="text"], input[type="password"], input[type="date"]
+input[type="button"], textarea,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, main, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+  -webkit-tap-highlight-color: transparent
+
+// html
+//   overflow-x hidden
+
+// body
+//   overflow-x: hidden
+input:-webkit-autofill,
+input:-webkit-autofill:hover
+input:-webkit-autofill:focus
+input:-webkit-autofill:active
+  transition: background-color 5000s ease-in-out 0s
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset
+
+input
+  filter: none
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+
+audio,
+canvas,
+progress,
+video
+  display: inline-block
+  vertical-align: baseline
+
+audio:not([controls])
+  display: none
+  height: 0
+
+[hidden],
+template
+  display: none
+
+a
+  background: transparent
+  transition $trans
+
+a:active,
+a:hover
+  outline: 0;
+
+abbr[title]
+  border-bottom: 1px dotted
+
+b,
+strong
+  font-weight: bold
+
+dfn
+  font-style: italic
+
+mark
+  background: #ff0
+  color: #062229
+
+img
+  border: none
+
+ul,
+ol,
+li
+  list-style-type: none
+
+svg:not(:root)
+  overflow: hidden
+
+code,
+kbd,
+pre,
+samp
+  font-family: monospace, monospace
+  font-size: 1em
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  -webkit-appearance: button
+  cursor: pointer
+
+button[disabled],
+html input[disabled]
+  cursor: default
+
+button::-moz-focus-inner,
+input::-moz-focus-inner
+  border: 0
+  padding: 0
+
+input[type="checkbox"],
+input[type="radio"]
+  box-sizing: border-box;
+  padding: 0
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+  height: auto
+
+input[type="search"]
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration
+  -webkit-appearance: none
+
+fieldset
+  border: none
+
+legend
+  border: 0
+  padding: 0
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+textarea,
+input[type="submit"]
+input[type="date"]
+  border-radius: 0
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="date"]
+textarea
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  outline: none
+  box-shadow: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  border: none
+  &::placeholder
+    opacity: 1
+
+  &::-ms-clear
+    display: none
+    width: 0
+    height: 0
+
+
+input[type="number"]
+  -moz-appearance: textfield
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number]
+  font-family: 'Golos','Arial', 'Helvetica', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 24px
+
+button
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  border none
+
+input[type="text"],
+input[type="password"],
+textarea
+  outline: none;
+
+textarea
+  overflow: hidden
+  resize none
+
+
+optgroup
+  font-weight: bold;
+
+table
+  border-collapse: collapse;
+  border-spacing: 0;
+
+td,
+th
+  padding: 0;
+
+*
+  outline none !important
+  box-sizing border-box
+  background-repeat no-repeat
+
+body, html
+  margin auto
+  // height 100%
+  height auto
+  min-width 320px
+  color #2D2841
+  position relative
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-weight: normal
+  font-style: normal
+  font-size 15px
+  line-height 22px
+  // max-width 1920px
+  // width 100%
+  // margin 0 auto
+
+.wrapSVG
+  display none
+
+svg
+  width 100%
+  height 100%
+
+img, iframe, video
+  max-width 100%
+  height auto
+.frame-pdf
+  width 90%
+  height 600px
+  +max(tablet)
+    height 500px
+  +max(mobile)
+    height 300px
+
+a
+  color inherit
+  text-decoration none
+  transition color .3s ease
+  font-style: normal
+  font-weight: normal
+  // font-size: 14px
+  // line-height: 20px
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+
+ul
+  // list-style-image: url(/frontend/images_new/dot.svg)
+  padding-left 29px
+  li
+    position relative
+    &::before
+      content ''
+      position absolute
+      left -27px
+      top 8px
+      background-image url(/frontend/images_new/dot.svg)
+      background-repeat no-repeat
+      width 6px
+      height 6px
+
+ul li:not(:last-child)
+  margin-bottom 15px
+
+// div
+// p
+//   font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+//   font-style: normal
+//   font-weight: 300
+//   font-size: 16px
+//   line-height: 24px
+//   +max(sMobile)
+//     font-size: 14px
+//     line-height: 20px
+
+
+.container
+.wrapper
+  display block
+  max-width 1270px
+  width 100%
+  margin 0 auto
+  padding 0 48px
+  position relative
+  z-index 1
+  +max(tablet)
+    padding 0 32px
+  +max(mobile)
+    padding 0 25px
+  +max(sMobile)
+    padding 0 18px
+
+h1
+.h1
+  color #062229
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 48px
+  line-height: 48px
+  +max(tabletLarge)
+    font-size 24px
+    line-height 24px
+
+h2
+.h2
+.content h2
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-style: normal
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px;
+  margin-top 0
+  display block
+  margin-bottom 0
+  +max(tablet)
+    font-size: 24px;
+    line-height: 26px;
+    margin: 10px 0;
+
+h3
+.h3
+.content h3
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 32px
+  line-height: 36px
+  margin-top 0
+  display block
+  +max(screen)
+    font-size: 30px
+    line-height: 36px
+  +max(tabletLarge)
+    font-size: 24px
+    line-height: 36px
+  +max(sMobile)
+    font-size: 16px
+    line-height: 16px
+
+
+h4
+.h4
+.content h4
+  font-family: 'Golos','Arial', 'Helvetica', sans-serif
+  font-style: normal
+  font-weight: 600
+  font-size: 24px
+  line-height: 28px
+  margin-top 0
+  display block
+  +max(sMobile)
+    font-size: 20px
+    line-height: 24px
+
+h5
+.h5
+.content h5
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 22px
+  line-height: 33px
+  margin-top 0
+  +max(screen)
+    font-size: 20px
+    line-height: 120%
+
+a:hover
+  color #ef182f
+
+.content p
+.content div
+  font-family: 'Golos','Arial', 'Helvetica',  sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 28px
+  +max(mobile)
+    font-size: 14px
+    line-height: 24px
+
+p:not(:last-of-type)
+  margin-bottom 18px
+  +max(tabletLarge)
+    margin-bottom 14px
+  +max(sMobile)
+    margin-bottom 16px
+/*
+.mobile-only
+  display: none;
+  +max(tablet)
+    display: block;
+*/
+.temp
+  height 588px
+  background-color #ccc
+.hide-h1
+  h1
+    display: none;
+.lead-text
+  font-weight: 500
+  font-size: 20px
+  line-height: 26px
+  color #2D2841
+  +max(tabletLarge)
+    font-size: 18px
+    line-height: 24px
+  +max(sMobile)
+    font-size 20px
+    line-height 26px
+.-red
+  color: #ef182f;

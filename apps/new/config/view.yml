@@ -1,0 +1,23 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+    #, /frontend/css/added.css?v=1
+  stylesheets:    [/frontend/css/new.css?v=12]
+  #, /frontend/css/magic360.css
+  #/frontend/js/magic360.js
+
+  javascripts:    [/frontend/js/plugins/jquery.maskedinput.min.js, /frontend/js/new.js?v=4, /frontend/js/plugins/jquery.ui.touch-punch.min.js, /frontend/js/plugins/cookie.js, /frontend/js/gtm.js?v=1]
+  #Через запятую
+
+  has_layout:     true
+  layout:         layout

@@ -1,0 +1,761 @@
+.sidebar-f{
+  .sidebar{
+    &-nav{
+      &-toggle{
+        left: -20px;
+      }
+      &.-collection{
+        li{
+          a{
+            padding: 6px 20px 6px 38px;
+          }
+        }
+      }
+    }
+  }
+}
+.sidebar {
+  float: left;
+  width: 284px;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -1px;
+  transition: ease all .5s;
+  &.-sexopedia {
+    width: 250px;
+  }
+  &.-video {
+    width: 280px;
+  }
+  &-mob-but-filtr {
+    display: none;
+  }
+  &-up-but {
+    display: none;
+  }
+  &-showcase {
+    padding: 19px 17px;
+    background-color: #fff;
+    &-item {
+      &:nth-of-type(n+2) {
+        margin-top: 40px;
+      }
+    }
+    &-img {
+      @extend %logo;
+      margin: 0 0 16px;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &-desc {
+      margin: 10px 0 0;
+    }
+    #main &-h {
+      a {
+        text-decoration: none;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    &-h {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 120%;
+      margin: 0 0 13px;
+      &,
+      a {
+        color: #0f0f0f;
+      }
+    }
+    &-title {
+      color: #5d5c5c;
+      font-size: 17px;
+      line-height: 120%;
+      max-width: 200px;
+    }
+  }
+  &-video {
+    background-color: #fff;
+    padding: 6px 20px 32px 11px;
+    &-h {
+      color: #000;
+      font-size: 30px;
+      line-height: 120%;
+      font-weight: bold;
+      text-align: right;
+      margin: 0 0 24px;
+    }
+    #main &-nav {
+      li {
+        margin: 6px 0;
+      }
+      .active {
+        color: $redC;
+        background: transparent;
+      }
+      a {
+        padding: 0 0 0 25px;
+        &:hover {
+          background-color: transparent;
+        }
+        &::before {
+          left: 0;
+          width: auto;
+          height: auto;
+          content: '>>';
+          color: #fab3b1;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  &-f {
+    border-radius: 7px;
+    padding: 19px 37px 0;
+    background-color: #fff;
+    .top-panel-f {
+      display: none;
+      position: relative;
+      height: 41px;
+      border-bottom: 1px solid #C6C6C6;
+      p {
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    }
+    .sidebar & a {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .styleCH {
+      & + label {
+        &::before {
+          border-color: #706E6F;
+        }
+      }
+    }
+    &-prop {
+      font-size: 16px;
+      margin: 9px 0 0;
+      .-color {
+        &-1 {
+          background-color: #EB5757;
+        }
+        &-2 {
+          background-color: #F2994A;
+        }
+        &-3 {
+          background-color: #F2C94C;
+        }
+        &-4 {
+          background-color: #219653;
+        }
+        &-5 {
+          background-color: #2F80ED;
+        }
+      }
+      label {
+        span {
+          color: #706E6F;
+        }
+      }
+      &-color {
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        margin: 0 4px 0 0;
+        border-radius: 50%;
+        vertical-align: top;
+        display: inline-block;
+      }
+      &-row {
+        margin: 4px 0;
+        &:nth-of-type(n+6) {
+          display: none;
+          .-isProps & {
+            display: block;
+          }
+        }
+      }
+      &-all {
+        font-size: 16px;
+        &,
+        a {
+          color: $f3c;
+        }
+        a::before {
+          content: attr(data-all);
+          display: inline;
+          .-isProps & {
+            content: attr(data-up);
+          }
+        }
+      }
+    }
+    &-head {
+      margin: 0 0 19px;
+      text-transform: uppercase;
+      font: 24px/120% $helvFont;
+    }
+    &-accord {
+      margin-top: 16px;
+      &-wrapper{
+        display: flex;
+        flex-direction: column;
+        .-isNewby{
+          order: -1;
+        }
+      }
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &-plate {
+        @extend %noUserSelect;
+        cursor: pointer;
+        font: bold 16px/120% $helvFont;
+        &::after {
+          content: ' ';
+          position: relative;
+          margin: 0 0 0 6px;
+          display: inline-block;
+          transform-origin: 50% 50%;
+          border: 6px solid transparent;
+          border-bottom: 9px solid #1A1A1A;
+          .-up & {
+            top: 6px;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &-up-block {
+        @extend %anim;
+        height: 1px;
+        opacity: 0;
+        overflow: hidden;
+        margin: 0 -15px;
+        padding: 0 15px;
+        transition-property: opacity;
+        .-up & {
+          height: auto;
+          opacity: 1;
+        }
+      }
+      &-cont {
+        overflow: hidden;
+        padding-bottom: 10px;
+      }
+    }
+    &-range {
+      max-width: 208px;
+      margin: 14px 0 0 0;
+      &-services {
+        color: #706E6F;
+        margin: 16px -11px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font: 16px/120% $font-main-family;
+        input[type="text"] {
+          height: 27px;
+          display: block;
+          padding: 0 2px 0 3px;
+          width: calc(50% - 42px);
+          box-sizing: border-box;
+          border: 1px solid #E0E0E0;
+          font: 16px/27px $font-main-family;
+        }
+        &-from,
+        &-before,
+        &-dimension {
+          box-sizing: border-box;
+        }
+        &-from {
+          width: 21px;
+        }
+        &-before {
+          width: 33px;
+          text-align: center;
+        }
+        &-dimension {
+          width: 34px;
+          text-align: left;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  .btn-reset {
+    border: 2px solid #000;
+    text-transform: uppercase;
+    width: 90%;
+    height: 48px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #fff;
+    letter-spacing: 3px;
+  }
+  &-nav {
+    padding-bottom: 24px;
+    background-color: #fff;
+    &-toggle {
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 36px;
+      z-index: 1;
+      cursor: pointer;
+      position: absolute;
+      &::before {
+        top: 12px;
+        left: 20px;
+        content: ' ';
+        display: block;
+        position: absolute;
+        border: 8px solid transparent;
+        border-top-color: #ffcbca;
+        border-top-width: 10px;
+      }
+    }
+  }
+  &-brend {
+    margin: 26px 0 0;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 15px 31px;
+    .-bMar {
+      margin-bottom: 24px;
+    }
+    &-h {
+      color: #0f0f0f;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+      font: 22px/120% $helvFont;
+    }
+    &-link-all{
+      background:transparent;
+      color: #fd2a19;
+      display: block;
+      margin-top: 30px;
+    }
+    &-link {
+      margin: 34px 0 0;
+      &-row {
+        &:nth-of-type(n+2) {
+          margin: 42px 0 0;
+        }
+      }
+      &-item {
+        color: #4c4c4c;
+        font-size: 20px;
+        line-height: 120%;
+        text-decoration: none;
+        display: inline-block;
+        img {
+          display: block;
+          margin: 0 auto 14px;
+        }
+      }
+    }
+  }
+  .-collection {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    a {
+      &::before {
+        display: none;
+      }
+    }
+    .active + ul {
+      display: block;
+    }/*
+    .-isActive,
+    li:hover {
+      &>a {
+        background-color: #f2f2f2;
+      }
+    }*/
+    li {
+      ul {
+        display: none;
+        padding: 7px 0 16px;
+        // padding: 7px 0 13px;
+        // margin: 1px 0 0 53px;
+        margin: 1px 0 0;
+        // background-color: #f2f2f2;
+      }
+      li {
+        // margin: 0 18px;
+        // text-indent: 7px;
+        // background: linear-gradient(to left, #b5b5b5, #b5b5b5 80%, transparent 80%, transparent) repeat-x 0 100%;
+        // background-size: 5px 1px;
+        // &:last-of-type {
+        //   background: none;
+        // }
+        .sidebar-nav-toggle{
+          top: -10px;
+          left: -10px;
+        }
+        .active {
+          color: $redC;
+          background-color: transparent;
+          &::before {
+            color: $redC;
+          }
+        }
+        li{
+          a.last{
+            padding-left: 48px;
+          }
+        }
+        a {
+          color: #4c4c4c;
+          font-size: 16px;
+          padding: 8px 0 9px 35px;
+          &:hover {
+            background-color: #f2f2f2;
+          }
+          &::before {
+            top: 6px;
+            left: -16px;
+            content: '»';
+            bottom: auto;
+            color: #4c4c4c;
+            font-size: 20px;
+            display: none;
+            position: absolute;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .-action {
+      color: #d11e0f;
+    }
+  }
+  li {
+    position: relative;
+    a {
+      @extend %logo;
+      color: #4c4c4c;
+      position: relative;
+      padding: 6px 20px 6px 48px;
+      &::before {
+        top: 0;
+        left: 24px;
+        bottom: 0;
+        width: 12px;
+        height: 12px;
+        content: ' ';
+        display: block;
+        margin: auto 0;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #ffbbb9;
+      }
+    }
+    &:first-of-type {
+      .sidebar-nav-toggle {
+        height: 45px;
+        &::before {
+          top: 18px;
+        }
+      }
+      a {
+        padding-top: 11px;
+        padding-bottom: 10px;
+      }
+    }
+    ul {
+      font-size: 13px;
+      line-height: 120%;
+    }
+  }
+  a:hover,
+  .active {
+    background-color: #f2f2f2;
+  }
+  &-sexopedia {
+    background-color: #fff;
+    padding: 22px 11px 14px;
+    & &-h {
+      color: #000;
+      margin: 0 0 0 25px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      font: bold 18px/120% $helvFont;
+      &:hover {
+        background: transparent;
+      }
+    }
+    &-nav {
+      font-size: 16px;
+      line-height: 120%;
+      li {
+        margin: 11px 0;
+        padding-left: 0;
+        &:first-of-type a,
+        a {
+          padding: 0 0 0 18px;
+        }
+        a {
+          color: #4c4c4c;
+          &::before {
+            left: 0;
+            bottom: auto;
+            content: '>>';
+            color: #fab3b1;
+            border-radius: 0;
+            background-color: transparent;
+          }
+          &.active,
+          &:hover {
+            color: $redC;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    width: 260px;
+    li {
+      a {
+        padding-left: 50px;
+        padding-top: 7px;
+        padding-bottom: 8px;
+        &::before {
+          left: 11px;
+        }
+      }
+    }
+    &-nav {
+      &-toggle {
+        width: 50px;
+        &::before {
+          left: 25px;
+        }
+      }
+    }
+    &-sexopedia {
+      &-nav {
+        li {
+          &:first-of-type a,
+          a {
+            padding: 0 0 0 18px;
+          }
+          a {
+            &::before {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    width: 220px;
+    &.-video {
+      width: 240px;
+    }
+    &-video {
+      &-h {
+        font-size: 22px;
+      }
+      &-nav {
+        font-size: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    float: none;
+    width: auto;
+    margin-left: -17px;
+    margin-right: -17px;
+    .btn-reset {
+      display: block;
+      width: 100%;
+    }
+    &.-video {
+      width: auto;
+    }
+    &-video {
+      display: none;
+      &-h {
+        text-align: left;
+        margin-bottom: 12px;
+      }
+    }
+    &-mob-but-filtr {
+      color: #000;
+      font-size: 19px;
+      display: block;
+      cursor: pointer;
+      line-height: 48px;
+      max-width: 290px;
+      margin: 0 auto;
+      text-align: center;
+      letter-spacing: 2px;
+      // background-color: #fbc5e0;
+      text-transform: uppercase;
+      svg {
+        top: 4px;
+        width: 25px;
+        height: 25px;
+        margin-right: 3px;
+        position: relative;
+      }
+    }
+    &-f {
+      top: 0;
+      left: -150%;
+      position: fixed;
+      height: 100%;
+      width: 85%;
+      z-index: 150;
+      transition: ease all .5s;
+      box-sizing: border-box;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-top: 0;
+      &-accord {
+        border-bottom: 1px solid #C6C6C6;
+        &-plate {
+          position: relative;
+          cursor: pointer;
+          padding: 10px 0;
+          font-size: 18px;
+          font-weight: normal;
+          color: #666;
+          &::after {
+            content: '+';
+            color: #666;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            margin: 0 0 0 6px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 26px;
+            transform-origin: 50% 50%;
+            transition: all ease .5s;
+            font-weight: 500;
+            border: none;
+            .-up & {
+              content: '–';
+              top: 11px;
+              right: 0;
+              transform: rotate(360deg);
+              transition: all ease .5s;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .top-panel-f {
+        display: block;
+      }
+      .close-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .styleCH + label {
+        padding-left: 35px;
+      }
+      .-isVisibleFiltr & {
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        position: fixed;
+        overflow-y: scroll;
+        height: 100%;
+        transition: ease all .5s;
+      }
+      .-isHiddenFiltr & {
+        transition: ease all .5s;
+        left: -150%;
+      }
+    }
+    &-sexopedia {
+      display: none;
+    }
+    &-up-but {
+      display: block;
+      margin: 0 0 2px;
+      text-align: center;
+      text-transform: uppercase;
+      .but {
+        height: 43px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 45px;
+        padding: 0 64px;
+        &:hover {
+          background-color: $f3c;
+        }
+      }
+    }
+    .-collection {
+      li {
+        a {
+          padding-left: 49px;
+        }
+        li {
+          a {
+            padding-top: 10px;
+            &::before {
+              top: 10px;
+              left: -12px;
+            }
+          }
+        }
+      }
+    }
+    &.-sexopedia {
+      width: auto;
+    }
+    &-nav-toggle {
+      width: 50px;
+      &::before {
+        left: 21px;
+      }
+    }
+    &-brend {
+      padding-bottom: 39px;
+      .-bMar {
+        margin-bottom: 33px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $smallTablet) {
+  .sidebar-f{
+    .sidebar{
+      &-nav{
+        &.-collection{
+          li{
+            a{
+              padding: 6px 20px 6px 29px;
+            }
+            li{
+              a{
+                padding: 6px 20px 6px 36px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

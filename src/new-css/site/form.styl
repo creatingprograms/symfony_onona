@@ -1,0 +1,576 @@
+.wrap-block-reg
+  .proof-container
+    margin-right: 3% !important;
+.page-basket
+  .proof-container
+    max-width: 340px;
+.proof-container
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // margin-top: 16px;
+  input
+    max-width: calc(50% - 10px);
+  .btn-full.btn-full_rad.btn-half
+    max-width: calc(50% - 10px);
+    &:not(:first-child)
+      margin-top: 0;
+  .proof-result
+    margin: 16px auto;
+    width: 100%;
+    .btn-full
+      margin-top: 16px;
+      +max(tablet)
+        font-size: 14px;
+      span
+        display: inline-block;
+        margin: 0 4px;
+.btn-full
+  user-select: none;
+.btn-full.disabled
+.btn-full.disabled:hover
+  background-color: #ccc!important;
+  border-color: #ccc;
+  color: #fff;
+  cursor: no-drop;
+.custom-check_shadow.hasError
+  border-color: red !important;
+.field-default
+  position relative
+  label
+    display block
+    font-size: 13px
+    line-height: 18px
+    margin-bottom 8px
+  input[type="email"]
+  input[type="number"]
+  input[type="password"]
+  input[type="tel"]
+  input[type="text"]
+  input[type="date"]
+  textarea
+    background-color #fff
+    border 1px solid #E1E0E9
+    border-radius: 8px
+    width 100%
+    ph(color, #9B98AC)
+  textarea
+    padding 15px
+  input
+  textarea
+    &.hasError
+      border-color: red;
+
+.btn-show-pass
+  position absolute
+  bottom 23px
+  right 15px
+  cursor pointer
+  width 18px
+  height 18px
+  transform: translateY(50%)
+
+.-down
+  svg
+    transform: rotate(180deg);
+.btn-search
+  max-width: 16px
+  width: 100%
+  height: 16px
+  margin-right: 12px
+  +max(600)
+    margin-right 0
+  svg
+    fill #616C7C
+    +max(desktop)
+      fill #2D2841
+
+.btn
+  font-size: 15px;
+  &.link-fill
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+.wrap-form-search
+  display: flex;
+  align-items: center;
+  margin: 0 15px 0 auto;
+  +max(tablet)
+    display: none;
+    // margin-left auto
+    // margin-right 16px
+  // +max(sMobile)
+  //   margin-right 8px
+
+.header-form
+  +max(600)
+    width 0
+    position absolute
+    right 70%
+    &.active
+      padding: 20px 0;
+      background: #fff;
+      width 180px
+  .search-string
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    ph(color, #9B98AC)
+    +max(600)
+      width 100%
+
+
+.wrap-block-form
+  background-color: #F3F4F5;
+  +max(tablet)
+    margin-top 80px
+    .form-subsc .field input
+      font-size: 14px;
+  +max(mobile)
+    .block-form
+      flex-wrap: wrap;
+      p
+        display none
+  @media(max-width: 386px)
+    .link-fill.-red
+      margin: 5px auto 0;
+      border-radius: 24px;
+    .form-subsc .field
+      flex-wrap: wrap;
+      input
+        border-radius: 8px;
+
+
+.block-form
+  display: flex;
+  justify-content: space-between;
+  padding-top: 57px;
+  padding-bottom: 55px;
+  +max(tablet)
+    padding-top 40px
+    padding-bottom 40px
+
+.block-form__content
+  max-width: 350px
+  width: 100%;
+  flex-grow: 1
+  margin-right: 10.7%;
+  +max(tablet)
+    max-width 300px
+    margin-right 6.7%
+  p
+    margin-top: 15px;
+    +max(tablet)
+      margin-top 6px
+
+.form-subsc
+  width: 100%;
+  margin-top: 14px;
+  +max(tablet)
+    margin-top 0
+  .field
+    display: flex;
+    align-items: center;
+    max-width: 507px;
+    +max(tablet)
+      max-width 457px
+    input
+      width: 100%;
+      border-radius: 8px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border 1px solid #E1E0E9;
+      border-right: none;
+  .custom-check
+    margin-top: 22px;
+
+.field
+  input
+    height: 48px;
+    ph(color, #9B98AC)
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 16px;
+
+.custom-check
+  display: flex;
+  align-items: center;
+
+.custom-check_label
+  color #2D2841
+  font-size: 13px;
+  line-height: 18px;
+  a
+    color: #9B98AC;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom 1px solid #9B98AC
+
+.check-check_block
+  position relative
+  max-width 18px
+  width 100%
+  height 18px
+  flex 1 0 auto
+  margin-right 12px
+
+.custom-check_shadow
+  width 100%
+  height 100%
+  position relative
+  background-color #fff
+  border 1px solid #fff
+  border-radius: 4px
+  display flex
+  align-items center
+  justify-content center
+  cursor pointer
+
+.custom-check_shadow::after
+  content: ''
+  display block
+  max-width 12px
+  width 100%
+  height 12px
+  flex 1 0 auto
+  background-color transparent
+  transition: .2s ease
+  background-image: url('/frontend/images_new/check.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0;
+
+.check-check_block .check-check_input[type="checkbox"]
+.check-check_block .check-check_input[type="radio"]
+  -webkit-appearance: auto
+  position absolute
+  width 20px
+  height 20px
+  top 0
+  left 0
+  z-index 1
+  cursor pointer
+  opacity 0
+
+.check-check_input[type="checkbox"]:checked ~ .custom-check_shadow::after
+.check-check_input[type="radio"]:checked ~ .custom-check_shadow::after
+  opacity: 1;
+
+.form-catalog
+  .custom-check_shadow
+    border-color: #E5E4EB
+
+.custom-range
+  border 1px solid #E1E0E9
+  border-radius: 8px
+
+.form-group-block .form-group__content
+  &.-range
+    padding-top 12px
+
+.custom-range__number
+  display flex
+  justify-content space-between
+  padding 12px 15px 10px
+  input
+    margin-left 10px
+
+.custom-range__slider
+  position relative
+  width 100%
+  height 2px
+  top 1px
+  width: calc(100% - 15px)
+  margin: 0 auto
+  .ui-slider-range
+    position absolute
+    background-color #EF182F
+    position: absolute
+    z-index: 1
+    font-size: .7em
+    display: block
+    border: 0
+    overflow: hidden
+    top: 0
+    height: 100%
+  .ui-slider-handle
+    position absolute
+    border-radius: 50%
+    border 2px solid #EF182F
+    background-color #fff
+    width 16px
+    height 16px
+    top -7px
+    z-index 2
+    cursor pointer
+    transform: translateX(-50%)
+
+.custom-range__input
+.sidebar-f-range-services-from
+.sidebar-f-range-services-before
+  font-size 15px
+  line-height 20px
+
+.sidebar-f-range-services-from
+.sidebar-f-range-services-before
+  margin-right -4px
+
+.sidebar-f-range-services-from
+  margin-left 7px
+
+.sidebar-f-range-services-before
+  margin-left auto
+
+.custom-range__input.maxCost
+  margin-right -4px
+
+.custom-range__input
+  max-width 30%
+
+
+.custom-tag-set
+  display inline-flex
+  label
+    background-color #fff
+    border 1px solid #E1E0E9
+    border-radius: 4px
+    display inline-flex
+    align-items center
+    justify-content center
+    padding 4px 12px
+    transition $trans
+    cursor pointer
+  input[type="radio"]:checked ~ label
+    border-color: #EF182F
+    background-color #EF182F
+    color #fff
+  input[type="radio"]
+    position absolute
+    z-index -1
+    opacity 0
+
+.form-feedback
+  .group-field
+    display flex
+    justify-content space-between
+    margin-bottom 14px
+    .field
+      max-width: 49%
+      flex 1 0 auto
+.btn-full.btn-form
+  border-radius: 50px
+  min-width 236px
+  font-weight: 500
+  font-size: 15px
+  line-height: 24px
+  margin-left auto
+
+.table-shop
+  border 1px solid #E1E0E9
+
+.table-shop__th
+  font-size: 13px
+  line-height: 18px
+
+.custom-check_circle
+  &.custom-check
+    &.item-offset
+      padding-left 1%
+      padding-right 1%
+  .check-check_input[type="radio"]:checked ~ .custom-check_shadow
+    border-color: #EF182F
+  .custom-check_shadow
+    background-color #fff
+    max-width 22px
+    width 22px
+    height 22px
+    border-radius 50%
+    border 1px solid #EBEDEF
+    transition $trans
+  .custom-check_shadow
+    &::after
+      background-image url('')
+      border-radius: 50%
+      width 12px
+      height 12px
+      background-color #EF182F
+  .custom-check_label
+    font-size: 15px
+    line-height: 22px
+
+.field-number
+  display flex
+  align-items center
+  justify-content center
+  width 100px
+  height 32px
+  border 1px solid #E1E0E9
+  border-radius: 50px
+  input[type='number']
+    width 60%
+    text-align center
+
+.number-min
+.number-plus
+  display flex
+  align-items center
+  justify-content center
+  width 10px
+  height 10px
+  background-color _fill
+  position relative
+  cursor pointer
+  &:hover
+    svg
+      stroke #EF182F
+  svg
+    stroke #616C7C
+    transform $trans
+
+.number-min
+  left 9px
+
+.number-plus
+  right 11px
+
+.ui-selectmenu-menu
+  padding: 0
+  margin: 0
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+
+.ui-selectmenu-menu .ui-menu
+  overflow: auto
+  overflow-x: hidden
+  padding-bottom: 1px
+
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup
+  font-size: 1em
+  font-weight: bold
+  line-height: 1.5
+  padding: 2px 0.4em
+  margin: 0.5em 0 0 0
+  height: auto
+  border: 0
+
+.ui-selectmenu-open
+  display: block
+
+.ui-selectmenu-text
+  display: block
+  margin-right: 20px
+  overflow: hidden
+  text-overflow: ellipsis
+
+.ui-selectmenu-button.ui-button
+  text-align: left
+  white-space: nowrap
+  width: 14em
+
+.ui-selectmenu-icon.ui-icon
+  float: right
+  margin-top: 0
+
+.ui-selectmenu-button
+  border 1px solid #E1E0E9
+  border-radius: 8px
+  display flex
+  flex-direction: row-reverse
+  justify-content: space-between
+  height 48px
+  align-items center
+  padding 0 16px
+  cursor pointer
+  &.ui-selectmenu-button-open
+    border-radius: 8px 8px 0 0
+    border-bottom: none
+    .ui-selectmenu-icon.ui-icon
+      transform: rotate(180deg)
+
+.ui-selectmenu-menu
+  z-index 3
+  background-color #fff
+
+.ui-menu
+  padding 16px
+  border 1px solid #E1E0E9
+  border-radius: 0 0 8px 8px
+
+.ui-menu-item
+  cursor pointer
+  &::before
+    display none
+  &:hover
+    div
+      color #EF182F
+  .ui-state-active
+    color  #EF182F
+
+.ui-selectmenu-icon
+  background-image url('/frontend/images_new/arrow-red.svg')
+  background-repeat no-repeat
+  width 16px
+  height 16px
+  float none
+
+.-delivery
+  .wrap-custom-select
+    margin-top 30px
+    margin-bottom 20px
+  .ui-selectmenu-button.ui-button
+    max-width 376px
+    width 100%
+  .ui-selectmenu-button
+    margin 0 auto
+
+.map-delivery
+  width 100%
+  height 455px
+  //background-color #ccc
+  margin-top 20px
+  &.dlh
+    height: auto;
+
+.delivery-ymaps
+  height 100%
+
+.form-sets
+  display flex
+  align-items center
+  justify-content: center
+  border-bottom: 1px solid #e1e0e9
+  padding-bottom: 18px
+  margin-bottom: 32px
+  position: relative
+
+.sets-type
+  margin 0 32px
+  position relative
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: -19px
+    height: 1px
+    width: calc(100% + 10px)
+    transition: .3s ease
+    transform: translateX(-50%)
+  &.active:after
+    background-color #ef182f
+  input
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.sets-type__label
+  cursor pointer
+  span
+    display block
+    margin 0 auto
+  .sets-type__img
+    text-align center
+  .sets-type__text
+    color #EF182F

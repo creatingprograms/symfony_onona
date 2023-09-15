@@ -1,0 +1,190 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Product
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        category_products_list:
+          label: Категории
+        dop_info_products_list:
+          label: Дополнительные характеристики
+        photoalbums_list:
+          label: Фотоальбом
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        code:
+          label: Артикул
+        is_new_on_site:
+          label: Новинка сайта
+        is_new_on_market:
+          label: Новинка рынка
+        content:
+          label: Содержимое
+        newbie_description:
+          label: Описание раздел для новичков
+        price:
+          label: Цена
+        old_price:
+          label: Старая цена
+        discount:
+          label: Скидка
+        nextdiscount:
+          label: Будущая скидка
+        count:
+          label: Кол-во на складе
+        video:
+          label: Ссылка на видео
+        videoenabled:
+          label: Есть видео
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+        rating:
+          label: Рейтинг
+        is_public:
+          label: Доступна
+        is_related:
+          label: Рек. товар
+        parents_id:
+          label: Родитель
+        bonus:
+          label: Процент бонусов зачисление
+        bonuspay:
+          label: Процент бонусов оплата
+        generalcategory_id:
+          label: Главная категория(её так же отметить в списке ниже)
+        newPhotoalbums:
+          label: Новый фотоальбом
+        Photoalbums:
+          label: Фотоальбомы
+        created_at:
+          label: Дата добавления
+        endaction:
+          label: Дата окончания акции
+        startaction:
+          label: Дата начала акции
+        step:
+          label: Шаг акции
+        createNewPhotoalbum:
+          label: Создать новый фотоальбом
+        yamarket:
+          label: Размещать в Ya.Market
+        tags:
+          label: Теги
+        count_range:
+          label: Кол-во
+        yamarket_clothes:
+          label: Включить в каталог Одежда и обувь
+        yamarket_color:
+          label: Цвет
+        yamarket_typeimg:
+          label: Тип рисунка
+        yamarket_category:
+          label: Категория
+        yamarket_sex:
+          label: Пол
+        yamarket_model:
+          label: Модель
+        yamarket_typeprefix:
+          label: Тип товара (например корсет)
+        sync:
+          label: Синхронизация
+        is_visiblechildren:
+          label: Показывать дочерние элементы в карточке товара
+        is_visiblecategory:
+          label: Показывать этот товар в категории
+        user:
+          label: Менеджер
+        moder:
+          label: Требуется модерация
+        is_notadddelivery:
+          label: Не требующий доставки
+        sortpriority:
+          label: Приоритет сортировки
+        weight:
+          label: Вес, кг
+        for_pairs:
+          label: Для пар
+        for_she:
+          label: Для нее
+        for_her:
+          label: Для него
+        bdsm:
+          label: БДСМ
+        cosmetics:
+          label: Косметика
+        belie:
+          label: Белье
+        other:
+          label: Разное
+        barcode:
+          label: Штрих-код
+        file:
+          label: Изображение gif
+        is_express:
+          label: Экспресс доставка
+        is_bonus_enabled:
+          label: Разрешено использовать бонусы
+        is_coupon_enabled:
+          label: Разрешено использовать купоны
+        externallink:
+          label: Редирект на лендинг
+        set_her:
+          label: Для нее
+        set_him:
+          label: Для него
+        set_pairs:
+          label: Для пар
+        doc1:
+          label: Инструкция
+        doc2:
+          label: Инструкция
+        doc3:
+          label: Инструкция
+        doc4:
+          label: Инструкция
+        doc5:
+          label: Инструкция
+        articles_ids:
+          label: ID статей, через запятую
+      list:
+        title: Товары
+        display: [ id, _name, code, slug, is_public, is_related, adult, price,count]
+        sort: [ position, Asc ]
+        object_actions:
+          #promote:
+          #  action: promote
+          #  label: Вверх
+          #demote:
+          #  action: demote
+          #  label: Вниз
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [ id, name, code, slug, is_public, is_related, is_coupon_enabled, sync, category_products_list, dop_info_products_list, count_range, barcode ]
+      form:
+        display:
+          Основная информация: [ generalcategory_id, _category_products_list, _dop_info_products_list, newPhotoalbums, createNewPhotoalbum, file, Photoalbums, photoalbums_list, parents_id, name, slug, code, content, price, old_price,startaction, endaction, step, discount,nextdiscount, bonuspay, count, video, videoenabled, views_count, votes_count, rating, is_public, is_new_on_market, is_new_on_site, is_coupon_enabled, is_bonus_enabled, is_related, sync, bonus, created_at, yamarket , tags, adult is_visiblechildren,is_visiblecategory,user,moder, is_notadddelivery,sortpriority, weight, externallink, is_express]
+          Инструкции: [ doc1, doc2, doc3, doc4, doc5, articles_ids ]
+          Раздел распродажа: [ for_pairs, for_she, for_her, bdsm, cosmetics, belie, other]
+          Раздел Наборы: [ set_pairs, set_her, set_him]
+          Раздел Для новичков: [ newbie_description ]
+          Параметры Яндекс.Маркет: [ yamarket_clothes, yamarket_color, yamarket_typeimg, yamarket_category, yamarket_sex, yamarket_model, yamarket_typeprefix, barcode ]
+          Meta теги: [ h1, title, keywords, description, canonical ]
+      edit:
+        title: Редактирование товара "%%name%%"
+      new:
+        title: Создание товара

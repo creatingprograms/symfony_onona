@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Servicerequest
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          servicerequest
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:
+          label: Создан
+        user_id:
+          label: Пользователь
+        fio:
+          label: Имя пользователя
+        email:
+          label: email
+      list:
+        title: Документы оплаты
+        display: [ created_at, fio, email ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

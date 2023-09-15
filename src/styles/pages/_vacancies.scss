@@ -1,0 +1,110 @@
+.vacancies{
+  &-image-container{
+    position: relative;
+    max-width: 100%;
+  }
+  &-image-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 33px 54px;
+    font: bold 75px/131% a_futuricablackregular;
+    color: #000;
+    .small{
+      font: 16px/120% HelveticaNeueCyr;
+      display: block;
+      width: 315px;
+      margin-top: 60px;
+    }
+    hr{
+      border: hidden;
+      border-top: 9px solid #e85a7f;
+      max-width: 50%;
+      width: 150px;
+      margin: 22px 0 0;
+    }
+  }
+  &-text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: normal;
+  }
+  &-detaillist{
+    display: flex;
+    flex-direction: column;
+    width: 57%;
+    .vacancies-element{
+      padding: 25px 42px;
+    }
+  }
+  &-shortlist{
+    display: flex;
+    flex-direction: column;
+    width: 41%;
+    .vacancies-element{
+      margin-top: 0;
+      padding-top: 0;
+      &:nth-child(1){
+        margin-top: 20px;
+        padding-top: 25px;
+      }
+    }
+  }
+  &-element{
+    background: #fff;
+    margin-top: 20px;
+    padding: 25px 32px;
+    &.--bottom{
+      padding: 0;
+      background: #ffe2e2;
+      margin-top: 20px;
+    }
+    .pink{
+      margin: 21px 0;
+    }
+  }
+  &-header{
+    text-transform: uppercase;
+    color: #d11e0f;
+    margin-bottom: 20px;
+  }
+  &-element-header{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 20px;
+    &::before{
+      content: '>> ';
+      color: #ffe2e2;
+    }
+  }
+
+}
+@media screen and (max-width: $smallDesctop) {
+  .vacancies{
+    &-image-text{
+      font: bold 55px/131% a_futuricablackregular;
+    }
+  }
+}
+@media screen and (max-width: $smallTablet) {
+  .vacancies{
+    &-image-text{
+      font: bold 45px/131% a_futuricablackregular;
+      .small, hr{display: none;}
+    }
+    &-text-wrapper{
+      flex-wrap: wrap;
+    }
+    &-detaillist,&-shortlist{width: 100%;}
+  }
+}
+@media screen and (max-width: $smallMobile) {
+  .vacancies{
+    &-image-text{
+      font: bold 25px/131% a_futuricablackregular;
+      padding: 13px 24px;
+    }
+  }
+}

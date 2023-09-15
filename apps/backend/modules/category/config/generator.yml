@@ -1,0 +1,77 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Category
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          category
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        views_count:
+          label: Просмотров
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        is_open:
+          label: Открыта
+        is_public:
+          label: Доступна
+        parents_id:
+          label: Родитель
+        category_products_list:
+          label: Товары этой категории
+        count:
+          label: Количество товара
+        lovepricename:
+          label: Название в разделе Лучшая цена
+        tags:
+          label: Теги
+        show_in_catalog:
+          label: Выводить иконку на странице каталога
+        icon_priority:
+          label: Приоритет сортировки иконки
+        img:
+          label: Иконка в каталоге
+        icon_name:
+          label: Подпись иконки в каталоге
+        prodid_priority:
+          label: id приоритетных товаров для сортировки через запятую
+      list:
+        title: Категории
+        display: [ id, name, slug, _count, is_public, adult ]
+        sort: [ position, Asc ]
+        object_actions:
+          promote:
+            action: promote
+            label: Вверх
+          demote:
+            action: demote
+            label: Вниз
+          prodstats:
+            action: prodstats
+            label: Статистика
+          _edit: ~
+          _delete: ~
+          editseo:
+            action: editseo
+            label: Редактировать
+      filter:
+        display: [ id, name, slug, is_public, show_in_catalog]
+      form:
+        display:
+          Основная информация: [ name, slug, content, parents_id, is_open, is_public, lovepricename, prodid_priority, tags, show_in_catalog, icon_priority, icon_name, img]
+          Meta теги: [ h1, title, keywords, description, canonical ]
+      edit:
+        title: Редактирование категории "%%name%%"
+      new:
+        title: Создание категории

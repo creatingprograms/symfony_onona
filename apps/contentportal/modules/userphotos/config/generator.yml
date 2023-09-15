@@ -1,0 +1,42 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           PhotosUser
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          photos_user
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        comment:
+          label: Комментарий
+        product_id:
+          label: Товар
+        user_id:
+          label: Пользователь
+        username:
+          label: Имя пользователя
+        comment_manager:
+            label: Коментарий администратора
+        point:
+            label: Количесчтво баллов
+      list:    
+        title: Пользовательские фото
+        display: [ _product_id, _user_id, _is_public, created_at ]
+      filter:  
+        display: [ is_public ]
+      form:    
+        class: PhotosUserCPForm
+        display: 
+          Основная информация: [ product_id, filename, name, comment, username] 
+          Модерация: [ comment_manager, point ]
+      edit:    
+        title: Редактирование пользовательского фото "%%id%%"
+      new:     
+        title: Создание пользовательского фото

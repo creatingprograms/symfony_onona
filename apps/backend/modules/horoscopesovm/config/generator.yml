@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Horoscopesovm
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          horoscopesovm
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        horoscope_m_id:
+          label: Знак мужчины
+        horoscope_g_id:
+          label: Знак девушки
+        content:
+          label: Совместимость
+      list:    
+        title: Гороскоп совместимость
+        display: [ id, _horoscope_m_id, _horoscope_g_id ]
+        actions: {}
+        batch_actions: {}
+        object_actions:
+          _edit: ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

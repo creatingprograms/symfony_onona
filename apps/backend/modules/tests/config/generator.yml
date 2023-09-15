@@ -1,0 +1,52 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Tests
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tests
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        created_at:
+            label: Дата создания
+        img:
+            label: Изображение
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+        rating:
+          label: Рейтинг
+        writing:
+          label: Прошли тест
+      list:   
+        title: Тесты
+        display: [ name, slug, is_public, writing ]
+      filter:  
+        display: [ name, slug, is_public]
+      form:    
+        display: 
+          Основная информация: [ name, slug, content, img, is_public ]
+          Статистика: [ views_count, votes_count, rating, writing ]
+          Meta теги: [ title, keywords, description ]
+          Вопросы: [ Question,new_Question ]
+          Результат: [ Result,new_Result ]
+      edit:    
+        title: Редактирование теста "%%name%%"
+      new:     
+        title: Создание нового теста

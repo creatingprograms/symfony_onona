@@ -1,0 +1,113 @@
+/*img.blured{
+  filter: blur(10px);
+}
+.blured{
+  .product-card-img-block{
+    img{
+      filter: blur(10px);
+    }
+  }
+
+  // .mfp-gallery{
+  //   img{
+  //     filter: blur(10px);
+  //   }
+  // }
+  // .cat-list-img{
+  //   img{
+  //     filter: blur(10px);
+  //   }
+  // }
+}*/
+.-forHer {
+  .sidebar {
+    width: 320px;
+    margin-top: 53px;
+    &-f {
+      border-right: 10px;
+      padding: 19px 40px 18px;
+    }
+  }
+  .cont-right {
+    width: calc(100% - 390px);
+  }
+  @media screen and (max-width: $smallDesctop) {
+    .cont-right {
+      width: calc(100% - 378px);
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    .wrap-cont {
+      padding-left: 0;
+      padding-right: 17px;
+      max-width: 1004px;
+    }
+    .sidebar {
+      width: 260px;
+      &-f {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    .cont-right {
+      width: calc(100% - 276px);
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    .wrap-cont {
+      max-width: 752px;
+    }
+    .sidebar {
+      width: 220px;
+      &-f-range {
+        width: calc(100% - 12px);
+        &-services {
+          margin-right: 0;
+          input[type="text"] {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    .cont-right {
+      width: calc(100% - 248px);
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    .intro-block {
+      h1,
+      .h1 {
+        margin: 0 0 22px;
+      }
+      &.wrapper {
+        margin-top: -54px;
+      }
+      &-img {
+        display: none;
+      }
+      &-desc {
+        font-size: 16px;
+        line-height: 120%;
+      }
+    }
+    .cat-list-filtr {
+      text-align: left;
+    }
+    .sidebar {
+      width: 100%;
+      margin: 0 auto 20px;
+      max-width: 290px;
+      &-f-range {
+        max-width: 3000px;
+        &-services {
+          input[type="text"] {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .cont-right {
+      width: auto;
+    }
+  }
+}

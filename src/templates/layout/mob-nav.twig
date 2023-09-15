@@ -1,0 +1,239 @@
+<div class="mob-nav">
+  <div class="mob-nav-wrap">
+    <div class="mob-nav-plate">
+      <div class="mob-nav-plate-col -but">
+        <div class="header-nav-but">&nbsp;</div>
+      </div>
+      {% if isLogin %}
+        <div class="mob-nav-plate-col -lk -red">
+          <a href="#" >Личный кабинет</a>
+        </div>
+        <div class="mob-nav-plate-col -logout">
+          <a href="#">
+            <svg>
+              <use xlink:href="#logOutIcon" />
+            </svg>
+          </a>
+        </div>
+      {% else %}
+        <div class="mob-nav-plate-col -enter -red">
+          <a href="#" >Вход</a>
+        </div>
+        <div class="mob-nav-plate-col -reg">
+          <a href="#">Регистрация</a>
+        </div>
+      {% endif %}
+    </div>
+    <nav>
+      <ul class="mob-nav-top">
+        <li class="-red">
+          <!-- Сделаю выпадашку по ID-ку -->
+          <a href="#" data-href="#mobCatalopPop">КАТАЛОГ ПРОДУКЦИИ</a>
+          <div class="mob-nav-arrow" data-href="#mobCatalopPop">
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+          </div>
+        </li>
+        <li class="-action">
+          <a href="#" data-href="#mobCatalopPop">АКЦИИ</a>
+          <div class="mob-nav-arrow" data-href="#mobCatalopPop">
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <a href="#" data-href="#mobCatalopPop">Магазины</a>
+          <div class="mob-nav-arrow" data-href="#mobCatalopPop">
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <a href="#">Секс-тренинги</a>
+        </li>
+        <li>
+          <a href="#" data-href="#mobCatalopPop">Все о сексе</a>
+          <div class="mob-nav-arrow" data-href="#mobCatalopPop">
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+          </div>
+        </li>
+        <li>
+          <a href="#">Распродажа</a>
+        </li>
+        <li>
+          <a href="#">Для новичков</a>
+        </li>
+      </ul>
+      <ul class="mob-nav-bot">
+        <li>
+          <a href="#">Сотрудничество</a>
+        </li>
+        <li>
+          <a href="#">Как оформить заказ</a>
+        </li>
+        <li>
+          <a href="#">Способы доставки</a>
+        </li>
+        <li>
+          <a href="#">Оплата</a>
+        </li>
+        <li>
+          <a href="#">Гарантии</a>
+        </li>
+        <li>
+          <a href="#">Наши магазины</a>
+        </li>
+      </ul>
+      <div class="mob-nav-pop" id="mobCatalopPop">
+        <div class="mob-nav-plate">
+          <div class="mob-nav-plate-col -back" >
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+            Назад
+          </div>
+        </div>
+        <div class="mob-nav-head">
+          Каталог продукции
+        </div>
+        <ul class="mob-nav-top">
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>он и она</span> — Игрушки для пар
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>он</span> — Игрушки для мужчин
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>она</span> — Игрушки для женщин
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>БДСМ</span> и фетиш
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>интимная</span> косметика
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>эротическое</span> белье
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>аксессуары</span> — разное
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mob-nav-link" data-href="#mobCatalopPopForTwo">
+              <span>секс</span> Игрушки
+              <div class="mob-nav-arrow" data-href="#mobCatalopPopForTwo">
+                <svg>
+                  <use xlink:href="#backArrowIcon" />
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mob-nav-pop" id="mobCatalopPopForTwo">
+        <div class="mob-nav-plate">
+          <div class="mob-nav-plate-col -back">
+            <svg>
+              <use xlink:href="#backArrowIcon" />
+            </svg>
+            Назад
+          </div>
+        </div>
+        <div class="mob-nav-head">
+          Для двоих
+        </div>
+        <ul class="mob-nav-top">
+          <li>
+            <a href="#">Анальные игрушки</a>
+          </li>
+          <li>
+            <a href="#">Двухсторонние фаллосы</a>
+          </li>
+          <li>
+            <a href="#">Страпоны</a>
+          </li>
+          <li>
+            <a href="#">Подарочные наборы</a>
+          </li>
+          <li>
+            <a href="#">Вибраторы для пар</a>
+          </li>
+          <li>
+            <a href="#">Насадки и кольца</a>
+          </li>
+          <li>
+            <a href="#">Стимуляторы из металла</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="mob-nav-tel">
+      <li>
+        <a href="tel:">
+          8 (800) 500 98 78 
+          <b>Россия</b>
+        </a>
+      </li>
+      <li>
+        <a href="tel:">
+          8 (495) 374 98 78 
+          <b>Москва</b>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

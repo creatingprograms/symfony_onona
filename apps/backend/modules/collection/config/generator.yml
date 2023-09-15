@@ -1,0 +1,46 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Collection
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          collection
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        image:
+          label: Изображение
+        is_public:
+          label: Доступна
+        is_popular:
+          label: Популярный
+        subid:
+          label: Дополнительный ID
+        priority_sort_list:
+          label: Список ID товаров с приоритетной сортировки (в порядке следования ID)
+      list:
+        title: Колекции
+        display: [ id, name, slug, is_public, subid, is_popular ]
+        sort: [ position, Asc ]
+      filter:
+        display: [ id, name, slug, is_public ]
+      form:
+        display:
+          Основная информация: [ name, slug, content, is_public, subid, image, is_popular, priority_sort_list ] 
+          Meta теги: [ title, keywords, description ]
+      edit:
+        title: Редактирование колекции "%%name%%"
+      new:
+        title: Создание колекции

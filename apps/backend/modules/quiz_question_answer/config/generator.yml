@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           QuizQuestionAnswer
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          quizanswers
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        quizquestion_id:
+          label: Вопрос
+        is_correct:
+          label: Правильный ответ
+      list:
+        title: Ответы квиза
+        display: [ quizquestion_id, answer, balls]
+      filter:
+        display: [ quizquestion_id, answer]
+      form:
+        display:
+          Основная информация: [ quizquestion_id, answer, balls, comment, is_correct ]
+      edit:
+        title: Редактирование ответа на вопрос квиза "%%answer%%"
+      new:
+        title: Создание нового ответа на вопрос квиза

@@ -1,0 +1,97 @@
+_catalog:
+  enabled:     false
+  with_layout: false
+  contextual: false
+_products:
+  lifetime:    2592000
+_paginator:
+  lifetime:    2592000
+_changechildren:
+  lifetime:    2592000
+_sliderCategoryRetailRocket:
+  enabled:     false
+  with_layout: false
+  contextual: false
+_paginatorNew:
+  enabled:     false
+  with_layout: false
+  contextual: false
+_paginatorNew2:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_catalogDev:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+show:
+  lifetime:    21600
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+shownew:
+  lifetime:    21600
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+showBestPrice:
+  lifetime:    21600
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+  
+showManagePrice:
+  lifetime:    21600
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+noncount:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+filters:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+filtersblock:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+catalog:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+bestprice:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+new:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+related:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+collection:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+manufacturer:
+  enabled:     false
+  with_layout: false
+  contextual: false

@@ -1,0 +1,144 @@
+.-oprosnik{
+  h1{
+    color: #0f0f0f;
+    line-height: 32px;
+    margin: 0;
+    text-align: center;
+    background: #f2cfb9;
+  }
+  .subheader{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 40px;
+  }
+  .image-box{
+    box-sizing: border-box;
+    padding: 30px 220px;
+    text-align: center;
+    background: #f8c2b8 url(/frontend/images/oprosnik-back.jpg) 50% no-repeat;
+    margin: auto;
+    width: 976px;
+    background-size: contain;
+    line-height: 125%;
+    max-width: 90%;
+    .header{
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .form{
+    text-align: center;
+    margin-bottom: 50px;
+    &-oprosnik{
+      .form-row{
+        width: fit-content;
+        margin: 40px auto 28px;
+      }
+      hr{
+        width: 80%;
+      }
+      textarea{
+        width: 570px;
+        height: 178px;
+        max-width: 80%;
+        border: 3px solid #e1e1e1;
+        margin: 30px auto;
+      }
+      .form-label{
+        font-weight: bold;
+        text-align: center;
+        color: #010101;
+        label{
+          color: #5c5c5c;
+          display: block;
+          margin-top: 10px;
+          font-weight: normal;
+        }
+      }
+      .male-female{
+        margin: 30px auto;
+        color: #5c5c5c;
+        text-align: center;
+        .styleCH+label::before{
+          background:transparent url('/frontend/images/oprosnik-dot.png') 50% 400% no-repeat;
+        }
+        .styleCH:checked+label::before{
+          background-position: 50% 50%;
+        }
+        label{
+          margin-right: 30px;
+          &:nth-last-child(1){
+            margin-right: 0;
+          }
+          &::before{
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  .advantages{
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0;
+    &-element{
+      width: calc(33% - 20px);
+      padding-left: 96px;
+      box-sizing: border-box;
+      font-size: 13px;
+      line-height: normal;
+      color: #5b5b5b;
+      min-height: 70px;
+      &.basket-cart{
+        background: url('/frontend/images/oprosnik-basket.png') 10px top no-repeat;
+      }
+      &.deliv{
+        background: url('/frontend/images/oprosnik-deliv.png') 11px top no-repeat;
+      }
+      &.finger{
+        background: url('/frontend/images/oprosnik-finger.png') 18px top no-repeat;
+      }
+      .header{
+        color: #000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .-oprosnik{
+    .image-box{
+      width: 100%;
+      max-width: 100%;
+      padding: 15px 30px;
+    }
+    .advantages{
+      flex-wrap: wrap;
+      &-element{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .-oprosnik{
+    .form{
+      &-oprosnik{
+        .form-row{
+          width: 100%;
+        }
+        .male-female {
+          label{
+            margin-right: 18px;
+          }
+        }
+        textarea{
+          width: 80%;
+        }
+      }
+    }
+  }
+}

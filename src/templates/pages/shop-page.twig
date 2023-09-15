@@ -1,0 +1,217 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <div class="breadcrumbs wrapper">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a> > Магазин «Он&nbsp;и&nbsp;Она» в&nbsp;Москве, ул.&nbsp;Летчика Бабушкина
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <main class="wrapper">
+    <div class="shop-item">
+      <div class="shop-item-top">
+        <div class="shop-item-info">
+          <div class="shop-item-plate">
+            <!-- Ниже "span" в "H1" не нужен, делаю его для дизайна -->
+            <h1>
+              Магазин «Он и Она» в Москве,  <span class="-block">ул.&nbsp;Летчика Бабушкина</span>
+            </h1>
+          </div>
+          <div class="shop-item-info-desc">
+            <div class="shop-item-group">
+              <p><b>Адрес:</b></p>
+              <p>г.&nbsp;Москва, ул.&nbsp;Летчика Бабушкина, д.&nbsp;30С10, "Северный&nbsp;рынок"</p>
+            </div>
+            <div class="shop-item-group">
+              <b>Режим работы:</b> КРУГЛОСУТОЧНО
+            </div>
+            <div class="shop-item-group">
+              <p><b>Схема проезда:</b></p>
+              <p>Бабушкинская, 1&nbsp;вагон из центра, любой автобус до остановки к/т&nbsp;"Орион". Вход: с&nbsp;правой стороны от центрального входа в&nbsp;рынок. Вас приятно порадует большой выбор эротического белья, литературы, игрушек для взрослых.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-map" id="map"  data-lat="55.869905" data-lon="37.676457"></div>
+      </div>
+      <div class="shop-item-slider -typeSlider" >
+        <div class="swiper-container" >
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_1.jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_2.jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_3.jpg" alt="">
+            </a>
+            <!-- Второй ряд стрелок -->
+
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_1.jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_2.jpg" alt="">
+            </a>
+            <a href="#" class="swiper-slide">
+              <img src="/images/shop-item/shop_3.jpg" alt="">
+            </a>
+
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev">
+          <svg>
+            <use xlink:href="#backArrowIcon" />
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg>
+            <use xlink:href="#backArrowIcon" />
+          </svg>
+        </div>
+      </div>
+      <div class="shop-item-review">
+        <div class="shop-item-review-h">
+          отзывы о магазине
+        </div>
+        <div class="shop-item-review-call-form">
+          <a href="#formShopItemReview" class="downLinkJS -isVis">Оставьте свой отзыв или вопрос</a>
+        </div>
+        <form action="index.php" class="form form-review" id="formShopItemReview">
+          <div class="form-row">
+            <div class="form-label">
+              ФИО:*
+            </div>
+            <input type="text" value="Константин Константинович Константинопольский">
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              E-mail:*
+            </div>
+            <input type="email" value="" placeholder="Введите ваш e-mail">
+            <div class="form-hint">
+              E-mail не публикуется при отзыве и необходим для отсеивания искусственных отзывов, оставляемых роботами.
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              Комментарий:*
+            </div>
+            <textarea placeholder="Очень классный магазин, рекомендую!"></textarea>
+          </div>
+          <div class="form-row form-review-subm">
+            <div class="form-review-consent">
+              <input type="checkbox" class="styleCH" name="val-rev-1" id="val-rev-1" value="val-rev-1">
+              <label for="val-rev-1">Я принимаю условия <a href="#">Пользовательского соглашения</a></label>
+            </div>
+            <div class="form-capcha">
+              <div class="form-capcha-label">
+                4534535
+              </div>
+              <input type="text" name="" value="" placeholder="Введите символы">
+            </div>
+            <input type="submit" value="добавить отзыв" class="but -big">
+          </div>
+        </form>
+        <div class="review-list review-list-down" id="reviewList">
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Татьяна</b>
+              <span class="review-list-date">08.10.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Впервые стали клиентами этого магазина 26 сентября 2014. Продавец-консультант вежливая и очень деликатная :) Спасибо большое) Вместе с "игрушками" и клубной картой мы приобрели у вас ещё и хорошее настроение ;)</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Вадим</b>
+              <span class="review-list-date">12.14.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Посетил данный магазин 11.12.14.Красивый,стильный интерьер.Приятно зайти. Особо хочу отметить работу продавца-консультанта Ирины. Вежливо,деликатно главное,подробно ответила на все вопросы. Зашел в магазин из интереса, "только посмотреть", вышел пусть с небольшой.но покупкой). Спасибо!</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Илья</b>
+              <span class="review-list-date">15.03.2016</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Был в этом магазине 2 раза и оба раза ушел с покупками и хорошим настроением. Приятно порадовала работа продавцов. Заира - чудо, а Луиза просто душка! Они мне все объяснили, все продемонстрировали. Сложилось впечатление что они хотят не товар продать, а чтоб я получил от товара удовольствие. Спасибо Вам девушки!</p>
+            </div>
+          </div>
+          <!-- Пошли скрытые элементы -->
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Татьяна</b>
+              <span class="review-list-date">08.10.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Впервые стали клиентами этого магазина 26 сентября 2014. Продавец-консультант вежливая и очень деликатная :) Спасибо большое) Вместе с "игрушками" и клубной картой мы приобрели у вас ещё и хорошее настроение ;)</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Вадим</b>
+              <span class="review-list-date">12-14.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Посетил данный магазин 11.12.14.Красивый,стильный интерьер.Приятно зайти. Особо хочу отметить работу продавца-консультанта Ирины. Вежливо,деликатно главное,подробно ответила на все вопросы. Зашел в магазин из интереса, "только посмотреть", вышел пусть с небольшой.но покупкой). Спасибо!</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Илья</b>
+              <span class="review-list-date">15.03.2016</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Был в этом магазине 2 раза и оба раза ушел с покупками и хорошим настроением. Приятно порадовала работа продавцов. Заира - чудо, а Луиза просто душка! Они мне все объяснили, все продемонстрировали. Сложилось впечатление что они хотят не товар продать, а чтоб я получил от товара удовольствие. Спасибо Вам девушки!</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Татьяна</b>
+              <span class="review-list-date">08.10.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Впервые стали клиентами этого магазина 26 сентября 2014. Продавец-консультант вежливая и очень деликатная :) Спасибо большое) Вместе с "игрушками" и клубной картой мы приобрели у вас ещё и хорошее настроение ;)</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Вадим</b>
+              <span class="review-list-date">12-14.2014</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Посетил данный магазин 11.12.14.Красивый,стильный интерьер.Приятно зайти. Особо хочу отметить работу продавца-консультанта Ирины. Вежливо,деликатно главное,подробно ответила на все вопросы. Зашел в магазин из интереса, "только посмотреть", вышел пусть с небольшой.но покупкой). Спасибо!</p>
+            </div>
+          </div>
+          <div class="review-list-item">
+            <div class="review-list-plate">
+              <b class="review-list-name">Илья</b>
+              <span class="review-list-date">15.03.2016</span>
+            </div>
+            <div class="review-list-desc">
+              <p>Был в этом магазине 2 раза и оба раза ушел с покупками и хорошим настроением. Приятно порадовала работа продавцов. Заира - чудо, а Луиза просто душка! Они мне все объяснили, все продемонстрировали. Сложилось впечатление что они хотят не товар продать, а чтоб я получил от товара удовольствие. Спасибо Вам девушки!</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-list-all">
+          <a href="#reviewList" class="allButJS" data-all="Свернуть отзывы">
+            <span>Смотреть больше отзывов</span>
+            <svg>
+              <use xlink:href="#arrowMoreIcon" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock afterHeader %}

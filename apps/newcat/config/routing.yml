@@ -1,0 +1,617 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: page, action: show, slug: mainNewDis }
+
+popup_15_form:
+ url: /viewpopup15form
+ param: { module: page, action: showPopup15 }
+
+popup_15_serve:
+ url: /servepopup15form
+ param: { module: noncache, action: servePopup15 }
+
+export_cpa_onona:
+ url: /export_cpa_onona
+ param: { module: noncache, action: exportcpaonona }
+
+export_yamaps:
+ url: /ya_maps_xml
+ param: { module: noncache, action: exportyamapsxml }
+
+API_1C_GetBonusCount:
+  url:   /api/getbonuscount
+  param: { module: noncache, action: apiGetBonusCount }
+
+API_1C_GetBonusCount:
+  url:   /api/updatebarcodes
+  param: { module: noncache, action: updatebarcodes }
+
+ProductFeed:
+  url: /productfeed
+  param: { module: noncache, action: productFeed }
+ProductFeedYML:
+  url: /productfeedyml
+  param: { module: noncache, action: productFeedYML }
+
+API_1C_BonusDown:
+  url:   /api/bonusdown
+  param: { module: noncache, action: apiBonusDown }
+
+
+    # start Регистрация через соц сети
+regss_auth:
+  url:   /regss_auth
+  param: { module: noncache, action: regssauth }
+
+regss:
+  url:   /regss
+  param: { module: sfGuardRegister, action: regss }
+    # end Регистрация через соц сети
+
+suggest:
+  url:   /suggest
+  param: { module: page, action: suggest }
+
+#расчет цены доставки Почта РФ
+russianpost_delivery:
+  url:   /russianpost_get_delivery_price
+  param: { module: noncache, action: getRussianpostDeliveryPrice }
+
+#расчет цены доставки pickpoint
+pickpoint_delivery:
+  url:   /pickpoint_get_delivery_price/:id/:weight
+  param: { module: noncache, action: getPickpointDeliveryPrice }
+
+# start Покупка на Маркете
+yamarket_cart:
+  url:   /yamarketpay/cart
+  param: { module: yamarketpay, action: cart }
+
+yamarket_orderaccept:
+  url:   /yamarketpay/order/accept
+  param: { module: yamarketpay, action: orderaccept }
+
+yamarket_orderstatus:
+  url:   /yamarketpay/order/status
+  param: { module: yamarketpay, action: orderstatus }
+
+  # end Покупка на Маркете
+#Проверка существования email
+
+check_email:
+  url:   /checkemail
+  param: { module: noncache, action: checkemail }
+
+# Магазины
+#shops:
+#  url:   /shops
+#  param: { module: page, action: shops }
+
+shop_show:
+  url:   /shops/:slug
+  param: { module: page, action: shopsDetail }
+shop_add_comment:
+  url: /send-shop-comment
+  param: { module: page, action: shopsComment }
+
+category_bestprice:
+  url:   /category/bestprice
+  param: { module: category, action: bestprice }
+
+new_prod:
+  url:   /newprod
+  param: { module: category, action: new }
+
+news_show:
+  url:   /news/:slug
+  param: { module: page, action: news }
+
+newslist_show:
+  url:   /newslist
+  param: { module: page, action: newslist }
+
+captcha_check:
+  url: /captcha_check
+  param: { module: noncache, action: captchacheck }
+
+
+catalog_show_newprod:
+  url:   /catalog/:slug/newprod
+  param: { module: category, action: newprod }
+
+catalog_show_relatecategory:
+  url:   /catalog/:slug/relatecategory
+  param: { module: category, action: relatecategory }
+
+
+category_filters_show:
+  url:   /category/filters/:slug
+  param: { module: category, action: filters }
+
+category_filters_block:
+  url:   /category/filtersblock/:slug
+  param: { module: category, action: filtersblock }
+
+category_noncount:
+  url:   /category/noncount
+  param: { module: category, action: noncount }
+
+category_changechildren:
+  url:   /category/changechildren/:id
+  param: { module: category, action: changechildren }
+
+product_changechildren:
+  url:   /product/changechildren/:id
+  param: { module: product, action: changechildren }
+
+category_showBestPrice:
+  url:   /category/Luchshaya_tsena
+  param: { module: category, action: showBestPrice }
+
+category_showDiscount60:
+  url:   /category/skidki_do_60_percent
+  param: { module: category, action: showDiscount60 }
+
+category_showNovice:
+  url:   /category/dlya_novichkov
+  param: { module: category, action: showNewby }
+
+category_showManagePrice:
+  url:   /category/upravlyai-cenoi
+  param: { module: category, action: showManagePrice }
+
+category_show_page:
+  url:   /category/:slug/*
+  param: { module: category, action: shownew }
+
+category_show:
+  url:   /category/:slug
+  param: { module: category, action: shownew }
+
+
+catalog_show:
+  url:   /catalog/:slug
+  # param: { module: category, action: showForMen }
+  param: { module: category, action: catalog }
+
+
+add_comment_article:
+  url:   /sexopedia/:slug/addcomment
+  param: { module: article, action: addcomment }
+
+article_category:
+  url:   /sexopedia/category/:slug
+  param: { module: article, action: category }
+
+article_catalog:
+  url:   /sexopedia/catalog/:slug
+  param: { module: article, action: catalog }
+
+article_rate:
+  url:   /sexopedia/rate
+  param: { module: article, action: rate }
+
+
+article_show_page:
+  url:   /sexopedia/:slug/*
+  param: { module: article, action: show }
+
+article_show:
+  url:   /sexopedia/:slug
+  param: { module: article, action: show }
+
+article:
+  url:   /sexopedia
+  param: { module: article, action: index }
+
+manufacturer_show:
+  url:   /manufacturer/:slug
+  param: { module: category, action: manufacturer }
+
+manufacturer_show_all:
+  url:   /manufacturer_all/:slug
+  param: { module: category, action: manufacturerall }
+
+collection_show:
+  url:   /collection/:slug
+  param: { module: category, action: collection }
+
+related:
+  url:   /related
+  param: { module: category, action: related }
+
+fastorder:
+  url:   /fastorder/:id
+  param: { module: product, action: fastorder }
+
+product_setnotification:
+  url:   /setnotification
+  param: { module: product, action: setnotification }
+
+product_delnotification:
+  url:   /delnotification
+  param: { module: product, action: delnotification }
+
+product_setmintoprice:
+  url:   /setmintoprice
+  param: { module: product, action: setmintoprice }
+
+product_rate:
+  url:   /product/rate
+  param: { module: product, action: rate }
+
+product_ratecomment:
+  url:   /product/ratecomment/:id
+  param: { module: product, action: ratecomment }
+
+product_uploaduserphoto:
+  url:   /product/uploaduserphoto/:id
+  param: { module: product, action: uploadUserPhoto }
+
+product_preshow:
+  url:   /product/preshow/:id
+  param: { module: product, action: preshow }
+
+product_showUserPhotos:
+  url:   /product/showuserphotos/:id
+  param: { module: product, action: showUserPhotos }
+
+product_preshowPhoto:
+  url:   /product/preshowphoto/:id
+  param: { module: product, action: preshowPhoto }
+
+product_usersendform:
+  url:   /product/usersendform/:id
+  param: { module: product, action: userSendForm }
+
+senduser:
+  url:   /product/:slug/senduser
+  param: { module: product, action: show, senduser: true }
+
+product_show:
+  url:   /product/:slug
+  param: { module: product, action: show }
+
+add_comment:
+  url:   /product/:slug/addcomment
+  param: { module: product, action: addcomment }
+
+login:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+logout:
+  url:   /logout/
+  param: { module: sfGuardAuth, action: signout }
+
+register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+
+customer_mydata:
+  url:   /customer/mydata
+  param: { module: customer, action: mydata }
+
+customer_myphoto:
+  url:   /customer/myphoto
+  param: { module: customer, action: myphoto }
+
+customer_myorders:
+  url:   /customer/myorders
+  param: { module: customer, action: myorders }
+
+customer_bonus:
+  url:   /customer/bonus
+  param: { module: customer, action: bonus }
+
+customer_bonusshop:
+  url:   /customer/bonusshop
+  param: { module: customer, action: bonusshop }
+
+customer_bonusadd:
+  url:   /customer/bonusadd/:id
+  param: { module: customer, action: bonusadd }
+
+customer_order_detail:
+  url:   /customer/orderdetails/:id
+  param: { module: customer, action: orderdetails }
+
+customer_notification:
+  url:   /customer/notification
+  param: { module: customer, action: notification }
+
+addtocart:
+  url:   /cart/addtocart/:id
+  param: { module: cart_new, action: addtocart }
+addtocartya:
+  url:   /cart/addtocartya/:id
+  param: { module: cart_new, action: addtocartya }
+
+addtocartcount:
+  url:   /cart/addtocartcount/:id
+  param: { module: cart_new, action: addtocartcount }
+
+addtodesire:
+  url:   /cart/addtodesire/:id
+  param: { module: cart_new, action: addtodesire }
+
+addtocompare:
+  url:   /cart/addtocompare/:id
+  param: { module: cart_new, action: addtocompare }
+
+cart_info_header:
+  url:   /cart/cartinfoheader
+  param: { module: cart_new, action: cartinfoheader }
+
+action_info:
+  url:   /cart/actioninfo
+  param: { module: cart_new, action: actioninfo }
+
+processorder:
+  url:   /cart_old/processorder
+  param: { module: cart_new, action: processorder }
+
+processorder_confirmed:
+  url:   /cart_old/processorder/confirmed
+  param: { module: cart_new, action: confirmed }
+
+processorder_confirmed_new:
+  url:   /cart/confirmed
+  param: { module: cart_new, action: confirmed }
+processorder_confirmed_new_css:
+  url:   /cart/confirmedcss
+  param: { module: cart_new, action: confirmedcss }
+
+
+payments:
+  url:   /cart/payments
+  param: { module: cart_new, action: payments }
+
+jel_info_header:
+  url:   /cart/jelinfoheader
+  param: { module: cart_new, action: jelinfoheader }
+
+cart_info:
+  url:   /cart_old
+  param: { module: cart_new, action: index }
+
+cart_info_new:
+  url:   /cart
+  param: { module: cart_new, action: index }
+
+clear_cart:
+  url:   /clearcart
+  param: { module: cart_new, action: clearcart }
+
+clear_product_cart_old:
+  url:   /deletefromcart_old/:id
+  param: { module: cart_new, action: index }
+
+clear_product_cart:
+  url:   /deletefromcart/:id
+  param: { module: cart_new, action: index }
+
+
+
+
+desire_info:
+  url:   /desire
+  param: { module: cart_new, action: desire }
+
+desire_del:
+  url:   /desire/delete/:id
+  param: { module: cart_new, action: desire }
+
+desires:
+  url:   /desires
+  param: { module: desire, action: index }
+
+desire_rate:
+  url:   /desire/rate
+  param: { module: desire, action: rate }
+
+desire_setting:
+  url:   /setdesire
+  param: { module: desire, action: setting }
+
+desire_user_show:
+  url:   /desire/:slug
+  param: { module: desire, action: show }
+
+
+compare_info:
+  url:   /compare
+  param: { module: cart_new, action: compare }
+
+compare_del:
+  url:   /compare/delete/:id
+  param: { module: cart_new, action: compare }
+
+compare_delall:
+  url:   /compare/deleteall
+  param: { module: cart_new, action: delalltocompare }
+
+
+
+comments:
+  url:   /comments
+  param: { module: page, action: comments }
+
+oprosnik:
+  url:   /oprosnik/:order
+  param: { module: page, action: oprosnik }
+
+oprosnik_shop:
+  url:   /oprosnikshop/:order
+  param: { module: page, action: oprosnikShop }
+
+search:
+  url:   /search
+  param: { module: page, action: search }
+
+firstvisit:
+  url:   /firstvisit/:stats
+  param: { module: noncache, action: firstvisit }
+
+Konultsexolog:
+  url:   /konultsexolog
+  param: { module: noncache, action: konultsexolog }
+
+addnotification:
+  url:   /addnotification
+  param: { module: noncache, action: addNotification }
+
+delnotification:
+  url:   /delnotification/:catid
+  param: { module: noncache, action: delNotification }
+
+Logvalidmail:
+  url:   /logvalidmail
+  param: { module: noncache, action: logvalidmail }
+
+refid:
+  url:   /refid/:refid
+  param: { module: noncache, action: refid }
+
+refidpartner:
+  url:   /refidpartner
+  param: { module: noncache, action: refidpartner }
+
+xmlmyads:
+  url:   /xmlmyads
+  param: { module: noncache, action: xmlmyads }
+
+xmladmitad:
+  url:   /xmladmitad
+  param: { module: noncache, action: xmladmitad }
+
+xmlleadtrade:
+  url:   /xmlleadtrade
+  param: { module: noncache, action: xmlleadtrade }
+
+xmlmyragon:
+  url:   /xmlmyragon
+  param: { module: noncache, action: xmlmyragon }
+
+support:
+  url:   /support
+  param: { module: noncache, action: support }
+
+no18:
+  url:   /no18
+  param: { module: noncache, action: no18 }
+
+sliderRelated:
+  url:   /sliderRelated
+  param: { module: noncache, action: sliderrelated }
+
+18age_show:
+  url:   /18age/:slug
+  param: { module: page, action: 18age }
+
+Bonuspayprod_show:
+  url:   /bonuspayprod
+  param: { module: noncache, action: bonuspayprod }
+
+sliderCategoryRetailRocket:
+  url:   /categorysliderrr
+  param: { module: noncache, action: sliderCategoryRetailRocket }
+
+sliderMainRetailRocket:
+  url:   /mainsliderrr
+  param: { module: noncache, action: sliderMainRetailRocket }
+
+sliderMainPageProd:
+  url:   /sliderMainPageProd
+  param: { module: noncache, action: sliderMainPageProd }
+
+
+
+#horoscope_general:
+#  url:   /horoscope
+#  param: { module: horoscope, action: index }
+
+#horoscope_sovm:
+#  url:   /horoscopesovm
+#  param: { module: horoscope, action: sovm }
+
+#horoscope_show:
+#  url:   /horoscope/:slug
+#  param: { module: horoscope, action: show }
+
+
+
+tests_general:
+  url:   /lovetest
+  param: { module: tests, action: index }
+
+tests_general_2:
+  url:   /tests
+  param: { module: tests, action: index }
+
+tests_rate:
+  url:   /tests/rate
+  param: { module: tests, action: rate }
+
+tests_show:
+  url:   /tests/:slug
+  param: { module: tests, action: show }
+
+
+
+
+product_showerror:
+  url:   /product/*
+  param: { module: page, action: error404 }
+
+customers_showerror:
+  url:   /customer/*
+  param: { module: page, action: error404 }
+
+sitemap:
+  url: /sitemap
+  param: { module: page, action: sitemap }
+
+
+video_list:
+  url:   /video
+  param: { module: video, action: index }
+
+video_show:
+  url:   /video/:slug
+  param: { module: video, action: show }
+
+video_preshow:
+  url:   /video/preshow/:id
+  param: { module: video, action: preshow }
+
+
+
+page_show_addcomm:
+  url:   /:slug/addcomm
+  param: { module: page, action: addcomm }
+
+page_show_russianpost:
+  url:   /russianpost/:slug
+  param: { module: page, action: showRussianPost }
+
+page_show_pickpoint:
+  url:   /pickpoint/:slug
+  param: { module: page, action: showPickpoint }
+
+page_show:
+  url:   /:slug
+  param: { module: page, action: show }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

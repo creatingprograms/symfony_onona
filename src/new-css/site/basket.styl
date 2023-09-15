@@ -1,0 +1,817 @@
+.via-delivery
+  height: 560px;
+.delivery-icon-16
+.delivery-icon-17
+  padding-top: 48px;
+  flex-shrink: 0;
+.delivery-icon-16
+  width: 85px;
+  background: url('/frontend/images_new/delivery/yandex.svg') no-repeat top center;
+.delivery-icon-17
+  width: 97px;
+  background: url('/frontend/images_new/delivery/ozon_rocket.svg') no-repeat center 13px;
+.shops-delivery
+  width: 650px;
+  max-width: 80%;
+  margin: auto;
+  position: relative;
+  background: #f1f1f1;
+  border: 2px solid #333;
+  border-radius: 30px;
+  padding: 35px;
+  box-sizing: border-box;
+  label
+    display: block;
+    margin: 15px 0;
+    color: #1a1a1a;
+.drh-container
+  display: none;
+  &.active
+    display: block;
+  
+.wrap-buttons-duplicate
+  display: none;
+  @media(min-width: 766px)
+    display: block;
+.btn-full
+  &.btn-full_yellow
+    background-color: #ffdd2d;
+    border-color: #ffdd2d;
+    color: #333;
+    &:hover
+      background-color: #fcc521;
+.purchase-card_basket
+  .wrap
+    &:last-child
+      padding-top 16px
+  .btn-full
+    margin-top 20px
+    &.btn-full_yellow
+      background-color: #ffdd2d;
+      border-color: #ffdd2d;
+      color: #333;
+      &:hover
+        background-color: #fcc521;
+.purchase-card__info
+  &:not(:first-child)
+    margin-top 20px
+
+.purchase-card__info
+  span
+    &:first-child
+      font-size: 14px
+      line-height: 18px
+      display block
+      margin-bottom 5px
+    &:last-child
+      font-weight: 500
+      font-size: 20px
+      line-height: 26px
+  .product-item__price
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    &::after
+      top 50%
+      transform: translate(100%,-50%)
+      font-size: 14px
+      line-height: 20px
+      color #9B98AC
+  .purchase-card__bonus
+    font-size: 14px
+    line-height: 18px
+    color #616C7C
+    margin-bottom 0
+    margin-top 4px
+
+
+.purchase-card__info
+  &.-result
+    span
+      &:last-child
+        color #EF182F
+        font-weight: 500
+        font-size: 28px
+        line-height: 28px
+
+.sidebar-info
+  background-color #E3E7EB
+  border-radius: 8px
+  padding 24px
+  margin-top 16px
+  .wrap-btn
+    margin-top 24px
+  .btn-full
+    display inline-block
+    vertical-align top
+    line-height 24px
+
+.sidebar-info__title
+  font-weight 500
+  margin-bottom 5px
+
+.sidebar-info__text
+  font-size 14px
+  line-height 18px
+
+.basket-item
+  display flex
+  position relative
+  min-height: 230px
+  align-items center
+  border-bottom: 1px solid #E1E0E9
+  padding 20px 0
+  +max(mobile)
+    min-height: 170px
+    align-items flex-start
+  +max(sMobile)
+    flex-wrap wrap
+    width 100vw
+    margin-left -18px
+    padding-left 18px
+    padding-right 18px
+  .purchase-card__item
+    font-size 14px
+    line-height 18px
+    margin-top 16px
+    +max(sMobile)
+      flex-direction: column
+      margin-top 6px
+    &.-status
+      a
+        +max(sMobile)
+          margin-left 0
+  .product-item__price
+    +max(sMobile)
+      display flex
+      align-items center
+    &::after
+      position static
+      display: block
+      transform: translateX(0)
+      +max(sMobile)
+        margin-left 10px
+
+  .purchase-card__bonus
+    max-width: 110px
+    +max(sMobile)
+      max-width: 100%
+      margin-bottom 0
+  .field-number
+    max-width: 100px
+    flex 1 0 auto
+    +max(mobile)
+      margin-top 20px
+    +max(sMobile)
+      position absolute
+      left 18px
+      bottom 35px
+      margin-top 0
+  .row-col
+    display flex
+    justify-content space-between
+    +max(mobile)
+      display block
+      margin-top 24px
+    +max(sMobile)
+      margin-top 0
+  .col
+    width 100%
+    flex 1 0 auto
+    &:nth-child(1)
+      max-width: 148px
+      margin-right 16px
+      +max(mobile)
+        max-width: 21.2%
+        margin-right 5%
+      +max(sMobile)
+        max-width: 124px
+        margin-right 3%
+    &:nth-child(2)
+      max-width: 54%
+      margin-right 44px
+      +max(mobile)
+        max-width: 36%
+      +max(sMobile)
+        margin-right 0
+        max-width: 53%
+    &:nth-child(3)
+      max-width: 20%
+      position relative
+      +max(mobile)
+        max-width: 26%
+      +max(sMobile)
+        display flex
+        flex-direction: column
+        margin-top 25px
+        max-width: 100%
+        padding-left calc(124px + 3%)
+        position static
+
+.basket-item__img
+  max-width: 148px
+  width 100%
+  +max(mobile)
+    max-width: 100%
+
+.basket-item__info
+  max-width: 270px
+  width 100%
+  flex 1 0 auto
+
+.basket-item__title
+  +max(sMobile)
+    padding-right 10%
+
+.btn-basket-del
+  cursor: pointer;
+  max-width: 20px
+  width 100%
+  height 20px
+  background-color transparent
+  padding 0
+  position absolute
+  right 0
+  top 0
+  +max(sMobile)
+    top 22px
+    right 18px
+  &:hover
+    svg
+      fill #EF182F
+  svg
+    fill #616C7C
+    transition $trans
+
+.basket-item__article
+  margin-bottom 4px
+  span
+    font-size: 14px
+    line-height: 18px
+    &:first-child
+      color #616C7C
+      +max(sMobile)
+        display none
+.tab__title-delivery
+  justify-content: space-between;
+.purchase-steps
+  padding-top 23px
+  .features-tabs__title .features-tab__title:not(:last-child)
+    // margin-right 5%
+  .features-tab__title
+    position relative
+    &.active
+      span
+        color #2D2841
+    span
+      font-size: 12px
+      line-height: 16px
+      color #616C7C
+      display block
+      margin-top 10px
+    input
+      position absolute
+      width 100%
+      height 100%
+      top 0
+      left 0
+      opacity 0
+      z-index -1
+    &.features-tab__title_pvz
+      &.active
+      &:hover
+        color: #2d2841;
+        cursor: default;
+      label
+        cursor: pointer;
+        &.active
+        &:hover
+          color: #ef182f;
+  .features-tab__content
+    padding-bottom 25px
+    .btn-full
+      max-width: 256px
+      width 100%
+
+.purchase-step__title
+  margin-bottom 32px
+
+.purchase-step
+  border-top 1px solid #E1E0E9
+  padding-top 48px
+  .features-tabs
+    margin-top 0
+
+.block-payment
+  display flex
+  margin -12px
+  margin-bottom 18px
+  +max(550px)
+    display block
+
+.payment-item
+  cursor pointer
+  display block
+  background-color #F3F4F5
+  border-radius: 8px
+  height 120px
+  position relative
+  transition $trans
+  border: 1px solid transparent
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0)
+  margin 12px
+  padding 22px
+  &:hover
+    background-color #fff
+    border: 1px solid #E1E0E9
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05)
+  &.active
+    background-color #EF182F
+    color #fff
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0)
+  .icons
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    max-width: 210px;
+    &-split
+      max-width: 100%;
+      img
+        max-height: 29px;
+    &-wrap
+      text-align: center;
+      align-items: center;
+      width: 29%;
+      img
+        max-width: 29px;
+        width: 29px;
+  input
+    position absolute
+    z-index -1
+    opacity 0
+  span
+    display block
+    &:first-of-type
+      font-weight 500
+    &:last-of-type
+      font-size: 13px
+      line-height: 18px
+      margin-top 2px
+
+.payment-item
+  width 100%
+  max-width 277px
+  +max(550px)
+    max-width: calc(100% - 25px)
+  &.-wallet
+    max-width: 176px
+
+.purchase-step__title-sub
+  display block
+  margin-top -16px
+  margin-bottom 40px
+
+.purchase-step
+  .wrap-info-user
+    margin-top -32px
+  .info-user
+    display flex
+    flex-wrap wrap
+    &:nth-child(2)
+      border-top: 1px solid #E1E0E9
+      border-bottom: 1px solid #E1E0E9
+      padding-bottom 44px
+      margin-top 40px
+    .field
+    & > .group-field
+      width 100%
+      flex 1 0 auto
+      margin-top 32px
+    .field-name
+      max-width: 47%
+      +max(600px)
+        max-width: 100%
+    .field-date
+      max-width: 22%
+      margin-left 3%
+      margin-right 3%
+      +max(600px)
+        max-width: 100%
+        margin-left 0
+        margin-right 0
+    .group-field_gender
+      max-width: 23%
+      width 100%
+      margin-left auto
+      display flex
+      flex-wrap: wrap
+      align-items flex-start
+      +max(600px)
+        max-width: 100%
+      label
+        width 100%
+        font-size: 13px
+        line-height: 18px
+      .custom-check_circle
+        margin-left 18%
+        +max(600px)
+          margin-left 0
+          margin-right 15px
+    .field-tel
+      max-width: 22%
+      +max(600px)
+        max-width: 100%
+    .field-email
+      margin-left 3%
+      margin-right 3%
+      max-width: 34.5%
+      +max(600px)
+        max-width: 100%
+        margin-left 0
+        margin-right 0
+    .field-city
+      max-width: 22%
+      +max(600px)
+        max-width: 100%
+    .field-street
+      max-width: 47%
+      margin-left: 3%
+      margin-right: 3%
+      +max(600px)
+        margin-left 0
+        max-width 64%
+    .field_house
+      max-width: 22%
+      +max(600px)
+        max-width: 33%
+
+.field-cooment
+  max-width: 100%
+  &.hide-textarea
+    max-width: 30%
+    +max(600px)
+      max-width: 100%
+
+.btn-add-comment
+  cursor pointer
+  span
+    line-height 24px
+  svg
+    stroke #2D2841
+    max-width: 12px
+    width 100%
+    height 12px
+
+.purchase-step .info-user
+  .hide-textarea
+    margin-top 70px
+
+.hide-textarea
+  .block-textarea
+    display none
+
+.info-user-bonus
+  margin-top 74px
+  display flex
+  +max(600px)
+    flex-direction column
+    margin-top 34px
+  .wrap-field-input
+    width 100%
+    max-width: 57.5%
+    flex 1 0 auto
+    +max(600px)
+      max-width: 100%
+  label
+    font-size: 13px
+    line-height: 18px
+    margin-bottom 8px
+    display block
+  .field
+    display flex
+    input
+      width 100%
+      border 1px solid #E1E0E9
+      border-right none
+      border-radius: 8px 0 0 8px
+      margin-right -3px
+      &.success
+        border-color: green;
+      &.fail
+        border-color: red;
+  .custom-range
+    width 100%
+    margin-left 5%
+    margin-right 3%
+    max-width: 40%
+
+.info-user__note
+  margin-top 32px
+  .custom-check
+    &:not(:first-child)
+      margin-top 16px
+  .custom-check_shadow
+    border 1px solid #E1E0E9
+
+.wrap-field-range
+  margin-left 5%
+  max-width: 34.5%
+  width: 100%
+  flex 1 0 auto
+  +max(600px)
+    margin-left 0
+    margin-top 20px
+    max-width: 50%
+    min-width: 250px
+
+.custom-slide-range
+  display flex
+  justify-content space-between
+  padding 12px 15px 16px
+  input
+    width 50%
+
+.max-count-range
+  font-size: 15px
+  line-height: 20px
+  color #616C7C
+
+.wrap-slider-range
+  border 1px solid #E1E0E9
+  border-radius: 8px
+  position relative
+
+.slide-range-input
+  color #EF182F
+  font-size: 15px
+  line-height: 20px
+
+.slider-range-max
+  position relative
+  height 1px
+  width calc(100% - 11px)
+  margin 0 auto
+  position absolute
+  bottom: -1px
+  left: 50%
+  transform: translate(-50%, -50%)
+  .ui-slider-range
+    height 2px
+    background-color #EF182F
+    position absolute
+    left 0
+    top 0
+    border-radius: 0 0 0 6px
+  .ui-slider-handle
+    width 14px
+    height 14px
+    border-radius: 50%
+    background-color #fff
+    border 2px solid #EF182F
+    position absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    cursor pointer
+
+.block-info.block-info_catalog.block-info_2 > *
+  color #2D2841
+
+.purchase-card_basket.purchase-card_fixed
+  margin-top 40px
+  margin-bottom 42px
+  +max(600px)
+    margin-top 32px
+    margin-bottom 40px
+  .wrap
+    max-width: 50%
+    width 100%
+    +max(600px)
+      max-width 100%
+    &:nth-child(1)
+      padding-bottom 22px
+      +max(600px)
+        padding 30px 23px 24px
+    &:nth-child(2)
+      max-width: 50%
+      display flex
+      align-items center
+      justify-content center
+      +max(600px)
+        max-width: 100%
+        border-top none
+        padding-top 0
+  .btn-full
+    margin-top 0
+  .purchase-card__info:not(:first-child)
+    margin-top 15px
+    +max(600px)
+      margin-top 18px
+  .product-item__price
+    font-weight: 500
+    font-size: 32px
+    line-height: 34px
+    &::after
+      top 100%
+      transform translate(100%,-100%)
+  .purchase-card__bonus
+    margin-top 8px
+    color #EF182F
+
+.wrap-sidebar-info
+  display flex
+  justify-content space-between
+  +max(sMobile)
+    display block
+  +min(mobile)
+    display none
+  .sidebar-info
+    max-width: 48.5%
+    width 100%
+    margin-top 0
+    display flex
+    flex-direction column
+    +max(sMobile)
+      max-width: 100%
+      min-height: 221px
+    &:not(:first-child)
+      +max(sMobile)
+        margin-top 16px
+  .sidebar-info__text
+    margin-bottom 25px
+  .wrap-btn
+    margin-top auto
+  .btn-full
+    max-width: 176px
+    width 100%
+    text-align center
+
+.wrap-btn-mob
+  margin-top 30px
+  .btn-full
+    max-width: 275px
+    width 100%
+    text-align center
+  +min(mobile)
+    display none
+
+.block-popup.popup-ozon
+  padding 35px 30px 60px;
+  max-width: 1400px;
+  height: 800px;
+  max-height: 80%;
+  +max(tablet)
+    max-width: 742px
+.block-popup.popup-cart
+  padding 43px 50px 0
+  +max(tablet)
+    max-width: 742px
+    padding 23px 25px 0
+  .basket-item
+    padding-top 30px
+    align-items flex-start
+    border-bottom: none
+    margin-bottom 20px
+    +max(sMobile)
+      width 100%
+      padding-left 0
+      padding-right 0
+      margin-right 0
+      margin-left 0
+      padding-bottom 130px
+    .col
+      &:nth-child(1)
+        max-width: 17%
+        margin-right 3.5%
+        +max(tablet)
+          max-width: 18%
+        +max(sMobile)
+          max-width: 104px
+      &:nth-child(2)
+        max-width: 51%
+        margin-right 10%
+        +max(tablet)
+          margin-right 8%
+        +max(mobile)
+          max-width: 41%
+        +max(sMobile)
+          max-width: 55%
+          margin-right 0
+      &:nth-child(3)
+        +max(sMobile)
+          padding-left: calc(104px + 3%)
+    .basket-item__title
+      +max(sMobile)
+        padding-right 0
+    .field-number
+      +max(sMobile)
+        position static
+        margin-top 10px
+
+  .product-item__price
+    display flex
+    align-items flex-start
+    +max(tablet)
+      font-size: 22px
+      line-height: 24px
+    &::after
+      margin-left 10px
+  .status-block-item
+    margin-bottom 4px
+    +max(sMobile)
+      display block
+      .product-item__reviews
+        margin-left 0
+  .wrap-btn
+    display flex
+    max-width: 100%
+    width 447px
+    min-width: 447px
+    justify-content space-between
+    +max(mobile)
+      min-width: inherit
+      width auto
+      flex-direction: column
+    +max(sMobile)
+      position absolute
+      bottom 0
+      left 0
+      margin-top 0
+    .btn-full
+      display inline-block
+      vertical-align top
+      text-align center
+      max-width: inherit
+      width auto
+      +max(mobile)
+        width 256px
+        min-width 256px
+      &:not(:first-child)
+        margin-top 0
+        +max(mobile)
+          margin-top 15px
+
+.wrap-sl-popup
+  max-width: 328px
+  width 100%
+  &:first-child
+    padding-left 50px
+    max-width 378px
+    +max(tablet)
+      padding-left 25px
+      max-width: 353px
+  &:last-child
+    padding-right 50px
+    max-width: 378px
+    +max(tablet)
+      padding-right 25px
+      max-width: 353px
+  &:not(:last-child)
+    border-right: 1px solid #E1E0E9
+
+
+.sl-popup
+  width calc(100% + 100px)
+  margin-left -50px
+  border-top 1px solid #E1E0E9
+  border-radius: 0 0 8px 8px
+  +max(tablet)
+    width calc(100% + 50px)
+    margin-left -25px
+  .custom-nav
+    box-shadow 0px 4px 4px rgba(0, 0, 0, 0.05)
+  .swiper-button-disabled
+    opacity 0
+
+.sl-popup-item
+  display flex
+  padding-top 28px
+  padding-bottom 30px
+  .product-item__price
+    max-width: 50%
+    width 100%
+    flex 1 0 auto
+  .product-item__cart
+    flex 1 0 auto
+
+.block-popup.popup-cart .sl-popup-item
+  .product-item__price
+    align-items flex-end
+
+.sl-popup__img
+  max-width: 104px
+  width 100%
+  display block
+
+.sl-popup__content
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  padding-right 32px
+
+.sl-popup__title
+  padding-right 40px
+  display block
+
+.sl-popup.shadow-white_active::after
+  +max(sMobile)
+    display none

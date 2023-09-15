@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DopInfoCategory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dop_info_category
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        is_compare:
+          label: Показывать в таблице сравнения товаров
+        namecompare:
+          label: Название раздела на странице сравнения
+      list:    
+        title: Категории доп. характеристик
+        display: [ _name, is_compare ]
+        sort: [ position, Asc ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

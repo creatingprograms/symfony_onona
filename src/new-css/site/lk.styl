@@ -1,0 +1,534 @@
+.block-greeting
+  background-color #EBEDEF
+  max-width: 824px
+  width 100%
+  margin 40px auto 0
+  border-radius: 8px
+  display flex
+  justify-content space-between
+  align-items center
+  padding: 32px 18px
+  padding-right: 26px
+  +max(mobile)
+    flex-direction: column
+  .wrap
+    max-width 516px
+    width 100%
+    margin-right 20px
+  .wrap-btn
+    max-width: 176px
+    width 100%
+    +max(mobile)
+      margin-top 20px
+
+.block-user-info
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  max-width: 1024px
+  width 100%
+  margin 0 auto
+
+.user-info__title
+  border-bottom 1px solid #E1E0E9
+  padding: 14px 20px
+  display flex
+  align-items center
+  justify-content space-between
+  a
+    font-weight: 500
+    font-size: 14px
+    line-height: 18px
+    text-decoration underline
+
+.user-info__content
+  padding: 17px 5%
+  table
+    width 100%
+
+.user-info-item
+  max-width calc((100% / 2) - 12px)
+  width 100%
+  margin-top 25px
+  +max(mobile)
+    max-width: 100%
+  &:not(.user-info_no-border)
+    .wrap
+      border 1px solid #E1E0E9
+      border-radius: 8px
+      overflow hidden
+
+.lk-orders
+  th
+    font-size: 12px
+    line-height: 16px
+    color #616C7C
+    font-weight 400
+    text-align left
+    padding 4px 0 17px
+    &:first-child
+      padding-left 7px
+      text-align left
+      +max(tablet)
+        padding-left 0
+  td
+    font-size: 14px
+    line-height: 16px
+    color #BDBDBD
+    padding-bottom 10px
+    +max(sMobile)
+      font-size 12px
+    &:first-child
+      padding-left 7px
+      text-align left
+      +max(tablet)
+        padding-left 0
+  .status-executed
+    td
+      color #2D2841
+  .status-order
+    max-width 18px
+    width 18px
+    height 18px
+    margin 0 auto
+
+.lk-orders
+  th
+  td
+    text-align center
+    &:nth-child(1)
+      max-width: 19%
+      width 100%
+    &:nth-child(2)
+      max-width: 21%
+      width 100%
+
+
+.user-info-item
+  &:nth-child(2)
+    .user-info__content
+      display flex
+      flex-wrap: wrap
+    .col
+      max-width: 50%
+      width 100%
+      +max(sMobile)
+        max-width: 100%
+      &:not(:first-child)
+        +max(sMobile)
+          margin-top 15px
+    .wrap-btn
+      max-width: 100%
+      width 100%
+      margin-top 34px
+    .btn-full
+      max-width 226px
+      width 100%
+      margin 0 auto
+
+.user-info-item
+  &:nth-child(3)
+    .wrap
+      &:nth-child(1)
+        margin-bottom 14px
+    .element-picture
+      max-width: 57%
+      width: 100%
+      margin: 20px auto 4px
+      text-align center
+
+.user-info__bonus
+  text-align center
+  padding-top: 21px
+  padding-bottom: 36px
+  +max(sMobile)
+    padding-top 12px
+    padding-bottom 20px
+
+.wrap-activation-bonuses
+  display none
+  .user-info__content
+    padding-top 27px
+  .wrap-btn
+    margin-top 32px
+    margin-bottom 16px
+  .btn-full
+    margin 0 auto
+    max-width 226px
+    width 100%
+    line-height 24px
+
+.form-bonus
+  .field
+    margin-bottom 22px
+
+.history-order__title
+  margin-left -10px
+  margin-bottom 17px
+  +max(sMobile)
+    margin-left 0
+
+.history-order-table
+  td
+    padding-bottom 14px
+    font-size 14px
+    line-height 16px
+    +max(sMobile)
+      font-size 12px
+    &:first-child
+      width 28%
+    &:nth-child(2)
+      width 21%
+
+.user-info_no-border
+  .user-info__content
+    p a
+      color #EF182F
+      text-decoration underline
+  .wrap-btn
+    margin-top 45px
+  .btn-full
+    max-width 226px
+    width 100%
+    margin 0 auto
+
++max(mobile)
+  .user-info-item
+    &:nth-child(1)
+      order 2
+    &:nth-child(2)
+      order 1
+    &:nth-child(3)
+      order 3
+    &:nth-child(4)
+      order 4
+
+.form-edit
+  display flex
+  flex-wrap: wrap
+  justify-content space-between
+  max-width: 1024px
+  width 100%
+  margin 0 auto
+  padding-right 8.5%
+  margin-top 8%
+  +max(tabletLarge)
+    padding-right 0
+  .col
+    max-width 400px
+    width 100%
+    +max(tablet)
+      max-width 47%
+    +max(mobile)
+      max-width 100%
+    &:first-child
+      margin-right 30px
+      +max(tablet)
+        margin-right 0
+      +max(mobile)
+        margin-bottom 35px
+  .wrap-btn
+    max-width: 100%
+    width 100%
+  .group-field
+    display flex
+    flex-wrap wrap
+  .form-note
+    margin-top 110px
+    +max(mobile)
+      margin-top 60px
+    +max(sMobile)
+      margin-top 25px
+  .wrap-btn
+    margin-top 55px
+    padding-left 10%
+    +max(tabletLarge)
+      padding-left 0
+  .btn-full
+    line-height 24px
+    margin 0 auto
+    max-width: 226px
+    width 100%
+    font-weight 500
+    font-size 15px
+
+  .group-field
+    &.group-field_gender
+      margin-left auto
+      max-width: 123px
+      width 100%
+      margin-top 0
+      align-items flex-start
+      +max(sMobile)
+        max-width: 100%
+        margin-top 25px
+      & > label
+        max-width 100%
+        width 100%
+        font-size: 13px
+        line-height: 18px
+        margin-bottom 10px
+        &.hasError
+          color: red;
+      .custom-check_circle
+        &:not(:last-child)
+          margin-right auto
+          +max(sMobile)
+            margin-right 30px
+    &.group-field_address
+      justify-content space-between
+      & > .field
+        margin-top 0
+        &:not(:first-child)
+          +max(sMobile)
+            margin-top 25px
+      .field_w
+        max-width: 30%
+        width 100%
+        +max(sMobile)
+          max-width: 100%
+
+.form-edit__title
+  margin-bottom 9%
+  +max(mobile)
+    margin-bottom 4%
+
+.form-edit__content
+  .field
+    &:not(:first-child)
+      margin-top 25px
+  .group-field
+    margin-top 25px
+
+.field_w
+  max-width: 176px
+  width 44%
+
+.form-note
+  p
+    font-size: 13px
+    line-height: 22px
+
+
+.wrap-block.wrap-block-reg
+  margin-top 40px
+
+.form-reg
+  legend
+    margin-bottom 24px
+  fieldset
+    &:not(:first-child)
+      margin-top 40px
+    &:nth-child(1)
+      .fieldset-block
+        & > *:not(:nth-child(-n+3))
+          +min(mobile)
+            margin-top 32px
+    &:nth-child(2)
+      .fieldset-block
+        & > *:not(:nth-child(-n+2))
+          margin-top 32px
+  .custom-check_shadow
+    border: 1px solid #E1E0E9
+  .fieldset-block
+    .field
+      max-width: 45%;
+      margin-top: 32px;
+      margin-left: 0;
+      +max(mobile)
+        margin-top: 20px;
+        max-width: 100%;
+
+
+.fieldset-block
+  display flex
+  flex-wrap: wrap
+  justify-content space-between
+  & > *:last-child
+    margin-right auto
+    margin-left 3%
+  .field
+    max-width 34.5%
+    width 100%
+  & > .field
+    +max(mobile)
+      max-width: 100%
+    &:not(:first-child)
+      +max(mobile)
+        margin-top 20px
+  .group-field_gender
+    max-width: 23%
+    width 100%
+    margin-left auto
+    display flex
+    flex-wrap: wrap
+    align-items flex-start
+    +max(mobile)
+      margin-left 0
+      margin-top 20px
+      max-width: 36%
+    & > label
+      font-size: 13px
+      line-height: 18px
+      max-width: 100%
+      width 100%
+    .custom-check
+      &:nth-child(2)
+        margin-right 17%
+  .field-tel
+    max-width: 176px
+    width 100%
+    margin-right 3%
+    margin-left auto
+    +max(tablet)
+      margin-right 0
+  .field-city
+    max-width 59.6%
+    margin-right 3%
+  .field-street
+    max-width 50%
+    width 100%
+  .group-field_address
+    max-width: 43.5%
+    width: 100%
+    display: flex
+    margin-left 3.2%
+    margin-right 3%
+    display flex
+    justify-content space-between
+    +max(mobile)
+      margin-left 0
+      margin-right 0
+      max-width: 100%
+    .field
+      max-width 29%
+      width 100%
+  .field-email
+    margin-left 3%
+    margin-right 3%
+    +max(mobile)
+      margin-left 0
+      margin-right 0
+  .field-second-name
+    margin-left 3%
+    +max(mobile)
+      margin-left 0
+  .field-rass-repl
+    margin-left 3%
+    margin-right auto
+    +max(mobile)
+      margin-left 0
+      margin-right 0
+
+.reg-note
+  background: #E3E7EB
+  border-radius: 8px
+  font-size: 14px
+  line-height: 18px
+  margin-top 32px
+  margin-right 3%
+  padding 24px
+
+.form-reg__bottom
+  display flex
+  align-items center
+  margin-top 32px
+  +max(sMobile)
+    flex-direction: column-reverse
+  .wrap-btn
+    margin-right 24px
+    flex 1 0 auto
+    +max(sMobile)
+      margin-right 0
+  .btn-full
+    font-size 15px
+    line-height 24px
+  .custom-check
+    width 100%
+    +max(sMobile)
+      margin-bottom 25px
+  .custom-check_label
+    position relative
+    top 2px
+
+.white-popup-block
+  background: #FFF
+  padding: 20px 30px
+  text-align: left
+  max-width: 650px
+  margin: 40px auto
+  position: relative
+
+.block-popup
+  padding 32px 40px 24px
+  border-radius: 8px
+  max-width: 428px
+  width 100%
+  .mfp-close
+    +min(mobile)
+      color #fff
+      right auto
+      left -58px
+      top -14px
+      font-weight 100
+      font-family 'Golos','Arial', 'Helvetica',  sans-serif
+
+.block-popup__title
+  margin-bottom 12px
+
+.block-popup
+  margin-top 24px
+  .field
+    &:not(:first-child)
+      margin-top 16px
+    label
+      display flex
+      a
+        margin-left auto
+        color #EF182F
+        text-decoration underline
+        font-size: 13px
+        line-height: 18px
+  .custom-check
+    margin-top 24px
+  .custom-check_shadow
+    border: 1px solid #e1e0e9
+  .wrap-btn
+    margin-top 30px
+  .btn-full
+    max-width 100%
+    width 100%
+    font-size 15px
+    line-height 24px
+    &:not(:first-child)
+      margin-top 16px
+  .wrap-in-soc
+    height 40px
+    margin-top 32px
+  .text-soc
+    text-align center
+    font-size: 13px
+    line-height: 18px
+    color #616C7C
+    margin-top: 16px
+
+.popup-recovery
+  .wrap-btn
+     margin-top 64px
+
+.popup-reg
+  .wrap-btn
+     margin-top 32px
+
+.user-info_no-order
+  padding 20px 0 28px
+  p
+    font-weight: 500
+    font-size: 15px
+    line-height: 21px
+    color #616C7C
+    text-align center
+  .btn-full
+    max-width: 226px
+    width 100%
+    margin 32px auto 0

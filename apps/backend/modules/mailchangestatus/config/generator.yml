@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Mailchangestatus
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          mailchangestatus
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        status:
+          label: Статус
+        is_public:
+          label: Отправлять
+        content:
+          label: Письмо
+        titlemail:
+          label: Заголовок письма
+      list:    
+        title: Письма при смене статусов
+        display: [ status, is_public ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

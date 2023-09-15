@@ -1,0 +1,114 @@
+.btn-chosen
+  &.is-active
+    position: relative;
+    +max(440px)
+      top: 0 !important;
+    &:after
+      content: attr(count);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -6px;
+      right: -8px;
+      background-color: #ef182f;
+      font-size: 12px;
+      line-height: 16px;
+      color: #fff;
+      font-weight: 500;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+.shops-link
+  display: block;
+  margin-bottom: 10px;
+.product-item
+  &__cart.product-item__not-stroke
+    svg
+      stroke: transparent;
+      fill: #2d2841;
+    &:hover
+      svg
+        fill: #fff;
+  &__fav
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 0;
+    border-bottom: 1px solid #E1E0E9;
+    max-width: 876px;
+    @media(max-width: 747px)
+      flex-wrap: wrap;
+    .question
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #E1E0E9;
+      border-radius: 50%;
+      line-height: 16px;
+      text-align: center;
+      margin-left: 7px;
+      vertical-align: middle;
+    .product-item
+      &__price
+        padding-bottom: 25px;
+        @media(max-width: 747px)
+          height: fit-content;
+        &::after
+          left: 0;
+          right: auto;
+          top: auto;
+          transform: none;
+          bottom: 0;
+        &_block
+          @media(max-width: 747px)
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+      &__img
+        width: 148px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media(max-width: 747px)
+          width: 100%;
+        img
+          margin: auto;
+          display: block;
+          max-height: 150px;
+      &__descripion
+        max-width: 301px;
+        @media(max-width: 900px)
+          max-width: 220px;
+        @media(max-width: 747px)
+          max-width: 100%;
+        .art
+          margin-bottom: 4px;
+        .stock
+          margin-top: 16px;
+          @media(max-width: 747px)
+            margin-bottom: 15px;
+    span
+      color: #9B98AC;
+    .stock
+      .link
+        color: #ef182f;
+    .purchase-card__bonus
+      margin-top: 27px;
+      @media(max-width: 747px)
+        margin-top: 0;
+      &::before
+        background: #fff url('/frontend/images_new/gift-card.svg') no-repeat;
+        width: 24px;
+        margin-right: 0;
+      span
+        line-height: 22px;
+        color: #616C7C;
+        display: block;
+
+  &__del_block
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    @media(max-width: 747px)
+      margin-top: 16px;

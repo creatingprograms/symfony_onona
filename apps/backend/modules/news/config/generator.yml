@@ -1,0 +1,37 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           News
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          news
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        content:
+          label: Содержимое
+        precontent:
+          label: Предварительное содержимое
+        news_pages_list:
+          label: На каких страницах доступна
+        created_at:
+          label: Дата добавления
+        photo_url:
+            label: Изображение
+      list:
+        title: Страницы
+        display: [ name, created_at, is_public ]
+      form:
+        display:
+          Основная информация: [ name, photo_url, precontent, content, is_public, created_at ]
+      # filter:  ~
+      # edit:    ~
+      # new:     ~

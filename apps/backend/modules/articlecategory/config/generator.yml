@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Articlecategory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          articlecategory
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        category_articles_list:
+          label: Статьи этой категории
+      list:    
+        title: Категории статей
+        display: [ id, name, slug, is_public ]
+        sort: [ position, Asc ]
+      filter:  ~
+      form:    
+        display: 
+          Основная информация: [ name, slug, content, is_public ]
+          Meta теги: [ title, keywords, description ]
+      edit:    
+        title: Редактирование категории "%%name%%"
+      new:     
+        title: Создание категории

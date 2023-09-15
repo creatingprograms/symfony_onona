@@ -1,0 +1,27 @@
+
+_shopsMapsRf:
+  lifetime:    172800
+  enabled:     true
+_shopsMapsMO:
+  lifetime:    172800
+  enabled:     true
+_blockActionProduct:
+  lifetime:    172800
+  enabled:     true
+_blockComments:
+  lifetime:    172800
+  enabled:     true
+_blockCommentsShop:
+  lifetime:    172800
+  enabled:     true
+_blockArticle:
+  lifetime:    172800
+  enabled:     true
+_blockBanners:
+  lifetime:    172800
+  enabled:     true
+  
+all:
+  enabled:     false
+  with_layout: false
+  contextual: false

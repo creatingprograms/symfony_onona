@@ -1,0 +1,264 @@
+.zero-m
+  &>*
+    &:first-child
+      margin-top 0
+      +max(wide)
+        margin-top 0
+      +max(screen)
+        margin-top 0
+      +max(desktop)
+        margin-top 0
+      +max(tabletLarge)
+        margin-top 0
+      +max(tablet)
+        margin-top 0
+      +max(mobile)
+        margin-top 0
+      +max(sMobile)
+        margin-top 0
+    &:last-child
+      margin-bottom 0
+      +max(wide)
+        margin-bottom 0
+      +max(screen)
+        margin-bottom 0
+      +max(desktop)
+        margin-bottom 0
+      +max(tabletLarge)
+        margin-bottom 0
+      +max(tablet)
+        margin-bottom 0
+      +max(mobile)
+        margin-bottom 0
+      +max(sMobile)
+        margin-bottom 0
+
+.box-ratio
+  position relative
+  &::before
+    content ''
+    padding-top 100%
+    display block
+  &>*
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+  img
+    width 100%
+    height 100%
+    object-fit contain
+    object-position: 50% 50%
+
+.-forNoviceNew
+  color #000
+  .wrap-title-page
+    margin-bottom 95px
+    +max(tabletLarge)
+      margin-bottom 50px
+      margin-top 20px
+    +max(mobile)
+      margin-bottom 30px
+  .wrap-block
+    &:not(:first-of-type)
+      margin-top 98px
+      +max(tablet)
+        margin-top 65px
+
+.title-page
+  span
+    color #BD3238
+    box-shadow inset 0px -16px 0px rgba(248,146,177, .3)
+
+
+.novice-block-text
+  display grid
+  grid-template-columns auto 514px
+  align-items center
+  grid-column-gap 65px
+  +max(tabletLarge)
+    grid-template-columns repeat(1, 1fr)
+    grid-row-gap 35px
+
+.novice-text
+  font-size 18px
+  line-height 32px
+  +max(mobile)
+    font-size 16px
+    line-height 26px
+  p:not(:last-of-type)
+    margin-bottom 28px
+    +max(mobile)
+      margin-bottom 16px
+  a
+    color #EF182F
+    text-decoration underline
+
+.novice-info
+  background-color #EF182F
+  border-radius 18px
+  display flex
+  align-items center
+  justify-content center
+  padding 60px 55px
+  color #fff
+  position relative
+  font-size 24px
+  line-height 34px
+  overflow hidden
+  +between(mobile, tabletLarge)
+    padding 40px 25px
+  +max(mobile)
+    padding 16px 25px
+    font-size 18px
+    line-height 24px
+    border-radius 10px  
+  &>span
+    position absolute
+    bottom -12px
+    right 0
+    font-weight: 900
+    font-size: 97px
+    line-height: 1
+    color #fff
+    opacity 0.3
+    +max(mobile)
+      font-size 58px
+
+.novice-content
+  +between(mobile, tabletLarge)
+    br
+      display none
+  b
+    font-size 24px
+    line-height 34px
+    font-weight 900
+    +max(mobile)
+      font-size 20px
+      line-height 32px
+
+.novice-list
+  display grid
+  grid-row-gap 100px
+  +max(tablet)
+    grid-row-gap 58px
+
+
+.novice-item
+  display flex
+  justify-content space-between
+  padding-bottom 55px
+  grid-column-gap 55px
+  +max(mobile)
+    flex-direction column
+    padding-bottom 0
+  &:nth-child(even)
+    flex-direction: row-reverse
+    +max(mobile)
+      flex-direction column
+    .novice-itme-img
+      +max(mobile)
+        margin-left auto
+        margin-right 0
+      .-img
+        transform translate(-92px, 55px)
+        +max(tablet)
+          transform translate(-47px, 28px)
+  &:nth-child(5n+2)
+    .novice-itme-img
+      &::after
+        background-color #FDDEE8
+      .-img
+        box-shadow: 0px 0px 14px rgba(253, 222, 232, 0.8)
+  &:nth-child(5n+3)
+    .novice-itme-img
+      &::after
+        background-color #E8EFFA
+      .-img
+        box-shadow: 0px 0px 14px rgba(210, 222, 240, 0.8)
+  &:nth-child(5n+4)
+    .novice-itme-img
+      &::after
+        background-color #F1E6F5
+      .-img
+        box-shadow: 0px 0px 14px rgba(229, 214, 234, 0.8)
+  &:nth-child(5n+5)
+    .novice-itme-img
+      &::after
+        background-color #E8FAF5
+      .-img
+        box-shadow: 0px 0px 14px rgba(191, 233, 221, 0.8)
+
+  .btn-full
+    display inline-flex
+    padding 12px 62px
+    +max(mobile)
+      display flex
+      max-width 360px
+      margin-left auto
+      margin-right auto
+
+.novice-itme-img
+  flex 1 0 auto
+  align-self: flex-start
+  width 100%
+  max-width 38.331%
+  +max(mobile)
+    max-width 320px
+    width 83.1%
+    margin-right auto
+  &::after
+    content ''
+    border-radius 20px
+    background-color #E7E7E7
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    +max(mobile)
+      border-radius 10px
+  .-img
+    border-radius 20px
+    background-color #fff
+    box-shadow: 0px 0px 14px rgba(231, 231, 231, 0.8)
+    overflow hidden
+    transform translate(92px, 55px)
+    z-index 2
+    padding 27px
+    +max(tablet)
+      transform translate(47px, 28px)
+    +max(mobile)
+      border-radius 10px
+    img
+      display block
+.novice-item-content
+  align-items center
+  align-self: center
+  flex 1 0 auto
+  max-width 45.6%
+  width 100%
+  +between(mobile, tablet)
+    padding-top 15px
+  +max(mobile)
+    max-width 100%
+    margin-top 58px
+  +between(tablet,tabletLarge)
+    padding-top 70px
+  .-text
+    margin 20px 0 30px
+    +max(mobile)
+      margin 24px 0
+  .-title
+    line-height 36px
+    +max(tablet)
+      font-size 20px
+      line-height 26px
+    +max(mobile)
+      font-size 17px
+      line-height 24px
+  ul
+    li:not(:last-child)
+      +max(tablet)
+        margin-bottom 9px

@@ -1,0 +1,61 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Video
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          video
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        videoyoutube:
+          label: Видео с YouTube
+        videoserver:
+          label: Видео с сервера
+        photo:
+          label: Фотография
+        content:
+          label: Описание
+        is_public:
+          label: Доступно
+        is_publicmainpage:
+          label: Показывать на главной
+        is_related:
+          label: Рекомендованное
+        link:
+          label: Ссылка
+        tag:
+          label: Теги
+        youtubelink:
+          label: Ссылка на YouTube
+        comment_manager:
+            label: Коментарий администратора
+        point:
+            label: Количесчтво баллов
+        product_id:
+          label: Товар
+      list:    
+        title: Видео
+        display: [ id, name, slug, link, is_public,is_publicmainpage ]
+      filter:  
+        display: [ is_public ]
+      form:    
+        class: VideoCPForm 
+        display: 
+          Основная информация: [ product_id, name, slug, link, youtubelink, videoyoutube, videoserver, photo, content, is_public,is_publicmainpage,is_related,tag] 
+          Meta теги: [ title, keywords, description ]
+          Модерация: [ comment_manager, point ]
+      edit:    
+        title: Редактирование видео "%%name%%"
+      new:     
+        title: Создание видео

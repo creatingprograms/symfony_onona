@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Bonus
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          bonus
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        user_id:
+          label: Пользователь
+        bonus:
+          label: Бонусов
+        comment:
+          label: Комментарий
+        created_at:
+          label: Дата начисления
+        activatelk:
+          label: Активированы в личном кабинете
+      list:
+        title: Бонусы
+        display: [ user_id, bonus, comment, created_at, activatelk ]
+      filter:  ~
+      form:
+        display:
+          Основная информация: [ _user_id, bonus, comment, log, activatelk  ]
+      edit:    ~
+      new:     ~

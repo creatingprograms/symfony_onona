@@ -1,0 +1,75 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Catalog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          catalog
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        menu_name:
+          label: Название в верхнем меню
+        description:
+          label: Дополнительное название
+        is_public:
+          label: Доступна
+        img:
+          label: Изображение
+        img_top:
+          label: Изображение вверху
+        img_bottom:
+          label: Изображение внизу
+        page:
+          label: Страница
+        maxaction:
+          label: Число товаров с акциями(макс)
+        slug:
+          label: Синоним
+        category_catalogs_list:
+          label: Категории раздела
+        tags:
+          label: Теги
+        class:
+          label: Дополнительный класс
+        brands_ids:
+          label: id Брендов через | для меню
+        prodid_priority:
+          label: id приоритетных товаров для сортировки через запятую
+        top20_list:
+          label: id товаров TOP 20 через запятую
+        gifts_list:
+          label: id товаров Новинки через запятую
+        sale_list:
+          label: id товаров Распродажа и акции через запятую
+        best_sales_list:
+          label: id товаров Популярное через запятую
+      list:
+        title: Каталоги
+        display: [ name, is_public ]
+        sort: [ position, Asc ]
+        object_actions:
+          promote:
+            action: promote
+            label: Вверх
+          demote:
+            action: demote
+            label: Вниз
+          _edit: ~
+          _delete: ~
+      filter:  ~
+      form:
+        display:
+          Основная информация: [ name, menu_name, description, slug, is_public, img, img_top, img_bottom, position, category_catalogs_list, tags, class, prodid_priority, top20_list, gifts_list, sale_list, best_sales_list ]
+          Meta теги: [ title, keywords, metadescription, canonical ]
+          Страница: [ page, maxaction ]
+      edit:    ~
+      new:     ~

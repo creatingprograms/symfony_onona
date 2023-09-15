@@ -1,0 +1,391 @@
+# Обновление остатков
+update_stocks:
+  url: /api/update-stock
+  param: { module: noncache, action: updatestock }
+# Запрос остатков от маркета
+yamarket_stock:
+  url: /api/stocks
+  param: { module: category, action: stock }
+# положить в корзину из лендинга
+cart_from_landing:
+  url: /cart-from-landing
+  param: { module: cart_new, action: cartfromlanding }
+# atol
+check_atol_doc:
+  url: /check-atol-doc
+  param: { module: cart_new, action: checkatoldoc }
+# cards mobile api
+cardsmobile:
+  url: /cardsmobile
+  param: { module: cardsmobile, action: index }
+cardsmobile_get_user:
+  url: /cardsmobile/v1/card
+  param: { module: cardsmobile, action: getCard }
+cardsmobile_reserve_anon:
+  url: /cardsmobile/v1/card/anonymous
+  param: { module: cardsmobile, action: newCardReserve }
+cardsmobile_create:
+  url: /cardsmobile/v1/card/anonymous/:slug
+  param: { module: cardsmobile, action: newCardCreate, cardNumber: slug  }
+cardsmobile_purchase_history: #доступные способы коммуникации
+  url: /cardsmobile/v1/card/:num/purchases #История покупок
+  param: { module: cardsmobile, action: cardGetHistory, cardNumber: num }
+cardsmobile_card_info: #информация о карте. получить или обновить
+  url: /cardsmobile/v1/card/:num
+  param: { module: cardsmobile, action: cardGetInfo, cardNumber: num }
+cardsmobile_card_storeCommunication: #доступные способы коммуникации
+  url: /cardsmobile/v1/card/:num/communication
+  param: { module: cardsmobile, action: cardSaveCommunication, cardNumber: num }
+
+homepage:
+  url:   /
+  param: { module: page, action: show, slug: main }
+
+no18:
+  url:   /no18
+  param: { module: noncache, action: no18 }
+
+18age_show:
+  url:   /18age/:slug
+  param: { module: page, action: 18age }
+
+export_cpa_onona: #Экспорт заказов advcake
+ url: /export_cpa_onona
+ param: { module: noncache, action: exportcpaonona }
+export_cpa_onona_promo: #Экспорт заказов advcake с промокодами
+ url: /export_cpa_onona_promo
+ param: { module: noncache, action: exportcpaononapromo }
+
+export_yamaps: #Экспорт магазинов для карты Яндекса
+ url: /ya_maps_xml
+ param: { module: noncache, action: exportyamapsxml }
+
+updateBarcodes: # Обновляет штрих-коды товаров из файла
+ url:   /api/updatebarcodes
+ param: { module: noncache, action: updatebarcodes }
+
+support: # Обратная связь
+  url:   /support
+  param: { module: noncache, action: support }
+videoorder: # Форма видеозаказа
+  url:   /videoform-preceed
+  param: { module: noncache, action: videoorder }
+
+check_email: #Проверка существования email
+ url:   /checkemail
+ param: { module: noncache, action: checkemail }
+
+pickpoint_delivery: #расчет цены доставки pickpoint
+  url:   /pickpoint_get_delivery_price/:id/:weight
+  param: { module: noncache, action: getPickpointDeliveryPrice }
+
+API_1C_GetBonusCount:
+  url:   /api/getbonuscount
+  param: { module: noncache, action: apiGetBonusCount }
+API_1C_BonusDown:
+  url:   /api/bonusdown
+  param: { module: noncache, action: apiBonusDown }
+# Магазины
+shop_get_more:
+  url: /shops/get-more
+  param: { module: page, action: shopsMore }
+shop_add_comment:
+  url: /shops/add-comment
+  param: { module: page, action: shopsComment }
+shop_show:
+  url:   /shops/:slug
+  param: { module: page, action: shopsDetail }
+get_delivery_points:
+  url:   /get_delivery_points/:id
+  param: { module: noncache, action: getDeliveryPoints }
+
+# Корзина
+cart_info_new:
+  url:   /cart
+  param: { module: cart_new, action: index }
+coupon:
+  url:   /cart/check-coupon
+  param: { module: cart_new, action: check }
+addtocart:
+  url:   /cart/addtocart/:id
+  param: { module: cart_new, action: addtocart }
+addtocartya: #для яндекса
+  url:   /cart/addtocartya/:id
+  param: { module: cart_new, action: addtocartya }
+clear_cart: #Очистить всю корзину
+  url:   /clearcart
+  param: { module: cart_new, action: clearcart }
+cartinfotop:  #показать верхнюю корзину-строку
+  url:   /carttop
+  param: { module: cart_new, action: cartTop }
+clear_product_cart: #Удалить элемент из корзины
+  url:   /deletefromcart/:id #удалить строку из корзины
+  param: { module: cart_new, action: deletefromcart }
+addtocartcount: #добавить товар в корзине
+  url:   /cart/addtocartcount/:id
+  param: { module: cart_new, action: addtocartcount }
+processorder_confirmed_new: #Подтверждение заказа
+  url:   /cart/confirmed
+  param: { module: cart_new, action: confirmed }
+#processorder_confirmed_css: #Подтверждение заказа
+#  url:   /cart/confirmedcss
+#  param: { module: cart_new, action: confirmedcss }
+processorder_confirmed_check: #Проверка заказа
+  url:   /cart/confirmed_check
+  param: { module: cart_new, action: confirmedcheck }
+#processorder_confirmed_test: #Тестовое отображение страницы
+#  url:   /cart/confirmed_test
+#  param: { module: cart_new, action: confirmedtest }
+directposturl_yandex: #Страница обработки сообщения от яндекс кассы о завершении оплаты
+  url:   /directpost_yandex
+  param: { module: cart_new, action: directposturlyandex }
+directposturl_ime: #Страница обработки сообщения от банка о завершении оплаты
+  url:   /directposturl_ime
+  param: { module: cart_new, action: directposturlime }
+directposturl: #Страница обработки сообщения от банка о завершении оплаты
+  url:   /cart/directposturl
+  param: { module: cart_new, action: directposturl }
+payments: #Получение оплат по типу доставки
+  url:   /cart/payments
+  param: { module: cart_new, action: payments }
+russianpost_delivery: #расчет цены доставки Почта РФ
+  url:   /russianpost_get_delivery_price
+  param: { module: noncache, action: getRussianpostDeliveryPrice }
+#Сравнение
+# compare_info:
+#   url:   /compare
+#   param: { module: cart_new, action: compare }
+# compare_del:
+#   url:   /compare/delete/:id
+#   param: { module: cart_new, action: compare }
+# compare_delall:
+#   url:   /compare/deleteall
+#   param: { module: cart_new, action: delalltocompare }
+#Список желаний
+#desire_info:
+#  url:   /desire
+#  param: { module: cart_new, action: desire }
+#desire_del:
+#  url:   /desire/delete/:id
+#  param: { module: cart_new, action: desire }
+#addtodesire:
+#  url:   /cart/addtodesire/:id
+#  param: { module: cart_new, action: addtodesire }
+
+# Продукт
+product_comment:
+  url:   /product/add-comment
+  param: { module: product, action: addComment }
+product_show:
+  url:   /product/:slug
+  param: { module: product, action: show }
+fastorder:
+  url:   /fastorder/:id
+  param: { module: product, action: fastorder }
+# каталог
+new_prod: #новые товары
+  url:   /newprod
+  param: { module: category, action: new }
+related: #Популярные товары
+  url:   /related
+  param: { module: category, action: related }
+catalog_show_newprod: #Новые товары в каталоге
+  url:   /catalog/:slug/newprod
+  param: { module: category, action: newprod }
+catalog_show_relatecategory: #Лидеры продаж товары в каталоге
+  url:   /catalog/:slug/relatecategory
+  param: { module: category, action: relatecategory }
+catalog_show:
+  url:   /catalog/:slug
+  param: { module: category, action: catalog }
+catalog_full:
+  url:   /catalog
+  param: { module: category, action: catalogFull }
+#category_showDiscount60: #скидки
+#  url:   /category/skidki_do_60_percent
+#  param: { module: category, action: showDiscount60 }
+category_showNovice: #Для новичков
+  url:   /category/dlya_novichkov
+  param: { module: category, action: showNewby }
+category_qrshops: #QR магазины
+  url:   /category/qrshops
+  param: { module: category, action: showQrshops }
+#category_qrshops_sub: #QR магазины дочерние
+#  url:   /category/qrshops/:slug
+#  param: { module: category, action: showQrshops }
+category_express: #Экспресс
+  url:   /category/express
+  param: { module: category, action: showExpress }
+category_express_sub: #Экспресс дочерние
+  url:   /category/express/:slug
+  param: { module: category, action: showExpress }
+category_fix: #Все по
+  url:   /category/vse-po
+  param: { module: category, action: showFixprice }
+category_fix_sub: #Все по дочерние
+  url:   /category/vse-po/:slug
+  param: { module: category, action: showFixprice }
+#category_showLutshayacena: #Управляй ценой, потому что тот раздел не реализован и содержит на хосте 1 товар
+#  url:   /category/luchshaya_tsena
+#  param: { module: category, action: showManagePrice }
+#category_showManagePrice: #Управляй ценой
+#  url:   /category/upravlyai-cenoi
+#  param: { module: category, action: showManagePrice }
+category_show:
+  url:   /category/:slug
+  param: { module: category, action: category }
+
+# Любовные тесты
+tests_general:
+  url:   /lovetest
+  param: { module: tests, action: index }
+
+tests_general_2:
+  url:   /tests
+  param: { module: tests, action: index }
+
+tests_result:
+  url:   /tests/done/:slug
+  param: { module: tests, action: done }
+tests_show:
+  url:   /tests/:slug
+  param: { module: tests, action: show }
+quiz:
+  url:   /quiz
+  param: { module: tests, action: quiz }
+quiz_show:
+  url:   /quiz/done/:slug
+  param: { module: tests, action: quizdone }
+
+#tests_rate:
+#  url:   /tests/rate
+#  param: { module: tests, action: rate }
+
+# личный кабинет
+login:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+logout:
+  url:   /logout/
+  param: { module: sfGuardAuth, action: signout }
+register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+addnotification:
+  url:   /addnotification
+  param: { module: noncache, action: addNotification }
+delnotification:
+  url:   /delnotification/:catid
+  param: { module: noncache, action: delNotification }
+customer_mydata: #Мои данные
+  url:   /customer/mydata
+  param: { module: customer, action: mydata }
+customer_myphoto:
+  url:   /customer/myphoto
+  param: { module: customer, action: myphoto }
+customer_myorders: #Мои заказы
+  url:   /customer/myorders
+  param: { module: customer, action: myorders }
+customer_order_detail:  #Заказ детально
+  url:   /customer/orderdetails/:id
+  param: { module: customer, action: orderdetails }
+customer_bonus: #Мои бонусы
+  url:   /customer/bonus
+  param: { module: customer, action: bonus }
+customer_notification: #Мои оповещения
+  url:   /customer/notification
+  param: { module: customer, action: notification }
+customer_bonusshop: #бонус за поку в магазине
+  url:   /customer/bonusshop
+  param: { module: customer, action: bonusshop }
+customer_bonusadd: #Бонуз за заказ
+  url:   /customer/bonusadd/:id
+  param: { module: customer, action: bonusadd }
+customers_showerror:
+  url:   /customer/*
+  param: { module: page, action: error404 }
+
+#videos
+video_list:
+  url:   /video
+  param: { module: video, action: index }
+
+video_show:
+  url:   /video/:slug
+  param: { module: video, action: show }
+
+#Производители, коллекции
+manufacturers:
+  url:   /manufacturers
+  param: { module: category, action: manufacturerindex }
+
+manufacturer_show:
+  url:   /manufacturer/:slug
+  param: { module: category, action: manufacturer }
+collections:
+  url:   /collections
+  param: { module: category, action: collectionindex }
+collection_show:
+  url:   /collection/:slug
+  param: { module: category, action: collection }
+
+#sexopedia
+article_category:
+  url:   /sexopedia/category/:slug
+  param: { module: article, action: category }
+article_catalog:
+  url:   /sexopedia/catalog/:slug
+  param: { module: article, action: catalog }
+article_show:
+  url:   /sexopedia/:slug
+  param: { module: article, action: show }
+article:
+  url:   /sexopedia
+  param: { module: article, action: index }
+
+sitemap:
+  url: /sitemap
+  param: { module: page, action: sitemap }
+wheel: #Колесо фортуны
+  url:   /wheel-result
+  param: { module: noncache, action: wheel }
+firstvisit: #форма в футере
+  url:   /firstvisit/:stats
+  param: { module: noncache, action: firstvisit }
+firstvisitpopup: #всплывающая форма 300 бонусов
+  url:   /firstvisit-popup/:stats
+  param: { module: noncache, action: firstvisitPopup }
+search:
+  url:   /search
+  param: { module: page, action: search }
+comments: #Комментарии
+  url:   /comments
+  param: { module: page, action: comments }
+oprosniksave:
+  url:   /oprosnik/save
+  param: { module: page, action: oprosniksave }
+oprosnik:
+  url:   /oprosnik/:order
+  param: { module: page, action: oprosnik }
+#oprosnik_shop:
+#  url:   /oprosnikshop/:order
+#  param: { module: page, action: oprosnikShop }
+Konultsexolog: #консультация сексолога
+  url:   /konultsexolog
+  param: { module: noncache, action: konultsexolog }
+page_show_pickpoint:
+  url:   /pickpoint/:slug
+  param: { module: page, action: showPickpoint }
+# В конце блока
+page_show:
+  url:   /:slug
+  param: { module: page, action: show }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

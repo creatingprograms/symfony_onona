@@ -1,0 +1,61 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Comments
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          comments
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        text:
+          label: Комментарий
+        product_id:
+          label: Товар
+        article_id:
+          label: Статья
+        customer_id:
+          label: Пользователь
+        is_public:
+          label: Доступен
+        is_onmain:
+          label: На главную
+        is_novice:
+          label: Для новичков
+        username:
+          label: Имя
+        mail:
+          label: Почта
+        page_id:
+          label: ID страницы
+        shops_id:
+          label: Магазин
+        copy:
+          label: Данные для копирования
+        created_at:
+            label: Дата создания
+        answer:
+            label: Ответ
+        rate_set:
+            label: Рейтинг
+        sort_index:
+            label: Индекс сортировки
+      list:
+        title: Комментарии
+        display: [ _product_id, _customer_id, username, text, _is_public, is_onmain, created_at, rate_set ]
+      filter:
+        display: [ product_id, customer_id, username, is_public, is_onmain, is_novice ]
+      form:
+        display:
+          Основная информация: [ product_id, article_id, page_id, shops_id, _copy, username, mail, is_public, is_onmain, is_novice, sort_index, created_at, rate_set ]
+          Комментарий: [ text,answer ]
+      edit:
+        title: Редактирование комментария "%%id%%"
+      new:
+        title: Создание комментария

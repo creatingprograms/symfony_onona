@@ -1,0 +1,10 @@
+all:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+show:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  

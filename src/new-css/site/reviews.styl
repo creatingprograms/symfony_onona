@@ -1,0 +1,58 @@
+.reviews-list
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__clear_button
+    cursor: pointer;
+    color: #9B98AD;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 14px;
+  &__filter
+    border: 1px solid #E1E0E9;
+    border-radius: 10px;
+    padding: 40px 20px 14px;
+    &_wrap
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      @media(max-width: 767px)
+        flex-wrap: wrap;
+    &_el
+      width: 50%;
+      @media(max-width: 767px)
+        width: 100%;
+      .label
+        padding-left: 16px;
+  &__element
+    display: flex;
+    gap: 20px;
+    border: 1px solid #E1E0E9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px #5F5F5F1A;
+    padding: 15px 0 15px 15px;
+    justify-content: space-between;
+  &__image
+    max-height: 100px;
+    height: 100px;
+    width: 140px;
+    flex-shrink: 0;
+    img
+      max-height: 100%;
+      display: block;
+      margin: auto;
+  &__text
+    width: 100%;
+    padding: 32px 40px 20px 0;
+    border-top: 1px solid #E1E0E9;
+    margin-top: 14px;
+    text-align: justify;
+    &_wrapper
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+  &__date
+    color: #9B98AD;
+  &__name
+    margin-right: 20px;

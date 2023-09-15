@@ -1,0 +1,48 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Category
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          category_mcategory
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:   
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        is_open:
+          label: Открта
+        is_public:
+          label: Доступна
+        parents_id:
+          label: Родитель
+        category_products_list:
+          label: Товары этой категории
+        count:
+          label: Количество товара
+        lovepricename:
+          label: Название в разделе Лучшая цена
+      list:        
+        title: Категории
+        display: [ id, name, lovepricename, _countloveprice]
+        sort: [ positionloveprice, Asc ]
+        object_actions: []
+      filter:  
+        display: [ name, lovepricename ]
+      form:    
+        display: 
+          Основная информация: [ name, lovepricename ]
+      edit:    
+        title: Редактирование категории "%%name%%"
+      new:     
+        title: Создание категории

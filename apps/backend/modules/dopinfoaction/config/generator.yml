@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Dopinfoaction
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dopinfoaction
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        endaction:
+          label: Окончание действия
+        startaction:
+          label: Начало действия
+        dopinfo_id:
+          label: Бренд или коллекция
+        is_active:
+          label: Активен
+      list:
+        title: Акции бренда/коллекции
+        display: [is_active, startaction, endaction, _dopinfo_id]
+
+      filter:  ~
+      form:
+        display:
+          Основная информация: [ is_active, startaction, endaction, dopinfo_id  ]
+      edit:    ~
+      new:     ~

@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           BonusMailsendLog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          bonus_mailsend_log
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        mail:
+          label: Почта
+        bonus:
+          label: Сколько бонусов
+        day:
+          label: Через сколько дней  сгорят
+        created_at:
+          label: Когда отправлено
+      list:   
+        title: Лог отсылки писем о бонусах
+        display: [ mail, bonus, day, created_at]
+        object_actions: [ ]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

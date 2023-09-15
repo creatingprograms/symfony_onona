@@ -1,0 +1,132 @@
+.order-confirm
+  .order-wrapper
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 700px)
+      flex-wrap: wrap;
+  .left-side
+    margin-right: 50px;
+    @media screen and (max-width: 700px)
+      margin-right: 0;
+      order: 2;
+    &-h
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 400;
+      position: relative;
+      padding-right: 120px;
+      margin-bottom: 8px;
+    .print-block
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 28px;
+      background: url('/frontend/images_new/printer.svg') no-repeat left center;
+      text-decoration: underline;
+      font-size: 14px;
+      line-height: 24px;
+      cursor: pointer;
+      @media screen and (max-width: 900px)
+        display: none;
+    a
+      color: #EF182F;
+      text-decoration: underline;
+  .shop-block
+    display: flex;
+    justify-content: flex-start;
+    @media screen and (max-width: 900px)
+      flex-wrap: wrap;
+    .image-block
+      height: 276px;
+      width: 276px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 16px;
+      background-position: center;
+      margin-right: 25px;
+      @media screen and (max-width: 900px)
+        margin-bottom: 15px;
+    .info-block
+      display: flex;
+      flex-direction: column;
+      &-bottom
+        margin-top: auto;
+        a
+          display: block;
+          color: #2D2841;
+          text-decoration: none;
+          margin-top: 12px;
+  .delivery-info
+    margin-top: 32px;
+    &-metro
+    &-exclam
+    &-address
+      padding-left: 26px;
+      color: #616C7C;
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 11px;
+    &-address
+      background: url('/frontend/images_new/placeholder.svg') no-repeat left center;
+    &-exclam
+      background: url('/frontend/images_new/exclamation-button.svg') no-repeat left center;
+    &-metro
+      background: url('/frontend/images_new/icon-moscow-metro-logo.svg') no-repeat left center;
+  .right-side
+    width: 276px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background-color: #F9F8FC;
+    padding: 24px;
+    @media screen and (max-width: 700px)
+      width: 100%;
+      margin-bottom: 15px;
+    .payment-form
+      margin-top: 25px;
+      .but
+        border: 1px solid red;
+        background: #fff;
+        color: red;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 15px;
+        &:hover
+          border: 1px solid white;
+          background: red;
+          color: white;
+    p
+      font-size: 14px;
+      line-height: 18px;
+      // color: #2D2841;
+      margin-bottom: 4px;
+    .order-sum
+      line-height: 26px;
+      font-weight: 500;
+      font-size: 20px;
+      &-bonus
+        padding-left: 28px;
+        background: url('/frontend/images_new/gift-card.svg') no-repeat left center;
+    .bonus
+      color: #616C7C;
+      font-size: 14px;
+      margin-bottom: 23px;
+    .item
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      &-detail
+        margin-bottom: 23px;
+        color: #616C7C;
+    .order-total
+      padding: 11px 24px 0;
+      margin: 20px -24px 0;
+      border-top: 1px solid #E1E0E9;
+      .order-sum
+        color: #EF182F;
+        font-size: 28px;
+  .hide-title
+    .h2.block-title
+      display: none;

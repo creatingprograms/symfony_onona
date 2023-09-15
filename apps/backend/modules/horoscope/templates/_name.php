@@ -1,0 +1,1 @@
+<a href="/horoscope/<?=$horoscope->getSlug()?>"><?=$horoscope->getName()?></a>

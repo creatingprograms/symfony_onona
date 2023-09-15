@@ -1,0 +1,241 @@
+.tinkoff
+  color: #333;
+  font-size: 17px;
+  line-height: 28px;
+  
+  &_link
+    display: block;
+    margin-top: 20px;
+    @media(max-width: 767px)
+      display: none;
+  &_link_mobile
+    display: none;
+    @media(max-width: 767px)
+      display: block;
+  h1
+    color: #333;
+    margin-top: 64px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    @media(max-width: 860px)
+      margin-top: 32px;
+      font-size: 36px;
+      line-height: 40px;
+  .center
+    display: block;
+    margin: auto;
+  h2
+    text-align: center;
+    margin: 64px 0 32px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    @media(max-width: 860px)
+      margin-top: 32px;
+      font-size: 24px;
+      line-height: 28px;
+    .small
+      display: block;
+      line-height: 28px;
+      font-size: 17px;
+      font-weight: 400;
+      margin-top: 20px;
+  .steps
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 32px;
+    @media(max-width: 860px)
+      flex-direction: column;
+    &-step
+      padding-top: 88px;
+      position: relative;
+      width: 240px;
+      &:after
+        content: '';
+        display: block;
+        height: 64px;
+        width: 64px;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: #F6F7F8 url('/frontend/images/tinkoff/shopping-cart.svg') 50% no-repeat;
+      &_2
+        &:after
+          background-image: url('/frontend/images/tinkoff/device-phone-settings.svg');
+      &_3
+        &:after
+          background-image: url('/frontend/images/tinkoff/pencil.svg');
+      &_4
+        &:after
+          background-image: url('/frontend/images/tinkoff/check.svg');
+      @media(max-width: 860px)
+        width: 100%;
+        margin-bottom: 32px;
+  .cats
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    padding-bottom: 32px;
+    @media(max-width: 860px)
+      flex-direction: column;
+      align-items: center;
+    a
+      color: rgba(51, 111, 238, 0.8);
+      display: block;
+      margin-top: 40px;
+      font-size: 15px;
+      line-height: 20px;
+    &-cat
+      width: 336px;
+      background: #F6F7F8;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+      padding: 16px;
+      background-position: bottom right;
+      &_1
+        background-image: url('/frontend/images/tinkoff/cats_m.png');
+      &_3
+        background-image: url('/frontend/images/tinkoff/manufacturers_m.png');
+      &_2
+        background-image: url('/frontend/images/tinkoff/discounts_m.png');
+      @media(max-width: 1200px)
+        width: 248px;
+        padding-bottom: 144px;
+        text-align: center;
+        background-position: bottom center;
+        a
+          margin-top: 16px;
+      @media(max-width: 860px)
+        width: 100%;
+        max-width: 336px;
+        margin-bottom: 32px;
+        background-position: bottom right;
+        text-align: left;
+        padding-bottom: 16px;
+        a
+          margin-top: 40px;
+  .about-block
+    padding-left: 50%;
+    position: relative;
+    height: 360px;
+    @media(max-width: 860px)
+      height: auto;
+      padding-top: 280px;
+      padding-left: 0;
+      &:after
+        width: 327px;
+        height: 248px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: contain;
+        background-position: bottom center;
+    &:after
+      content: '';
+      display: block;
+      height: 100%;
+      width: 50%;
+      background: #FFDD2D url('/frontend/images/tinkoff/image_about.png') 50% no-repeat;
+      border-radius: 8px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    ul
+      margin-left: 50px;
+      @media(max-width: 860px)
+        margin: 0;
+        padding: 0;
+      li
+        &:before
+          height: 8px;
+          width: 8px;
+          border-radius: 4px;
+          background: #FFDD2D;
+        @media(max-width: 860px)
+          text-align: center;
+          &:before
+            content: none;
+  .subside-block
+    margin: 96px 0;
+    padding: 32px;
+    background: #F6F7F8 url('/frontend/images/tinkoff/img_hat_mod.png') bottom right no-repeat;
+    border-radius: 8px;
+    @media(max-width: 860px)
+      margin: 64px -500px;
+      padding-bottom: 198px;
+      background-position-x: center;
+      text-align: center;
+    .title
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 20px;
+      @media(max-width: 860px)
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    .text
+      width: 528px;
+      @media(max-width: 860px)
+        max-width: 90vw;
+        margin: auto;
+        text-align: center;
+      span
+        position: relative;
+      sup
+        position: absolute;
+        top: -9px;
+        font-size: 11px;
+  .more-block
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    @media(max-width: 860px)
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    &_title
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 16px;
+      @media(max-width: 860px)
+        text-align: center;
+    &_subblock
+      width: calc(100% - 24px);
+      max-width: 48%;
+      @media(max-width: 860px)
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        margin-bottom: 32px;
+    &_2
+      @media(max-width: 860px)
+        max-width: 360px;
+        margin: auto;
+        text-align: center;
+  .small-text
+    padding: 32px 202px 32px 32px;
+    border: 1px solid #EAECEE;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 96px 0;
+    position: relative;
+    &:before
+      content: '1';
+      position: absolute;
+      top: 26px;
+      left: 24px;
+      font-size: 11px;
+    @media(max-width: 1200px)
+      padding-right: 32px;
+    @media(max-width: 860px)
+      max-width: 360px;
+      margin: 64px auto;

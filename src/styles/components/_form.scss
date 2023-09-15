@@ -1,0 +1,181 @@
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  &.hasError{
+    border: 1px solid red !important;
+  }
+}
+.form {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  input[type="password"],
+  input[type="email"],
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="tel"],
+  textarea {
+    @extend %input;
+    height: 40px;
+    color: #1A1A1A;
+    padding: 0 3px 0 16px;
+    border: 1px solid #CFCFCF;
+    letter-spacing: -0.7px;
+    font: 16px/40px $font-main-family;
+    &::placeholder {
+      color: #B8A6AF;
+      letter-spacing: -0.7px;
+    }
+    /*&.hasError{
+      border: 1px solid red;
+    }*/
+  }
+  textarea {
+    height: 74px;
+    line-height: 120%;
+    resize: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  a {
+    color: #D11E0F;
+  }
+  .styleCH {
+    & + label {
+      font-size: 16px;
+      line-height: 120%;
+      padding-left: 46px;
+      display: inline-block;
+      letter-spacing: -0.7px;
+      &,
+      a {
+        color: #B8A6AF;
+      }
+      &::before {
+        top: -3px;
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+  &-label {
+    margin: 0;
+  }
+  &-row {
+    margin: 40px 0 28px;
+  }
+  &-hint {
+    font-size: 14px;
+    color: #B8A6AF;
+    line-height: 160%;
+    font-style: italic;
+    margin: 5px 0 0;
+    letter-spacing: -0.6px;
+  }
+  &-capcha {
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    input[type="text"],
+    &-label {
+      @extend %noUserSelect;
+      width: 50%;
+    }
+    &-label {
+      color: #1A1A1A;
+      font-size: 16px;
+      text-align: center;
+      line-height: 40px;
+      background-color: #FFB9B6;
+    }
+  }
+  &-review {
+    .form-row {
+      &:first-of-type {
+        margin-top: 18px;
+      }
+    }
+    & &-subm {
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    &-review {
+      &-subm {
+        align-items: center;
+        .but {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &-review {
+      &-subm {
+        align-items: flex-start;
+        flex-direction: column;
+        .form-review {
+          &-consent {
+            order: 2;
+            margin: 30px 0 0;
+          }
+        }
+        .but {
+          order: 3;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    input[type="password"],
+    input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="tel"],
+    textarea {
+      height: 51px;
+      line-height: 51px;
+    }
+    textarea {
+      height: 126px;
+      line-height: 120%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .but {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .styleCH + label {
+      font-size: 14px;
+      padding-left: 35px;
+      display: inline-block;
+    }
+    &-hint {
+      font-size: 12px;
+      line-height: 120%;
+    }
+    &-capcha {
+      input[type="text"] {
+        height: 40px;
+        line-height: 40px;
+        width: calc(100% - 132px);
+      }
+      &-label {
+        width: 132px;
+      }
+    }
+  }
+}

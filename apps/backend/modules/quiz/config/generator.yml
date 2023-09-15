@@ -1,0 +1,48 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Quiz
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          quiz
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        created_at:
+            label: Дата создания
+        img:
+            label: Изображение
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+      list:
+        title: Квиз
+        display: [ name, slug, is_public]
+      filter:
+        display: [ name, slug, is_public]
+      form:
+        display:
+          Основная информация: [ name, slug, content, img, is_public ]
+          Статистика: [ views_count, votes_count ]
+          # Meta теги: [ title, keywords, description ]
+          Вопросы: [ QuizQuestion,new_Question ]
+          Результат: [ QuizResult,new_Result ]
+      edit:
+        title: Редактирование квиза "%%name%%"
+      new:
+        title: Создание нового квиза

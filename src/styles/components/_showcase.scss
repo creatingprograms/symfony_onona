@@ -1,0 +1,357 @@
+ .js-art-show{
+   cursor: pointer;
+ }
+.showcase {
+  margin-top: 43px;
+  margin-bottom: 48px;
+  position: relative;
+  font: 300 20px/120% $calFont;
+  &.hide-text{
+    padding: 5px 0;
+    margin: 15px auto 25px;
+    .showcase-item{
+      width: 20%;
+      @media screen and (max-width: $smallMobile) {
+        width: 100%;
+        span{
+          margin: auto;
+        }
+      }
+    }
+  }
+  .-item {
+    &-1 {
+      img {
+        margin-left: 7px;
+      }
+    }
+    &-4 {
+      img {
+        margin-left: -8px;
+        margin-top: 7px;
+      }
+    }
+    &-5 {
+      img {
+        margin-left: 21px;
+      }
+    }
+    &-8 {
+      img {
+        margin-top: -10px;
+        margin-left: -4px;
+      }
+    }
+  }
+  .swiper {
+    &-container {
+      overflow: visible;
+    }
+    &-wrapper {
+      justify-content: space-between;
+    }
+    &-button {
+      &-next,
+      &-prev {
+        display: none;
+      }
+    }
+  }
+  & &-item {
+    width: 109px;
+  }
+  &-item {
+    @extend %logo;
+    color: #565555;
+    text-align: center;
+    &:hover {
+      color: #eb0728;
+      .showcase {
+        &-img {
+          &::before {
+            background-position: 50% 50%;
+          }
+        }
+      }
+    }
+  }
+  &-img {
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 108px;
+      height: 108px;
+      content: ' ';
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      background: #fff url('/frontend/images/item_background_sync.gif') no-repeat 50% -3000px;
+    }
+    img {
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: block;
+      max-width: 125px;
+      max-height: 125px;
+      /*max-width: 3000px;*/
+      position: absolute;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+  &-text {
+    display: block;
+  }
+  @media screen and (max-width: $smallDesctop) {
+    font-size: 18px;
+    .-item {
+      &-1 {
+        img {
+          width: 90px;
+        }
+      }
+      &-2 {
+        img {
+          width: 110px;
+        }
+      }
+      &-3 {
+        img {
+          width: 100px;
+        }
+      }
+      &-4 {
+        img {
+          width: 90px;
+        }
+      }
+      &-5 {
+        img {
+          width: 65px;
+          margin-left: 12px;
+        }
+      }
+      &-6 {
+        img {
+          width: 82px;
+        }
+      }
+      &-8 {
+        img {
+          width: 100px;
+        }
+      }
+    }
+    & &-item {
+      width: 98px;
+    }
+    &-img {
+      &::before {
+        width: 98px;
+        height: 98px;
+      }
+      img {
+        max-width: 105px;
+        max-height: 105px;
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    font-size: 15px;
+    .-item {
+      &-1 {
+        img {
+          width: 80px;
+        }
+      }
+      &-2 {
+        img {
+          width: 90px;
+        }
+      }
+      &-3 {
+        img {
+          width: 90px;
+        }
+      }
+      &-4 {
+        img {
+          width: 80px;
+        }
+      }
+      &-5 {
+        img {
+          width: 55px;
+          margin-left: 12px;
+        }
+      }
+      &-6 {
+        img {
+          width: 70px;
+        }
+      }
+      &-7 {
+        img {
+          width: 50px;
+        }
+      }
+      &-8 {
+        img {
+          width: 80px;
+        }
+      }
+    }
+    & &-item {
+      width: 80px;
+    }
+    &-img {
+      height: 102px;
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+      img {
+        max-width: 90px;
+        max-height: 90px;
+      }
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    .-item {
+      &-1 {
+        img {
+          width: 71px;
+        }
+      }
+      &-2 {
+        img {
+          width: 65px;
+        }
+      }
+      &-3 {
+        img {
+          width: 80px;
+        }
+      }
+      &-4 {
+        img {
+          width: 70px;
+          margin-left: 0;
+        }
+      }
+      &-5 {
+        img {
+          width: 55px;
+          margin-left: 12px;
+        }
+      }
+      &-6 {
+        img {
+          width: 70px;
+        }
+      }
+      &-7 {
+        img {
+          width: 50px;
+        }
+      }
+      &-8 {
+        img {
+          width: 70px;
+          margin-left: 0;
+        }
+      }
+    }
+    .swiper {
+      &-container {
+        margin: 0 auto;
+        padding: 15px 0;
+        overflow: hidden;
+        max-width: 500px;
+        width: calc(100% - 46px);
+      }
+      &-wrapper {
+        justify-content: flex-start;
+      }
+      &-button {
+        &-next,
+        &-prev {
+          top: 50%;
+          outline: none;
+          display: block;
+          margin-top: -20px;
+          position: absolute;
+          svg {
+            width: 23px;
+            height: 40px;
+            fill: #0e0d10;
+          }
+          &:active {
+            svg {
+              fill: $f3c;
+            }
+          }
+        }
+        &-next {
+          right: 17px;
+          transform: rotate(180deg);
+          transform-origin: 50% 50%;
+        }
+        &-prev {
+          left: 17px;
+        }
+      }
+    }
+    & &-item {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 20px;
+      width: calc(50% - 10px);
+    }
+    &-img {
+      margin: 0;
+      width: 70px;
+      height: 65px;
+      &::before {
+        left: 0;
+        right: auto;
+        margin: 0;
+        width: 64px;
+        height: 64px;
+        background: none;
+
+      }
+      img {
+        max-width: 75px;
+        max-height: 75px;
+      }
+    }
+    &-text {
+      width: calc(100% - 92px);
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: $smallMobile) {
+    .swiper {
+      &-container {
+        max-width: 290px;
+      }
+    }
+    & &-item {
+      width: 100%;
+    }
+  }
+}

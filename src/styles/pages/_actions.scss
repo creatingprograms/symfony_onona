@@ -1,0 +1,61 @@
+.actions{
+  &-block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &-element{
+    text-decoration: none;
+    display: block;
+    margin-bottom: 37px;
+  }
+  &-form{
+    box-sizing: border-box;
+    width: 544px;
+    height: 299px;
+    color: #fff;
+    background: #fa82a9;
+    padding: 27px 40px 20px;
+    max-width: 100%;
+    .header{
+      font: bold 20px/120% HelveticaNeueCyr;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 6px;
+    }
+    .us_input{
+      background: #fff;
+      display: block;
+      margin-top: 19px;
+      height: 35px;
+      box-sizing: border-box;
+      padding: 0 15px;
+      width: 300px;
+      max-width: 80%;
+    }
+    .us_submit{
+      display: block;
+      text-align: center;
+      background: #fa3173;
+      margin-top: 25px;
+      width: 180px;
+      height: 34px;
+      line-height: 34px;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .actions{
+    &-form{
+      padding: 27px 30px 20px;
+    }
+    .us_input{
+      max-width: 100%;
+    }
+    .us_submit{
+      width: 100%;
+    }
+  }
+}

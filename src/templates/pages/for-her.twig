@@ -1,0 +1,227 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <div class="wrapper breadcrumbs">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a> > Она - игрушки для женщин
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <div class="wrapper topHead">
+    <h1>Она - игрушки для женщин</h1>
+  </div>
+  <section class="top-slider wrapper -typeSlider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-3.jpg">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-2.jpg">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="/images/temporary/sld/rnb-3.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+  </section>
+  <section class="wrapper showcase" id="showcaseSlider">
+    <div class="swiper-button-prev">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg>
+        <use xlink:href="#backArrowIcon" />
+      </svg>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <a href="#" class="showcase-item swiper-slide -item-1">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-1.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Элитные 
+            Вибраторы
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-2">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-2.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Реалистики-
+            дилдо
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-3">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-3.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Вибро-
+            массажеры
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-4">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-4.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Вагинальные
+            шарики
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-5">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-5.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Виброяйца,
+            Вибропули
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-6">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-6.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Стимуляторы
+            клитора
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-7">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-7.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Стимуляторы
+            точки&nbsp;G
+          </span>
+        </a>
+        <a href="#" class="showcase-item swiper-slide -item-8">
+          <span class="showcase-img">
+            <img src="/images/for-her-icons/icon-8.png" alt="">
+          </span>
+          <span class="showcase-text">
+            Женские
+            помпы
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper wrap-cont -clf">
+    {% include '../layout/sidebar-filtr.twig'  %}
+    <main class="cont-right -filtr">
+      <form action="index.php" class="cat-list-filtr">
+        <span class="-sort"></span>
+        <div class="cat-list-filtr-mob-col">
+          <!-- div-ы после label нужны для мобильника, на мобильника все это превращается в селект, по другому не получится -->
+          <input type="radio" name="cal-list-filtr" id="clf-1" checked>
+          <label for="clf-1">популярности</label>
+          <div class="cat-list-filtr-mob-text">популярности</div>
+          <input type="radio" name="cal-list-filtr" id="clf-2">
+          <label for="clf-2">новизне</label>
+          <div class="cat-list-filtr-mob-text">новизне</div>
+          <input type="radio" name="cal-list-filtr" id="clf-3">
+          <label for="clf-3">цене</label>
+          <div class="cat-list-filtr-mob-text">цене</div>
+          <input type="radio" name="cal-list-filtr" id="clf-4">
+          <label for="clf-4">названию</label>
+          <div class="cat-list-filtr-mob-text">названию</div>
+          <!-- Попап для мобильника -->
+          <div class="cat-list-filtr-mob-pop">
+            <label for="clf-1">популярности</label>
+            <label for="clf-2">новизне</label>
+            <label for="clf-3">цене</label>
+            <label for="clf-4">названию</label>
+          </div>
+        </div>
+      </form>
+      <div class="cat-list-category">
+        <b>Популярные категории:</b>
+        <a href="#">Вагинальные шарики</a>
+        <a href="#">Вибраторы</a>
+        <a href="#">Виброяйца</a>
+        <a href="#">Анальная стимуляция</a> 
+        <a href="#">Страпоны</a>
+        <a href="#">Минивибраторы</a>
+        <a href="#">Вибротрусики</a>
+        <a href="#">Фетиш и БДСМ</a>
+        <a href="#">Вибраторы на присоске</a>
+      </div>
+      <div class="cat-list -items -int">
+        {% include '../block/cat-list-collection-items-for-here.twig' %}
+        {% include '../block/cat-list-collection-items-for-here.twig' %}
+        {% include '../block/cat-list-collection-items-for-here.twig' %}
+      </div>
+      <div class="more">
+        <a href="#">Показать  еще  <svg><use xlink:href="#arrowMoreIcon"></use></svg></a>
+      </div>
+      <!-- 'pag-line' для линий не знаю сколько будет страниц может 3, а может 2 к примеру. Чтобы начиналось четко от пагинации -->
+      <div class="pag-line">
+        <div class="pag">
+          <a href="#" class="pag-first -noActive">
+            &lt;
+            &lt;
+          </a>
+          <a href="#" class="pag-prev -noActive">
+            &lt;
+          </a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" class="pag-next">
+            &gt;
+          </a>
+          <a href="#" class="pag-last">
+            &gt;
+            &gt;
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <article class="intro-block wrapper">
+    <div class="intro-block-wrap">
+      <figure class="intro-block-img">
+        <img src="/images/about_2.png" width="359px">
+      </figure>
+      <div class="intro-block-desc">
+        <!-- Вообще можно заменить и на div с классом H1 это ничего не поломает, на главной странице это единственный блок который можно отнести к H1 -->
+        <div class="h1">
+          игрушки для женщин
+        </div>
+        <p>
+          <span class="-block">Интимные игрушки для женщин: подарите себе удовольствие!</span>
+          Многие считают, что мастурбация — удел представителей сильного пола. Это совсем не так! Прекрасные дамы также прибегают к сольным любовным играм. Разнообразить досуг и получить яркое наслаждение помогут интим-игрушки для женщин.</p>
+        <a href="#">Как сделать правильный выбор?</a>
+      </div>
+    </div>
+  </article>
+{% endblock afterHeader %}

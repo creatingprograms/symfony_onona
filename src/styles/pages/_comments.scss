@@ -1,0 +1,195 @@
+.page-comments{
+  margin: 33px 0;
+  &-list{
+    background: #fff;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    &-element{
+      display: flex;
+      flex-direction: column;
+      width: calc(33.33% - 23px);
+    }
+  }
+  &-cat{
+    margin-bottom: 30px;
+    &-list{
+      padding: 17px 20px;
+    }
+    a{
+      color: #070007;
+      display: block;
+      line-height: 23px;
+      position: relative;
+      padding-left: 25px;
+      font-size: 14px;
+      &::before{
+        content: '>>';
+        display: block;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .header{
+      padding-left: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 14px;
+      .arrow{
+        display: inline-block;
+        width: 17px;
+        background: url('/frontend/images/black-arrow.png') 50% no-repeat;
+        vertical-align: middle;
+        margin-left: 4px;
+        height: 28px;
+        transform: rotate(180deg);
+      }
+      &.active{
+        .arrow{
+          transform: rotate(0);
+        }
+      }
+    }
+    &.cat-1{
+      background: #e9effd;
+      .header{
+        background: #b9c8e5;
+      }
+      a::before{
+        color: #b9c8e5;
+      }
+    }
+    &.cat-2{
+      background: #fff0d3;
+      .header{
+        background: #ffd889;
+      }
+      a::before{
+        color: #ffd889;
+      }
+    }
+    &.cat-3{
+      background: #fbdbea;
+      .header{
+        background: #f6acd1;
+      }
+      a::before{
+        color: #f6acd1;
+      }
+    }
+    &.cat-4{
+      background: #e9e5e5;
+      .header{
+        background: #3b3b3b;
+        color: #fff;
+      }
+      a::before{
+        color: #3b3b3b;
+      }
+    }
+    &.cat-5{
+      background: #f7e2fd;
+      .header{
+        background: #e5bff1;
+      }
+      a::before{
+        color: #e5bff1;
+      }
+    }
+    &.cat-6{
+      background: #ffc8bb;
+      .header{
+        background: #ffa99f;
+      }
+      a::before{
+        color: #ffa99f;
+      }
+    }
+    &.cat-7{
+      background: #dbf5f3;
+      .header{
+        background: #99dcd8;
+      }
+      a::before{
+        color: #99dcd8;
+      }
+    }
+  }
+  &-details{
+    padding: 25px 35px;
+    background: #fff;
+    margin-top: 25px;
+    .element{
+      border: 2px dotted #ffe3e2;
+      padding: 25px;
+      display: flex;
+      border-top: hidden;
+      &:nth-child(1){
+        border-top: 2px dotted #ffe3e2;
+      }
+      a{
+        color: #000;
+        margin-bottom: 10px;
+        display: block;;
+      }
+      .pic{
+        width: 165px;
+        margin-right: 23px;
+        flex-shrink: 0;
+        max-height: 180px;
+        img{
+          max-height: 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+      .details{
+        .rating{
+          .summary{
+            color: #6a6a6a;
+            display: inline-block;
+            margin-left: 5px;
+            line-height: 19px;
+          }
+        }
+        .date{
+          color: #6a6a6a;
+          strong{
+            color: #000;
+          }
+        }
+        .text{
+          color: #000;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .page-comments{
+    &-list{
+      flex-wrap: wrap;
+      &-element{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .page-comments{
+    &-details{
+      .element{
+        flex-wrap: wrap;
+        .pic{
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+}

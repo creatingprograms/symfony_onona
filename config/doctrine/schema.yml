@@ -1,0 +1,2069 @@
+Category:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    h1: string(255)
+    content: { type: clob }
+    is_open: { type: boolean, default: 0 }
+    is_public:    { type: boolean, default: 1 }
+    adult:    { type: boolean, default: 1 }
+    show_in_catalog:    { type: boolean, default: 0 }
+    img: { type: string(255) }
+    icon_name: { type: string(255) }
+    icon_priority: { type: integer(8) }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    parents_id: { type: integer(8) }
+    lovepricename: string(255)
+    positionloveprice: integer(8)
+    filters: { type: clob }
+    tags:         { type: string(255) }
+    rrproductid: { type: clob }
+    prodid_priority: { type: clob }
+    lastupdaterrproductid: { type: integer(8) }
+    filtersnew: { type: clob }
+    minPrice: { type: integer(8) }
+    maxPrice: { type: integer(8) }
+    countProductActions: { type: integer(8) }
+    views_count: { type: integer, default: 0 }
+    canonical: string(255)
+  relations:
+    Parent:
+      class: Category
+      local: parents_id
+      foreign: id
+      type: one
+    Children:
+      class: Category
+      local: id
+      foreign: parents_id
+      type: many
+    CategoryProducts:
+      onDelete: CASCADE
+      class: Product
+      refClass: CategoryProduct
+      foreignAlias: Category
+    CategoryCatalogs:
+      onDelete: CASCADE
+      class: Catalog
+      refClass: CategoryCatalog
+      foreignAlias: Category
+
+Catalog:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    description: { type: string(255) }
+    canonical: string(255)
+    menu_name: { type: string(255) }
+    page_id: { type: integer(8) }
+    is_public:    { type: boolean, default: 1 }
+    img: { type: string(255) }
+    img_top: { type: string(255) }
+    img_bottom: { type: string(255) }
+    maxaction: { type: integer(8) }
+    page: { type: clob }
+    class:         { type: string(255) }
+    tags:         { type: string(255) }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    metadescription: { type: string(255) }
+    prodid_priority: { type: clob }
+    prodid_bestprice: { type: clob }
+    top20_list: { type: clob }
+    sale_list: { type: clob }
+    gifts_list: { type: clob }
+    best_sales_list: { type: clob }
+    prodid_bestprice: { type: clob }
+    prodid_bestprice: { type: clob }
+    prodid_random: { type: clob }
+    brands_ids: { type: string(255) }
+  relations:
+    Page:
+      class: Page
+      local: page_id
+      foreign: id
+      type: one
+    CategoryCatalogs:
+      onDelete: CASCADE
+      class: Category
+      refClass: CategoryCatalog
+      foreignAlias: Catalog
+
+CategoryCatalog:
+  columns:
+    category_id:
+      type: integer(8)
+      primary: true
+    catalog_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Category:
+      onDelete: CASCADE
+      foreignAlias: CategoryCatalogs
+    Catalog:
+      onDelete: CASCADE
+      foreignAlias: CategoryCatalogs
+
+Product:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    h1: string(255)
+    name: string(255)
+    code: { type: string(255), unique: true }
+    content: { type: clob }
+    newbie_description: { type: clob }
+    price: integer
+    bonus: integer
+    bonuspay: integer
+    old_price: integer
+    discount: integer
+    nextdiscount: integer
+    count: integer
+    video: string(255)
+    doc1: string(255)
+    doc2: string(255)
+    doc3: string(255)
+    doc4: string(255)
+    doc5: string(255)
+    articles_ids: string(255)
+    file: type: string(255)
+    canonical: string(255)
+    videoenabled: { type: boolean, default: 0 }
+    is_coupon_enabled: { type: boolean, default: 1 }
+    is_bonus_enabled: { type: boolean, default: 1 }
+    views_count: { type: integer, default: 0 }
+    votes_count: integer
+    rating: integer
+    is_related:    { type: boolean, default: 0 }
+    is_public:    { type: boolean, default: 1 }
+    is_new_on_market:    { type: boolean, default: 0 }
+    is_new_on_site:    { type: boolean, default: 1 }
+    is_visiblechildren:    { type: boolean, default: 1 }
+    is_visiblecategory:    { type: boolean, default: 1 }
+    is_notadddelivery:    { type: boolean, default: 0 }
+    set_pairs:    { type: boolean, default: 0 }
+    set_her:    { type: boolean, default: 0 }
+    set_him:    { type: boolean, default: 0 }
+    for_pairs:    { type: boolean, default: 0 }
+    for_she:    { type: boolean, default: 0 }
+    for_her:    { type: boolean, default: 0 }
+    bdsm:    { type: boolean, default: 0 }
+    cosmetics:    { type: boolean, default: 0 }
+    belie:    { type: boolean, default: 0 }
+    other:    { type: boolean, default: 0 }
+    sync:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    externallink: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    parents_id: { type: integer(8) }
+    id1c: { type: string(255) }
+    generalcategory_id: { type: integer(8) }
+    adult:    { type: boolean, default: 1 }
+    yamarket:    { type: boolean, default: 1 }
+    is_express:    { type: boolean, default: 0 }
+    endaction:
+      type: date
+    startaction:
+      type: date
+    step:
+      type: enum
+      values: [ '',  '1 сутки', '2 суток', '3 суток', '4 суток', '5 суток' ]
+    positionrelated: integer
+    tags:         { type: string(255) }
+    pointcreate:         { type: string(255) }
+    moder:    { type: boolean, default: 0 }
+    moderuser:    { type: string(255) }
+    user:         { type: string(255) }
+    yamarket_clothes:   { type: boolean, default: 0 }
+    yamarket_color:    { type: string(255) }
+    yamarket_typeimg:    { type: string(255) }
+    yamarket_category:    { type: string(255) }
+    yamarket_sex:
+      type: enum
+      values: [ '',  'Женский', 'Мужской' ]
+    yamarket_model:    { type: string(255) }
+    yamarket_typeprefix:    { type: string(255) }
+    stock: { type: clob }
+    buywithitem: { type: clob }
+    countsell: { type: integer(8) }
+    sortpriority: { type: integer(8), default: 50 }
+    barcode: string(20)
+    weight: { type: float }
+  relations:
+    CategoryProducts:
+      onDelete: CASCADE
+      class: Category
+      refClass: CategoryProduct
+      foreignAlias: Product
+    DopInfoProducts:
+      class: DopInfo
+      refClass: DopInfoProduct
+      foreignAlias: Product
+      onDelete: CASCADE
+    Parent:
+      class: Product
+      local: parents_id
+      foreign: id
+      type: one
+    Children:
+      class: Product
+      local: id
+      foreign: parents_id
+      type: many
+    GeneralCategory:
+      class: Category
+      local: generalcategory_id
+      foreign: id
+      type: one
+    Comments:
+      class: Comments
+      local: id
+      foreign: product_id
+      type: many
+
+ProductForBackUp:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    code: string(255)
+    content: { type: clob }
+    price: integer
+    bonus: integer
+    old_price: integer
+    discount: integer
+    count: integer
+    video: string(255)
+    views_count: integer
+    votes_count: integer
+    rating: integer
+    is_related:    { type: boolean, default: 0 }
+    is_public:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    parents_id: { type: integer(8) }
+    id1c: integer
+    generalcategory_id: { type: integer(8) }
+    adult:    { type: boolean, default: 1 }
+    endaction:
+      type: date
+    step:
+      type: enum
+      values: [ '',  '1 сутки', '2 суток', '3 суток', '4 суток', '5 суток' ]
+
+DopInfoCategory:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    name: string(255)
+    namecompare: string(255)
+    is_compare:    { type: boolean, default: 1 }
+    is_public:    { type: boolean, default: 1 }
+
+DopInfoCategoryFull:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    name: string(255)
+    filename:     { type: string(50) }
+  relations:
+    DopInfoCategory:
+      onDelete: CASCADE
+      class: DopInfoCategory
+      refClass: DopInfoCategoryFullCategory
+      foreignAlias: Category
+
+DopInfoCategoryFullCategory:
+  columns:
+    dop_info_category_full_id:
+      type: integer(8)
+      primary: true
+    dop_info_category_id:
+      type: integer(8)
+      primary: true
+  relations:
+    DopInfoCategoryFull:
+      onDelete: CASCADE
+      foreignAlias: DopInfoCategoryFullCategory
+    DopInfoCategory:
+      onDelete: CASCADE
+      foreignAlias: DopInfoCategoryFullCategory
+
+DopInfoCategoryFullDopInfo:
+  columns:
+    dop_info_category_full_id:
+      type: integer(8)
+      primary: true
+    dop_info_id:
+      type: integer(8)
+      primary: true
+  relations:
+    DopInfoCategoryFull:
+      onDelete: CASCADE
+      foreignAlias: DopInfoCategoryFullDopInfo
+    DopInfo:
+      onDelete: CASCADE
+      foreignAlias: DopInfoCategoryFullDopInfo
+
+DopInfo:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ value ]
+      unique: false
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    dicategory_id: integer
+    value: string(255)
+    description: { type: clob }
+  relations:
+    DopInfoCategory:
+      onDelete: CASCADE
+      local: dicategory_id
+      foreignAlias: DopInfoCategory
+    DopInfoProducts:
+      onDelete: CASCADE
+      class: DopInfo
+      refClass: DopInfoProduct
+      foreignAlias: Product
+    DopInfoCategoryFullDopInfo:
+      onDelete: CASCADE
+      class: DopInfoCategoryFull
+      refClass: DopInfoCategoryFullDopInfo
+      foreignAlias: CategoryFull
+
+DopInfoProduct:
+  columns:
+    dop_info_id:
+      type: integer(8)
+      primary: true
+    product_id:
+      type: integer(8)
+      primary: true
+    code:
+      type: string(255)
+  relations:
+    DopInfo:
+      onDelete: CASCADE
+      foreignAlias: DopInfoProducts
+    Product:
+      onDelete: CASCADE
+      foreignAlias: DopInfoProducts
+
+CategoryProduct:
+  columns:
+    category_id:
+      type: integer(8)
+      primary: true
+    product_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Category:
+      onDelete: CASCADE
+      foreignAlias: CategoryProducts
+    Product:
+      onDelete: CASCADE
+      foreignAlias: CategoryProducts
+
+Sorttablerelated:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    product_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+
+    #Фотографии
+
+Photoalbum:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:           { type: string(255), notnull: true, unique: true }
+    content:        { type: clob }
+  relations:
+    ProductPhotoalbums:
+      class: Product
+      refClass: ProductPhotoalbum
+      foreignAlias: Photoalbums
+
+Photo:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    album_id:     { type: integer, notnull: true }
+    filename:     { type: string(50), notnull: true, unique: true }
+    name:         { type: string(255) }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+  relations:
+    Photoalbum:
+      onDelete: CASCADE
+      local: album_id
+      foreignAlias: Photos
+
+ProductPhotoalbum:
+  columns:
+    product_id:
+      type: integer(5)
+      primary: true
+    photoalbum_id:
+      type: integer(5)
+      primary: true
+  relations:
+    Product:
+      onDelete: CASCADE
+      foreignAlias: ProductPhotoalbums
+    Photoalbum:
+      onDelete: CASCADE
+      foreignAlias: ProductPhotoalbums
+
+# Вакансии
+Vacancy:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+VacancyReply:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:         { type: string(255), notnull: true }
+    email:        { type: string(255) }
+    phone:        { type: string(255) }
+    vacancy_id:   { type: integer(8), notnull: true }
+    vacancy_name: { type: string(255), notnull: true, unique: true }
+
+#Страницы
+Page:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    sitemapRate:         { type: string(255) }
+    content:      { type: clob }
+    content_mobile:      { type: clob }
+    content_mo:      { type: clob }
+    content_mo_mobile:      { type: clob }
+    content_new_version:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    is_show_right_block:    { type: boolean, notnull: true, default: 1 }
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    tags:         { type: string(255) }
+    class:         { type: string(255) }
+    city_id: integer(8)
+    views_count: { type: integer, default: 0 }
+  relations:
+    City:
+      onDelete: CASCADE
+      local: city_id
+      foreignAlias: City
+
+Categorypage:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: string(255)
+  relations:
+    CategorypagePages:
+      onDelete: CASCADE
+      class: Page
+      refClass: CategorypagePage
+      foreignAlias: Categorypage
+
+CategorypagePage:
+  columns:
+    Categorypage_id:
+      type: integer(8)
+      primary: true
+    page_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Categorypage:
+      onDelete: CASCADE
+      foreignAlias: CategorypagePages
+    Page:
+      onDelete: CASCADE
+      foreignAlias: CategorypagePages
+
+   #Статьи
+
+Article:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    precontent:      { type: clob }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    is_new:    { type: boolean, notnull: true, default: 0 }
+    tags:         { type: string(255) }
+    img: { type: string(255) }
+    img_preview: { type: string(255) }
+    views_count: integer
+    votes_count: integer
+    rating: integer
+    is_related:    { type: boolean, notnull: true, default: 0 }
+    positionrelated: integer
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    moder:    { type: boolean, default: 0 }
+    user:         { type: string(255) }
+    expert_id: { type: integer}
+    category_slug:        { type: string(255), notnull:true, default: '' }
+    video: string(255)
+
+Articlecategory:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    content: { type: clob }
+    is_public:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+  relations:
+    CategoryArticles:
+      onDelete: CASCADE
+      class: Article
+      refClass: CategoryArticle
+      foreignAlias: Articlecategory
+    CategoryarticleCatalogs:
+      onDelete: CASCADE
+      class: Articlecatalog
+      refClass: CategoryarticleCatalog
+      foreignAlias: Articlecategory
+
+Articlecatalog:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    content: { type: clob }
+    description: { type: string(255) }
+    is_public:    { type: boolean, default: 1 }
+  relations:
+    Category:
+      onDelete: CASCADE
+      class: Articlecategory
+      refClass: CategoryarticleCatalog
+      foreignAlias: Catalog
+
+CategoryArticle:
+  columns:
+    articlecategory_id:
+      type: integer(8)
+      primary: true
+    article_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Articlecategory:
+      onDelete: CASCADE
+      foreignAlias: CategoryArticles
+    Article:
+      onDelete: CASCADE
+      foreignAlias: CategoryArticles
+
+CategoryarticleCatalog:
+  columns:
+    articlecategory_id:
+      type: integer(8)
+      primary: true
+    articlecatalog_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Articlecategory:
+      onDelete: CASCADE
+      foreignAlias: CategoryCatalogs
+    Articlecatalog:
+      onDelete: CASCADE
+      foreignAlias: CategoryCatalogs
+
+   #Оплата
+
+
+#FAQ
+Faq:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    precontent:      { type: clob }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    img: { type: string(255) }
+    img_preview: { type: string(255) }
+    views_count: integer
+    is_related:    { type: boolean, notnull: true, default: 0 }
+    positionrelated: integer
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    category_slug:        { type: string(255), notnull:true, default: '' }
+
+Faqcategory:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    content: { type: clob }
+    is_public:    { type: boolean, default: 1 }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+  relations:
+    CategoryFaqs:
+      onDelete: CASCADE
+      class: Faq
+      refClass: CategoryFaq
+      foreignAlias: Faqcategory
+
+CategoryFaq:
+  columns:
+    faqcategory_id:
+      type: integer(8)
+      primary: true
+    faq_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Faqcategory:
+      onDelete: CASCADE
+      foreignAlias: CategoryFaq
+    Faq:
+      onDelete: CASCADE
+      foreignAlias: CategoryFaq
+
+Payment:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    picture:      string(255)
+    picturehover: string(255)
+    description:  { type: string(255), notnull: true, default: '' }
+    is_online:    { type: boolean, notnull: true, default: 1 }
+
+OrdersPayments: #Связка документов оплаты на стороне YooKassa  номера заказа
+  actAs:
+    Timestampable: ~
+  columns:
+    order_id:         { type: integer(8), notnull: true, unique: true }
+    payment_id:       { type: string(255), notnull: true, unique: true }
+    idempotence:      { type: string(255), notnull: true }
+    payment_service:  { type: string(255), notnull: true }
+    status:           { type: string(255), notnull: true }
+
+#Доставка
+Delivery:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    is_pvz:       { type: boolean, notnull: true, default: 0 }
+    picture:      string(255)
+    picturehover: string(255)
+    description:  { type: string(255), notnull: true, default: '' }
+    free_from: { type: integer(8), default: 0}
+    free_from_online: { type: integer(8), default: 0}
+    free_from_online_moscow: { type: integer(8), default: 0}
+  relations:
+    DeliveryPayments:
+      class: Payment
+      refClass: DeliveryPayment
+      foreignAlias: Deliverys
+
+DeliveryPayment:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    delivery_id:
+      type: integer(8)
+      primary: true
+    payment_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Delivery:
+      foreignAlias: DeliveryPayment
+    Payment:
+      foreignAlias: DeliveryPayment
+
+Menu:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    url:
+      type: string(255)
+      notnull: false
+    text:
+      type: string(255)
+      notnull: true
+    conter_target: #лол опечатка
+      type: string(255)
+      notnull: false
+    positionmenu:
+      type: enum
+      values: [ 'Под шапкой', 'Левое', 'Над шапкой(новый дизайн)', 'Под шапкой(новый дизайн)', 'footer-fix', 'top_menu_new', 'top_menu_new_frontend', 'main_frontend', 'footer_frontend', 'mobile_frontend' ]
+    parents_id: { type: integer(8) }
+    target_blank:    { type: boolean, default: 0 }
+    is_active:    { type: boolean, default: 1 }
+  relations:
+    Parent:
+      class: Menu
+      local: parents_id
+      foreign: id
+      type: one
+    Children:
+      class: Menu
+      local: id
+      foreign: parents_id
+      type: many
+
+#Пользователи
+sfGuardUser:
+  actAs:
+    Timestampable: ~
+  columns:
+    birthday:
+      type: date
+    phone:
+      type: string(255)
+    #Адрес
+    index_house:
+      type: string(255)
+    city:
+      type: string(255)
+    region_fias_id:
+      type: string(255)
+    street:
+      type: string(255)
+    house:
+      type: string(255)
+    korpus:
+      type: string(255)
+    apartament:
+      type: string(255)
+    sex:
+      type: string(255)
+    ssidentity:
+      type: string(255)
+    oldphone:
+      type: string(255)
+    activephone:    { type: boolean, default: 0 }
+    activephonecode:
+      type: integer(8)
+    last_ip:
+      type: string(255)
+    personal_recomendation:
+      type: clob
+    cart:
+      type: clob
+
+Orders:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    delivery_id:
+      type: integer(8)
+      notnull: true
+    payment_id:
+      type: integer(8)
+      notnull: true
+    customer_id:
+      type: integer(8)
+      notnull: true
+    delivery_price:
+      type: string(255)
+      notnull: true
+    firsttotalcost:
+      type: integer(8)
+      notnull: true
+    coupon:
+      type: string(255)
+    advcake_url:
+      type: clob
+    advcake_trackid:
+      type: string(32)
+    comments:
+      type: clob
+    status_detail:
+      type: clob
+    comment_1c:
+      type: clob
+    status:
+      type: string(255)
+    referal:
+      type: string(255)
+    source:
+      type: string(255)
+    medium:
+      type: string(255)
+    source_ym:
+      type: string(255)
+    medium_ym:
+      type: string(255)
+    region:
+      type: string(255)
+    sync_status:
+      type: string(255)
+    internetid:
+      type: string(255)
+    prxcityads:
+      type: string(255)
+    ipUser:
+      type: string(255)
+    prefix:
+      type: string(255)
+    referurl:
+      type: clob
+    samyragon:
+      type: string(255)
+    manager:
+      type: string(255)
+    bonuspay:
+      type: integer(8)
+    yaid:
+      type: string(255)
+    yalaststatussend:
+      type: clob
+    firsttext:
+      type: clob
+    custombonusper:    { type: boolean, default: 0 }
+    sms_id:
+      type: string(255)
+    sms_price:
+      type: string(255)
+    sms_currency:
+      type: string(255)
+    yataxi_id:
+      type: string(255)
+    yataxi_status:
+      type: string(255)
+  relations:
+    Delivery:
+      onDelete: CASCADE
+      local: delivery_id
+      foreignAlias: Delivery
+    Payment:
+      onDelete: CASCADE
+      local: payment_id
+      foreignAlias: Payment
+    sfGuardUser:
+      onDelete: CASCADE
+      local: customer_id
+      foreignAlias: User
+
+Comments:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    product_id:
+      type: integer(8)
+    page_id:
+      type: integer(8)
+    shops_id:
+      type: integer(8)
+    article_id:
+      type: integer(8)
+    compare_id:
+      type: integer(8)
+    customer_id:
+      type: integer(8)
+    sort_index:
+      type: integer(8)
+      default: 100
+    is_public:    { type: boolean, default: 0 }
+    is_onmain:    { type: boolean, default: 0 }
+    is_novice:    { type: boolean, default: 0 }
+    username:
+      type: string(255)
+    mail:
+      type: string(255)
+    answer:
+      type: clob
+    rate_plus:
+      type: integer(8)
+    rate_minus:
+      type: integer(8)
+    rate_set:
+      type: integer(8)
+    point:
+      type: integer(8)
+    comment_manager:
+      type: clob
+    manager_id:
+      type: integer(8)
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+    sfGuardUser:
+      onDelete: CASCADE
+      local: customer_id
+      foreignAlias: User
+    Article:
+      onDelete: CASCADE
+      local: article_id
+      foreignAlias: Article
+    Compare:
+      onDelete: CASCADE
+      local: compare_id
+      foreignAlias: Compare
+    Page:
+      onDelete: CASCADE
+      local: page_id
+      foreignAlias: Page
+    Shops:
+      onDelete: CASCADE
+      local: shops_id
+      foreignAlias: Shops
+
+Bonus:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:
+      type: integer(8)
+      notnull: true
+    bonus:
+      type: integer(8)
+      notnull: true
+    comment:
+      type: string(255)
+      notnull: true
+    log:
+      type: clob
+    activatelk:    { type: boolean, default: 0 }
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+
+Banners:
+  actAs:
+    Timestampable: ~
+  columns:
+    href:
+      type: string(255)
+    alt:
+      type: string(255)
+    description:
+      type: string(255)
+    button: {type: string(255), default :'Условия акции'}
+    src:
+      type: string(255)
+    src_mobile:
+      type: string(255)
+    is_public:    { type: boolean, default: 0 }
+    is_rotation:    { type: boolean, default: 1 }
+    class:
+      type: enum
+      values: [ 'block-info_1', 'block-info_2']
+    view_count:
+      type: integer(8)
+      notnull: false
+    position:
+      type: enum
+      values: [ 'Главная новый 2', 'Главная новый 3', 'Двойной Главная', 'Главная 1', 'Главная 2', 'Категория', 'Каталог', 'Карточка товара', 'Корзина', 'catalog', 'sex-igrushki-dlja-par', 'sex-igrushki-dlya-muzhchin', 'sex-igrushki-dlya-zhenschin', 'BDSM-i-fetish', 'intimnaya-kosmetika', 'preparaty', 'eroticheskoe-bele' 'aksessuary-dlya-seksa', 'dlya_novichkov', 'slider_sex-igrushki-dlja-par', 'slider_sex-igrushki-dlya-muzhchin', 'slider_sex-igrushki-dlya-zhenschin', 'slider_bdsm-i-fetish', 'slider_intimnaya-kosmetika', 'slider_preparaty', 'slider_eroticheskoe-bele' 'slider_aksessuary-dlya-seksa', 'slider_dlya_novichkov' ]
+
+Sliders:
+  actAs:
+    Timestampable: ~
+  columns:
+    href:
+      type: string(255)
+    alt:
+      {type: string(255), notnull: true}
+    file:
+      type: string(255)
+    is_active:
+      {type: boolean, notnull: true, default: true}
+    src:
+      type: string(255)
+    src_mobile:
+      type: string(255)
+    position: { type: integer, default: 100 }
+    positionpage:
+      type: enum
+      values: [ 'main_new_1', 'main_new_2', 'main_new_3', 'catalog_sex-igrushki-dlja-par_1', 'catalog_sex-igrushki-dlja-par_2', 'catalog_sex-igrushki-dlja-par_3', 'catalog_sex-igrushki-dlya-muzhchin_1', 'catalog_sex-igrushki-dlya-muzhchin_2', 'catalog_sex-igrushki-dlya-muzhchin_3', 'catalog_sex-igrushki-dlya-zhenschin_1', 'catalog_sex-igrushki-dlya-zhenschin_2', 'catalog_sex-igrushki-dlya-zhenschin_3', 'catalog_eroticheskoe-bele_1', 'catalog_eroticheskoe-bele_2', 'catalog_eroticheskoe-bele_3', 'catalog_intimnaya-kosmetika_1', 'catalog_intimnaya-kosmetika_2', 'catalog_intimnaya-kosmetika_3', 'catalog_preparaty_1', 'catalog_preparaty_2', 'catalog_preparaty_3', 'catalog_bdsm-i-fetish_1', 'catalog_bdsm-i-fetish_2', 'catalog_bdsm-i-fetish_3', 'catalog_aksessuary-dlya-seksa_1', 'catalog_aksessuary-dlya-seksa_2', 'catalog_aksessuary-dlya-seksa_3', 'catalog_dlya_novichkov_1', 'catalog_dlya_novichkov_2', 'catalog_dlya_novichkov_3', 'main_page', 'main_page_new', 'magazins_in_moscow','sl_sexopedia', 'sl_pairs', 'sl_man', 'sl_woman', 'sl_actions', 'category_skidki_do_60_percent', 'catalog_feb14_1', 'catalog_feb14_2', 'catalog_feb14_3', 'for-him' ]
+    description:
+      type: string(255)
+    button: {type: string(255), default :'Условия акции'}
+    is_small:
+      {type: boolean, notnull: true, default: 0}
+    is_onlymoscow:
+      {type: boolean, notnull: true, default: false}
+    class:
+      type: enum
+      values: [ 'promotion-item_cyan', 'promotion-item_orange', 'promotion-item_blue', 'promotion-item_red']
+    view_count:
+      type: integer(8)
+      notnull: false
+    # is_small:
+    #   {type: boolean, notnull: true, default: false}
+
+Bottombanner:
+  actAs:
+    Timestampable: ~
+  columns:
+    startaction:
+      type: timestamp
+      notnull: true
+    endaction:
+      type: timestamp
+      notnull: true
+    text:
+      type: string(255)
+      notnull: true
+      unique: true
+    link:
+      type: string(255)
+      notnull: true
+    is_active: { type: boolean, default: 0 }
+
+Senduser:
+  actAs:
+    Timestampable: ~
+  columns:
+    product_id:
+      type: integer(8)
+      notnull: true
+    name:
+      type: string(255)
+    mail:
+      type: string(255)
+    phone:
+      type: string(255)
+    is_send:    { type: boolean, default: 0 }
+    is_manager:    { type: boolean, default: 0 }
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+
+SearchLog:
+  actAs:
+    Timestampable: ~
+  columns:
+    text: string(255)
+
+Manufacturer:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    subid: integer(8)
+    name: string(255)
+    content: { type: clob }
+    is_public:    { type: boolean, default: 1 }
+    is_popular:    { type: boolean, default: 1 }
+    countactionproduct: integer(8)
+    maxdiscount: integer(8)
+    minprice: integer(8)
+    priority_sort_list: { type: clob }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    image: {type: string(255)}
+
+Collection:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    subid: integer(8)
+    name: string(255)
+    content: { type: clob }
+    is_public:    { type: boolean, default: 1 }
+    is_popular:    { type: boolean, default: 1 }
+    priority_sort_list: { type: clob }
+    title: { type: string(255) }
+    keywords: { type: string(255) }
+    description: { type: string(255) }
+    image: {type: string(255)}
+
+Captcha:
+  actAs:
+    Timestampable: ~
+  columns:
+    subid: string(255)
+    val: string(255)
+    ip: { type: clob }
+    type: string(255)
+
+FastOrderLog:
+  actAs:
+    Timestampable: ~
+  columns:
+    code: string(255)
+    name: string(255)
+    username: string(255)
+    mail: string(255)
+
+ProductActionLog:
+  actAs:
+    Timestampable: ~
+  columns:
+    prodid: string(255)
+    manid: string(255)
+    count: string(255)
+    discount: string(255)
+    endaction: string(255)
+    step: string(255)
+
+BonusMailsendLog:
+  actAs:
+    Timestampable: ~
+  columns:
+    mail: string(255)
+    bonus: string(255)
+    day: string(255)
+
+Redirect:
+  actAs:
+    Timestampable: ~
+  columns:
+    outurl: string(255)
+    inurl: string(255)
+
+Validw3:
+  actAs:
+    Timestampable: ~
+  columns:
+    pageurl: clob
+    error: string(255)
+    page: clob
+
+PartnerId:
+  actAs:
+    Timestampable: ~
+  columns:
+    refid: string(255)
+    webmaster: string(255)
+
+PartnerRefid:
+  actAs:
+    Timestampable: ~
+  columns:
+    refid: string(255)
+
+Oprosnik:
+  actAs:
+    Timestampable: ~
+  columns:
+    orderid: string(255)
+    dataans: clob
+    rating: integer
+    shop:
+      type: enum
+      values: [ 'Магазин',  'Интернет магазин']
+
+Logs404:
+  actAs:
+    Timestampable: ~
+  columns:
+    url: string(255)
+    urlFrom: string(255)
+    ip: string(255)
+
+Oldslug:
+  actAs:
+    Timestampable: ~
+  columns:
+    module: string(255)
+    oldslug: string(255)
+    newslug: string(255)
+    dopid: string(255)
+
+Articlelink:
+  actAs:
+    Timestampable: ~
+  columns:
+    words: string(255)
+    link: string(255)
+
+Regformvideo:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: string(255)
+    mail: string(255)
+
+Mailchangestatus:
+  actAs:
+    Timestampable: ~
+  columns:
+    status: string(255)
+    titlemail: string(255)
+    is_public:    { type: boolean, default: 1 }
+    content: { type: clob }
+
+Mailsendlog:
+  actAs:
+    Timestampable: ~
+  columns:
+    comment: { type: clob }
+
+News:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    precontent:      { type: clob }
+    content:      { type: clob }
+    is_public:    { type: boolean, default: 1 }
+    photo_url:    { type: string(255) }
+  relations:
+    NewsPages:
+      onDelete: CASCADE
+      class: Page
+      refClass: NewsPage
+      foreignAlias: News
+
+NewsPage:
+  columns:
+    news_id:
+      type: integer(8)
+      primary: true
+    page_id:
+      type: integer(8)
+      primary: true
+  relations:
+    News:
+      onDelete: CASCADE
+      foreignAlias: NewsPages
+    Page:
+      onDelete: CASCADE
+      foreignAlias: NewsPages
+
+Pickpoint:
+  actAs:
+    Timestampable: ~
+  columns:
+    Address: string(255)
+    Card:    { type: boolean, default: 0 }
+    Cash:    { type: boolean, default: 0 }
+    CitiId: string(255)
+    CitiName: string(255)
+    CitiOwnerId: string(255)
+    CountryName: string(255)
+    House: string(255)
+    dopid: string(255)
+    InDescription:  { type: clob }
+    IndoorPlace: string(255)
+    Latitude: string(255)
+    Longitude: string(255)
+    Metro: string(255)
+    Name: string(255)
+    Number: string(255)
+    OutDescription: { type: clob }
+    OwnerId: string(255)
+    PostCode: string(255)
+    Region: string(255)
+    Status: string(255)
+    Street: string(255)
+    TypeTitle: string(255)
+    WorkTime: string(255)
+    city_id: integer(8)
+    is_public:    { type: boolean, default: 0 }
+  relations:
+    City:
+      onDelete: CASCADE
+      local: city_id
+      foreignAlias: City
+
+Qiwi:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: string(255)
+    town:    string(255)
+    citygroup:    string(255)
+    addr: string(255)
+    latitude: string(255)
+    longitude: string(255)
+    descr:  { type: clob }
+    oh: string(255)
+    city_id: integer(8)
+  relations:
+    City:
+      onDelete: CASCADE
+      local: city_id
+      foreignAlias: City
+
+Iml:
+  actAs:
+    Timestampable: ~
+  columns:
+    Address: string(255)
+    Regioncode: string(255)
+    Workmode: string(255)
+    Code: string(255)
+    Name: string(255)
+    Latitude: string(255)
+    Longitude: string(255)
+    city_id: integer(8)
+  relations:
+    City:
+      onDelete: CASCADE
+      local: city_id
+      foreignAlias: City
+
+City:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name: string(255)
+    slug: string(255)
+    pickpointpage:  { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+
+QrRedirects:
+  actAs:
+    Timestampable: ~
+  columns:
+    shop: string(255)
+    shop_id: integer(8)
+    type:
+      type: enum
+      values: [ '2gis', 'google', 'yandex' ]
+  relations:
+    Shops:
+      onDelete: CASCADE
+      local: shop_id
+      foreignAlias: Shops
+Shops:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+  columns:
+    is_active:    { type: boolean, default: 1 }
+    is_onmain:    { type: boolean, default: 0 }
+    is_new:    { type: boolean, default: 0 }
+    slug: string(255)
+    Address: string(255)
+    phone: string(255)
+    Card:    { type: boolean, default: 0 }
+    Cash:    { type: boolean, default: 0 }
+    House: string(255)
+    Description:  { type: clob }
+    Latitude: string(255)
+    Longitude: string(255)
+    Metro: string(255)
+    Iconmetro: string(255)
+    preview_image: string(255)
+    Name: string(255)
+    OutDescription: { type: clob }
+    Status: string(255)
+    Street: string(255)
+    WorkTime: string(255)
+    city_id: integer(8)
+    page_id: integer(8)
+    id1c: string(255)
+    google: { type: clob }
+    yandex: { type: clob }
+    2gis: { type: clob }
+  relations:
+    City:
+      onDelete: CASCADE
+      local: city_id
+      foreignAlias: City
+    Page:
+      class: Page
+      local: page_id
+      foreign: id
+      type: one
+    Comments:
+      class: Comments
+      local: id
+      foreign: shops_id
+      type: many
+
+OrdersShop:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    dopid: string(255)
+    date: timestamp
+    checknumber:
+      type: integer(8)
+      notnull: true
+    smena:
+      type: string(255)
+      notnull: true
+    discountcard:
+      type: string(255)
+    cardownername:
+      type: string(255)
+    cardowner:
+      type: string(255)
+    price:
+      type: integer(8)
+    active:    { type: boolean, default: 0 }
+    dateactive: timestamp
+    ipactive:
+      type: string(255)
+
+MailTemplates:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+      notnull: true
+    subject:
+      type: string(255)
+      notnull: true
+    slug:
+      type: string(255)
+      notnull: true
+      unique: true
+
+Dopinfoaction:
+  actAs:
+    Timestampable: ~
+  columns:
+    startaction:
+      type: timestamp
+      notnull: true
+    endaction:
+      type: timestamp
+      notnull: true
+    dopinfo_id:
+      type: integer
+    is_active: { type: boolean, default: 0 }
+Coupons:
+  actAs:
+    Timestampable: ~
+  columns:
+    startaction:
+      type: timestamp
+      notnull: true
+    endaction:
+      type: timestamp
+      notnull: true
+    text:
+      type: string(255)
+      notnull: true
+      unique: true
+    discount:
+      type: integer
+      default: 0
+      notnull: true
+    discount_second:
+      type: integer
+      default: 0
+      notnull: true
+    free_third:
+      type: boolean
+      default: 0
+      notnull: true
+    discount_sum:
+      type: integer
+      default: 0
+      notnull: true
+    min_sum:
+      type: integer
+      default: 0
+      notnull: true
+    conditions:
+      type: clob
+      default: ''
+    is_active: { type: boolean, default: 0 }
+    is_promo: { type: boolean, default: 0 }
+    is_important: { type: boolean, default: 0 }
+    express_disc_50_if_gt_3: { type: boolean, default: 0 }
+
+ActionsDiscount:
+  actAs:
+    Timestampable: ~
+  columns:
+    startaction:
+      type: timestamp
+      notnull: true
+    endaction:
+      type: timestamp
+      notnull: true
+    text:
+      type: string(255)
+      notnull: true
+      unique: true
+    discount:
+      type: integer
+      notnull: true
+
+ActionsDiscountInterval:
+  actAs:
+    Timestampable:  ~
+  #  tableName:        ah_intranet_subversion_repository
+  columns:
+  #    id:             { type: integer(4), primary: true, autoincrement: true }
+    actionsdiscount_id:     { type: integer, notnull: true }
+    start:           { type: integer, notnull: true }
+    end:      { type: integer, notnull: true }
+    discount:      { type: integer, notnull: true }
+  relations:
+    ActionsDiscount: { local: actionsdiscount_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Interval }
+
+Horoscope:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+      unique: true
+    date:
+      type: string(255)
+    image:     { type: string(50), notnull: true, unique: true }
+    info:
+      type: clob
+    month:
+      type: clob
+    year:
+      type: clob
+    characteristic:
+      type: clob
+    compatibility:
+      type: clob
+
+Horoscopesovm:
+  actAs:
+    Timestampable: ~
+  columns:
+    horoscope_m_id:     { type: integer, notnull: true }
+    horoscope_g_id:     { type: integer, notnull: true }
+    content:
+      type: clob
+  relations:
+    Horoscopem: { class: Horoscope, local: horoscope_m_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Horoscopesovm }
+    Horoscopeg: { class: Horoscope, local: horoscope_g_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Horoscopesovm }
+
+Tests:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    img: { type: string(255) }
+    views_count: integer
+    votes_count: integer
+    rating: integer
+    writing: integer
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+
+TestsQuestion:
+  actAs:
+    Timestampable:  ~
+  #  tableName:        ah_intranet_subversion_repository
+  columns:
+  #    id:             { type: integer(4), primary: true, autoincrement: true }
+    test_id:     { type: integer, notnull: true }
+    question:           { type: clob, notnull: true }
+    number:      { type: integer(2), notnull: true }
+  relations:
+    Tests: { local: test_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Question }
+
+TestsQuestionAnswer:
+  actAs:
+    Timestampable:  ~
+  #  tableName:        ah_intranet_subversion_repository
+  columns:
+  #    id:             { type: integer(4), primary: true, autoincrement: true }
+    testquestion_id:     { type: integer, notnull: true }
+    answer:     { type: clob, notnull: true }
+    balls:           { type: integer(4), notnull: true }
+  relations:
+    TestsQuestion: { local: testquestion_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Answer }
+
+TestsResult:
+  actAs:
+    Timestampable:  ~
+  #  tableName:        ah_intranet_subversion_repository
+  columns:
+  #    id:             { type: integer(4), primary: true, autoincrement: true }
+    test_id:     { type: integer, notnull: true }
+    balls_to:           { type: integer, notnull: true }
+    balls_from:           { type: integer, notnull: true }
+    results:      { type: clob }
+  relations:
+    Tests: { local: test_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: Result }
+
+Quiz:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [ SlugifyClass, Slugify ]
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    img: { type: string(255) }
+    views_count: integer
+    votes_count: integer
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+
+QuizQuestion:
+  actAs:
+    Timestampable:  ~
+  columns:
+    quiz_id:     { type: integer, notnull: true }
+    question:           { type: clob, notnull: true }
+    number:      { type: integer(2), notnull: true }
+    img: { type: string(255) }
+  relations:
+    Quiz: { local: quiz_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: QuizQuestion }
+
+QuizQuestionAnswer:
+  actAs:
+    Timestampable:  ~
+  columns:
+    quizquestion_id:     { type: integer, notnull: true }
+    answer:     { type: clob, notnull: true }
+    balls:           { type: integer(4), notnull: true }
+    comment:           { type: clob, notnull: true, default '' }
+    is_correct:    { type: boolean, notnull: true, default: 1 }
+  relations:
+    QuizQuestion: { local: quizquestion_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: QuizAnswer }
+
+QuizResult:
+  actAs:
+    Timestampable:  ~
+  columns:
+    quiz_id:     { type: integer, notnull: true }
+    name: { type: string(255), notnull: true }
+    balls_to:           { type: integer, notnull: true }
+    balls_from:           { type: integer, notnull: true }
+    results:      { type: clob }
+    link: { type: string(255), notnull: true }
+    link_1: { type: string(255), notnull: true }
+    link_2: { type: string(255), notnull: true }
+  relations:
+    Quiz: { local: quiz_id, foreign: id, type: one, onDelete: CASCADE, foreignAlias: QuizResult }
+
+
+
+
+Compare:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:
+      type: integer(8)
+      notnull: true
+    products:
+      type: clob
+    productsinfo:
+      type: clob
+    rule:
+      type: enum
+      values: [ 'Личный',  'Доступен со ссылкой', 'Публичный' ]
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+
+Synonyms:
+  actAs:
+    Timestampable: ~
+  columns:
+    text:
+      type: clob
+
+
+
+PhotosUser:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    user_id:     { type: integer }
+    product_id:     { type: integer, notnull: true }
+    filename:     { type: string(50), notnull: true, unique: true }
+    name:         { type: string(255) }
+    is_public:    { type: boolean, notnull: true, default: 0 }
+    comment:
+      type: clob
+    point:
+      type: integer(8)
+    comment_manager:
+      type: clob
+    manager_id:
+      type: integer(8)
+    username:
+      type: string(255)
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+
+NotificationCategory:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    user_id:     { type: integer }
+    category_id:     { type: integer, notnull: true }
+    user_mail:         { type: string(255) }
+    is_enabled:    { type: boolean, notnull: true, default: 1 }
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+#    Category:
+#      onDelete: CASCADE
+#      local: category_id
+#      foreignAlias: Category
+
+Notification:
+  actAs:
+    Timestampable: ~
+    Sortable: ~
+  columns:
+    user_id:     { type: integer }
+    type:         { type: string(255) }
+    product_id:     { type: integer }
+    dateevent:      {type: date}
+    comment:         { type: string(255) }
+  relations:
+    sfGuardUser:
+      onDelete: CASCADE
+      local: user_id
+      foreignAlias: User
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+
+
+Video:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    link:      { type: clob }
+    videoyoutube:      { type: clob }
+    videoserver:         { type: string(255) }
+    photo:         { type: string(255) }
+    timing:         { type: string(25) }
+    subname:         { type: string(255) }
+    content:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 0 }
+    is_publicmainpage:    { type: boolean, notnull: true, default: 0 }
+    is_related:    { type: boolean, default: 1 }
+    tag:         { type: string(255) }
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    youtubelink:  { type: string(255) }
+    point:
+      type: integer(8)
+    comment_manager:
+      type: clob
+    manager_id:
+      type: integer(8)
+    username:
+      type: string(255)
+    product_id:     { type: integer }
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+
+RussianPostCity:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [ name ]
+      unique: true
+      canUpdate: false
+      builder: [SlugifyClass, Slugify]
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true, unique: true }
+    slug:         { type: string(255), notnull: true, unique: true }
+    sitemapRate:         { type: string(255) }
+    content:      { type: clob }
+    content_mobile:      { type: clob }
+    content_mo:      { type: clob }
+    content_mo_mobile:      { type: clob }
+    is_public:    { type: boolean, notnull: true, default: 1 }
+    is_show_right_block:    { type: boolean, notnull: true, default: 1 }
+    title:        { type: string(255) }
+    keywords:     { type: string(255) }
+    description:  { type: string(255) }
+    tags:         { type: string(255) }
+    city: { type: string(255) }
+Atolsettings:
+  actAs:
+    Timestampable: ~
+  columns:
+    #number: string(25)
+    token: { type: clob }
+Cardsmobile:
+  actAs:
+    Timestampable: ~
+  columns:
+    #number: string(25)
+    barcode: { type: string(25) }
+    user_id: { type: integer(8) }
+    is_public:    { type: boolean, default: 1 }
+    phone: { type: string(25) }
+    city: { type: string(255) }
+    country: { type: string(255) }
+    email: { type: string(255) }
+    sex: { type: string(1) }
+    user_name: { type: string(255) }
+    user_family: { type: string(255) }
+    user_subname: { type: string(255) }
+    is_reserved:    { type: boolean, default: 1 }
+    birthday: { type: date }
+    is_allow_email: { type: boolean, default: 0 }
+    is_allow_sms: { type: boolean, default: 0 }
+    is_allow_call: { type: boolean, default: 0 }
+  relations:
+    sfGuardUser:
+      foreignAlias: User
+      onDelete: CASCADE
+      local: user_id
+      type: one
+Servicerequest:
+  actAs:
+    Timestampable: ~
+  columns:
+    #number: string(25)
+    user_id: { type: integer(8) }
+    fio: { type: string(255) }
+    email: { type: string(255) }
+  relations:
+    sfGuardUser:
+      foreignAlias: User
+      onDelete: CASCADE
+      local: user_id
+      type: one
+
+Paymentdoc: #документы оплаты
+  actAs:
+    Timestampable: ~
+  columns:
+    order_id:     { type: integer(8) }
+    amount:       { type: integer(8) }
+    card_no:      string(255)
+    fio:          string(255)
+    sync_status:  { type: boolean, notnull: true, default: 0 }
+    response_code: string(255)
+    payment_type:
+      type: string(255)
+      notnull: true
+      default: 'mkb'
+    receipt_date: string(255)
+    receipt_url: string(255)
+
+Experts: #Эксперты к статьям
+  actAs:
+    Sortable: ~
+  columns:
+    name:         { type: string(255), notnull: true }
+    description:  { type: string(255), notnull: true }
+    photo_url:    { type: string(255) }
+Notify:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:
+      type: integer(8)
+    email:
+      type: string(255)
+      primary: true
+    name:
+      type: string(255)
+    product_id:
+      type: integer(8)
+      primary: true
+  relations:
+    Product:
+      onDelete: CASCADE
+      local: product_id
+      foreignAlias: Product
+SmsProof:
+  actAs:
+    Timestampable: ~
+  columns:
+    phone:
+      type: integer(20)
+      primary: true
+    text:
+      type: integer(8)

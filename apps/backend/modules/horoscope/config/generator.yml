@@ -1,0 +1,51 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Horoscope
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          horoscope
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name:
+          label: Знак
+        date:
+          label: Даты
+        image:
+          label: Изображение
+        info:
+          label: Информация
+        month:
+          label: Прогноз на месяц
+        year:
+          label: Прогноз на год
+        characteristic:
+          label: Общая характеристика
+        compatibility:
+          label: Совместимость знаков
+      list:    
+        title: Гороскоп
+        display: [ id, _name, date ]
+        actions: {}
+        batch_actions: {}
+        object_actions:
+          _edit: ~
+      filter:   
+        class: false
+      form:    
+        display: 
+          Основная информация: [ name, slug, date, image, info] 
+          Гороскоп: [ month, year, characteristic, compatibility ]
+      edit:    
+        actions: {_list: ~, _save: ~}
+        title: Редактирование гороскопа "%%name%%"
+      new:     
+        actions: {_list: ~, _save: ~}
+        title: Создание гороскопа

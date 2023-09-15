@@ -1,0 +1,65 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Shops
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shops
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        Address:
+          label: Полный адрес
+        phone:
+          label: Телефон
+        Card:
+          label: Можно расплачиваться картами
+        Cash:
+          label: Можно расплачиваться наличными
+        House:
+          label: Номер дома
+        Description:
+          label: Описание
+        Latitude:
+          label: Координаты(широта)
+        Longitude:
+          label: Координаты(долгота)
+        Metro:
+          label: Метро
+        Iconmetro:
+          label: Иконка метро
+        preview_image:
+          label: Картинка Предпросмотра
+        is_new:
+          label: Отметка New
+        is_onmain:
+          label: В слайдер на главной
+        is_active:
+          label: Активен
+        slug:
+          label: Ссылка
+        Name:
+          label: Название
+        OutDescription:
+          label: Как добраться
+        Status:
+          label: Статус
+        Street:
+          label: Улица
+        WorkTime:
+          label: "Время работы. "
+        city_id:
+          label: Город
+      list:
+        title: Магазины
+        display: [ is_active, Name, Metro, Address, is_onmain]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

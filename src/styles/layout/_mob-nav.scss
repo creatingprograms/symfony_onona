@@ -1,0 +1,228 @@
+.mob-nav {
+  @extend %anim;
+  display: none;
+  &,
+  &-pop {
+    transition-property: transform;
+  }
+  &-pop {
+    @extend %anim;
+  }
+  @media screen and (max-width: $largeTablet) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 100;
+    overflow: auto;
+    background-color: #fff;
+    transform: translateX(-100%);
+    border-right: 1px solid #E5E5E5;
+    nav {
+      font: 18px/120% $helvFont;
+      .mob-nav-link,
+      a {
+        padding: 13px 20px;
+        border-top: 1px solid #E5E5E5;
+      }
+      a {
+        display: block;
+        color: $font-main-color;
+        text-decoration: none;
+      }
+      .mob-nav-link {
+        color: #706E6F;
+      }
+      li {
+        position: relative;
+      }
+    }
+    .-red {
+      a {
+        color: #F31806;
+        text-transform: uppercase;
+      }
+    }
+    .-action {
+      a {
+        color: #8673C7;
+      }
+    }
+    &-wrap {
+      position: relative;
+    }
+    &-link {
+      color: #706E6F;
+      span {
+        color: #F31806;
+        text-transform: uppercase;
+      }
+    }
+    &-head {
+      color: $font-main-color;
+      background-color: #E5E5E5;
+      padding: 16px 0 16px 20px;
+      font: bold 20px/120% $helvFont;
+    }
+    &-pop {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      position: absolute;
+      background-color: #fff;
+      transform: translateX(-100%);
+      &.-isUp {
+        transform: translateX(0);
+      }
+    }
+    &-arrow {
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 100%;
+      position: absolute;
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 12px;
+        height: 24px;
+        fill: #E5E5E5;
+      }
+    }
+    &-plate {
+      height: 82px;
+      display: flex;
+      flex-wrap: wrap;
+      background: #F0F0F0;
+      font: 18px/120% $helvFont;
+      a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        color: $font-main-color;
+      }
+      .-red {
+        &,
+        a {
+          color: #F31806;
+        }
+      }
+      .-back {
+        color: #F31806;
+        font-size: 20px;
+        line-height: 120%;
+        padding: 0 0 0 18px;
+        svg {
+          width: 12px;
+          height: 24px;
+          display: block;
+          fill: #F31806;
+          margin: 0 10px 0 0;
+        }
+      }
+      .-but {
+        width: 94px;
+      }
+      .-enter {
+        width: 104px;
+      }
+      .-reg {
+        width: 200px;
+      }
+      .-logout {
+        svg {
+          width: 44px;
+          height: 34px;
+          display: block;
+        }
+      }
+      .-lk {
+        width: 220px;
+      }
+      .-logout {
+        width: 84px;
+      }
+      .header-nav-but {
+        margin: 0;
+      }
+      &-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #E5E5E5;
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+    &-bot {
+      &,
+      a {
+        background-color: #f0f0f0;
+      }
+    }
+    &-tel {
+      font: 18px/120% $helvFont;
+      a {
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        justify-content: space-between;
+        background-color: #706E6F;
+        padding: 16px 25px 16px 20px;
+      }
+      li {
+        &:nth-of-type(n+2) {
+          border-top: 1px solid #E5E5E5;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    nav {
+      font: 14px/120% $helvFont;
+    }
+    &-head {
+      font-size: 16px;
+    }
+    &-tel {
+      font: 14px/120% $helvFont;
+    }
+    &-plate {
+      height: 54px;
+      font-size: 14px;
+      .-but {
+        width: 56px;
+      }
+      .-enter {
+        width: 66px;
+      }
+      .-reg {
+        width: 124px;
+      }
+      .-lk {
+        width: 148px;
+      }
+      .-back {
+        font-size: 16px;
+      }
+      .-logout {
+        width: 44px;
+        svg {
+          width: 22px;
+          height: 17px;
+        }
+      }
+      &-col {
+        box-sizing: border-box;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.block-img-top
+  border-radius: 20px
+  overflow hidden
+
+.wrap-info-express
+  .block-content
+    max-width 776px
+    margin 0 auto
+
+.catalog-result-express .product-item:not(:nth-child(3n+3))
+  +min(tabletLarge)
+    margin-right 0
+  +between(mobile, tabletLarge)
+    max-width: calc((100% / 3) - 38px)
+
+.catalog-result-express .product-item:not(:nth-child(2n+2))
+  +between(mobile, tablet)
+    margin-right 0
+
+.catalog-result-express .product-item:not(:nth-child(2n+2))
+  +between(mobile, tablet)
+    max-width: calc((100% / 3) - 38px)
+
+.catalog-result-express .product-item:not(:nth-child(3n+3))
+  +between(mobile, tablet)
+    margin-right 4%
+
+.catalog-result-express .product-item:not(:nth-child(-n+2))
+  +between(mobile, tablet)
+    margin-top 0
+
+.catalog-result-express .product-item:not(:nth-child(-n+3))
+  +min(tabletLarge)
+    margin-top 0
+  +between(mobile, tablet)
+    margin-top 40px
+  +min(mobile)
+    margin-top 40px
+.catalog-result-express .product-item.product-item_sets:not(:nth-child(-n+3))
+  margin-top 0;
+  margin-bottom: 40px;
+
+.catalog-result-express .product-item
+  +min(tabletLarge)
+    max-width: calc((100% / 4) - 42px);
+
+.catalog-result-express
+  // +between(mobile, tablet)
+  //   justify-content flex-start
+  .product-item:not(:nth-child(4n+4))
+    +min(tabletLarge)
+      margin-right 4%
+  .product-item:not(:nth-child(-n+4))
+    +min(tabletLarge)
+      margin-top 50px
+  .product-item
+    +between(mobile, tablet)
+      max-width: calc((100% / 3) - 38px)

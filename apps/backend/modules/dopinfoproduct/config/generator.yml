@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           DopInfoProduct
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          dop_info_product
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        dop_info_id:
+          label: ID Доп. Хар.
+        product_id:
+          label: ID товара
+        code:
+          label: Артикул
+      list:    
+        title: Дополнительные характеристики
+        display: [ _dop_info_id, _product_id, code ]
+      filter:  ~
+      form:    
+        display: 
+          Основная информация: [ code ]
+      edit:   
+        title: Редактирование дополнительной характеристики товара
+      new:     
+        title: Создание дополнительной характеристики товара

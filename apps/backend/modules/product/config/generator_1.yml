@@ -1,0 +1,96 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Product
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        category_products_list:
+          label: Категории
+        dop_info_products_list:
+          label: Дополнительные характеристики  
+        photoalbums_list:
+          label: Фотоальбом  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        code:
+          label: Артикул
+        content:
+          label: Содержимое
+        price:
+          label: Цена
+        old_price:
+          label: Старая цена
+        discount:
+          label: Скидка
+        count:
+          label: Кол-во на складе
+        video:
+          label: Ссылка на видео
+        views_count:
+          label: Количество просмотров
+        votes_count:
+          label: Количество голосов
+        rating:
+          label: Рейтинг
+        is_public:
+          label: Доступна
+        is_related:
+          label: Рек. товар
+        parents_id:
+          label: Родитель
+        bonus:
+          label: Процент бонусов
+        generalcategory_id:
+          label: Главная категория(её так же отметить в списке ниже)
+        newPhotoalbums:
+          label: Новый фотоальбом
+        Photoalbums:
+          label: Фотоальбомы
+        created_at:
+          label: Дата добавления
+        endaction:
+          label: Дата окончания акции
+        step:
+          label: Шаг акции
+        createNewPhotoalbum:
+          label: Создать новый фотоальбом
+        yamarket:
+          label: Размещать в Ya.Market
+        tags:
+          label: Теги
+      list:
+        title: Товары
+        display: [ id, _name, code, slug, is_public, is_related, adult, price,count ]
+        sort: [ position, Asc ]
+        object_actions:
+          #promote: 
+          #  action: promote
+          #  label: Вверх
+          #demote: 
+          #  action: demote
+          #  label: Вниз
+          _edit: ~
+          _delete: ~
+      filter:  
+        display: [ id, name, code, slug, is_public, is_related, category_products_list ]
+      form:       
+        display: 
+          Основная информация: [ generalcategory_id, category_products_list, _test, photoalbums_list, newPhotoalbums, createNewPhotoalbum, Photoalbums, parents_id, name, slug, code, content, price, old_price, endaction, step, discount, count, video, views_count, votes_count, rating, is_public, is_related, bonus, created_at, yamarket , tags, adult] 
+          #
+          Meta теги: [ title, keywords, description ]
+      edit:    
+        title: Редактирование товара "%%name%%"
+      new:     
+        title: Создание товара

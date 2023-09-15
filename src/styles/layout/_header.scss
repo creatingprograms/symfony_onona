@@ -1,0 +1,305 @@
+$borderedColor: #dcdcdc;
+header {
+  font: 300 14px/120% $helvFont;
+  .logo {
+    float: left;
+    .-tablet {
+      display: none;
+    }
+  }
+  [href^="tel:"] {
+    font-weight: bold;
+  }
+  .wrapper{
+    position: relative;
+  }
+  .bonus-count{
+    padding: 5px 7px;
+    border: 1px solid #ffcbca;
+    border-radius: 9px;
+    font-size: 17px;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 46px;
+    right: 12px;
+    span{
+      background: url(/frontend/images/b.jpg) 0 1px no-repeat;
+      height: 14px;
+      width: 11px;
+      margin-left: 2px;
+      display: inline-block;
+    }
+    &-description{
+      text-align: center;
+      font-size: 9px;
+      width: auto;
+    }
+  }
+}
+.header {
+  &-wrap {
+    z-index: 10;
+    position: relative;
+  }
+  &-nav-but {
+    display: none;
+  }
+  &-form {
+    float: right;
+    margin: 17px 0 0;
+    position: relative;
+    width: calc(100% - 219px);
+    input[type="text"] {
+      display: block;
+      height: 32px;
+      width: 100%;
+      padding: 0 58px 0 10px;
+      box-sizing: border-box;
+      font: 14px/32px $helvFont;
+      border: 1px solid $borderedColor;
+    }
+    input[type="submit"] {
+      top: 0;
+      right: 0;
+      display: block;
+      outline: none;
+      height: 32px;
+      width: 53px;
+      padding: 0;
+      border: none;
+      position: absolute;
+      background: #f5d0cf url('/encodeImg/search-but.svg') no-repeat 50% 50%;
+    }
+  }
+  &-col {
+    &-left {
+      float: left;
+      width: calc(100% - 394px);
+    }
+    &-right {
+      float: right;
+      width: 364px;
+      a {
+        color: #d11e0f;
+        text-decoration: none;
+      }
+    }
+  }
+  &-services {
+    width: 160px;
+    float: left;
+    font-weight: 500;
+    line-height: 135%;
+    &-top {
+      margin: 0 0 15px;
+    }
+  }
+  &-basket {
+    float: right;
+    margin: -10px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    &,
+    a {
+      color: $font-main-color;
+    }
+    a {
+      text-decoration: none;
+    }
+    svg {
+      top: 7px;
+      width: 26px;
+      height: 23px;
+      fill: #716f70;
+      position: relative;
+      margin: 0 0 0 5px;
+    }
+    &-numb {
+      top: 2px;
+      right: -6px;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      background-color: #d11e0f;
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+  &-inf {
+    p {
+      margin: 5px 0;
+    }
+    a {
+      margin-right: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: $smallDesctop) {
+  .header {
+    &-col {
+      &-left {
+        width: calc(100% - 350px);
+      }
+      &-right {
+        width: 326px;
+      }
+    }
+    &-services {
+      width: 136px;
+    }
+  }
+}
+@media screen and (max-width: $largeTablet) {
+  header {
+    background-color: #f7f7f7;
+    .wrapper {
+      height: 56px;
+      position: relative;
+    }
+    .-largeTabletTel {
+      top: 30px;
+      left: 245px;
+      font-size: 16px;
+      position: absolute;
+    }
+    .logo {
+      margin: -12px 0 0 33px;
+      img {
+        width: 123px;
+        height: 75px;
+      }
+      .-desctop {
+        display: none;
+      }
+      .-tablet {
+        display: block;
+      }
+    }
+  }
+  .header {
+    &-col {
+      &-left {
+        width: auto;
+      }
+    }
+    &-basket {
+      margin: -5px -4px 0 0;
+      svg {
+        width: 63px;
+        height: 48px;
+      }
+      &-numb {
+        top: -3px;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+    &-nav-but {
+      width: 53px;
+      height: 41px;
+      display: block;
+      float: left;
+      margin: 3px 0 0;
+      background: url('/frontend/images/header/tablet-nav-but.png') 0% 50% no-repeat, url('/frontend/images/header/close.svg') 300px 50% no-repeat;
+    }
+    &-form {
+      top: -5px;
+      left: 560px;
+      width: calc(100% - 643px);
+      position: absolute;
+      input[type="text"] {
+        border: none;
+        height: 60px;
+        line-height: 60px;
+        padding-right: 64px;
+      }
+      input[type="submit"] {
+        top: 5px;
+        right: 5px;
+        width: 49px;
+        height: 49px;
+        background: url('encodeImg/search-but-tablet.svg') 50% 50% no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: $smallTablet) {
+  header {
+    .wrapper {
+      height: 28px;
+    }
+    .logo {
+      margin: -9px 0 0 23px;
+      img {
+        width: 62px;
+        height: 39px;
+      }
+    }
+    .-largeTabletTel {
+      top: 16px;
+      left: 146px;
+      font-size: 14px;
+    }
+  }
+  .header {
+    &-nav-but {
+      width: 20px;
+      height: 18px;
+      display: block;
+      float: left;
+      margin: 3px 0 0;
+      background: url('/frontend/images/header/menu.svg') 0% 50% no-repeat, url('/frontend/images/header/close.svg') 300px 50% no-repeat;
+    }
+    &-basket {
+      margin-right: 0;
+      svg {
+        width: 26px;
+        height: 23px;
+      }
+      &-numb {
+        width: 14px;
+        height: 14px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &-form {
+      left: 452px;
+      width: calc(100% - 526px);
+      input[type="text"] {
+        height: 34px;
+        line-height: 34px;
+      }
+      input[type="submit"] {
+        width: 18px;
+        height: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  header {
+    .logo {
+      margin-left: 10px;
+    }
+  }
+  .header {
+    &-col-right {
+      width: auto;
+    }
+    &-form {
+      left: 134px;
+      width: calc(100% - 198px);
+    }
+  }
+}

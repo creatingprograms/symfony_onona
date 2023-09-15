@@ -1,0 +1,44 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Payment
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          payment
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        deliverys_list:
+          label: Способы доставки
+        description:
+          label: Подробно
+        picture:
+          label: Иконка
+        picturehover:
+          label: Иконка при наведении
+        is_online:
+          label: Скидка за онлайн
+      list:
+        title: Оплата
+        display: [ name, is_public ]
+      filter:
+        display: [ name, is_public ]
+      form:
+        display:
+          Основная информация: [ name, description, is_online, content, is_public,deliverys_list, picture, picturehover ]
+      edit:
+        title: Редактирование способа оплаты "%%name%%"
+      new:
+        title: Создание нового способа оплаты

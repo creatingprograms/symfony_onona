@@ -1,0 +1,114 @@
+.form-er {
+  font: 15px/120% $helvFont;
+  &.-bg {
+    color: #5c5c5c;
+    padding: 19px 17px 16px;
+    background-color: #fff;
+    a {
+      color: #d00000;
+    }
+    .but {
+      color: #fff;
+      height: 58px;
+      font-size: 22px;
+      letter-spacing: -.7px;
+      padding: 0 29px;
+      line-height: 58px;
+    }
+  }
+  input[type="password"],
+  input[type="email"],
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="tel"] {
+    @extend %input;
+    height: 36px;
+    color: #1A1A1A;
+    padding: 0 10px;
+    font: 16px/32px $helvFont;
+    border: 1px solid #dadada;
+    &::placeholder {
+      color: #bfa8b0;
+    }
+  }
+  &-label {
+    margin: 0 0 2px;
+  }
+  &-h {
+    color: #0f0f0f;
+    font-size: 21px;
+    line-height: 125%;
+    font-weight: bold;
+    margin: 0 0 8px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+  }
+  &-intro {
+    color: #807e7e;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 0 0 14px;
+    letter-spacing: -1px;
+  }
+  &-row {
+    margin: 21px 0;
+  }
+  &-ch-services {
+    margin: 26px 0;
+  }
+  &-align {
+    &-left {
+      float: left;
+    }
+    &-right {
+      float: right;
+    }
+  }
+  &-forgot {
+    font-size: 13px;
+    line-height: 120%;
+  }
+  @media screen and (max-width: $largeMobile) {
+    font-size: 14px;
+    &.-bg {
+      .but {
+        width: 100%;
+        padding: 0;
+        height: 49px;
+        display: block;
+        font-size: 17px;
+        line-height: 49px;
+        position: static;
+        max-width: 300px;
+        margin: 0 auto;
+        text-transform: uppercase;
+      }
+    }
+    input[type="password"],
+    input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="tel"] {
+      height: 49px;
+      line-height: 49px;
+    }
+    &-h {
+      margin: 0;
+    }
+    &-row {
+      margin: 25px 0;
+    }
+    &-intro {
+      font-size: 16px;
+      margin: 20px 0 14px;
+    }
+    &-label {
+      margin: 0 0 14px;
+    }
+    &-ch-services {
+      margin: 26px 0 34px;
+    }
+  }
+}

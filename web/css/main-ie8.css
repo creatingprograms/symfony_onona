@@ -1,0 +1,26 @@
+#hiden header,
+#hiden input,
+#hiden #enter,
+.wraper,
+.mainHeader .wraper a,
+.backetWrap header,
+.mainMenu,
+.mainMenu li:first-child a,
+#search,
+.leftItems header,
+#sendVote,
+.content,
+.photo,
+#countGoods,
+.goodsInfo .elemWrap,
+#addToBasket,
+.rightItems header,
+.manager a,
+.bigGalery li,
+.bigGalery .toBasket {
+	behavior: url(css/pie.htc);	
+	zoom: 1;
+}
+.mainMenu a:hover {
+	background: url(../img/ie-opasity-white.png);
+}

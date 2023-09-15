@@ -1,0 +1,91 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <!-- Тут у нас по дизайну нет левого паддинга, если так сгенерить не получится не добавлять класс '-sidebar' -->
+  <div class="breadcrumbs wrapper">
+    <div class="breadcrumbs-mob-none">
+      <a href="#">Секс-шоп главная</a> > <a href="#">Коллекции</a>  > Metal Worx
+    </div>
+    <a href="#" class="back">
+      <svg>
+        <use xlink:href="#backIcon" />
+      </svg>
+      Назад
+    </a>
+  </div>
+  <div class="wrapper wrap-cont -clf -sidebar">
+    <main class="cont-right">
+      <h1>Metal Worx</h1>
+      <div class="collection-page -clf">
+        <figure class="collection-page-img">
+          <img src="/images/collection/collection-img.png" alt="">
+        </figure>
+        <p>Metal Worx - коллекция игрушек для взрослых из металла от крупнейшего американского производителя PipeDream. Сексуальные девайсы из стали созданы для жестких игр. Высококачественный медицинский металл отполирован вручную до зеркального отражения, он гигиеничный, непористый, быстро нагревается, отлично подходит для температурной игры, тем самым добавляя новые ощущения в любые эротические забавы.</p>
+        <p>Каждый девайс коллекции упакован в красивый металлический чемоданчик.</p>
+        <div class="collection-page-subscription -sign">
+          Подпишитесь на уведомления о новых поступлениях  товаров в этом разделе:
+        </div>
+        <form action="index.php" class="collection-page-form">
+          <input type="email" name="" value="" placeholder="Введите свой e-mail">
+          <input type="submit" name="" value="Подписаться" class="but">
+        </form>
+      </div>
+      <div class="cat-list-wrap">
+        <form action="index.php" class="cat-list-filtr">
+          <span class="-sort"></span>
+          <div class="cat-list-filtr-mob-col">
+            <!-- div-ы после label нужны для мобильника, на мобильника все это превращается в селект, по другому не получится -->
+            <input type="radio" name="cal-list-filtr" id="clf-1" checked>
+            <label for="clf-1">популярности</label>
+            <div class="cat-list-filtr-mob-text">популярности</div>
+            <input type="radio" name="cal-list-filtr" id="clf-2">
+            <label for="clf-2">новизне</label>
+            <div class="cat-list-filtr-mob-text">новизне</div>
+            <input type="radio" name="cal-list-filtr" id="clf-3">
+            <label for="clf-3">цене</label>
+            <div class="cat-list-filtr-mob-text">цене</div>
+            <input type="radio" name="cal-list-filtr" id="clf-4">
+            <label for="clf-4">названию</label>
+            <div class="cat-list-filtr-mob-text">названию</div>
+            <!-- Попап для мобильника -->
+            <div class="cat-list-filtr-mob-pop">
+              <label for="clf-1">популярности</label>
+              <label for="clf-2">новизне</label>
+              <label for="clf-3">цене</label>
+              <label for="clf-4">названию</label>
+            </div>
+          </div>
+        </form>
+        <div class="cat-list -items -int">
+          {% include '../block/cat-list-collection-items.twig' %}
+          {% include '../block/cat-list-collection-items.twig' %}
+          {% include '../block/cat-list-collection-items.twig' %}
+          {% include '../block/cat-list-collection-items.twig' %}
+        </div>
+        <div class="more">
+          <a href="#">Показать  еще  <svg><use xlink:href="#arrowMoreIcon" /></svg></a>
+        </div>
+        <div class="pag">
+          <a href="#" class="pag-first -noActive">
+            &lt;
+            &lt;
+          </a>
+          <a href="#" class="pag-prev -noActive">
+            &lt;
+          </a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" class="pag-next">
+            &gt;
+          </a>
+          <a href="#" class="pag-last">
+            &gt;
+            &gt;
+          </a>
+        </div>
+      </div>
+    </main>
+    {% include '../layout/sidebar-collection.twig'  %}
+  </div>
+{% endblock afterHeader %}

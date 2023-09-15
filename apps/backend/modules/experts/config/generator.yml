@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Experts
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          experts
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        description:
+            label: Описание
+        photo_url:
+            label: Изображение
+
+      list:
+        title: Эксперты
+        display: [ name, description]
+      form:
+        display:
+          Основная информация: [ name, description, photo_url ]
+      edit:
+        title: Редактирование эксперта "%%name%%"
+      new:
+        title: Создание нового эксперта

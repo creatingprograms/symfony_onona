@@ -1,0 +1,49 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           RussianPostCity
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          russian_post_city
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        content_mobile:
+          label: Содержимое мобильной версии
+        is_public:
+          label: Доступна
+        sitemapRate:
+          label: Приоритет Sitemap
+        tags:
+          label: Теги
+        categorypage_list:
+          label: Категории
+        city_id:
+          label: Город
+        is_show_right_block:
+          label: Показывать правый блок
+      list:    
+        title: Страницы Почты России
+        display: [ name, slug, is_public ]
+      filter:  
+        display: [ name, slug, is_public ]
+      form:    
+        display: 
+          Основная информация: [ name, slug, content,content_mobile, is_public,sitemapRate, tags, city, is_show_right_block ]
+          Meta теги: [ title, keywords, description ]
+      edit:    
+        title: Редактирование страницы "%%name%%"
+      new:     
+        title: Создание новой страницы

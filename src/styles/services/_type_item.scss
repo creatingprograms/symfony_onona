@@ -1,0 +1,338 @@
+$f3c: #F31806;
+%logo {
+  @include logo;
+}
+%input {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+%noUserSelect {
+  @include no-user-select;
+}
+%anim {
+  transition-delay: 0s;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  transition-property: margin, padding, width, height, font-size;
+}
+%pie-clearfix {
+  @include pie-clearfix;
+}
+%clearfix {
+  @include clearfix;
+}
+%micro-clearfix {
+  @include micro-clearfix;
+}
+%panX {
+  @include scrollToch;
+  overflow-x: scroll;
+  padding-bottom: 40px;
+  margin-bottom: -40px;
+}
+.-rub {
+  font-family: $rubF;
+  font-weight: normal;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.-none {
+  display: none;
+}
+.-sign {
+  color: #d11e0f;
+}
+.wrapSVG {
+  display: none;
+}
+.-clf {
+  @extend %pie-clearfix;
+}
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  img {
+    display: block;
+  }
+}
+.back {
+  color: #706E6F;
+  svg {
+    top: 1px;
+    width: 7px;
+    height: 12px;
+    fill: #706E6F;
+    margin: 0 7px 0 0;
+    position: relative;
+  }
+}
+.blackout {
+  @extend %anim;
+  top: -300%;
+  left: -300%;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  transition-delay: 0s, .5s, .5s;
+  transition-property: opacity, left, top;
+  background-color: rgba(5, 5, 5, .7);
+  .-isPop & {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition-property: opacity;
+  }
+}
+img {
+  max-width: 100%;
+}
+.rnb {
+  @extend %logo;
+  img {
+    width: 100%;
+  }
+  &.wrapper {
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: $largeMobile) {
+    &.wrapper {
+      margin-bottom: 0;
+    }
+    &.-mobFull {
+      margin-left: -17px;
+      margin-right: -17px;
+    }
+  }
+}
+.allButJS {
+  &.-isAll {
+    &::before {
+      display: inline;
+      content: attr(data-all);
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.smm {
+  display: flex;
+  a {
+    @extend %logo;
+    margin-left: 22px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    img,
+    svg {
+      display: block;
+    }
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+    fill: transparent;
+  }
+  .-youtube {
+    height: 51px;
+  }
+}
+
+.rating {
+  display: flex;
+  &.-chose {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+    .rating-item {
+      cursor: pointer;
+      &:nth-of-type(n+2) {
+        margin-left: 5px;
+      }
+    }
+  }
+  svg {
+    width: 19px;
+    height: 19px;
+    display: block;
+    fill: #dadada;
+  }
+  .-hovered,
+  .-isActive {
+    svg {
+      fill: #FBC5E0;
+    }
+  }
+  &-numb {
+    font-size: 14px;
+    line-height: 120%;
+    margin: 0 0 0 10px;
+  }
+  &-item {
+    &:nth-of-type(n+2) {
+      margin-left: 2px;
+    }
+  }
+}
+.-largeTabletHide {
+  @media screen and (max-width: $largeTablet) {
+    display: none;
+  }
+}
+.-smallTabletHide {
+  @media screen and (max-width: $smallTablet) {
+    display: none;
+  }
+}
+
+.but {
+  @extend %anim;
+  color: #fff;
+  height: 38px;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #D11E0F;
+  font: 16px/36px $font-main-family;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-property: background-color;
+  &:hover {
+    background-color: $f3c;
+  }
+  &.-roze {
+    background-color: #e51471;
+  }
+  &.-black {
+    background-color: #010101;
+  }
+  &.-big {
+    height: 50px;
+    padding: 0 52px;
+    font-size: 18px;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+  &.-dotted {
+    height: 36px;
+    color: #706E6F;
+    line-height: 34px;
+    background-color: transparent;
+    border: 1px dotted #706E6F;
+    &.-big {
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+}
+
+.more {
+  color: #000;
+  display: block;
+  text-align: center;
+  margin: 27px 0 0;
+  font: 18px/120% $helvFont;
+  cursor: pointer;
+  svg {
+    width: 19px;
+    height: 13px;
+    margin: 0 0 0 8px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  span {
+    cursor: pointer;
+  }
+  @media screen and (max-width: $smallDesctop) {
+    font-size: 13px;
+    margin: 19px 0 0;
+    svg {
+      margin: 0;
+      width: 12px;
+      height: 8px;
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    font-size: 25px;
+    margin: 29px 0 0;
+    svg {
+      width: 23px;
+      height: 14px;
+      margin-left: 12px;
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    font-size: 13px;
+    margin: 19px 0 0;
+    svg {
+      margin: 0;
+      width: 12px;
+      height: 8px;
+    }
+  }
+}
+@media screen and (max-width: $largeMobile) {
+  .-mobileHide {
+    display: none;
+  }
+}
+
+.intro {
+  color: #020202;
+  font-size: 15px;
+  line-height: 120%;
+  margin: 10px 0;
+  letter-spacing: -1px;
+  p {
+    margin: 0;
+  }
+}
+.breadcrumbs {
+  color: #ae8782;
+  font-size: 16px;
+  line-height: 120%;
+  margin: 18px 0 33px;
+  &.wrapper {
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+  &,
+  a {
+    color: #706E6F;
+  }
+  a {
+    text-decoration: none;
+  }
+  .back {
+    display: none;
+  }
+  @media screen and (max-width: $largeTablet) {
+    font-size: 23px;
+  }
+  @media screen and (max-width: $smallTablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $largeMobile) {
+    &.wrapper {
+      padding-bottom: 1px;
+    }
+    .back {
+      display: inline-block;
+    }
+    &-mob-none {
+      display: none;
+    }
+  }
+}

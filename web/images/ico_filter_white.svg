@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+<path fill="none" stroke="#FFFFFF" d="M22.5,21.543c0,0.529-0.429,0.957-0.957,0.957H1.456c-0.528,0-0.956-0.428-0.956-0.957V1.457
+	C0.5,0.929,0.928,0.5,1.456,0.5h20.087c0.528,0,0.957,0.429,0.957,0.957V21.543z"/>
+<line fill="none" stroke="#FFFFFF" x1="4" y1="5.5" x2="6.5" y2="5.5"/>
+<circle fill="none" stroke="#FFFFFF" cx="9" cy="5.5" r="2.5"/>
+<line fill="none" stroke="#FFFFFF" x1="4" y1="17.5" x2="6.5" y2="17.5"/>
+<circle fill="none" stroke="#FFFFFF" cx="9" cy="17.5" r="2.5"/>
+<line fill="none" stroke="#FFFFFF" x1="19" y1="11.5" x2="16.792" y2="11.5"/>
+<circle fill="none" stroke="#FFFFFF" cx="14" cy="11.5" r="2.5"/>
+<line fill="none" stroke="#FFFFFF" x1="11.5" y1="5.5" x2="19" y2="5.5"/>
+<line fill="none" stroke="#FFFFFF" x1="12" y1="11.5" x2="4" y2="11.5"/>
+<line fill="none" stroke="#FFFFFF" x1="11.5" y1="17.5" x2="19" y2="17.5"/>
+</svg>

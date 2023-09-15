@@ -1,0 +1,55 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Faq
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          faq
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        # category_slug:
+        #   label: Связанная категория товаров
+        precontent:
+          label: Превью
+        content:
+          label: Содержимое
+        is_public:
+          label: Доступна
+        tags:
+          label: Теги
+        created_at:
+            label: Дата создания
+        img:
+            label: Изображение
+        img_preview:
+            label: Изображение предпросмотра
+        is_related:
+            label: Рекомендуемая
+        positionrelated:
+            label: Сортировка рекомендуемых
+        views_count:
+          label: Количество просмотров
+      list:
+        title: Статьи
+        display: [ name, slug, is_public, is_related ]
+      filter:
+        display: [ name, slug, is_public]
+      form:
+        display:
+          Основная информация: [ name, slug,  precontent, content, img_preview, img, is_public, created_at, is_related, positionrelated, views_count ]
+          Meta теги: [ title, keywords, description ]
+      edit:
+        title: Редактирование статьи "%%name%%"
+      new:
+        title: Создание новой статьи

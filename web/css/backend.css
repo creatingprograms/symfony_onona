@@ -1,0 +1,29 @@
+.backend-left{
+  display: inline-block;
+  width: 80%;
+  margin-right: 1%;
+}
+.backend-left .small{
+  font-size: 10px;
+}
+.backend-left table{
+  width: 100%;
+}
+.backend-left thead tr{
+  background: #e7eef6;
+}
+.backend-left tbody tr:nth-child(even){
+  background: #f6f6f6;
+}
+.backend-right{
+  display: inline-block;
+  width: 18%;
+  padding-top: 115px;
+  vertical-align: top;
+}
+.backend-right table{
+  width: 100%;
+}
+.backend-right tr td:nth-last-child(1){
+  text-align: right;
+}

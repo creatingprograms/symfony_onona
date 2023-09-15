@@ -1,0 +1,52 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Manufacturer
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          manufacturer
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:
+          label: Название
+        slug:
+          label: Ссылка
+        content:
+          label: Содержимое
+        image:
+          label: Изображение
+        is_public:
+          label: Доступна
+        is_popular:
+          label: Популярный
+        subid:
+          label: Дополнительный ID
+        countactionproduct:
+          label: Количество товаров с акциями
+        maxdiscount:
+          label: Максимальная скидка
+        minprice:
+          label: Минимальная цена
+        priority_sort_list:
+          label: Список ID товаров с приоритетной сортировки (в порядке следования ID)
+      list:
+        title: Производители
+        display: [ id, name, slug, is_public, subid, is_popular ]
+        sort: [ position, Asc ]
+      filter:
+        display: [ id, name, slug, is_public, is_popular ]
+      form:
+        display:
+          Основная информация: [ name, slug, content, is_public, is_popular, subid,  maxdiscount, minprice, image, priority_sort_list ]
+          Meta теги: [ title, keywords, description ]
+      edit:
+        title: Редактирование производителя "%%name%%"
+      new:
+        title: Создание производителя

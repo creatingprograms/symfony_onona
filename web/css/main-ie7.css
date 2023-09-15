@@ -1,0 +1,105 @@
+.manager a {
+	margin: 0;
+}
+.mainHeader .wraper a {
+	margin: 0 0 5px 0;
+}
+.mainHeader .wraper p {
+	margin-top: -5px
+}
+#hiden a {
+	padding: 0;
+	margin: 0;
+}
+.mainMenu {
+	z-index: -1;
+}
+.content header li {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<i class="contentLiAfter">&frasl;</i>'));
+}
+.contentLiAfter {
+	color: #e8cad5;
+	font-size: 13px;
+	padding: 0 2px;
+}
+.content header li:first-child {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<i class="contentLiAfter"></i>'));
+}
+.multimedia .new {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<i class="newAfter"></i>'));
+}
+.newAfter {
+	content: "";
+	background: url(../img/new.png);
+	width: 61px;
+	height: 62px;
+	position: absolute;
+	top: -17px;
+	left: -3px;
+	z-index: 40;
+}
+.content .wraper > a {
+	position: absolute;
+	bottom: 115px;
+	left: 0;
+}
+
+
+.bigGalery a {
+	cursor: pointer;
+	text-align: center;
+	zoom: 1;
+	position: relative;
+}
+.bigGalery a > span {
+	top: 52%;
+}
+.bigGalery a strong {
+	position: absolute;
+	top: 267px;
+	left: 0;
+	width: 194px; 
+}
+
+.bigGalery span img {
+	top: -50%;
+	position:relative;
+	display: block;
+	zoom: 1;
+}
+.bigGalery .new {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<i class="newAfter"></i>'));
+}
+.bigGalery .newAfter {
+	content: "";
+	background: url(../img/new.png);
+	width: 61px;
+	height: 62px;
+	position: absolute;
+	top: -30px;
+	left: -16px;
+	z-index: 40;
+}
+.pager ol {
+	display: inline; 
+	zoom: 1; /*присваиваем ему layout*/
+}
+.long .bigGalery {
+	padding-bottom: 10px;
+}
+.autoGalery .gallery li  {
+	overflow:hidden
+}
+.autoGalery .gallery li ,
+.autoGalery .gallery a {
+	display:block
+}
+.autoGalery .gallery a {
+	top:50%;
+	left:0;
+}
+.autoGalery .gallery img {
+	top:-50%;
+	position:relative;
+	display:block
+}

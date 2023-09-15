@@ -1,0 +1,22 @@
+
+_topMenu:
+  lifetime:    172800
+  enabled:     false
+_bonusCount:
+  lifetime:    172800
+  enabled:     true
+_relatedProducts:
+  lifetime:    172800
+  enabled:     true
+_productParentNonCount:
+  lifetime:    172800
+  enabled:     true
+
+all:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_18age:
+  enabled:     false
+  contextual: false

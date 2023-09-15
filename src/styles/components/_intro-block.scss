@@ -1,0 +1,157 @@
+.intro-block {
+  &.wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 52px auto 79px;
+    &.-int {
+      margin: 37px auto 43px;
+    }
+  }
+  .-forHer & {
+    margin-top: 26px;
+    h1,
+    .h1 {
+      letter-spacing: 0;
+    }
+    &-wrap {
+      font-size: 20px;
+      line-height: 150%;
+      max-width: 3000px;
+    }
+  }
+  .-block {
+    display: block;
+  }
+  &.-int {
+    h1,
+    .h1 {
+      margin: 0 0 37px;
+    }
+    .intro-block {
+      &-wrap {
+        max-width: 100%;
+      }
+      &-img {
+        width: 389px;
+        margin: 0 0 0 -15px;
+      }
+      &-desc {
+        font-size: 22px;
+        line-height: 150%;
+        width: calc(100% - 424px);
+      }
+    }
+  }
+  &-desc {
+    padding-top: 33px;
+    width: calc(100% - 394px);
+  }
+  &-wrap {
+    max-width: 1047px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 170%;
+    justify-content: space-between;
+    h1,
+    .h1 {
+      color: $font-main-color;
+      margin: 0 0 30px;
+      text-transform: uppercase;
+      font: bold 22px/145% $helvFont;
+      span {
+        color: #d42f21;
+        display: block;
+      }
+    }
+    p {
+      margin: 20px 0;
+    }
+  }
+  @media screen and (max-width: $smallDesctop) {
+    &.-int {
+      .intro-block {
+        &-img {
+          width: 359px;
+        }
+        &-desc {
+          width: calc(100% - 394px);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $largeTablet) {
+    &.wrapper {
+      max-width: 854px;
+    }
+    &.-int {
+      max-width: 990px;
+      .intro-block {
+        &-img {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $smallTablet) {
+    &.-int {
+      max-width: 732px;
+      .intro-block {
+        &-img,
+        &-desc {
+          width: auto;
+        }
+      }
+    }
+    &.wrapper {
+      max-width: 766px;
+    }
+    .-smallTabletDefis {
+      &::after {
+        content: ' - ';
+        display: inline;
+      }
+    }
+    #main &-wrap {
+      display: block;
+      h1,
+      .h1 {
+        margin: 0 0 28px;
+        span {
+          display: inline;
+        }
+      }
+    }
+    &-img {
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    &-img,
+    &-desc {
+      width: auto;
+    }
+  }
+  @media screen and (max-width: $largeMobile) {
+    &.wrapper {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    h1,
+    .h1 {
+      font-size: 18px;
+    }
+    &.-int {
+      .intro-block {
+        &-desc {
+          font-size: 16px;
+        }
+      }
+    }
+    &-desc {
+      font-size: 14px;
+      line-height: 160%;
+      padding-top: 20px;
+    }
+  }
+}

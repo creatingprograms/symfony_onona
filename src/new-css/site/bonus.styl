@@ -1,0 +1,145 @@
+.-isBonus
+  .scroll-link
+    display: flex;
+    margin-bottom: 24px;
+    a
+      padding: 12px 34px 12px 0;
+      &.btn-full_white
+        padding-right: 0;
+    @media screen and (max-width: 1100px)
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .btn-full_white
+        margin-left: 0;
+  .btn-full_white
+    width: 300px;
+    margin-left: auto;
+  .scroll-rk
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    .-bonus
+      font-size: 40px;
+  .advantages
+    max-width: 975px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 23px;
+    margin-bottom: 51px;
+    @media screen and (max-width: 1100px)
+      flex-wrap: wrap;
+      justify-content: space-around;
+    &-item
+      width: 183px;
+      text-align: center;
+      margin-bottom: 20px;
+    &-h
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 86px;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 30px;
+      border-radius: 20px;
+      background-color: #f8f8f8;
+      margin-bottom: 7px;
+    &-text
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+  .simple
+    margin-top: 80px;
+    text-align: center;
+    &-h
+      color: #EF182F;
+      font-size: 48px;
+      line-height: 65px;
+      font-weight: 900;
+      text-transform: uppercase;
+    &-container
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      margin-bottom: 55px;
+      @media screen and (max-width: 1100px)
+        flex-wrap: wrap;
+        justify-content: space-around;
+    &-item
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 170px;
+      width: 170px;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 20px;
+      background: #EF182F;
+      color: #fff;
+      border-radius: 50%;
+      margin: 0 32px 20px;
+      strong
+        font-size: 35px;
+  .wrap-btn
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 347px;
+    .btn-full_white
+      width: 100%;
+      margin-top: 16px;
+  .block-content--small
+    max-width: 776px;
+    margin: auto;
+    font-size: 14px;
+    hr
+      width: 1174px;
+      margin: 30px -199px;
+      border-style: solid;
+      border-color: #E1E0E9;
+      border-bottom: hidden;
+    h2
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    ul
+      margin-top: 20px;
+      li
+        &::before
+          width: 4px;
+          height: 4px;
+          top: 10px;
+          background: #ccc;
+          border-radius: 50%;
+        &:not(:last-child)
+          margin-bottom: 0;
+    ol
+      counter-reset: list1;
+      li
+        &::before
+          content: counter(list1) ". ";
+          counter-increment: list1;
+      ol
+        counter-reset: list2;
+        li
+          &::before
+            counter-increment: list2;
+            content: counter(list1) "." counter(list2) ".";
+        ol
+          counter-reset: list3;
+          li
+            &::before
+              counter-increment: list3;
+              content: counter(list1) "." counter(list2) "." counter(list3) ".";
+    .-reset
+      padding-left: 0;
+      li
+        &::before
+          content: none;
+        div
+          margin: 20px 0;
+          &::before
+            content: ' - ';
+      a
+        color: #EF182F;

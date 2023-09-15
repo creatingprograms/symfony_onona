@@ -1,0 +1,123 @@
+.wrap-block.wrap-block-stock
+  margin-top 30px
+
+.wrap-img-top
+  border-radius: 20px
+  overflow hidden
+
+.width-center
+  max-width: 976px
+  width 100%
+  margin 0 auto
+
+.carts-tabs
+  margin-top 62px
+  +max(tabletLarge)
+    margin-top 49px
+  +max(sMobile)
+    margin-top 31px
+
+.carts-tabs__title
+  display flex
+  border-bottom 1px solid #E1E0E9
+  +max(mobile)
+    overflow-x scroll
+    overflow-y hidden
+    width 100vw
+    margin-left -25px
+    padding-left 25px
+    padding-bottom 30px
+    position relative
+    z-index 1
+  &::after
+    +max(mobile)
+      content ''
+      position absolute
+      bottom 29px
+      left 25px
+      width 120vw
+      height 1px
+      background-color #E1E0E9
+      z-index 1
+  .carts-tab__title
+    font-weight 500
+    position relative
+    padding-bottom 16px
+    cursor pointer
+    transition $trans
+    min-width 76px
+    +max(mobile)
+      flex 1 0 auto
+      z-index 2
+    &:not(:last-child)
+      margin-right 3%
+      +max(mobile)
+        margin-right 24px
+    &:last-child
+      +max(mobile)
+        padding-right 25px
+    &:after
+      content ''
+      position absolute
+      left 0
+      bottom -1px
+      height 1px
+      width 100%
+      transition $trans
+    &.active
+    &:hover
+      color #EF182F
+      &:after
+        background-color #EF182F
+
+.carts-tabs__content
+  +max(mobile)
+    background-color #fff
+    margin-top -30px
+    width 100vw
+    margin-left -25px
+    padding 0 25px
+    position relative
+    z-index 2
+  +max(sMobile)
+    margin-left -18px
+    padding 0 18px
+
+
+.carts-tab__content
+  padding-top 38px
+  margin -24px -12px
+  +max(sMobile)
+    padding-top 31px
+  .list-doc
+    padding-top 10px
+  .doc-item
+    &:not(:nth-child(-n+2))
+      margin-top 30px
+
+.carts-tab__content
+  display flex
+  flex-wrap: wrap
+  padding-top 60px
+  .cart
+    margin 24px 12px
+    max-width: calc(50% - 24px)
+    width 100%
+    +max(mobile)
+      max-width: 100%
+  .cart__img
+    width 100%
+    height 26vw
+    max-height 311px
+    margin-bottom 18px
+    background-repeat no-repeat
+    background-size cover
+    display block
+    background-color #ccc
+    +max(mobile)
+      height 48vw
+  .cart__title
+    font-size 18px
+    font-weight bold
+    margin-bottom 4px
+    display block

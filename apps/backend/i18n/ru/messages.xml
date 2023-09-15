@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header />
+    <body>
+      <trans-unit>
+        <source>Description</source>
+        <target>Описание</target>
+      </trans-unit>
+      <!-- Sliders -->
+      <trans-unit>
+        <source>for-him</source>
+        <target>Страница Для него (акция)</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_feb14_1</source>
+        <target>14 февраля 1</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_feb14_2</source>
+        <target>14 февраля 2</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_feb14_3</source>
+        <target>14 февраля 3</target>
+      </trans-unit>
+      <trans-unit>
+        <source>main_new_1</source>
+        <target>Главная страница, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>main_new_2</source>
+        <target>Главная страница, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>main_new_3</source>
+        <target>Главная страница, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_dlya_novichkov_1</source>
+        <target>Каталог, Для новичков, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_dlya_novichkov_2</source>
+        <target>Каталог, Для новичков, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_dlya_novichkov_3</source>
+        <target>Каталог, Для новичков, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_aksessuary-dlya-seksa_1</source>
+        <target>Каталог, Аксессуары, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_aksessuary-dlya-seksa_2</source>
+        <target>Каталог, Аксессуары, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_aksessuary-dlya-seksa_3</source>
+        <target>Каталог, Аксессуары, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_bdsm-i-fetish_1</source>
+        <target>Каталог, БДСМ, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_bdsm-i-fetish_2</source>
+        <target>Каталог, БДСМ, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_bdsm-i-fetish_3</source>
+        <target>Каталог, БДСМ, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_preparaty_1</source>
+        <target>Каталог, БАДы, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_preparaty_2</source>
+        <target>Каталог, БАДы, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_preparaty_3</source>
+        <target>Каталог, БАДы, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_intimnaya-kosmetika_1</source>
+        <target>Каталог, Косметика, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_intimnaya-kosmetika_2</source>
+        <target>Каталог, Косметика, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_intimnaya-kosmetika_3</source>
+        <target>Каталог, Косметика, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_eroticheskoe-bele_1</source>
+        <target>Каталог, Белье, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_eroticheskoe-bele_2</source>
+        <target>Каталог, Белье, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_eroticheskoe-bele_3</source>
+        <target>Каталог, Белье, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-zhenschin_1</source>
+        <target>Каталог, Для женщин, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-zhenschin_2</source>
+        <target>Каталог, Для женщин, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-zhenschin_3</source>
+        <target>Каталог, Для женщин, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-muzhchin_1</source>
+        <target>Каталог, Для мужчин, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-muzhchin_2</source>
+        <target>Каталог, Для мужчин, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlya-muzhchin_3</source>
+        <target>Каталог, Для мужчин, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlja-par_1</source>
+        <target>Каталог, Для пар, верхний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlja-par_2</source>
+        <target>Каталог, Для пар, средний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog_sex-igrushki-dlja-par_3</source>
+        <target>Каталог, Для пар, нижний</target>
+      </trans-unit>
+      <trans-unit>
+        <source>category_skidki_do_60_percent</source>
+        <target>Страница Распродажа</target>
+      </trans-unit>
+      <trans-unit>
+        <source>catalog</source>
+        <target>Баннер меню каталог, 176*352</target>
+      </trans-unit>
+      <trans-unit>
+        <source>dlya_novichkov</source>
+        <target>Баннер меню "Для новичков", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>aksessuary-dlya-seksa</source>
+        <target>Баннер меню "Аксессуары", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sex-igrushki-dlja-par</source>
+        <target>Баннер меню "Для пар", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sex-igrushki-dlya-muzhchin</source>
+        <target>Баннер меню "Для мужчин", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sex-igrushki-dlya-zhenschin</source>
+        <target>Баннер меню "Для женщин", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>BDSM-i-fetish</source>
+        <target>Баннер меню "БДСМ", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>intimnaya-kosmetika</source>
+        <target>Баннер меню "Интимная косметика", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>preparaty</source>
+        <target>Баннер меню "Препараты", 776*72</target>
+      </trans-unit>
+      <trans-unit>
+        <source>eroticheskoe-bele</source>
+        <target>Баннер меню "Белье", 776*72</target>
+      </trans-unit>
+
+      <trans-unit>
+        <source>slider_dlya_novichkov</source>
+        <target>Слайдер каталога Для новичков</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_aksessuary-dlya-seksa</source>
+        <target>Слайдер каталога Аксессуары</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_sex-igrushki-dlja-par</source>
+        <target>Слайдер каталога Для пар</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_sex-igrushki-dlya-muzhchin</source>
+        <target>Слайдер каталога Для мужчин</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_sex-igrushki-dlya-zhenschin</source>
+        <target>Слайдер каталога Для женщин</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_bdsm-i-fetish</source>
+        <target>Слайдер каталога БДСМ</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_intimnaya-kosmetika</source>
+        <target>Слайдер каталога Интимная косметика</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_preparaty</source>
+        <target>Слайдер каталога Препараты</target>
+      </trans-unit>
+      <trans-unit>
+        <source>slider_eroticheskoe-bele</source>
+        <target>Слайдер каталога Белье</target>
+      </trans-unit>
+
+      <trans-unit>
+        <source>main_page</source>
+        <target>Главная страница</target>
+      </trans-unit>
+      <trans-unit>
+        <source>main_page_new</source>
+        <target>Главная страница новый</target>
+      </trans-unit>
+      <trans-unit>
+        <source>magazins_in_moscow</source>
+        <target>Магазины в Москве</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sl_sexopedia</source>
+        <target>Сексопедия</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sl_pairs</source>
+        <target>Для пар</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sl_man</source>
+        <target>Для него</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sl_woman</source>
+        <target>Для нее</target>
+      </trans-unit>
+      <trans-unit>
+        <source>sl_actions</source>
+        <target>Акции</target>
+      </trans-unit>
+      <trans-unit>
+        <source>promotion-item_orange</source>
+        <target>Оранжевый</target>
+      </trans-unit>
+      <trans-unit>
+        <source>promotion-item_cyan</source>
+        <target>Голубой</target>
+      </trans-unit>
+      <trans-unit>
+        <source>promotion-item_blue</source>
+        <target>Синий</target>
+      </trans-unit>
+      <trans-unit>
+        <source>promotion-item_red</source>
+        <target>Красный</target>
+      </trans-unit>
+      <trans-unit>
+        <source>block-info_1</source>
+        <target>Голубой</target>
+      </trans-unit>
+      <trans-unit>
+        <source>block-info_2</source>
+        <target>Серый</target>
+      </trans-unit>
+
+      <!-- Actions -->
+      <trans-unit>
+        <source>New</source>
+        <target>Создать</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Delete</source>
+        <target>Удалить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>List</source>
+        <target>Список</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save</source>
+        <target>Сохранить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save and add</source>
+        <target>Сохранить и добавить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Cancel</source>
+        <target>Отмена</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Choose an action</source>
+        <target>Выберите действие</target>
+      </trans-unit>
+      <trans-unit>
+        <source>go</source>
+        <target>Выполнить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Back to list</source>
+        <target>Вернуться к списку</target>
+      </trans-unit>
+
+      <!-- Filters -->
+      <trans-unit>
+        <source>Reset</source>
+        <target>Очистить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Filter</source>
+        <target>Фильтр</target>
+      </trans-unit>
+
+      <!-- List -->
+      <trans-unit>
+        <source>No result</source>
+        <target>Нет результатов</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Actions</source>
+        <target>Действия</target>
+      </trans-unit>
+      <trans-unit>
+        <source>(page %%page%%/%%nb_pages%%)</source>
+        <target>(страница %%page%%/%%nb_pages%%)</target>
+      </trans-unit>
+      <trans-unit>
+        <source>asc</source>
+        <target>По возрастанию</target>
+      </trans-unit>
+      <trans-unit>
+        <source>desc</source>
+        <target>По убыванию</target>
+      </trans-unit>
+      <trans-unit>
+        <source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
+        <target>[0] нет результатов|[1] 1 результат|(1,+Inf] %1% результата(ов)</target>
+      </trans-unit>
+
+      <!-- Pagination -->
+      <trans-unit>
+        <source>First page</source>
+        <target>Первая страница</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Previous page</source>
+        <target>Предыдущая страница</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Next page</source>
+        <target>Следующая страница</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Last page</source>
+        <target>Последняя страница</target>
+      </trans-unit>
+
+      <!-- Form -->
+      <trans-unit>
+        <source>The item was created successfully.</source>
+        <target>Объект успешно создан.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was updated successfully.</source>
+        <target>Объект успешно изменен.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was created successfully. You can add another one below.</source>
+        <target>Объект успешно создан. Вы можете добавить еще один.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was updated successfully. You can add another one below.</source>
+        <target>Объект успешно обновлен. Вы можете добавить еще один.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item has not been saved due to some errors.</source>
+        <target>Объект не сохранен из-за некоторых ошибок.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was deleted successfully.</source>
+        <target>Объект успешно удален.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You must at least select one item.</source>
+        <target>Вы должны выделить как минимум один объект.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You must select an action to execute on the selected items.</source>
+        <target>Вы должны выбрать действие, которое будет выполнено с выделенными объектами.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>A problem occurs when deleting the selected items as some items do not exist anymore.</source>
+        <target>Возникла проблемма при удалении выделенных объектов, так как некоторые объекты больше не существуют.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The selected items have been deleted successfully.</source>
+        <target>Выделенные объекты успешно удалены.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>A problem occurs when deleting the selected items.</source>
+        <target>Возникла проблемма при удалении выделенных объектов.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>is empty</source>
+        <target>пустое значение</target>
+      </trans-unit>
+      <trans-unit>
+        <source>yes or no</source>
+        <target>да или нет</target>
+      </trans-unit>
+      <trans-unit>
+        <source>yes</source>
+        <target>да</target>
+      </trans-unit>
+      <trans-unit>
+        <source>no</source>
+        <target>нет</target>
+      </trans-unit>
+      <trans-unit>
+        <source>is_empty</source>
+        <target>пусто</target>
+      </trans-unit>
+      <trans-unit>
+        <source><![CDATA[from %from_date% to %to_date%]]></source>
+        <target><![CDATA[от %from_date% до %to_date%]]></target>
+      </trans-unit>
+      <trans-unit>
+        <source><![CDATA[from %from_date%<br />to %to_date%]]></source>
+        <target><![CDATA[от %from_date%<br />до %to_date%]]></target>
+      </trans-unit>
+
+           <!-- csSetting -->
+      <trans-unit>
+        <source>Settings</source>
+        <target>Настройки</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Name</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Value</source>
+        <target>Значение</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Restore Default</source>
+        <target>По умолчанию</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Restore All Defaults</source>
+        <target>Восстановить все настройки по умолчанию</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save Settings</source>
+        <target>Сохранить настройки</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Are you sure?</source>
+        <target>Вы уверены?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>NewPhoto</source>
+        <target>Новая фотография</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Photodelete</source>
+        <target>Удалить фотографию</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Photos</source>
+        <target>Фотографии</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is public</source>
+        <target>Публичная?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Position</source>
+        <target>Сортировка</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Filename</source>
+        <target>Файл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>remove the current file</source>
+        <target>Удалить данный файл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Manager</source>
+        <target>Менеджер</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Comment manager</source>
+        <target>Комментарий менеджера</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Username</source>
+        <target>Имя пользователя</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Product</source>
+        <target>Товар</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Answer</source>
+        <target>Ответ</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Page</source>
+        <target>Страница</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Shops</source>
+        <target>Магазин</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Created at</source>
+        <target>Создан</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Article</source>
+        <target>Статья</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Point</source>
+        <target>Точка</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

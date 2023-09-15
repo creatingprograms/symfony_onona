@@ -1,0 +1,169 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: pages, action: main }
+
+catalogs:
+  url:   /catalogs
+  param: { module: category, action: catalogs }
+
+catalog:
+  url:   /catalog/:slug
+  param: { module: category, action: catalog }
+
+category_bestprice:
+  url:   /category/Luchshaya_tsena
+  param: { module: category, action: bestprice }
+
+category:
+  url:   /category/:slug
+  param: { module: category, action: category }
+
+category_bestsellers:
+  url:   /bestsellers
+  param: { module: category, action: bestsellers }
+
+category_related:
+  url:   /related
+  param: { module: category, action: bestsellers }
+
+category_newproduct:
+  url:   /newproduct
+  param: { module: category, action: newproduct }
+
+category_newprod:
+  url:   /newprod
+  param: { module: category, action: newproduct }
+
+collection:
+  url:   /collection/:slug
+  param: { module: category, action: collection }
+
+manufacturer:
+  url:   /manufacturer/:slug
+  param: { module: category, action: manufacturer }
+
+customer:
+  url:   /customer
+  param: { module: customer, action: index }
+
+customer_mydata:
+  url:   /customer/mydata
+  param: { module: customer, action: mydata }
+
+customer_orderdetails:
+  url:   /customer/orderdetails/:id
+  param: { module: customer, action: orderdetails }
+
+
+product_rate:
+  url:   /product/rate
+  param: { module: product, action: rate }
+
+product_addComment:
+  url:   /product/addcomment/:slug
+  param: { module: product, action: addComment }
+
+product_senduser:
+  url:   /product/senduser/:slug
+  param: { module: product, action: senduser }
+
+product_addtocart:
+  url:   /product/addtocart/:slug
+  param: { module: product, action: addtocart }
+
+product_show:
+  url:   /product/:slug
+  param: { module: product, action: show }
+
+cart_index:
+  url:   /cart
+  param: { module: cart, action: index }
+
+cart_confirmed:
+  url:   /cart/confirmed
+  param: { module: cart, action: confirmed }
+
+cart_addtocartcount:
+  url:   /cart/addtocartcount/:id
+  param: { module: cart, action: addtocartcount }
+
+cart_deletefromcart:
+  url:   /cart/deletefromcart/:id
+  param: { module: cart, action: index }
+
+support:
+  url:   /support
+  param: { module: noncache, action: support }
+
+search:
+  url:   /search
+  param: { module: pages, action: search }
+
+login:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+logout:
+  url:   /logout/
+  param: { module: sfGuardAuth, action: signout }
+
+register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+
+
+# start Регистрация через соц сети
+regss_auth:
+  url:   /regss_auth
+  param: { module: noncache, action: regssauth }
+
+regss:
+  url:   /regss
+  param: { module: sfGuardRegister, action: regss }
+
+videos:
+  url:   /videos
+  param: { module: video, action: show }
+
+page_show_addcomm:
+  url:   /:slug/addcomm
+  param: { module: pages, action: addcomm }
+
+page_show_russianpost:
+  url:   /russianpost/:slug
+  param: { module: pages, action: showRussianPost }
+
+
+sitemap:
+  url: /sitemap
+  param: { module: pages, action: sitemap }
+
+page:
+  url:   /:slug
+  param: { module: pages, action: show }
+
+
+firstvisit:
+  url:   /firstvisit/:stats
+  param: { module: noncache, action: firstvisit }
+
+product_showerror:
+  url:   /product/*
+  param: { module: pages, action: error404 }
+
+customers_showerror:
+  url:   /customer/*
+  param: { module: pages, action: error404 }
+  
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

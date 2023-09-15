@@ -1,0 +1,8 @@
+all:
+  enabled:     false
+  with_layout: false
+  contextual: false
+  
+_18age:
+  enabled:     false
+  contextual: false

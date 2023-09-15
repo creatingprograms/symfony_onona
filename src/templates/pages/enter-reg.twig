@@ -1,0 +1,70 @@
+{% extends '../structure/index.twig' %}
+
+{% block afterHeader %}
+  <main class="wrapper">
+    <div class="regPage">
+      <form action="index.php" class="regPage-item form-er -bg -isBut">
+        <div class="form-er-h">
+          Вход для зарегистрированных пользователей
+        </div>
+        <div class="form-er-intro">
+          Авторизуйтесь на сайте, указав свои данные:
+        </div>
+        <div class="regPage-group">
+          <div class="form-er-row">
+            <div class="form-er-label">
+              Адрес электронной почты:*
+            </div>
+            <input type="email" value="">
+          </div>
+          <div class="form-er-row">
+            <div class="form-er-label -clf">
+              <span class="form-er-align-left">Пароль:*</span>
+              <a href="#" class="form-er-align-right form-er-forgot">Забыли пароль?</a>
+            </div>
+            <input type="password">
+          </div>
+          <div class="form-er-ch-services">
+            <input type="checkbox" name="" class="styleCH" id="saveThisSite">
+            <label for="saveThisSite">Запомнить меня на этом сайте</label>
+          </div>
+        </div>
+        <input type="submit" name="" value="Авторизоваться" class="but">
+      </form>
+      <div class="regPage-item form-er -bg -isBut">
+        <div class="form-er-h">
+          Регистрация для новых пользователей 
+        </div>
+        <div class="form-er-intro">
+          Рады видеть Вас в OnOna.ru! 
+        </div>
+        <div class="regPage-mob-group">
+          <p>Быстро, удобно, легко!</p>
+          <p>Преимущества регистрации:</p>
+          <ul>
+            <li>Использование введенных ранее данных при оформлении заказа.</li>
+            <li>Отслеживание статуса своих заказов/история заказов.</li>
+            <li>Подарок 300 бонусов на оплату уже первой покупки!</li>
+            <li>Накопление Бонусных рублей и оплата ими товаров.</li>
+            <li>Добавление товаров в список желаний/сравнения.</li>
+            <li>Возможность настроить оповещения для товара.</li>
+            <li>Получение персональных предложений, акций, ск</li>
+          </ul>
+          <a href="#" class="but">Зарегистрироваться</a>
+        </div>
+      </div>
+      <div class="regPage-item form-er -bg -smm">
+        <div class="form-er-h">
+          Войти, используя аккаунт&nbsp;соцсети
+        </div>
+        {% include '../block/regPage-smm.twig' %}
+      </div>
+      <div class="regPage-item form-er -bg -smm">
+        <div class="form-er-h">
+          зарегистрироваться, используя аккаунт соцсети
+        </div>
+        {% include '../block/regPage-smm.twig' %}
+      </div>
+    </div>
+  </main>
+{% endblock afterHeader %}

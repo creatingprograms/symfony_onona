@@ -1,0 +1,195 @@
+.video-icon
+  position: relative;
+  &:after
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url('/frontend/images_new/video.svg') no-repeat center;
+.video-list
+  display flex
+  flex-wrap: wrap
+  margin -12px
+
+.video-item
+  margin 12px
+  width 100%
+  display flex
+  flex-direction: column
+  max-width: 100%
+  +min(tablet)
+    max-width: calc((100% / 3) - 24px)
+  +min(sMobile)
+    max-width: calc((100% / 2) - 24px)
+  &:not(:nth-child(-n+3))
+    +min(tablet)
+      margin-top 29px
+  &:not(:nth-child(-n+2))
+    +between(sMobile, tablet)
+      margin-top 29px
+  &:not(:first-child)
+    +max(sMobile)
+      margin-top 20px
+
+.video-item__img
+  position relative
+  width 100%
+  height 52vw
+  background-repeat no-repeat
+  background-size cover
+  border-radius: 20px
+  overflow hidden
+  margin-bottom 18px
+  +min(tablet)
+    height 216px
+  +between(sMobile,tablet)
+    height 27vw
+  &::before
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(0,0,0, .5)
+    z-index 1
+    transition $trans
+    opacity 0
+  &::after
+    content ''
+    position absolute
+    background-image url('/frontend/images_new/play-btn.svg')
+    width 56px
+    height 56px
+    background-repeat no-repeat
+    background-size contain
+    z-index 1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition $trans
+    opacity 0
+
+.video-item__time
+  color #fff
+  display flex
+  align-items center
+  justify-content center
+  background-image url(/frontend/images_new/work_televideo/time.png)
+  background-repeat no-repeat
+  background-size cover
+  position absolute
+  bottom 0
+  right 0
+  width 70px
+  height 35px
+  z-index 2
+
+.video-item__title
+  font-weight bold
+  font-size 18px
+  line-height 22px
+  margin-bottom 5px
+
+.video-item__text
+  margin-bottom 5px
+  color #2D2841
+
+.video-item__date
+  text-align right
+  font-size 14px
+  color #616C7C
+  margin-top auto
+
+.video-item:hover
+  .video-item__img
+    &::before
+    &::after
+      opacity 1
+  .video-item__text
+    color #2D2841
+
+.video-popup-wrapper.popup 
+  background: 0 0
+
+.popup 
+  color: #010101
+  margin: 0 auto
+  position: relative
+  background: #f4aaa9
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.video-popup-wrapper 
+  width: 800px
+  margin: auto
+  max-width: 90%
+
+
+.video-container 
+  position: relative
+  height: 0
+  padding-bottom: 56.25%
+  display: block
+
+.video-container iframe 
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+.wrap-show-count
+  position relative
+  z-index 2
+  margin-bottom 40px
+
+.show-count 
+  display: block
+  align-items: left
+  position: relative
+  top: 0
+  z-index: 2
+
+.show-block 
+  position: relative
+  font-size 18px
+  text-align: left
+  cursor: pointer
+  font-weight: bold
+  user-select: none
+  display inline-flex
+  align-items center
+  &.active
+    svg
+      transform rotate(-90deg)
+  svg
+    max-width 15px
+    width 15px
+    height 15px
+    transform rotate(90deg)
+    padding 2px
+    margin-top 2px
+    margin-left 3px
+
+.block-number 
+  display: none
+  position: absolute
+  z-index: 9
+  text-align left
+  background-color #fff
+  border 1px solid #E1E0E9
+  padding 6px 6px
+  top 140%
+
+.show-count a 
+  display: block
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  margin-top 3px 0
+
+.block-number.active 
+  display: block

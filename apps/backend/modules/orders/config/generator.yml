@@ -1,0 +1,86 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Orders
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          orders
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        text:
+          label: Заказ
+        delivery_id:
+          label: Способ доставки
+        payment_id:
+          label: Способ оплаты
+        customer_id:
+          label: Заказчик
+        delivery_price:
+          label: Цена доставки
+        coupon:
+          label: Купон на скидку
+        comments:
+          label: Комментарии
+        comment_1c:
+          label: Комментарий из 1с
+        status_detail:
+          label: Детальный статус
+        status:
+          label: Статус
+        source:
+          label: Источник перехода
+        medium_ym:
+          label: Канал перехода metrika
+        source_ym:
+          label: Источник перехода metrika
+        medium:
+          label: Канал перехода
+        created_at:
+            label: Дата создания
+        ipUser:
+            label: IP заказавшего
+        firsttotalcost:
+            label: Первоначальная сумма заказа
+        manager:
+            label: Менеджер
+        totalprice:
+            label: Сумма
+        isbonuspay:
+            label: Оплачено бонусами
+        custombonusper:
+            label: Нестандарт. % бонус
+        bonuspay:
+            label: Сумма бонусов
+        bonusper:
+            label: % бонусов
+        perrange:
+            label: Интервал процентов
+      list:
+        title: Заказы
+        display: [ id, customer_id, status, source, medium, source_ym, medium_ym, created_at , _totalprice, _isbonuspay, custombonusper,firsttotalcost, bonuspay, _bonusper]
+        object_actions:
+          #promote:
+          #  action: promote
+          #  label: Вверх
+          #demote:
+          #  action: demote
+          #  label: Вниз
+          _edit: ~
+      filter:
+        display: [ id, customer_id, status, source, medium, source_ym, medium_ym, created_at, isbonuspay, custombonusper, ipUser, perrange ]
+      form:
+        display:
+          Основная информация: [ delivery_id, payment_id, delivery_price, coupon, comments, comment_1c, status, status_detail, manager, created_at, ipUser, firsttotalcost ]
+          Заказанные товары: [ text ]
+          Адрес доставки: [ customer_id ]
+      edit:
+        title: Редактирование заказа "%%id%%"
+      new:
+        title: Создание заказа

@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Photoalbum
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          photoalbum
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:   
+        name:
+          label: Название
+        content:
+          label: Описание
+        product_photoalbums_list:
+          label: Товары
+      list:   
+        title: Фотоальбомы
+        display: [ _name ]
+      filter:  
+        display: [ name ]
+      form:          
+        display: 
+          Основная информация: [ name, content, product_photoalbums_list ]
+      edit:    
+        title: Редактирование фотоальбома "%%name%%"
+      new:     
+        title: Создание фотоальбома

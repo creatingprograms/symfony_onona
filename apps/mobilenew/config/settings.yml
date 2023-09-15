@@ -1,0 +1,51 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/04-Settings
+
+prod:
+  .settings:
+    no_script_name:         true
+    logging_enabled:        false
+    cache:                  true
+
+dev:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_DEPRECATED ^ E_NOTICE)."\n" ?>
+    web_debug:              true
+    no_script_name:         false
+    etag:                   false
+    cache:                  true
+
+test:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    web_debug:              false
+    no_script_name:         false
+    etag:                   false
+    cache:                  true
+
+all:
+  .settings:
+    # Form security secret (CSRF protection)
+    csrf_secret:            false 
+    #11816ccb9f835b1731f473c0b31b9da979644058
+
+    standard_helpers:       [ Partial, Cache, I18N ]
+    enabled_modules:        [ default, csSettingsPlugin, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword ]
+    i18n:                   on
+    default_culture:        ru_RU
+
+    login_module:           sfGuardAuth
+    login_action:           signin
+    secure_module:          sfGuardAuth
+    secure_action:          secure
+
+    # Output escaping settings
+    escaping_strategy:      false
+    escaping_method:        ESC_SPECIALCHARS
+
+    # Enable the database manager
+    use_database:           true
+    
+  .actions:
+    error_404_module: pages
+    error_404_action: error404

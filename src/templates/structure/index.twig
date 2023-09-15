@@ -1,0 +1,48 @@
+{% extends '../performance/layout-full.twig' %}
+
+{% block viewPort %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock viewPort %}
+
+{% block header %}
+  {% include '../layout/header.twig' %}
+{% endblock header %}
+
+{% block footer %}
+  {% include '../layout/footer.twig' %}
+{% endblock footer %}
+
+{% block footer %}
+  {% include '../layout/footer.twig' %}
+{% endblock footer %}
+
+{% block footerBot %}
+  {% include '../layout/footer-bot.twig' %}
+{% endblock footerBot %}
+
+{% block afterFooter %}
+  <div id="blackout" class="blackout"></div>
+  {% include '../layout/wrapSvg.twig' %}
+  {% block popup %}
+    {% include '../layout/popup.twig'  %}
+  {% endblock popup %}
+  {% block popupPage %}
+  
+  {% endblock popupPage %}
+{% endblock afterFooter %}
+
+{% block script %}
+  <script>
+    var require = {
+      baseUrl: '/js/lib',
+      urlArgs: "bust=v1543239951"
+    };
+  </script>
+  <script src="/js/require-jquery.js"></script>
+  <script>
+    require(['../app/site'], function() {
+      require(['site/common'], function() {});
+      require(['site/map'], function() {});
+    });
+  </script>
+{% endblock script %}

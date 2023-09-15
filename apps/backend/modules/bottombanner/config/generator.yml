@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Bottombanner
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          bottombanner
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Баннер активен
+        created_at:
+            label: Дата создания
+        updated_at:
+            label: Дата изменения
+        startaction:
+            label: Начало действия
+        endaction:
+            label: Окончание действия
+        link:
+            label: Ссылка
+        text:
+            label: Текст
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

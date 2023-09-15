@@ -1,0 +1,81 @@
+// Resolution
+base = 1920
+wide = 1600
+screen = 1450
+desktop = 1200
+tabletLarge = 1100
+tablet = 980
+mobile = 765
+sMobile = 440
+
+// @media
+max(size)
+  @media all and (max-width: size px)
+    {block}
+min(size)
+  @media all and (min-width: size px)
+    {block}
+between(sizefrom, sizeto)
+  @media(min-width: sizefrom px) and (max-width: sizeto px)  
+    {block}
+
+max_phone(width,height)
+  @media (min-width: mobile px) and (max-height: height px)
+    {block}
+  @media all and (max-width: width px)
+    {block}
+
+noUserSelect()
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+
+//transition time
+  $trans = .3s ease
+
+// Colors
+_text = #000
+_blue = #4C94BC
+_blue-text = #34769B
+_fill_2 = #A93424
+_fill_3 = #BC7034
+_fill_4 = rgba(255, 255, 255, 0.6)
+_bg1 = #F5F5F5
+
+_border = #E0E0E0
+
+// Path
+link(file)
+  return url(/img/file)
+
+// SVG fix
+svg
+  transform translate3d(0,0,0)
+
+// Placeholder
+ph(opt,val)
+  &::-webkit-input-placeholder
+    {opt} val
+  &::-moz-placeholder
+    {opt} val
+  &:-moz-placeholder
+    {opt} val
+  &::placeholder
+    {opt} val
+  &:-ms-input-placeholder
+    {opt} val
+
+#map
+  [class$='-copyrights-pane']
+    opacity 0
+    pointer-events none
+#ctrlcopy
+  color transparent
+  height 1px
+  overflow hidden
+  position absolute
+  width 1px
+.mfp-close-btn-in 
+  .mfp-close
+    fill: #fff;
+    cursor: pointer;

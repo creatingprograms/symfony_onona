@@ -1,0 +1,115 @@
+.phone-box ul li{
+    display:block;
+    width:100%;
+    overflow:hidden;
+}
+.phone-box ul{
+    display:block;
+}
+.phone-box ul li .descr{
+    float:left;
+    width:78px;
+}
+.phone-box ul li .phone{
+    float:left;
+    width:142px;
+}
+.column-box.logos .img-holder {
+    display:block;
+    margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+    height:auto;
+}
+.brand-galery .galery-holder .galery ul li a{
+    display:block;
+    margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+    height:auto;
+}
+.item-media .img-holder a{
+    display:block;
+    margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+    height:auto;
+}
+#header .head-row .right .age .tips{
+    behavior: url(/newdis/js/pie.htc);
+}
+.nav-deco {
+    behavior: url(/newdis/js/pie.htc);
+}
+#nav .drop{
+    behavior: url(/newdis/js/pie.htc);
+}
+.column-box {
+    behavior: url(/newdis/js/pie.htc);
+}
+.column-box .title a .img-box img{
+    behavior: url(/newdis/js/pie.htc);
+}
+.login-popup{
+    behavior: url(/newdis/js/pie.htc);
+}
+.item-list li{
+    behavior: url(/newdis/js/pie.htc);
+}
+.item-list .bottom-box {
+    behavior: url(/newdis/js/pie.htc);
+}
+.leaders-galery .galery-holder .galery ul li{
+    behavior: url(/newdis/js/pie.htc);
+}
+.item-media .img-holder{
+    behavior: url(/newdis/js/pie.htc);
+}
+.item-char .input-holder {
+    behavior: url(/newdis/js/pie.htc);
+}
+.video-holder {
+    behavior: url(/newdis/js/pie.htc);
+}
+.promo-gallery-holder.two-item .promo-gallery ul li a {
+    behavior: url(/newdis/js/pie.htc);
+}
+.popup{
+    behavior: url(/newdis/js/pie.htc);
+}
+.availability{
+    behavior: url(/newdis/js/pie.htc);
+}
+.availability:after{
+    behavior: url(/newdis/js/pie.htc);
+}
+* + html #header .head-row .top-menu li{
+    zoom:1;
+}
+* + html .article-frame .article-list li{
+    zoom:1;
+}
+#footer {
+    zoom:1;
+}
+* + html #footer .footer-info li{
+    zoom:1;
+}
+* + html #footer .footer-info .ico-list li{
+    zoom:1;
+}
+* + html #footer .footer-row .ico-list li{
+    zoom:1;
+}
+* + html .item-list li{
+    zoom:1;
+}
+* + html .shop-list li{
+    zoom:1;                       
+}
+* + html .tabset .tab-control li{
+    zoom:1;
+}
+.tabsetDeliver .tab-control li .center {
+    zoom:1;
+}
+.tabsetDeliver .tab-control li .helper {
+    zoom:1;
+}
+#content {
+    padding-right: 3px;
+}
